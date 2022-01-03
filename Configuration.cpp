@@ -3503,7 +3503,7 @@ void Configuration::impl::reject ()
         }
       else
         {
-//          printf("%s(%0.1f) Coniguration impl_reject close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//          printf("%s(%0.1f) Configuration impl_reject close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
           close_rig ();
         }
     }
@@ -5643,7 +5643,7 @@ bool Configuration::impl::open_rig (bool force)
     {
       try
         {
-//    printf("%s(%0.1f) Coniguration rig_open, active %d, force %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_,force);
+//    printf("%s(%0.1f) Configuration rig_open, active %d, force %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),rig_active_,force);
 
           if (is_tci_ && rig_active_ && tci_audio_) restart_tci_device_ = true; 
           close_rig ();
@@ -5691,7 +5691,7 @@ bool Configuration::impl::open_rig (bool force)
 
           ui_->test_CAT_push_button->setStyleSheet ({});
           rig_active_ = true;
-//    printf("%s(%0.1f) Coniguration rig_open, start transceiver #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1);
+//    printf("%s(%0.1f) Configuration rig_open, start transceiver #:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1);
           Q_EMIT start_transceiver (++transceiver_command_number_,jtdxtime_); // start rig on its thread
           rig_params_ = gather_rig_data ();
           result = true;
@@ -5741,7 +5741,7 @@ void Configuration::impl::transceiver_frequency (Frequency f)
     current_offset_ = stations_.offset (f);
     cached_rig_state_.frequency (apply_calibration (f + current_offset_));
 
-//    printf("%s(%0.1f) Coniguration #:%d transceiver_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,f);
+//    printf("%s(%0.1f) Configuration #:%d transceiver_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,f);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5771,7 +5771,7 @@ void Configuration::impl::transceiver_tx_frequency (Frequency f)
             cached_rig_state_.tx_frequency (apply_calibration (f + current_tx_offset_));
           }
 
-//        printf("%s(%0.1f) Coniguration #:%d transceiver_tx_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,f);
+//        printf("%s(%0.1f) Configuration #:%d transceiver_tx_frequency: %lld\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,f);
         Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
       }
     }
@@ -5783,7 +5783,7 @@ void Configuration::impl::transceiver_mode (MODE m)
   if (cached_rig_state_.mode() != m)
   {
     cached_rig_state_.mode (m);
-//    printf("%s(%0.1f) Coniguration #:%d mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,m);
+//    printf("%s(%0.1f) Configuration #:%d mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,m);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5793,7 +5793,7 @@ void Configuration::impl::transceiver_ptt (bool on)
   cached_rig_state_.online (true); // we want the rig online
   set_cached_mode ();
   cached_rig_state_.ptt (on);
-//  printf("%s(%0.1f) Coniguration #:%d ptt: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
+//  printf("%s(%0.1f) Configuration #:%d ptt: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
   Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
 }
 
@@ -5804,7 +5804,7 @@ void Configuration::impl::transceiver_ft4_mode (bool on)
   if (cached_rig_state_.ft4_mode() != on)
   {
     cached_rig_state_.ft4_mode (on);
-//    printf("%s(%0.1f) Coniguration #:%d ft4_mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
+//    printf("%s(%0.1f) Configuration #:%d ft4_mode: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5816,7 +5816,7 @@ void Configuration::impl::transceiver_audio (bool on)
   if (cached_rig_state_.audio() != on)
   {
     cached_rig_state_.audio (on);
-//    printf("%s(%0.1f) Coniguration #:%d audio: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
+//    printf("%s(%0.1f) Configuration #:%d audio: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5828,7 +5828,7 @@ void Configuration::impl::transceiver_tune (bool on)
   if (cached_rig_state_.tune() != on)
   {
     cached_rig_state_.tune (on);
-//    printf("%s(%0.1f) Coniguration #:%d tune: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
+//    printf("%s(%0.1f) Configuration #:%d tune: %d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
 }
@@ -5839,7 +5839,7 @@ void Configuration::impl::transceiver_period (double period)
   set_cached_mode ();
   if (cached_rig_state_.period() != period)
   {
-//    printf("%s(%0.1f) Coniguration #:%d period: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,period,cached_rig_state_.period());
+//    printf("%s(%0.1f) Configuration #:%d period: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,period,cached_rig_state_.period());
     cached_rig_state_.period (period);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5851,7 +5851,7 @@ void Configuration::impl::transceiver_blocksize (qint32 blocksize)
   set_cached_mode ();
   if (cached_rig_state_.blocksize() != blocksize)
   {
-//    printf("%s(%0.1f) Coniguration #:%d blocksize: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,blocksize,cached_rig_state_.blocksize());
+//    printf("%s(%0.1f) Configuration #:%d blocksize: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,blocksize,cached_rig_state_.blocksize());
     cached_rig_state_.blocksize (blocksize);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5863,7 +5863,7 @@ void Configuration::impl::transceiver_spread (double spread)
   set_cached_mode ();
   if (cached_rig_state_.spread() != spread)
   {
-//    printf("%s(%0.1f) Coniguration #:%d spread: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,spread,cached_rig_state_.spread());
+//    printf("%s(%0.1f) Configuration #:%d spread: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,spread,cached_rig_state_.spread());
     cached_rig_state_.spread (spread);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5875,7 +5875,7 @@ void Configuration::impl::transceiver_nsym (int nsym)
   set_cached_mode ();
   if (cached_rig_state_.nsym() != nsym)
   {
-//    printf("%s(%0.1f) Coniguration #:%d nsym: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,nsym,cached_rig_state_.nsym());
+//    printf("%s(%0.1f) Configuration #:%d nsym: %d cached:%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,nsym,cached_rig_state_.nsym());
     cached_rig_state_.nsym (nsym);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5887,7 +5887,7 @@ void Configuration::impl::transceiver_trfrequency (double trfrequency)
   set_cached_mode ();
   if (cached_rig_state_.trfrequency() != trfrequency)
   {
-//    printf("%s(%0.1f) Coniguration #:%d trfrequency: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,trfrequency,cached_rig_state_.trfrequency());
+//    printf("%s(%0.1f) Configuration #:%d trfrequency: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,trfrequency,cached_rig_state_.trfrequency());
     cached_rig_state_.trfrequency (trfrequency);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5899,7 +5899,7 @@ void Configuration::impl::transceiver_txvolume (double txvolume)
   set_cached_mode ();
   if (cached_rig_state_.volume() != txvolume)
   {
-//    printf("%s(%0.1f) Coniguration #:%d txvolume: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,txvolume,cached_rig_state_.volume());
+//    printf("%s(%0.1f) Configuration #:%d txvolume: %0.1f cached: %0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,txvolume,cached_rig_state_.volume());
     cached_rig_state_.volume (txvolume);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
@@ -5919,10 +5919,10 @@ void Configuration::impl::transceiver_modulator_start (unsigned symbolslength, d
     cached_rig_state_.synchronize (synchronize);
     cached_rig_state_.dbsnr (dbsnr);
     cached_rig_state_.trperiod (trperiod);
-//    printf("%s(%0.1f) Coniguration #:%d modulator_start: symbolslength=%d framespersymbol=%0.1f frequency=%0.1f tonespacing=%0.1f synchronize= %d dbsnr=%0.1f trperiod=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,symbolslength,framespersymbol,frequency,tonespacing,synchronize,dbsnr,trperiod);
+//    printf("%s(%0.1f) Configuration #:%d modulator_start: symbolslength=%d framespersymbol=%0.1f frequency=%0.1f tonespacing=%0.1f synchronize= %d dbsnr=%0.1f trperiod=%0.1f\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,symbolslength,framespersymbol,frequency,tonespacing,synchronize,dbsnr,trperiod);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
-//  else printf("%s(%0.1f) Coniguration modulator_start: WAS ALLREADY RUNNING\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//  else printf("%s(%0.1f) Configuration modulator_start: WAS ALLREADY RUNNING\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
 }
 
 void Configuration::impl::transceiver_modulator_stop (bool on)
@@ -5933,15 +5933,15 @@ void Configuration::impl::transceiver_modulator_stop (bool on)
   {
     cached_rig_state_.tx_audio (false);
     cached_rig_state_.quick (on);
-//    printf("%s(%0.1f) Coniguration #:%d modulator_stop: quick=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
+//    printf("%s(%0.1f) Configuration #:%d modulator_stop: quick=%d\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),transceiver_command_number_+1,on);
     Q_EMIT set_transceiver (cached_rig_state_, ++transceiver_command_number_);
   }
-//  else printf("%s(%0.1f) Coniguration modulator_stop: WAS NOT RUNNING\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//  else printf("%s(%0.1f) Configuration modulator_stop: WAS NOT RUNNING\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
 }
 
 void Configuration::impl::sync_transceiver (bool /*force_signal*/)
 {
-//  printf("%s(%0.1f) Coniguration sync force: NULL\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//  printf("%s(%0.1f) Configuration sync force: NULL\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
   // pass this on as cache must be ignored
   // Q_EMIT sync (force_signal);
 }
@@ -5986,7 +5986,7 @@ void Configuration::impl::handle_transceiver_update (TransceiverState const& sta
     }
   else
     {
-//      printf("%s(%0.1f) Coniguration #:%d %d transceiver_update close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),sequence_number,transceiver_command_number_);
+//      printf("%s(%0.1f) Configuration #:%d %d transceiver_update close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset(),sequence_number,transceiver_command_number_);
       if (sequence_number == transceiver_command_number_) close_rig ();
     }
 
@@ -6013,7 +6013,7 @@ void Configuration::impl::handle_transceiver_failure (QString const& reason)
   qDebug () << "Configuration::handle_transceiver_failure: reason:" << reason;
 #endif
 
-//  printf("%s(%0.1f) Coniguration transceiver_failure close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//  printf("%s(%0.1f) Configuration transceiver_failure close rig\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
   close_rig ();
   ui_->test_PTT_push_button->setChecked (false);
 
@@ -6044,7 +6044,7 @@ void Configuration::impl::close_rig ()
         }
       rig_connections_.clear ();
       rig_active_ = false;
-//      printf("%s(%0.1f) Coniguration running rig closed\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
+//      printf("%s(%0.1f) Configuration running rig closed\n",jtdxtime_->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),jtdxtime_->GetOffset());
     }
 }
 
