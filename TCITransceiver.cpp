@@ -1002,7 +1002,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
   static unsigned mstr0=999999;
   qint64 ms0 = m_jtdxtime->currentMSecsSinceEpoch2() % 86400000; //m_jtdxtime -> currentMSecsSinceEpoch2() % 86400000;
   unsigned mstr = ms0 % int(1000.0*m_period); // ms into the nominal Tx start time
-  if(mstr < mstr0) {              //When mstr has wrapped around to 0, restart the buffer
+  if(mstr < mstr0/2) {              //When mstr has wrapped around to 0, restart the buffer
     dec_data.params.kin = 0;
     m_bufferPos = 0;
 //    printf("%s(%0.1f) reset buffer mstr:%d mstr0:%d maxSize:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),mstr,mstr0,maxSize);
