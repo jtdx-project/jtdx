@@ -1,6 +1,6 @@
 subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 
-  use ft8_mod1, only : mycall,hiscall
+  use ft8_mod1, only : mycall,hiscall,hisgrid4
   character msg37*37,decoded*22,callsign*12,calltmp*12,call_a*12,call_b*12,grid*12,callmask6*6
   character*6 mask6(3)
   integer, intent(in) :: i3,n3
@@ -197,7 +197,8 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
   endif
 
 ! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, both callsigns are correct, checking for valid grid
-  if(iaptype.eq.3) then
+! ES6DO TK60CNES R MJ79 ! non standard DXCall, iaptype 11
+  if(iaptype.eq.3 .or. iaptype.eq.11) then
     indxr=index(msg37,' R ')
     if(indxr.gt.7) then
       islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
@@ -208,8 +209,10 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
              msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
              msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
             grid=msg37(ispc3+1:ispc4-1)
-            call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
-            if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+            if(grid.ne.hisgrid4) then ! correctly decoded contest message
+              call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
+              if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+            endif
           endif
         endif
       endif
