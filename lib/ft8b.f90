@@ -21,7 +21,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   complex cd0(-800:4000),cd1(-800:4000),cd2(-800:4000),cd3(-800:4000),ctwk(32),csymb(32),cs(0:7,79),csymbr(32),csr(0:7,79), &
           csig(32),csig0(151680),z1,csymb256(256),cstmp2(0:7,79),csold(0:7,79),cscs(0:7,79)
   real a(5),s8(0:7,79),s82(0:7,79),s2(0:511),sp(0:7),s81(0:7),snrsync(21),syncw(7),sumkw(7),scoreratiow(7),freqsub(200), &
-       s256(0:8),s2563(0:26)
+       s256(0:8),s2563(0:26),syncavpart(3)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
@@ -214,7 +214,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 16  continue
     if(iqso.eq.3) ibest=ibest+1
 
-    syncav=3.
+    syncav=3.; syncavpart=3.
     snrsync=0.
     do k=1,79
       i1=ibest+(k-1)*32
@@ -237,6 +237,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     enddo
     syncav=sum(snrsync)/21.
+    syncavpart(1)=sum(snrsync(1:7))/7.; syncavpart(2)=sum(snrsync(8:14))/7.; syncavpart(3)=sum(snrsync(15:21))/7.
+    syncavemax=maxval(syncavpart,1)
 
 !    plev=0.0
 !    do k=1000,1009; abscd=abs(cd0(k)); if(abscd.gt.plev) plev=abscd; enddo
@@ -841,6 +843,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       scqnr=2.; smycnr=2.
 
       do isubp2=1,npasses
+! to replace lapmyc with lastinttx & enabledTx
+        if(lqsothread .and. lapmyc .and. isubp2.lt.5 .and. abs(f1-nfqso).lt.3.0 .and. syncavemax.lt.1.8) cycle ! +- 3Hz sync8 QSOfreq candidate list
         if(.not.swl .and. isubp2.eq.4) cycle
         if(isubp1.gt.2 .and. isubp2.lt.5) cycle ! skip regular decoding for extra subpasses
         if(lqsocandave) then
