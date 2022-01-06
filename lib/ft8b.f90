@@ -13,7 +13,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall,          &
                        maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56,       &
                        idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd,  &
-                       apsymdxnsr73,apsymdxns732
+                       apsymdxnsr73,apsymdxns732,ltxing
 
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
@@ -845,7 +845,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
       do isubp2=1,npasses
         if(isubp2.lt.5) then
-          if(lapmyc) then ! to replace lapmyc with lastinttx & enabledTx
+          if(ltxing) then ! enabled Tx and transmitted message including CQ at last interval
             if(abs(f1-nfqso).lt.3.0) then ! +- 3Hz sync8 QSOfreq candidate list
               if(syncavemax.lt.1.8) cycle
             else

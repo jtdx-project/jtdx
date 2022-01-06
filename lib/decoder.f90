@@ -13,7 +13,7 @@ subroutine multimode_decoder(params)
                        evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,nFT8decdt,sumxdtt,avexdt, &
                        nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4, &
                        lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandallthr,nincallthr,incall,msgincall,xdtincall, &
-                       maskincallthr
+                       maskincallthr,ltxing
   use ft4_mod1, only : llagcc,nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry,dd4
   use packjt77, only : lcommonft8b,ihash22,calls12,calls22
 
@@ -131,6 +131,7 @@ subroutine multimode_decoder(params)
   lenabledxcsearch=params%lenabledxcsearch; lwidedxcsearch=params%lwidedxcsearch
 
   lmultinst=params%lmultinst; lskiptx1=params%lskiptx1; lhidetest=params%lhidetest; lhidetelemetry=params%lhidetelemetry
+  ltxing=params%ltxing
   if(params%nmode.eq.8) then
      mycalllen1=len_trim(mycall)+1
      msgroot=''; msgroot=trim(mycall)//' '//trim(hiscall)//' '; msgrootlen=len_trim(msgroot)

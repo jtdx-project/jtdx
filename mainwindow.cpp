@@ -3368,7 +3368,7 @@ void MainWindow::decode()                                       //decode()
   else  dec_data.params.lft8lowth=true;
   if(m_ft8Sensitivity==2) dec_data.params.lft8subpass=true;
   else dec_data.params.lft8subpass=false;
-//  dec_data.params.lft8latestart=false;
+  dec_data.params.ltxing=(m_enableTx && (m_jtdxtime->currentMSecsSinceEpoch2()-m_mslastTX) < 26000) ? 1 : 0;
   dec_data.params.lhidetest=(ui->actionHide_FT_contest_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
   dec_data.params.lhidetelemetry=(ui->actionHide_telemetry_messages->isChecked() && !m_bypassAllFilters) ? 1 : 0;
   dec_data.params.lhideft8dupes=ui->actionHide_FT8_dupe_messages->isChecked() ? 1 : 0;
