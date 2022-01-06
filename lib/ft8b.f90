@@ -619,7 +619,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
     do isubp1=1,nsubpasses
       if(nweak.eq.1 .and. isubp1.eq.2) cycle
-      if(isubp1.gt.2 .and. isubp1.lt.6 .and. lmycsignal) cycle ! skip if it is lmycsignal, can be both
+      if(isubp1.gt.2 .and. isubp1.lt.6 .and. lmycsignal) cycle ! skip if it is lmycsignal, can be both lcq and lmy
+      syncavemax=3.
       if(isubp1.eq.2) cs=csr
       if(ipass.eq.npass-1 .and. (lcqsignal .or. lmycsignal) .and. &
         ((nweak.eq.1 .and. isubp1.eq.1) .or. (nweak.eq.2 .and. isubp1.eq.2))) cstmp2=cs
@@ -843,8 +844,17 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       scqnr=2.; smycnr=2.
 
       do isubp2=1,npasses
-! to replace lapmyc with lastinttx & enabledTx
-        if(lqsothread .and. lapmyc .and. isubp2.lt.5 .and. abs(f1-nfqso).lt.3.0 .and. syncavemax.lt.1.8) cycle ! +- 3Hz sync8 QSOfreq candidate list
+        if(isubp2.lt.5) then
+          if(lapmyc) then ! to replace lapmyc with lastinttx & enabledTx
+            if(abs(f1-nfqso).lt.3.0) then ! +- 3Hz sync8 QSOfreq candidate list
+              if(syncavemax.lt.1.8) cycle
+            else
+              if(syncavemax.lt.1.9) cycle
+            endif
+          else
+            if(syncavemax.lt.1.8) cycle
+          endif
+        endif
         if(.not.swl .and. isubp2.eq.4) cycle
         if(isubp1.gt.2 .and. isubp2.lt.5) cycle ! skip regular decoding for extra subpasses
         if(lqsocandave) then
