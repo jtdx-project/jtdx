@@ -494,16 +494,19 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     csymb256=cd0(i1:i1+255)*ctwk256
     call four2a(csymb256,256,1,-1,1)
     s256(0:8)=abs(csymb256(1:9))
-    iscq=0; nmic=0
+    rscq=0.; nmic=0
     do k11=8,16
       ip=maxloc(s8(:,k11))
       if(ip(1).eq.idtonemyc(k11-7)+1) nmic=nmic+1
       if(k11.lt.16) then
-        if(ip(1).eq.1) iscq=iscq+1
+        if(ip(1).eq.1) rscq=rscq+1.
       else
-        if(ip(1).eq.2) iscq=iscq+1
+        if(ip(1).eq.2) rscq=rscq+1.
       endif
     enddo
+    ip=maxloc(s8(:,17)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+    ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+    ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
 
     lqsosig=.false. ! has support to nonstandard callsign
     if((dfqso.lt.napwid .or. abs(nftx-f1).lt.napwid) .and. lapmyc .and. len_trim(hiscall).gt.2) then
@@ -517,7 +520,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
-    if(ip(1).eq.5 .or. iscq.gt.3) lcqsignal=.true.
+    if(ip(1).eq.5 .or. rscq.gt.3.1) lcqsignal=.true.
     if(.not.lcqsignal .and. ip(1).eq.4 .or. ip(1).eq.6) then
       s2563(0:8)=s256(0:8); s2563(9:26)=abs(csymb256(9:26))
       ip(1)=maxloc(s2563,1)
