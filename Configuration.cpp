@@ -2176,9 +2176,9 @@ void Configuration::impl::read_settings ()
   countries_= settings_->value ("CountryFilterList", "").toString ();
   callsigns_= settings_->value ("CallsignFilterList", "").toString ();
   next_color_CQ_ = color_CQ_ = settings_->value("colorCQ","#000000").toString();
-  next_color_MyCall_ = color_MyCall_ = settings_->value("colorMyCall","#f00000").toString();
+  next_color_MyCall_ = color_MyCall_ = settings_->value("colorMyCall","#ff0000").toString();
   next_color_StandardCall_ = color_StandardCall_ = settings_->value("colorStandardCall","#707070").toString();
-  next_color_TxMsg_ = color_TxMsg_ = settings_->value("colorTxMsg","#ffff00").toString();
+  next_color_TxMsg_ = color_TxMsg_ = settings_->value("colorTxMsg","#eeee00").toString();
   next_color_NewCQZ_ = color_NewCQZ_ = settings_->value("colorNewCQZ","#c08000").toString();
   next_color_NewCQZBand_ = color_NewCQZBand_ = settings_->value("colorNewCQZBand","#c0a080").toString();
   next_color_NewITUZ_ = color_NewITUZ_ = settings_->value("colorNewITUZ","#90b000").toString();
@@ -2192,23 +2192,23 @@ void Configuration::impl::read_settings ()
   next_color_NewCall_ = color_NewCall_ = settings_->value("colorNewCall","#a0a030").toString();
   next_color_NewCallBand_ = color_NewCallBand_ = settings_->value("colorNewCallBand","#e0e070").toString();
   next_color_WorkedCall_ = color_WorkedCall_ = settings_->value("colorWorkedCall","#00ff00").toString();
-  next_color_CQ_dark_ = color_CQ_dark_ = settings_->value("colorCQ_dark",Radio::convert_dark(settings_->value("colorCQ","#000000").toString(),true)).toString();
-  next_color_MyCall_dark_ = color_MyCall_dark_ = settings_->value("colorMyCall_dark",Radio::convert_dark(settings_->value("colorMyCall","#f00000").toString(),true)).toString();
-  next_color_StandardCall_dark_ = color_StandardCall_dark_ = settings_->value("colorStandardCall_dark",Radio::convert_dark(settings_->value("colorStandardCall","#707070").toString(),true)).toString();
-  next_color_TxMsg_dark_ = color_TxMsg_dark_ = settings_->value("colorTxMsg_dark",Radio::convert_dark(settings_->value("colorTxMsg","#ffff00").toString(),true)).toString();
-  next_color_NewCQZ_dark_ = color_NewCQZ_dark_ = settings_->value("colorNewCQZ_dark",Radio::convert_dark(settings_->value("colorNewCQZ","#c08000").toString(),true)).toString();
-  next_color_NewCQZBand_dark_ = color_NewCQZBand_dark_ = settings_->value("colorNewCQZBand_dark",Radio::convert_dark(settings_->value("colorNewCQZBand","#c0a080").toString(),true)).toString();
-  next_color_NewITUZ_dark_ = color_NewITUZ_dark_ = settings_->value("colorNewITUZ_dark",Radio::convert_dark(settings_->value("colorNewITUZ","#90b000").toString(),true)).toString();
-  next_color_NewITUZBand_dark_ = color_NewITUZBand_dark_ = settings_->value("colorNewITUZBand_dark",Radio::convert_dark(settings_->value("colorNewITUZBand","#c0d0a0").toString(),true)).toString();
-  next_color_NewDXCC_dark_ = color_NewDXCC_dark_ = settings_->value("colorNewDXCC_dark",Radio::convert_dark(settings_->value("colorNewDXCC","#c000c0").toString(),true)).toString();
-  next_color_NewDXCCBand_dark_ = color_NewDXCCBand_dark_ = settings_->value("colorNewDXCCBand_dark",Radio::convert_dark(settings_->value("colorNewDXCCBand","#d080d0").toString(),true)).toString();
-  next_color_NewGrid_dark_ = color_NewGrid_dark_ = settings_->value("colorNewGrid_dark",Radio::convert_dark(settings_->value("colorNewGrid","#00a0a0").toString(),true)).toString();
-  next_color_NewGridBand_dark_ = color_NewGridBand_dark_ = settings_->value("colorNewGridBand_dark",Radio::convert_dark(settings_->value("colorNewGridBand","#80d0d0").toString(),true)).toString();
-  next_color_NewPx_dark_ = color_NewPx_dark_ = settings_->value("colorNewPx_dark",Radio::convert_dark(settings_->value("colorNewPx","#00a040").toString(),true)).toString();
-  next_color_NewPxBand_dark_ = color_NewPxBand_dark_ = settings_->value("colorNewPxBand_dark",Radio::convert_dark(settings_->value("colorNewPxBand","#50e090").toString(),true)).toString();
-  next_color_NewCall_dark_ = color_NewCall_dark_ = settings_->value("colorNewCall_dark",Radio::convert_dark(settings_->value("colorNewCall","#a0a030").toString(),true)).toString();
-  next_color_NewCallBand_dark_ = color_NewCallBand_dark_ = settings_->value("colorNewCallBand_dark",Radio::convert_dark(settings_->value("colorNewCallBand","#e0e070").toString(),true)).toString();
-  next_color_WorkedCall_dark_ = color_WorkedCall_dark_ = settings_->value("colorWorkedCall_dark",Radio::convert_dark(settings_->value("colorWorkedCall","#00ff00").toString(),true)).toString();
+  next_color_CQ_dark_ = color_CQ_dark_ = settings_->value("colorCQ_dark","#e6dcd2").toString();
+  next_color_MyCall_dark_ = color_MyCall_dark_ = settings_->value("colorMyCall_dark","#bf0000").toString();
+  next_color_StandardCall_dark_ = color_StandardCall_dark_ = settings_->value("colorStandardCall_dark","#96aca2").toString();
+  next_color_TxMsg_dark_ = color_TxMsg_dark_ = settings_->value("colorTxMsg_dark","#aeae00").toString();
+  next_color_NewCQZ_dark_ = color_NewCQZ_dark_ = settings_->value("colorNewCQZ_dark","#804000").toString();
+  next_color_NewCQZBand_dark_ = color_NewCQZBand_dark_ = settings_->value("colorNewCQZBand_dark","#806040").toString();
+  next_color_NewITUZ_dark_ = color_NewITUZ_dark_ = settings_->value("colorNewITUZ_dark","#507000").toString();
+  next_color_NewITUZBand_dark_ = color_NewITUZBand_dark_ = settings_->value("colorNewITUZBand_dark","#809060").toString();
+  next_color_NewDXCC_dark_ = color_NewDXCC_dark_ = settings_->value("colorNewDXCC_dark","#800080").toString();
+  next_color_NewDXCCBand_dark_ = color_NewDXCCBand_dark_ = settings_->value("colorNewDXCCBand_dark","#904090").toString();
+  next_color_NewGrid_dark_ = color_NewGrid_dark_ = settings_->value("colorNewGrid_dark","#006060").toString();
+  next_color_NewGridBand_dark_ = color_NewGridBand_dark_ = settings_->value("colorNewGridBand_dark","#409090").toString();
+  next_color_NewPx_dark_ = color_NewPx_dark_ = settings_->value("colorNewPx_dark","#006000").toString();
+  next_color_NewPxBand_dark_ = color_NewPxBand_dark_ = settings_->value("colorNewPxBand_dark","#10a050").toString();
+  next_color_NewCall_dark_ = color_NewCall_dark_ = settings_->value("colorNewCall_dark","#606000").toString();
+  next_color_NewCallBand_dark_ = color_NewCallBand_dark_ = settings_->value("colorNewCallBand_dark","#a0a030").toString();
+  next_color_WorkedCall_dark_ = color_WorkedCall_dark_ = settings_->value("colorWorkedCall_dark","#00bf00").toString();
   useDarkStyle_ = settings_->value ("UseDarkStyle", false).toBool ();
 
   next_font_.fromString (settings_->value ("Font", QGuiApplication::font ().toString ()).toString ());
@@ -2241,9 +2241,9 @@ void Configuration::impl::read_settings ()
   harmonicsdepth_ = settings_->value ("HarmonicsDecodingDepth", 0).toInt (); if(!(harmonicsdepth_>=0 && harmonicsdepth_<=4)) harmonicsdepth_=0;
   ntopfreq65_ = settings_->value ("TopFrequencyJT65", 2700).toInt (); if(!(ntopfreq65_>=100 && ntopfreq65_<=5000)) ntopfreq65_=2700;
   nAnswerCQCounter_ = settings_->value ("SeqAnswerCQCounterValue", 2).toInt (); if(!(nAnswerCQCounter_>=1 && nAnswerCQCounter_<=5)) nAnswerCQCounter_=2;
-  nAnswerInCallCounter_ = settings_->value ("SeqAnswerInCallCounterValue", 2).toInt (); if(!(nAnswerInCallCounter_>=1 && nAnswerInCallCounter_<=5)) nAnswerInCallCounter_=2;
-  nSentRReportCounter_ = settings_->value ("SeqSentRReportCounterValue", 3).toInt (); if(!(nSentRReportCounter_>=1 && nSentRReportCounter_<=5)) nSentRReportCounter_=3;
-  nSentRR7373Counter_ = settings_->value ("SeqSentRR7373CounterValue", 2).toInt (); if(!(nSentRR7373Counter_>=1 && nSentRR7373Counter_<=5)) nSentRR7373Counter_=2;
+  nAnswerInCallCounter_ = settings_->value ("SeqAnswerInCallCounterValue", 3).toInt (); if(!(nAnswerInCallCounter_>=1 && nAnswerInCallCounter_<=5)) nAnswerInCallCounter_=2;
+  nSentRReportCounter_ = settings_->value ("SeqSentRReportCounterValue", 5).toInt (); if(!(nSentRReportCounter_>=1 && nSentRReportCounter_<=5)) nSentRReportCounter_=3;
+  nSentRR7373Counter_ = settings_->value ("SeqSentRR7373CounterValue", 4).toInt (); if(!(nSentRR7373Counter_>=1 && nSentRR7373Counter_<=5)) nSentRR7373Counter_=2;
   nsingdecatt_ = settings_->value ("nSingleDecodeAttempts", 1).toInt (); if(!(nsingdecatt_>=1 && nsingdecatt_<=3)) nsingdecatt_=1;
   fmaskact_ = settings_->value ("FMaskDecoding", false).toBool ();
   answerCQCount_ = settings_->value ("SeqAnswerCQCount", false).toBool ();
@@ -2442,7 +2442,7 @@ void Configuration::impl::read_settings ()
     id_after_73_ = settings_->value ("After73").toBool ();
   else id_after_73_ = false;
 
-  if(settings_->value ("TxQSYAllowed").toString()=="false" || settings_->value ("TxQSYAllowed").toString()=="true")
+  if(settings_->value ("TxQSYAllowed").toString()=="true" || settings_->value ("TxQSYAllowed").toString()=="true")
     tx_QSY_allowed_ = settings_->value ("TxQSYAllowed").toBool ();
   else tx_QSY_allowed_ = false;
 
@@ -2491,7 +2491,7 @@ void Configuration::impl::read_settings ()
   rig_params_.audio_source = settings_->value ("TXAudioSource", QVariant::fromValue (TransceiverFactory::TX_audio_source_front)).value<TransceiverFactory::TXAudioSource> ();
   rig_params_.ptt_port = settings_->value ("PTTport").toString ();
   data_mode_ = settings_->value ("DataMode", QVariant::fromValue (data_mode_none)).value<Configuration::DataMode> ();
-  prompt_to_log_ = settings_->value ("PromptToLog", false).toBool ();
+  prompt_to_log_ = settings_->value ("PromptToLog", true).toBool ();
   autolog_ = settings_->value ("AutoQSOLogging", false).toBool ();
   content_ = settings_->value ("Content", "AVI,CMD,GIF,HTML,HYBRID,IMAGE,JOINT,JPG,MP4,PHOTO").toString ();
   countries_ = settings_->value ("CountryFilterList", "").toString ();
@@ -2510,22 +2510,22 @@ void Configuration::impl::read_settings ()
 
   next_txtColor_ = txtColor_ = settings_->value ("txtColor", false).toBool ();
   next_workedColor_ = workedColor_ = settings_->value ("workedColor", false).toBool ();
-  next_workedStriked_ = workedStriked_ = settings_->value ("workedStriked", false).toBool ();
-  next_workedUnderlined_ = workedUnderlined_ = settings_->value ("workedUnderlined", true).toBool ();
+  next_workedStriked_ = workedStriked_ = settings_->value ("workedStriked", true).toBool ();
+  next_workedUnderlined_ = workedUnderlined_ = settings_->value ("workedUnderlined", false).toBool ();
 
   if(settings_->value ("workedDontShow").toString()=="false" || settings_->value ("workedDontShow").toString()=="true")
     next_workedDontShow_ = workedDontShow_ = settings_->value ("workedDontShow").toBool ();
   else next_workedDontShow_ = false;
 
-  next_newCQZ_ = newCQZ_ = settings_->value ("newCQZ", true).toBool ();
+  next_newCQZ_ = newCQZ_ = settings_->value ("newCQZ", false).toBool ();
   next_newCQZBand_ = newCQZBand_ = settings_->value ("newCQZBand", false).toBool ();
   next_newCQZBandMode_ = newCQZBandMode_ = settings_->value ("newCQZBandMode", false).toBool ();
-  next_newITUZ_ = newITUZ_ = settings_->value ("newITUZ", true).toBool ();
+  next_newITUZ_ = newITUZ_ = settings_->value ("newITUZ", false).toBool ();
   next_newITUZBand_ = newITUZBand_ = settings_->value ("newITUZBand", false).toBool ();
   next_newITUZBandMode_ = newITUZBandMode_ = settings_->value ("newITUZBandMode", false).toBool ();
   next_newDXCC_ = newDXCC_ = settings_->value ("newDXCC", true).toBool ();
-  next_newDXCCBand_ = newDXCCBand_ = settings_->value ("newDXCCBand", false).toBool ();
-  next_newDXCCBandMode_ = newDXCCBandMode_ = settings_->value ("newDXCCBandMode", false).toBool ();
+  next_newDXCCBand_ = newDXCCBand_ = settings_->value ("newDXCCBand", true).toBool ();
+  next_newDXCCBandMode_ = newDXCCBandMode_ = settings_->value ("newDXCCBandMode", true).toBool ();
   next_newGrid_ = newGrid_ = settings_->value ("newGrid", false).toBool ();
   next_newGridBand_ = newGridBand_ = settings_->value ("newGridBand", false).toBool ();
   next_newGridBandMode_ = newGridBandMode_ = settings_->value ("newGridBandMode", false).toBool ();
@@ -2533,11 +2533,11 @@ void Configuration::impl::read_settings ()
   next_newPxBand_ = newPxBand_ = settings_->value ("newPxBand", false).toBool ();
   next_newPxBandMode_ = newPxBandMode_ = settings_->value ("newPxBandMode", false).toBool ();
   next_newCall_ = newCall_ = settings_->value ("newCall", true).toBool ();
-  next_newCallBand_ = newCallBand_ = settings_->value ("newCallBand", false).toBool ();
-  next_newCallBandMode_ = newCallBandMode_ = settings_->value ("newCallBandMode", false).toBool ();
+  next_newCallBand_ = newCallBand_ = settings_->value ("newCallBand", true).toBool ();
+  next_newCallBandMode_ = newCallBandMode_ = settings_->value ("newCallBandMode", true).toBool ();
   next_newPotential_ = newPotential_ = settings_->value ("newPotential", false).toBool ();
   otherMessagesMarker_ = settings_->value ("OtherStandardMessagesMarker", true).toBool () && !newPotential_;
-  RR73Marker_= settings_->value ("73RR73Marker", false).toBool ();
+  RR73Marker_= settings_->value ("73RR73Marker", true).toBool ();
   on_RR73_marker_check_box_clicked(RR73Marker_);
   redMarker_ = settings_->value ("redMarker", true).toBool ();
   blueMarker_ = settings_->value ("blueMarker", false).toBool ();
@@ -2549,7 +2549,7 @@ void Configuration::impl::read_settings ()
   watchdog_ = settings_->value ("TxWatchdogTimer", 6).toInt (); if(!(watchdog_>=0 && watchdog_<=99)) watchdog_=6;
   tunetimer_ = settings_->value ("TuneTimer", 30).toInt (); if(!(tunetimer_>=0 && tunetimer_<=300)) tunetimer_=30;
   TX_messages_ = settings_->value ("Tx2QSO", true).toBool ();
-  hide_TX_messages_ = settings_->value ("HideTxMessages", false).toBool ();
+  hide_TX_messages_ = settings_->value ("HideTxMessages", true).toBool ();
   decode_at_52s_ = settings_->value("Decode52",false).toBool ();
   beepOnMyCall_ = settings_->value("BeepOnMyCall", false).toBool();
   beepOnNewCQZ_ = settings_->value("BeepOnNewCQZ", false).toBool();

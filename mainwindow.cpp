@@ -1408,7 +1408,7 @@ void MainWindow::readSettings()
   ui->actionJapanese->setText("日本語");
   set_language (m_lang);
   
-  m_callMode=m_settings->value("CallMode",2).toInt();
+  m_callMode=m_settings->value("CallMode",3).toInt();
   if(!(m_callMode>=0 && m_callMode<=3)) m_callMode=2; 
   if(m_callMode==0) ui->actionCallNone->setChecked(true);
   else if(m_callMode==1) ui->actionCallFirst->setChecked(true);
@@ -1439,26 +1439,26 @@ void MainWindow::readSettings()
 
   ui->actionHide_FT8_dupe_messages->setChecked(m_settings->value("HideFT8Dupes",true).toBool());
   ui->actionMyCallRXFwindow->setChecked(m_settings->value("ShowMyCallMessagesRxWindow",true).toBool());
-  ui->actionWantedCallRXFwindow->setChecked(m_settings->value("ShowWantedCallMessagesRxWindow",false).toBool());
+  ui->actionWantedCallRXFwindow->setChecked(m_settings->value("ShowWantedCallMessagesRxWindow",true).toBool());
 
-  m_ft8Sensitivity=m_settings->value("FT8Sensitivity",0).toInt();
+  m_ft8Sensitivity=m_settings->value("FT8Sensitivity",1).toInt();
   if(!(m_ft8Sensitivity>=0 && m_ft8Sensitivity<=2)) m_ft8Sensitivity=0;
   if(m_ft8Sensitivity==0) ui->actionFT8SensMin->setChecked(true);
   else if(m_ft8Sensitivity==1) ui->actionlowFT8thresholds->setChecked(true);
   else if(m_ft8Sensitivity==2) ui->actionFT8subpass->setChecked(true);
 
   if(m_settings->value("FT8DecoderEarlyStart").toString()!="false" && m_settings->value("FT8DecoderEarlyStart").toString()!="true") 
-    ui->actionFT8EarlyStart->setChecked(false);
+    ui->actionFT8EarlyStart->setChecked(true);
   else ui->actionFT8EarlyStart->setChecked(m_settings->value("FT8DecoderEarlyStart",false).toBool());
 
-  m_FT8WideDxCallSearch=m_settings->value("FT8WideDXCallSearch",false).toBool();
+  m_FT8WideDxCallSearch=m_settings->value("FT8WideDXCallSearch",true).toBool();
   ui->actionFT8WidebandDXCallSearch->setChecked(m_FT8WideDxCallSearch);
 
-  ui->actionBypass_text_filters_on_RX_frequency->setChecked(m_settings->value("BypassRXFreqTextFilters",false).toBool());
+  ui->actionBypass_text_filters_on_RX_frequency->setChecked(m_settings->value("BypassRXFreqTextFilters",true).toBool());
   ui->actionBypass_all_text_filters->setChecked(m_settings->value("BypassAllTextFilters",false).toBool());
   ui->actionEnable_main_window_popup->setChecked(m_settings->value("EnableMainwindowPopup",false).toBool());
   ui->actionAutoErase->setChecked(m_settings->value("AutoErase",false).toBool());
-  ui->actionEraseWindowsAtBandChange->setChecked(m_settings->value("EraseWindowsAtBandChange",false).toBool());
+  ui->actionEraseWindowsAtBandChange->setChecked(m_settings->value("EraseWindowsAtBandChange",true).toBool());
   ui->actionReport_message_priority->setChecked(m_settings->value("ReportMessagePriority",false).toBool());
 
   m_ndepth=m_settings->value("NDepth",3).toInt(); if(!(m_ndepth>=1 && m_ndepth<=3)) m_ndepth=3;
@@ -1486,7 +1486,7 @@ void MainWindow::readSettings()
   else if(m_nFT8SWLCycles==2) ui->actionDecFT8SWLcycles2->setChecked(true);
   else if(m_nFT8SWLCycles==3) ui->actionDecFT8SWLcycles3->setChecked(true);
 
-  m_nFT8RXfSens=m_settings->value("NFT8QSORXfreqSensitivity",1).toInt(); if(!(m_nFT8RXfSens>=1 && m_nFT8RXfSens<=3)) m_nFT8RXfSens=1;
+  m_nFT8RXfSens=m_settings->value("NFT8QSORXfreqSensitivity",2).toInt(); if(!(m_nFT8RXfSens>=1 && m_nFT8RXfSens<=3)) m_nFT8RXfSens=1;
   if(m_nFT8RXfSens==1) ui->actionRXfLow->setChecked(true);
   else if(m_nFT8RXfSens==2) ui->actionRXfMedium->setChecked(true);
   else if(m_nFT8RXfSens==3) ui->actionRXfHigh->setChecked(true);
@@ -1570,7 +1570,7 @@ void MainWindow::readSettings()
   m_crossbandHLOptionEnabled=m_settings->value("Crossband160mHL",true).toBool();
   ui->actionCrossband_160m_HL->setChecked(m_crossbandHLOptionEnabled);
 
-  m_autoTx=m_settings->value("QuickCall",false).toBool();
+  m_autoTx=m_settings->value("QuickCall",true).toBool();
   ui->AutoTxButton->setChecked(m_autoTx);
 
   m_autoseq=m_settings->value("AutoSequence",false).toBool();
