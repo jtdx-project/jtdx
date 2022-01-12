@@ -58,22 +58,22 @@
 <context>
     <name>Configuration::impl</name>
     <message>
-        <location filename="../Configuration.cpp" line="1370"/>
+        <location filename="../Configuration.cpp" line="1372"/>
         <source>&amp;OK</source>
         <translation>确定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1371"/>
+        <location filename="../Configuration.cpp" line="1373"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1386"/>
+        <location filename="../Configuration.cpp" line="1388"/>
         <source>Create temporary directory error: </source>
         <translation>创建临时目录错误: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1392"/>
+        <location filename="../Configuration.cpp" line="1394"/>
         <source>Create temporary directory error:
 %1
 Another application may be locking the directory</source>
@@ -82,67 +82,67 @@ Another application may be locking the directory</source>
 另一个应用程序可能正在锁定目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1409"/>
+        <location filename="../Configuration.cpp" line="1411"/>
         <source>Create data directory error: </source>
         <translation>创建数据目录错误: </translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1418"/>
-        <location filename="../Configuration.cpp" line="1429"/>
+        <location filename="../Configuration.cpp" line="1420"/>
+        <location filename="../Configuration.cpp" line="1431"/>
         <source>Create Directory</source>
         <comment>Cannot create directory &quot;</comment>
         <translation>创建数据目录错误 &quot;</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1589"/>
-        <location filename="../Configuration.cpp" line="1615"/>
-        <location filename="../Configuration.cpp" line="1667"/>
+        <location filename="../Configuration.cpp" line="1591"/>
+        <location filename="../Configuration.cpp" line="1617"/>
+        <location filename="../Configuration.cpp" line="1669"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1619"/>
-        <location filename="../Configuration.cpp" line="1671"/>
+        <location filename="../Configuration.cpp" line="1621"/>
+        <location filename="../Configuration.cpp" line="1673"/>
         <source>&amp;Insert ...</source>
         <translation>插入(&amp;I)...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1623"/>
+        <location filename="../Configuration.cpp" line="1625"/>
         <source>&amp;Load ...</source>
         <translation>加载(&amp;L) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1627"/>
+        <location filename="../Configuration.cpp" line="1629"/>
         <source>&amp;Save as ...</source>
         <translation>另存为(&amp;S) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1631"/>
+        <location filename="../Configuration.cpp" line="1633"/>
         <source>&amp;Merge ...</source>
         <translation>合并(&amp;M) ...</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="1635"/>
+        <location filename="../Configuration.cpp" line="1637"/>
         <source>&amp;Reset</source>
         <translation>重置(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2950"/>
+        <location filename="../Configuration.cpp" line="2955"/>
         <source>Serial Port:</source>
         <translation>串行端口:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2951"/>
+        <location filename="../Configuration.cpp" line="2956"/>
         <source>Serial port used for CAT control</source>
         <translation>用于CAT控制的串行端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2958"/>
+        <location filename="../Configuration.cpp" line="2963"/>
         <source>TCI Server:</source>
         <translation>TCI 服务:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2959"/>
+        <location filename="../Configuration.cpp" line="2964"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -157,12 +157,12 @@ Formats:
 	[IPv6地址]:端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2971"/>
+        <location filename="../Configuration.cpp" line="2976"/>
         <source>Network Server:</source>
         <translation>网络服务器:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2972"/>
+        <location filename="../Configuration.cpp" line="2977"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -177,12 +177,12 @@ IP v4-地址:端口
 [IPv6-地址]:端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2984"/>
+        <location filename="../Configuration.cpp" line="2989"/>
         <source>USB Device:</source>
         <translation>USB 设备:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2985"/>
+        <location filename="../Configuration.cpp" line="2990"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -193,137 +193,137 @@ Format:
 [VID[:PID[:供应商[:产品]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3020"/>
+        <location filename="../Configuration.cpp" line="3025"/>
         <source>Invalid audio input device</source>
         <translation>无效的音频输入设备</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3027"/>
+        <location filename="../Configuration.cpp" line="3032"/>
         <source>Invalid audio output device</source>
         <translation>无效的音频输出设备</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3033"/>
+        <location filename="../Configuration.cpp" line="3038"/>
         <source>Invalid PTT method</source>
         <translation>无效的PTT方法</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3043"/>
+        <location filename="../Configuration.cpp" line="3048"/>
         <source>Invalid PTT port</source>
         <translation>无效的PTT端口</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3590"/>
+        <location filename="../Configuration.cpp" line="3597"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 在信息内</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3591"/>
+        <location filename="../Configuration.cpp" line="3598"/>
         <source>CQ in message</source>
         <translation>CQ 在信息内</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4774"/>
+        <location filename="../Configuration.cpp" line="4781"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>JTDX 解码文本字体选择</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4896"/>
+        <location filename="../Configuration.cpp" line="4903"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
         <translation>输入网格错误：只接受4/6/8/10位网格</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5432"/>
-        <location filename="../Configuration.cpp" line="5463"/>
+        <location filename="../Configuration.cpp" line="5439"/>
+        <location filename="../Configuration.cpp" line="5470"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5428"/>
+        <location filename="../Configuration.cpp" line="5435"/>
         <source>Load Working Frequencies</source>
         <translation>载入工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5430"/>
-        <location filename="../Configuration.cpp" line="5461"/>
-        <location filename="../Configuration.cpp" line="5515"/>
+        <location filename="../Configuration.cpp" line="5437"/>
+        <location filename="../Configuration.cpp" line="5468"/>
+        <location filename="../Configuration.cpp" line="5522"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>频率文件 (*.qrg);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5446"/>
+        <location filename="../Configuration.cpp" line="5453"/>
         <source>Replace Working Frequencies</source>
         <translation>替换工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5447"/>
+        <location filename="../Configuration.cpp" line="5454"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>是否确实要放弃当前工作频率, 并将其替换为加载的频率?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5459"/>
+        <location filename="../Configuration.cpp" line="5466"/>
         <source>Merge Working Frequencies</source>
         <translation>合并工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5486"/>
-        <location filename="../Configuration.cpp" line="5495"/>
-        <location filename="../Configuration.cpp" line="5505"/>
+        <location filename="../Configuration.cpp" line="5493"/>
+        <location filename="../Configuration.cpp" line="5502"/>
+        <location filename="../Configuration.cpp" line="5512"/>
         <source>Not a valid frequencies file</source>
         <translation>不是有效频率文件</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5486"/>
+        <location filename="../Configuration.cpp" line="5493"/>
         <source>Incorrect file magic</source>
         <translation>不正确的文件內容</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5495"/>
+        <location filename="../Configuration.cpp" line="5502"/>
         <source>Version is too new</source>
         <translation>版本太新</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5505"/>
+        <location filename="../Configuration.cpp" line="5512"/>
         <source>Contents corrupt</source>
         <translation>内容已损坏</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5515"/>
+        <location filename="../Configuration.cpp" line="5522"/>
         <source>Save Working Frequencies</source>
         <translation>保存工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5525"/>
+        <location filename="../Configuration.cpp" line="5532"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>仅保存选定的工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5527"/>
+        <location filename="../Configuration.cpp" line="5534"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>是否确实要仅保存当前选择的工作频率? 单击 否 可保存所有.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5554"/>
+        <location filename="../Configuration.cpp" line="5561"/>
         <source>Reset Working Frequencies</source>
         <translation>重置工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5556"/>
+        <location filename="../Configuration.cpp" line="5563"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>您确定要放弃您当前的工作频率并用默认值频率替换它们吗?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5616"/>
+        <location filename="../Configuration.cpp" line="5623"/>
         <source>Save Directory</source>
         <translation>保存目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5632"/>
+        <location filename="../Configuration.cpp" line="5639"/>
         <source>Failed to open connection to rig</source>
         <translation>无法打开与无线电设备的连接</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6022"/>
+        <location filename="../Configuration.cpp" line="6029"/>
         <source>Rig failure</source>
         <translation>无线电设备故障</translation>
     </message>
@@ -2597,172 +2597,172 @@ Error: %2 - %3</source>
         <translation>参数功能范围外</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="433"/>
+        <location filename="../HamlibTransceiver.cpp" line="434"/>
         <source>Hamlib settings file error: %1 at character offset %2</source>
         <translation>Hamlib 设置文件错误: %1 字符偏移量 %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="439"/>
+        <location filename="../HamlibTransceiver.cpp" line="440"/>
         <source>Hamlib settings file error: top level must be a JSON object</source>
         <translation>Hamlib 设置文件错误: 顶层必须是 JSON 对象</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="451"/>
+        <location filename="../HamlibTransceiver.cpp" line="452"/>
         <source>Hamlib settings file error: config must be a JSON object</source>
         <translation>Hamlib 设置文件错误: 配置必须是JSON对象</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="359"/>
+        <location filename="../HamlibTransceiver.cpp" line="360"/>
         <source>Unsupported CAT type</source>
         <translation>不支持 CAT 类型</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="475"/>
+        <location filename="../HamlibTransceiver.cpp" line="476"/>
         <source>Hamlib error: %1 while %2</source>
         <translation>Hamlib 错误: %1 当 %2</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="492"/>
+        <location filename="../HamlibTransceiver.cpp" line="493"/>
         <source>opening connection to rig</source>
         <translation>打开连接无线电设备</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="554"/>
+        <location filename="../HamlibTransceiver.cpp" line="555"/>
         <source>getting current frequency</source>
         <translation>获取当前频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="563"/>
+        <location filename="../HamlibTransceiver.cpp" line="564"/>
         <source>getting current mode</source>
         <translation>获取当前模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="612"/>
-        <location filename="../HamlibTransceiver.cpp" line="647"/>
+        <location filename="../HamlibTransceiver.cpp" line="613"/>
+        <location filename="../HamlibTransceiver.cpp" line="648"/>
         <source>exchanging VFOs</source>
         <translation>在 VFOs 之间切换</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="620"/>
-        <location filename="../HamlibTransceiver.cpp" line="1176"/>
+        <location filename="../HamlibTransceiver.cpp" line="621"/>
+        <location filename="../HamlibTransceiver.cpp" line="1177"/>
         <source>getting other VFO frequency</source>
         <translation>获取其他 VFO 频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="629"/>
+        <location filename="../HamlibTransceiver.cpp" line="630"/>
         <source>getting other VFO mode</source>
         <translation>获取其他 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="657"/>
+        <location filename="../HamlibTransceiver.cpp" line="658"/>
         <source>setting current VFO</source>
         <translation>设置当前 VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="666"/>
+        <location filename="../HamlibTransceiver.cpp" line="667"/>
         <source>getting frequency</source>
         <translation>获取频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="675"/>
+        <location filename="../HamlibTransceiver.cpp" line="676"/>
         <source>getting mode</source>
         <translation>获取模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="697"/>
-        <location filename="../HamlibTransceiver.cpp" line="1091"/>
+        <location filename="../HamlibTransceiver.cpp" line="698"/>
+        <location filename="../HamlibTransceiver.cpp" line="1092"/>
         <source>getting current VFO</source>
         <translation>获取当前 VFO</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="756"/>
-        <location filename="../HamlibTransceiver.cpp" line="764"/>
-        <location filename="../HamlibTransceiver.cpp" line="778"/>
-        <location filename="../HamlibTransceiver.cpp" line="1150"/>
+        <location filename="../HamlibTransceiver.cpp" line="757"/>
+        <location filename="../HamlibTransceiver.cpp" line="765"/>
+        <location filename="../HamlibTransceiver.cpp" line="779"/>
+        <location filename="../HamlibTransceiver.cpp" line="1151"/>
         <source>getting current VFO frequency</source>
         <translation>获取当前 VFO 频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="762"/>
-        <location filename="../HamlibTransceiver.cpp" line="777"/>
-        <location filename="../HamlibTransceiver.cpp" line="784"/>
-        <location filename="../HamlibTransceiver.cpp" line="873"/>
-        <location filename="../HamlibTransceiver.cpp" line="891"/>
-        <location filename="../HamlibTransceiver.cpp" line="952"/>
+        <location filename="../HamlibTransceiver.cpp" line="763"/>
+        <location filename="../HamlibTransceiver.cpp" line="778"/>
+        <location filename="../HamlibTransceiver.cpp" line="785"/>
+        <location filename="../HamlibTransceiver.cpp" line="874"/>
+        <location filename="../HamlibTransceiver.cpp" line="892"/>
+        <location filename="../HamlibTransceiver.cpp" line="953"/>
         <source>setting frequency</source>
         <translation>设置频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="881"/>
-        <location filename="../HamlibTransceiver.cpp" line="959"/>
-        <location filename="../HamlibTransceiver.cpp" line="1031"/>
-        <location filename="../HamlibTransceiver.cpp" line="1044"/>
+        <location filename="../HamlibTransceiver.cpp" line="882"/>
+        <location filename="../HamlibTransceiver.cpp" line="960"/>
+        <location filename="../HamlibTransceiver.cpp" line="1032"/>
+        <location filename="../HamlibTransceiver.cpp" line="1045"/>
         <source>getting current VFO mode</source>
         <translation>获取当前 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="887"/>
-        <location filename="../HamlibTransceiver.cpp" line="896"/>
-        <location filename="../HamlibTransceiver.cpp" line="965"/>
-        <location filename="../HamlibTransceiver.cpp" line="1037"/>
-        <location filename="../HamlibTransceiver.cpp" line="1050"/>
+        <location filename="../HamlibTransceiver.cpp" line="888"/>
+        <location filename="../HamlibTransceiver.cpp" line="897"/>
+        <location filename="../HamlibTransceiver.cpp" line="966"/>
+        <location filename="../HamlibTransceiver.cpp" line="1038"/>
+        <location filename="../HamlibTransceiver.cpp" line="1051"/>
         <source>setting current VFO mode</source>
         <translation>设置当前 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="939"/>
-        <location filename="../HamlibTransceiver.cpp" line="1008"/>
+        <location filename="../HamlibTransceiver.cpp" line="940"/>
+        <location filename="../HamlibTransceiver.cpp" line="1009"/>
         <source>setting/unsetting split mode</source>
         <translation>设置/取消 设置异频模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="950"/>
-        <location filename="../HamlibTransceiver.cpp" line="990"/>
+        <location filename="../HamlibTransceiver.cpp" line="951"/>
+        <location filename="../HamlibTransceiver.cpp" line="991"/>
         <source>setting split mode</source>
         <translation>设置异频模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="978"/>
+        <location filename="../HamlibTransceiver.cpp" line="979"/>
         <source>setting split TX frequency and mode</source>
         <translation>设置异频发射频率和模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="983"/>
+        <location filename="../HamlibTransceiver.cpp" line="984"/>
         <source>setting split TX frequency</source>
         <translation>设置异频发射频率</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1055"/>
+        <location filename="../HamlibTransceiver.cpp" line="1056"/>
         <source>getting split TX VFO mode</source>
         <translation>获得异频发射 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1062"/>
+        <location filename="../HamlibTransceiver.cpp" line="1063"/>
         <source>setting split TX VFO mode</source>
         <translation>设置异频发射 VFO 模式</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1342"/>
+        <location filename="../HamlibTransceiver.cpp" line="1343"/>
         <source>getting PTT state</source>
         <translation>获取PTT 状态</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1378"/>
+        <location filename="../HamlibTransceiver.cpp" line="1379"/>
         <source>setting PTT on</source>
         <translation>设置PTT 开启</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1386"/>
+        <location filename="../HamlibTransceiver.cpp" line="1387"/>
         <source>setting PTT off</source>
         <translation>设置PTT 关闭</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1398"/>
+        <location filename="../HamlibTransceiver.cpp" line="1399"/>
         <source>setting a configuration item</source>
         <translation>设置配置项目</translation>
     </message>
     <message>
-        <location filename="../HamlibTransceiver.cpp" line="1408"/>
+        <location filename="../HamlibTransceiver.cpp" line="1409"/>
         <source>getting a configuration item</source>
         <translation>获取配置项目</translation>
     </message>
@@ -5320,7 +5320,7 @@ UDP 服务器 %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5381"/>
+        <location filename="../Configuration.cpp" line="5388"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -5328,184 +5328,184 @@ UDP 服务器 %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5383"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>Directory:</source>
         <translation>目录:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5384"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>File &amp;name:</source>
         <translation>文件名称(&amp;n):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5385"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>&amp;Open</source>
         <translation>打开(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5386"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Choose</source>
         <translation>选择(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5387"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>All files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>New Folder</source>
         <translation>新建文件夹</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>&amp;Rename</source>
         <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>Show &amp;hidden files</source>
         <translation>显示隐藏文件(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5402"/>
         <source>&amp;New Folder</source>
         <translation>新建文件夹(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Look in:</source>
         <translation>查看:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5397"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Files of type:</source>
         <translation>文件类型:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Go back</source>
         <translation>回去</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Forward</source>
         <translation>向前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>Go forward</source>
         <translation>前进</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Parent Directory</source>
         <translation>父目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Go to the parent directory</source>
         <translation>转到父目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>Create New Folder</source>
         <translation>创建新文件夹</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5421"/>
         <source>Create a New Folder</source>
         <translation>创建新文件夹</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>List View</source>
         <translation>列表查看</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5416"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Change to list view mode</source>
         <translation>更改为列表查看模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Detail View</source>
         <translation>详细信息查看</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Change to detail view mode</source>
         <translation>更改为详细信息查看模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5426"/>
         <source>Sidebar</source>
         <translation>侧栏</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5427"/>
         <source>List of places and bookmarks</source>
         <translation>地点和书签列表</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; 是写入保护.
 是否仍要将其删除?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>是否确实要删除 &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Could not delete directory.</source>
         <translation>无法删除目录.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5514,7 +5514,7 @@ Please verify the correct directory name was given.</source>
 请验证已给出正确的目录名称.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>Recent Places</source>
         <translation>近期的地方</translation>
     </message>
@@ -5522,22 +5522,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5422"/>
+        <location filename="../Configuration.cpp" line="5429"/>
         <source>Name</source>
         <translation>姓名</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="5430"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5424"/>
+        <location filename="../Configuration.cpp" line="5431"/>
         <source>Type</source>
         <translation>类型</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
+        <location filename="../Configuration.cpp" line="5432"/>
         <source>Date Modified</source>
         <translation>修改日期</translation>
     </message>
@@ -6595,7 +6595,7 @@ quiet period when decoding is done.</source>
     </message>
     <message>
         <location filename="../Configuration.ui" line="740"/>
-        <location filename="../Configuration.ui" line="1667"/>
+        <location filename="../Configuration.ui" line="1683"/>
         <source> s</source>
         <translation> 秒</translation>
     </message>
@@ -6636,7 +6636,7 @@ quiet period when decoding is done.</source>
     </message>
     <message>
         <location filename="../Configuration.ui" line="885"/>
-        <location filename="../Configuration.ui" line="1370"/>
+        <location filename="../Configuration.ui" line="1386"/>
         <source>Port:</source>
         <translation>端口:</translation>
     </message>
@@ -6843,42 +6843,42 @@ PTT的其它硬件接口.</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1323"/>
+        <location filename="../Configuration.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用RS-232 DTR 控制线切换无线电设备的PTT.一些商用接口单元也使用此方法.CAT串行端口的DTR控制线可用于此控制线,也可用于不同串行端口上的DTR控制线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1326"/>
+        <location filename="../Configuration.ui" line="1342"/>
         <source>&amp;DTR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1339"/>
+        <location filename="../Configuration.ui" line="1355"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果您没有无线电设备接口硬件,没法PTT而是使用无线电设备的自动声控来发射,请使用此选项.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1342"/>
+        <location filename="../Configuration.ui" line="1358"/>
         <source>VO&amp;X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1352"/>
+        <location filename="../Configuration.ui" line="1368"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用 RS-232 RTS 控制线切换无线电设备的 PTT, 需要硬件将线路整数.&lt;/p&gt;&lt;p&gt;一些商业接口单元也使用此方法.&lt;/p&gt;&lt;p&gt;CAT 串行端口的 RTS 控制线可用于此, 也可以使用其他串行端口上的 RTS 控制线.请注意, 使用硬件流控制时, 此选项在 CAT 串行端口上不可用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1355"/>
+        <location filename="../Configuration.ui" line="1371"/>
         <source>R&amp;TS</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1386"/>
+        <location filename="../Configuration.ui" line="1402"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选择用于 ptt 控制的RS-232 串行端口,当选择上述DTR或RTS作为发射方法时,此选项可用.此端口可以与用于CAT控制的端口相同.对于某些接口类型,可以选择特殊值CAT,这用于可以远程控制串口控制线的非串行CAT接口 (例如 omnirig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1417"/>
+        <location filename="../Configuration.ui" line="1433"/>
         <source>Some radios can select the audio input using a CAT command,
 this setting allows you to select which audio input will be used
 (if it is available then generally the Rear/Data option is best).</source>
@@ -6887,42 +6887,42 @@ this setting allows you to select which audio input will be used
 (如果可用,则通常 后方/数据 选项是最佳选择).</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1422"/>
+        <location filename="../Configuration.ui" line="1438"/>
         <source>Transmit Audio Source</source>
         <translation>无线电设备音频源</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1428"/>
+        <location filename="../Configuration.ui" line="1444"/>
         <source>Rear&amp;/Data</source>
         <translation>后方&amp;/数据口</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1438"/>
+        <location filename="../Configuration.ui" line="1454"/>
         <source>&amp;Front/Mic</source>
         <translation>前方/麦克风(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1461"/>
+        <location filename="../Configuration.ui" line="1477"/>
         <source>Modulation mode selected on radio.</source>
         <translation>在无线电设备上选择的调制模式.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1464"/>
+        <location filename="../Configuration.ui" line="1480"/>
         <source>Mode</source>
         <translation>模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1470"/>
+        <location filename="../Configuration.ui" line="1486"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;USB is usually the correct modulation mode,&lt;/p&gt;&lt;p&gt;unless the radio has a special data or packet mode setting&lt;/p&gt;&lt;p&gt;for AFSK operation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;上边带通常是正确的调制模式,除非无线电设备具有用于AFSK操作的特殊数据或数据包模式设置.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1473"/>
+        <location filename="../Configuration.ui" line="1489"/>
         <source>US&amp;B</source>
         <translation>上边带(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1486"/>
+        <location filename="../Configuration.ui" line="1502"/>
         <source>Don&apos;t allow the program to set the radio mode
 (not recommended but use if the wrong mode
 or bandwidth is selected).</source>
@@ -6931,48 +6931,48 @@ or bandwidth is selected).</source>
 或带宽).</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1491"/>
-        <location filename="../Configuration.ui" line="1550"/>
+        <location filename="../Configuration.ui" line="1507"/>
+        <location filename="../Configuration.ui" line="1566"/>
         <source>None</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1501"/>
+        <location filename="../Configuration.ui" line="1517"/>
         <source>If this is availabe then it is usually the correct mode for this program.</source>
         <translation>如果这是可用的那么它通常是这个程序的正确模式.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1504"/>
+        <location filename="../Configuration.ui" line="1520"/>
         <source>Data/P&amp;kt</source>
         <translation>数据/封包(&amp;k)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1524"/>
+        <location filename="../Configuration.ui" line="1540"/>
         <source>Split Operation</source>
         <translation>异频操作</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1530"/>
+        <location filename="../Configuration.ui" line="1546"/>
         <source>Fake It</source>
         <translation>虚假</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1540"/>
+        <location filename="../Configuration.ui" line="1556"/>
         <source>Rig</source>
         <translation>无线电设备</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1583"/>
+        <location filename="../Configuration.ui" line="1599"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Attempt to connect to the radio with these settings.&lt;/p&gt;&lt;p&gt;The button will turn green if the connection is successful or red if there is a problem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;尝试使用这些设置连接到无线电设备.如果连接成功,该按钮将变为绿色; 如果有问题,则为红色.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1586"/>
+        <location filename="../Configuration.ui" line="1602"/>
         <source>Test CAT</source>
         <translation>测试 CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1609"/>
+        <location filename="../Configuration.ui" line="1625"/>
         <source>Attempt to activate the transmitter.
 Click again to deactivate. Normally no power should be
 output since there is no audio being generated at this time.
@@ -6985,38 +6985,38 @@ radio interface behave as expected.</source>
 的任何发射指示是否如预期的那样.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1627"/>
+        <location filename="../Configuration.ui" line="1643"/>
         <source>Test PTT</source>
         <translation>测试 PTT</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1654"/>
-        <location filename="../Configuration.ui" line="1664"/>
+        <location filename="../Configuration.ui" line="1670"/>
+        <location filename="../Configuration.ui" line="1680"/>
         <source>Minimum delay between assertion of PTT and start of Tx audio.</source>
         <translation>在 PTT 和启动发射音频之间的最小延迟.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1657"/>
+        <location filename="../Configuration.ui" line="1673"/>
         <source>Tx delay:</source>
         <translation>发射延迟:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1714"/>
+        <location filename="../Configuration.ui" line="1730"/>
         <source>A&amp;udio</source>
         <translation>音频(&amp;u)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1717"/>
+        <location filename="../Configuration.ui" line="1733"/>
         <source>Audio interface settings</source>
         <translation>音频接口设置</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1723"/>
+        <location filename="../Configuration.ui" line="1739"/>
         <source>Soundcard</source>
         <translation>声卡</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1758"/>
+        <location filename="../Configuration.ui" line="1774"/>
         <source>Select the audio CODEC to use for transmitting.
 If this is your default device for system sounds then
 ensure that all system sounds are disabled otherwise
@@ -7029,46 +7029,46 @@ transmitting periods.</source>
 向外发射输出.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1735"/>
+        <location filename="../Configuration.ui" line="1751"/>
         <source>Select the audio CODEC to use for receiving.</source>
         <translation>选择要用于接收的音频信号.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1742"/>
+        <location filename="../Configuration.ui" line="1758"/>
         <source>&amp;Input:</source>
         <translation>输入(&amp;I):</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1769"/>
+        <location filename="../Configuration.ui" line="1785"/>
         <source>Select the channel to use for receiving.</source>
         <translation>选择要用于接收的通道.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1773"/>
-        <location filename="../Configuration.ui" line="1803"/>
+        <location filename="../Configuration.ui" line="1789"/>
+        <location filename="../Configuration.ui" line="1819"/>
         <source>Mono</source>
         <translation>单声道</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1778"/>
-        <location filename="../Configuration.ui" line="1808"/>
+        <location filename="../Configuration.ui" line="1794"/>
+        <location filename="../Configuration.ui" line="1824"/>
         <source>Left</source>
         <translation>左声道</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1783"/>
-        <location filename="../Configuration.ui" line="1813"/>
+        <location filename="../Configuration.ui" line="1799"/>
+        <location filename="../Configuration.ui" line="1829"/>
         <source>Right</source>
         <translation>右声道</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1788"/>
-        <location filename="../Configuration.ui" line="1818"/>
+        <location filename="../Configuration.ui" line="1804"/>
+        <location filename="../Configuration.ui" line="1834"/>
         <source>Both</source>
         <translation>双声道</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1796"/>
+        <location filename="../Configuration.ui" line="1812"/>
         <source>Select the audio channel used for transmission.
 Unless you have multiple radios connected on different
 channels; then you will usually want to select mono or
@@ -7079,180 +7079,180 @@ both here.</source>
 双声道.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1826"/>
+        <location filename="../Configuration.ui" line="1842"/>
         <source>Ou&amp;tput:</source>
         <translation>输出(&amp;t):</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1871"/>
+        <location filename="../Configuration.ui" line="1887"/>
         <source>Remember power settings by band and mode</source>
         <translation>记录各波段及模式的功率设置值</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1879"/>
+        <location filename="../Configuration.ui" line="1895"/>
         <source>Enable power memory during transmit</source>
         <translation>启用保存发射功率设置记录数值</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1882"/>
+        <location filename="../Configuration.ui" line="1898"/>
         <source>Transmit</source>
         <translation>发射</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1889"/>
+        <location filename="../Configuration.ui" line="1905"/>
         <source>Enable power memory during tuning</source>
         <translation>启用保存在调谐功率数值</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1892"/>
+        <location filename="../Configuration.ui" line="1908"/>
         <source>Tune</source>
         <translation>调谐</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1917"/>
+        <location filename="../Configuration.ui" line="1933"/>
         <source>Audio files save directory</source>
         <translation>声音文件保存目录</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1923"/>
+        <location filename="../Configuration.ui" line="1939"/>
         <source>Loc&amp;ation:</source>
         <translation>目录位置(&amp;a):</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1939"/>
+        <location filename="../Configuration.ui" line="1955"/>
         <source>Path to which .WAV files are saved.</source>
         <translation>.WAV 文件被保存到哪条路径.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1948"/>
+        <location filename="../Configuration.ui" line="1964"/>
         <source>TextLabel</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1955"/>
+        <location filename="../Configuration.ui" line="1971"/>
         <source>Click to select a different save directory for .WAV files.</source>
         <translation>单击选择不同的保存目录 .WAV 文件.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1958"/>
+        <location filename="../Configuration.ui" line="1974"/>
         <source>S&amp;elect</source>
         <translation>选择(&amp;e)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1989"/>
+        <location filename="../Configuration.ui" line="2005"/>
         <source>Sequencing</source>
         <translation>程序</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2013"/>
+        <location filename="../Configuration.ui" line="2029"/>
         <source>Message sequencing short scenarios</source>
         <translation>信息程序处理方案</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2021"/>
+        <location filename="../Configuration.ui" line="2037"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AutoSeq 1..3: call CQ when counter is reached. AutoSeq 6/7: search through decoded messages for any valid &apos;CQ&apos; or &apos;73&apos; message, call CQ if there no such messages found. Halt Tx if Single Shot QSO option is enabled in AutoSeq tab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;自动程序 1..3: 呼叫CQ当到达计数器时. 自动程序 6/7: 通过解码的信息搜索任何有效的&apos;CQ&apos;或&apos;73&apos; 信息,如果未找到此类信息. 如果在 &quot;自动程序&quot; 选项标签中启用了 &quot;单次通联&quot; 选项,则停止发射.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2024"/>
+        <location filename="../Configuration.ui" line="2040"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
         <translation>如果经过多少次计算. 搜索已解码的信息,呼叫CQ或终止发射:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2056"/>
-        <location filename="../Configuration.ui" line="2095"/>
-        <location filename="../Configuration.ui" line="2121"/>
-        <location filename="../Configuration.ui" line="2157"/>
+        <location filename="../Configuration.ui" line="2072"/>
+        <location filename="../Configuration.ui" line="2111"/>
+        <location filename="../Configuration.ui" line="2137"/>
+        <location filename="../Configuration.ui" line="2173"/>
         <source>times</source>
         <translation>次数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2069"/>
+        <location filename="../Configuration.ui" line="2085"/>
         <source>called CQ,  received a call and answered</source>
         <translation>主呼叫CQ, 接收别台多次重复回应</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2131"/>
+        <location filename="../Configuration.ui" line="2147"/>
         <source>sent RR73(73) answering to incoming RRR(RR73)</source>
         <translation>发送多次 RR73(73) 去回应对方 RRR(RR73)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2170"/>
+        <location filename="../Configuration.ui" line="2186"/>
         <source>answered to someone&apos;s CQ with no response</source>
         <translation>多次回应别台的CQ呼叫没有反应</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2183"/>
+        <location filename="../Configuration.ui" line="2199"/>
         <source>sent report answering to incoming report</source>
         <translation>发送信息报告去回答呼叫你的电台</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2217"/>
+        <location filename="../Configuration.ui" line="2233"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is being used for non-overlapping spectra scenario. Tx will be halted if spectra have common frequencies with no respect to this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该选项用于非堆栈频谱场景. 如果主叫台回答第三方电台, 发射将被停止&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2220"/>
+        <location filename="../Configuration.ui" line="2236"/>
         <source>Halt TX if operator I called answered to other operator</source>
         <translation>如果我呼叫的电台回应其他人则中止发射</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2227"/>
+        <location filename="../Configuration.ui" line="2243"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default autoselection ignoring received/transmitted direction of CQ if there is a valid &apos;new DXCC&apos; message decoded, either incoming call or selection from decoded CQ/73 messages. This option eliminates &apos;new DXCC&apos; exception in autoselection for directional CQ processing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选用定向CQ指定区域如AS NA AF…或前缀, 软件将忽略非指定区域或前缀的其他电台，包括新DXCC的CQ呼叫.渴望的呼号前缀，不受此定向限制..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2230"/>
+        <location filename="../Configuration.ui" line="2246"/>
         <source>Strict directional CQ operation</source>
         <translation>严格定向CQ操作</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2288"/>
+        <location filename="../Configuration.ui" line="2304"/>
         <source>Tx &amp;Macros</source>
         <translation>自定义文字(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2291"/>
+        <location filename="../Configuration.ui" line="2307"/>
         <source>Canned free text messages setup</source>
         <translation>设置自定义文字</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2297"/>
+        <location filename="../Configuration.ui" line="2313"/>
         <source>&amp;Add</source>
         <translation>增加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2304"/>
+        <location filename="../Configuration.ui" line="2320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum 13 characters for free message&lt;br&gt;&lt;br&gt;Maximum 19 characters for directional CQ standard message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;文字宏最多13个字符,定向CQ标准信息最多19个字符.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2314"/>
+        <location filename="../Configuration.ui" line="2330"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2324"/>
+        <location filename="../Configuration.ui" line="2340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag and drop items to rearrange order. Right click for item specific actions. Click, SHIFT+Click and, CRTL+Click to select items. @ symbol is being substituted with DX call, &amp; symbol with user&apos;s base callsign, # symbol with report to be transmitted, ^ symbol with correspondent&apos;s name retrieved from the log where name shall not exceed 7 chars.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;拖放项目以重新排列顺序.右键单击项目特定操作.点击,shift + 点击和,crtl + 点击选择项目.@ 符号被 dx 调用所取代,符号用用户的基本呼号、# 符号和要发射的报告.这些简化符号用于将QSO为特殊的标注.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2375"/>
+        <location filename="../Configuration.ui" line="2391"/>
         <source>Reportin&amp;g</source>
         <translation>报告(&amp;g)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2378"/>
+        <location filename="../Configuration.ui" line="2394"/>
         <source>Reporting and logging settings</source>
         <translation>设置日志和报告</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2391"/>
+        <location filename="../Configuration.ui" line="2407"/>
         <source>Logging</source>
         <translation>记录日志</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2427"/>
+        <location filename="../Configuration.ui" line="2443"/>
         <source>Some logging programs will not accept the type of reports
 saved by this program.
 Check this option to save the sent and received reports in the
@@ -7263,172 +7263,172 @@ comments field.</source>
 注释字段.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2433"/>
+        <location filename="../Configuration.ui" line="2449"/>
         <source>d&amp;B reports to comments</source>
         <translation>把d&amp;B信号报告写入备注栏</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2460"/>
+        <location filename="../Configuration.ui" line="2476"/>
         <source>Check this option to force the clearing of the DX Call
 and DX Grid fields when a 73 or free text message is sent.</source>
         <translation>选中此选项当发送73或自定义文字信息可强制清除DX呼叫
 和DX网格字段.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2464"/>
+        <location filename="../Configuration.ui" line="2480"/>
         <source>Clear &amp;DX call and grid after logging</source>
         <translation>记录完成后清除&amp;DX呼号及网格</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2440"/>
+        <location filename="../Configuration.ui" line="2456"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this option to force the clearing of the DX Call and DX Grid fields when exiting JTDX. This functionality is intended for UR5EQF logbook software users.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选中此选项可在退出JTDX时强制清除 DX呼号和DX网格字段.此功能适用于UR5EQF日志软件用户.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2443"/>
+        <location filename="../Configuration.ui" line="2459"/>
         <source>Clear DX call and grid on exit</source>
         <translation>关闭软件时清除DX呼号及网格</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2417"/>
+        <location filename="../Configuration.ui" line="2433"/>
         <source>Some logging programs will not accept JT-65 or JT9 as a recognized mode.</source>
         <translation>某些日志纪录程序将不接受 jt-65 或 jt9 作为可识别的模式.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2420"/>
+        <location filename="../Configuration.ui" line="2436"/>
         <source>Con&amp;vert mode to RTTY</source>
         <translation>把日志记录转成&amp;RTTY模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2450"/>
+        <location filename="../Configuration.ui" line="2466"/>
         <source>The program will pop up a partially completed Log QSO dialog when you send a 73 or free text message.</source>
         <translation>当您发送73或自定义文字时,程序将弹出一个部分完成的日志QSO对话框.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2453"/>
+        <location filename="../Configuration.ui" line="2469"/>
         <source>Promp&amp;t me to log QSO</source>
         <translation>提示我记录通联日志(&amp;t)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2471"/>
+        <location filename="../Configuration.ui" line="2487"/>
         <source>Enable automatic logging of QSO</source>
         <translation>启用自动记录通联日志</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2511"/>
+        <location filename="../Configuration.ui" line="2527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connection to external logbook software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;连接到外部日志软件&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2514"/>
+        <location filename="../Configuration.ui" line="2530"/>
         <source>Send logged QSO ADIF data</source>
         <translation>发送记录通联的ADIF数据</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2548"/>
         <location filename="../Configuration.ui" line="2564"/>
+        <location filename="../Configuration.ui" line="2580"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server name or address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP 服务器名称或地址&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2551"/>
+        <location filename="../Configuration.ui" line="2567"/>
         <source>TCP server:</source>
         <translation>TCP服务器地址:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2571"/>
-        <location filename="../Configuration.ui" line="2581"/>
+        <location filename="../Configuration.ui" line="2587"/>
+        <location filename="../Configuration.ui" line="2597"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP 服务器端口号码&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2574"/>
+        <location filename="../Configuration.ui" line="2590"/>
         <source>TCP port:</source>
         <translation>TCP端口:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2596"/>
+        <location filename="../Configuration.ui" line="2612"/>
         <source>Enable sending to TCP server</source>
         <translation>启用发送到TCP服务器</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2621"/>
+        <location filename="../Configuration.ui" line="2637"/>
         <source>2nd UDP server</source>
         <translation>辅助UDP服务器地址</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2635"/>
-        <location filename="../Configuration.ui" line="2645"/>
+        <location filename="../Configuration.ui" line="2651"/>
+        <location filename="../Configuration.ui" line="2661"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;secondary UDP server port number&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;辅助 UDP 服务器端口号码&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2638"/>
+        <location filename="../Configuration.ui" line="2654"/>
         <source>UDP port:</source>
         <translation>辅助UDP服务器端口:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2654"/>
+        <location filename="../Configuration.ui" line="2670"/>
         <source>Enable sending to secondary UDP server</source>
         <translation>启用辅助UDP服务器</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2687"/>
+        <location filename="../Configuration.ui" line="2703"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to configure data for recording into the ALL.TXT file. Recording of TX messages can not be switched off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允许设置要的数据纪录到ALL.txt 文件中.无法关闭发射信息的纪录&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2690"/>
+        <location filename="../Configuration.ui" line="2706"/>
         <source>Recording to ALL.TXT</source>
         <translation>记录至ALL.TXT</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2712"/>
+        <location filename="../Configuration.ui" line="2728"/>
         <source>decoded messages</source>
         <translation>已解码信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2719"/>
+        <location filename="../Configuration.ui" line="2735"/>
         <source>decoded and debug messages</source>
         <translation>已解码及除错信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2761"/>
+        <location filename="../Configuration.ui" line="2777"/>
         <source>Network Services</source>
         <translation>网络服务</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2782"/>
+        <location filename="../Configuration.ui" line="2798"/>
         <source>The program can send logged QSO info to the http://www.eqsl.cc web site.</source>
         <translation>程序可以将通联日志纪录发送到 http://www.eqsl.cc 网站.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2785"/>
+        <location filename="../Configuration.ui" line="2801"/>
         <source>Enable &amp;eQSL sending</source>
         <translation>启用上传&amp;eQSL网站(填写以下3项后才可以勾选)</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2805"/>
+        <location filename="../Configuration.ui" line="2821"/>
         <source>EQSL Username.</source>
         <translation>EQSL用户名称.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2812"/>
+        <location filename="../Configuration.ui" line="2828"/>
         <source>U&amp;sername:</source>
         <translation>用户名称(&amp;s):</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2822"/>
+        <location filename="../Configuration.ui" line="2838"/>
         <source>P&amp;assword:</source>
         <translation>密码(&amp;a):</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2832"/>
+        <location filename="../Configuration.ui" line="2848"/>
         <source>EQSL Password.</source>
         <translation>EQSL密码.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2842"/>
+        <location filename="../Configuration.ui" line="2858"/>
         <source>The program can send your station details and all
 decoded signals as spots to the http://pskreporter.info web site.
 This is used for reverse beacon analysis which is very useful
@@ -7439,265 +7439,265 @@ for assessing propagation and system performance.</source>
 用于评估传播和系统性能.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2848"/>
+        <location filename="../Configuration.ui" line="2864"/>
         <source>Enable &amp;PSK Reporter Spotting</source>
         <translation>启用&amp;PSK Reporter Spotting</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2855"/>
+        <location filename="../Configuration.ui" line="2871"/>
         <source>EQSL OTH Nickname.</source>
         <translation>EQSL QTH 昵称.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2862"/>
+        <location filename="../Configuration.ui" line="2878"/>
         <source>Enable DXSummit Spotting </source>
         <translation>启用DXSummit Spotting </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2869"/>
+        <location filename="../Configuration.ui" line="2885"/>
         <source>QTH N&amp;ickname:</source>
         <translation>&amp;QTH 昵称:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2882"/>
+        <location filename="../Configuration.ui" line="2898"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Primary UDP connection to external software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;与外部软件的主要 UDP 连接.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2885"/>
+        <location filename="../Configuration.ui" line="2901"/>
         <source>Primary UDP Server</source>
         <translation>主要UDP服务器</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2915"/>
+        <location filename="../Configuration.ui" line="2931"/>
         <source>UDP Server:</source>
         <translation>主要UDP服务器地址:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2931"/>
+        <location filename="../Configuration.ui" line="2947"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Optional hostname of network service to receive decodes.&lt;/p&gt;&lt;p&gt;Formats:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;hostname&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 multicast group address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 multicast group address&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Clearing this field will disable the broadcasting of UDP status updates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收解码的网络服务的可选主机名称.&lt;/p&gt;&lt;p&gt;格式:&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;主机名称&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 address&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 地址&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4多点传送组地址&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv6 多点传送组地址&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;清除此字段将禁用UDP状态更新的广播.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2941"/>
+        <location filename="../Configuration.ui" line="2957"/>
         <source>UDP Server port number:</source>
         <translation>主要UDP服务器端口:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2971"/>
+        <location filename="../Configuration.ui" line="2987"/>
         <source>Accept UDP requests</source>
         <translation>接受UDP请求</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2978"/>
+        <location filename="../Configuration.ui" line="2994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate acceptance of an incoming UDP request. The effect of this option varies depending on the operating system and window manager, its intent is to notify the acceptance of an incoming UDP request even if this application is minimized or hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;指示接受传入的 UDP 请求.此选项的效果因操作系统和窗口管理器而异,其目的是通知接受传入的 UDP 请求,即使此应用程序最小化或隐藏&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2981"/>
+        <location filename="../Configuration.ui" line="2997"/>
         <source>Notify on accepted UDP request</source>
         <translation>在接受UDP的请求时通知</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2988"/>
+        <location filename="../Configuration.ui" line="3004"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restore the window from minimized if an UDP request is accepted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果接受 UDP 请求,则从最小化还原窗口.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2991"/>
+        <location filename="../Configuration.ui" line="3007"/>
         <source>Accepted UDP request restores window</source>
         <translation>接受UDP请求还原窗口</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3002"/>
+        <location filename="../Configuration.ui" line="3018"/>
         <source>Enable sending logged QSO ADIF data</source>
         <translation>启用发送通联纪录的ADIF数据</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3012"/>
+        <location filename="../Configuration.ui" line="3028"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages marked by questionmark will not be passed to JTAlert and other UDP based software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;标记了问号的信息不会传递给 jtalert 和其他基于 UDP 的软件&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3015"/>
+        <location filename="../Configuration.ui" line="3031"/>
         <source>Prevent spotting messages with the unconfirmed callsigns via UDP</source>
         <translation>防止通过一些未确认的呼号通过UDP发送出去</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3022"/>
+        <location filename="../Configuration.ui" line="3038"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selected text filters will be applied to limit transmission of the UDP messages from JTDX, for instance messages from some continents can be blocked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将应用选定的文本筛选器来限制来自 JTDX 的 UDP 信息的传输, 例如, 某些大洲的信息可能会被阻止.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3025"/>
+        <location filename="../Configuration.ui" line="3041"/>
         <source>Apply text filters to transmission of the UDP messages</source>
         <translation>启用信息过滤器来防止某些个人的信息经UDP传出</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3060"/>
+        <location filename="../Configuration.ui" line="3076"/>
         <source>Frequencies</source>
         <translation>频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3063"/>
+        <location filename="../Configuration.ui" line="3079"/>
         <source>Default frequencies and band specific station details setup</source>
         <translation>设置默认值频率和带宽点特定的无线电设备详细信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3069"/>
+        <location filename="../Configuration.ui" line="3085"/>
         <source>Working Frequencies</source>
         <translation>工作频率</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3084"/>
+        <location filename="../Configuration.ui" line="3100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Right click to maintain the working frequencies list. Reset option allows to bring frequency list back to the default values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;右键点击一下以维护工作频率清单. 重置选项允许将频率清单恢复到预设值.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3681"/>
+        <location filename="../Configuration.ui" line="3697"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide hint character in marker field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在标记字段中隐藏提示字符.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3684"/>
+        <location filename="../Configuration.ui" line="3700"/>
         <source>Hide hint char</source>
         <translation>隐藏提示字符</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5167"/>
+        <location filename="../Configuration.ui" line="5183"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3111"/>
+        <location filename="../Configuration.ui" line="3127"/>
         <source>See WSPR documentattion Appendix C for details of how to determine these factors for your radio.</source>
         <translation>有关如何为您的无线电设备确定这些因素的详细信息,请参阅 WSPR 文件附录C.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3114"/>
+        <location filename="../Configuration.ui" line="3130"/>
         <source>Frequency Calibration</source>
         <translation>频率校准</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3123"/>
+        <location filename="../Configuration.ui" line="3139"/>
         <source>Intercept:</source>
         <translation>拦截:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3136"/>
-        <location filename="../Configuration.ui" line="6907"/>
+        <location filename="../Configuration.ui" line="3152"/>
+        <location filename="../Configuration.ui" line="6923"/>
         <source> Hz</source>
         <translation> 赫兹</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3155"/>
+        <location filename="../Configuration.ui" line="3171"/>
         <source>Slope:</source>
         <translation>倾斜率:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3168"/>
+        <location filename="../Configuration.ui" line="3184"/>
         <source> ppm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3211"/>
+        <location filename="../Configuration.ui" line="3227"/>
         <source>Station Information</source>
         <translation>电台信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3223"/>
+        <location filename="../Configuration.ui" line="3239"/>
         <source>Items may be edited.
 Right click for insert and delete options.</source>
         <translation>项目可以编辑.
 右键单击插入和删除选项.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3271"/>
+        <location filename="../Configuration.ui" line="3287"/>
         <source>Notifications</source>
         <translation>显示通知</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3279"/>
+        <location filename="../Configuration.ui" line="3295"/>
         <source>&apos;New one&apos; and &apos;worked B4&apos; status notifications</source>
         <translation>&apos;新的&apos; 和 &apos;曾经通联&apos; 状态通知</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3305"/>
+        <location filename="../Configuration.ui" line="3321"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的CQ区域信息当wsjtx_log.adi日志文件中不存在的CQ区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3308"/>
+        <location filename="../Configuration.ui" line="3324"/>
         <source>Check and highlight new CQZ</source>
         <translation>突出显示新CQ区域</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3315"/>
+        <location filename="../Configuration.ui" line="3331"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的CQ区域信息当wsjtx_log.adi日志文件中不存在的CQ区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3325"/>
+        <location filename="../Configuration.ui" line="3341"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with CQ Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的CQ区域信息当wsjtx_log.adi日志文件中不存在的CQ区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3345"/>
+        <location filename="../Configuration.ui" line="3361"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的ITU区域信息当wsjtx_log.adi日志文件中不存在的ITU区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3348"/>
+        <location filename="../Configuration.ui" line="3364"/>
         <source>Check and highlight new ITUZ</source>
         <translation>突出显示新ITU区域</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3355"/>
+        <location filename="../Configuration.ui" line="3371"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的ITU区域信息当wsjtx_log.adi日志文件中不存在的ITU区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3365"/>
+        <location filename="../Configuration.ui" line="3381"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with ITU Zones which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的ITU区域信息当wsjtx_log.adi日志文件中不存在的ITU区域.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3385"/>
+        <location filename="../Configuration.ui" line="3401"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的DXCC信息当wsjtx_log.adi日志文件中不存在的DXCC.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3388"/>
+        <location filename="../Configuration.ui" line="3404"/>
         <source>Check and highlight new DXCC</source>
         <translation>突出显示新DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3395"/>
+        <location filename="../Configuration.ui" line="3411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的DXCC信息当wsjtx_log.adi日志文件中不存在的DXCC.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3318"/>
-        <location filename="../Configuration.ui" line="3358"/>
-        <location filename="../Configuration.ui" line="3398"/>
-        <location filename="../Configuration.ui" line="3438"/>
-        <location filename="../Configuration.ui" line="3478"/>
-        <location filename="../Configuration.ui" line="3518"/>
+        <location filename="../Configuration.ui" line="3334"/>
+        <location filename="../Configuration.ui" line="3374"/>
+        <location filename="../Configuration.ui" line="3414"/>
+        <location filename="../Configuration.ui" line="3454"/>
+        <location filename="../Configuration.ui" line="3494"/>
+        <location filename="../Configuration.ui" line="3534"/>
         <source>per band</source>
         <translation>每波段</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3405"/>
+        <location filename="../Configuration.ui" line="3421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with DXCC countries which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的DXCC信息当wsjtx_log.adi日志文件中不存在的DXCC.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3328"/>
-        <location filename="../Configuration.ui" line="3368"/>
-        <location filename="../Configuration.ui" line="3408"/>
-        <location filename="../Configuration.ui" line="3448"/>
-        <location filename="../Configuration.ui" line="3488"/>
-        <location filename="../Configuration.ui" line="3528"/>
+        <location filename="../Configuration.ui" line="3344"/>
+        <location filename="../Configuration.ui" line="3384"/>
+        <location filename="../Configuration.ui" line="3424"/>
+        <location filename="../Configuration.ui" line="3464"/>
+        <location filename="../Configuration.ui" line="3504"/>
+        <location filename="../Configuration.ui" line="3544"/>
         <source>per mode</source>
         <translation>每模式</translation>
     </message>
@@ -7762,477 +7762,487 @@ Right click for insert and delete options.</source>
         <translation>关闭设备电源</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1836"/>
+        <location filename="../Configuration.ui" line="1329"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1332"/>
+        <source>Share PTT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1852"/>
         <source>refresh audio device list</source>
         <translation>刷新音频设备列表</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1839"/>
+        <location filename="../Configuration.ui" line="1855"/>
         <source>Refresh</source>
         <translation>刷新</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1852"/>
+        <location filename="../Configuration.ui" line="1868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use TCI Audio when available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果可用时,则使用TCI音频。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1855"/>
+        <location filename="../Configuration.ui" line="1871"/>
         <source>Use TCI Audio</source>
         <translation>使用 TCI 音频</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2478"/>
+        <location filename="../Configuration.ui" line="2494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add distance to correspondent to comments in ADIF QSO record.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在ADIF 通联纪录的备注中添加与对方电台的距离.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2481"/>
+        <location filename="../Configuration.ui" line="2497"/>
         <source>Distance to comments</source>
         <translation>把距离信息写入备注栏</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2951"/>
+        <location filename="../Configuration.ui" line="2967"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the service port number of the UDP server that JTDX should send updates to. If this is zero no updates will be broadcast.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;输入 WSJT-X 应向其发送更新的 UDP 服务器的服务端口号.如果为零,则不会广播更新&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="2968"/>
+        <location filename="../Configuration.ui" line="2984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this enabled JTDX will accept certain requests back from a UDP server that receives decode messages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用此功能后,WSJT-X 将接受来自接收解码信息的 UDP 服务器的某些请求&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3335"/>
-        <location filename="../Configuration.ui" line="3375"/>
-        <location filename="../Configuration.ui" line="3415"/>
-        <location filename="../Configuration.ui" line="3455"/>
-        <location filename="../Configuration.ui" line="3495"/>
-        <location filename="../Configuration.ui" line="3535"/>
+        <location filename="../Configuration.ui" line="3351"/>
+        <location filename="../Configuration.ui" line="3391"/>
+        <location filename="../Configuration.ui" line="3431"/>
+        <location filename="../Configuration.ui" line="3471"/>
+        <location filename="../Configuration.ui" line="3511"/>
+        <location filename="../Configuration.ui" line="3551"/>
         <source>Use also system sound for the notification.</source>
         <translation>使用系统声音进行通知.</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3338"/>
-        <location filename="../Configuration.ui" line="3378"/>
-        <location filename="../Configuration.ui" line="3418"/>
-        <location filename="../Configuration.ui" line="3458"/>
-        <location filename="../Configuration.ui" line="3498"/>
-        <location filename="../Configuration.ui" line="3538"/>
+        <location filename="../Configuration.ui" line="3354"/>
+        <location filename="../Configuration.ui" line="3394"/>
+        <location filename="../Configuration.ui" line="3434"/>
+        <location filename="../Configuration.ui" line="3474"/>
+        <location filename="../Configuration.ui" line="3514"/>
+        <location filename="../Configuration.ui" line="3554"/>
         <source>Beep as well</source>
         <translation>发出哔声</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3425"/>
+        <location filename="../Configuration.ui" line="3441"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的网格信息当wsjtx_log.adi日志文件中不存在的网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3428"/>
+        <location filename="../Configuration.ui" line="3444"/>
         <source>Check and highlight new grids</source>
         <translation>突出显示新网格</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3435"/>
+        <location filename="../Configuration.ui" line="3451"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的网格信息当wsjtx_log.adi日志文件中不存在的网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3445"/>
+        <location filename="../Configuration.ui" line="3461"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with grid squares which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的网格信息当wsjtx_log.adi日志文件中不存在的网格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3465"/>
+        <location filename="../Configuration.ui" line="3481"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的前缀信息当wsjtx_log.adi日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3468"/>
+        <location filename="../Configuration.ui" line="3484"/>
         <source>Check and highlight new prefixes</source>
         <translation>突出显示新前缀</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3475"/>
+        <location filename="../Configuration.ui" line="3491"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的前缀信息当wsjtx_log.adi日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3485"/>
+        <location filename="../Configuration.ui" line="3501"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with prefixes which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的前缀信息当wsjtx_log.adi日志文件中不存在的前缀.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3505"/>
+        <location filename="../Configuration.ui" line="3521"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which do not exist in the wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示具有新的呼号信息当wsjtx_log.adi日志文件中不存在的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3508"/>
+        <location filename="../Configuration.ui" line="3524"/>
         <source>Check and highlight new calls</source>
         <translation>突出显示新呼号</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3515"/>
+        <location filename="../Configuration.ui" line="3531"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new on the band according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在波段中具有新的呼号信息当wsjtx_log.adi日志文件中不存在的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3525"/>
+        <location filename="../Configuration.ui" line="3541"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight messages with callsigns which are new in the mode according to the data from wsjtx_log.adi log file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示在模式中具有新的呼号信息当wsjtx_log.adi日志文件中不存在的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3545"/>
+        <location filename="../Configuration.ui" line="3561"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use color notification for messages with the worked DXCC, Grid, Call.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用颜色显示曾经通联的 DXCC, 网格, 呼号的信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3548"/>
+        <location filename="../Configuration.ui" line="3564"/>
         <source>Highlight worked ones</source>
         <translation>突出显示曾经通联</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3555"/>
+        <location filename="../Configuration.ui" line="3571"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be striked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的DXCC网格, 呼叫的信息将带有删除线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3558"/>
+        <location filename="../Configuration.ui" line="3574"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked Call will be striked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的呼号与信息将将带有删除线&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3561"/>
+        <location filename="../Configuration.ui" line="3577"/>
         <source>strike it</source>
         <translation>删除线</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3568"/>
+        <location filename="../Configuration.ui" line="3584"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call will be underlined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;曾经通联的DXCC网格, 呼叫的信息将带有下划线.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3571"/>
+        <location filename="../Configuration.ui" line="3587"/>
         <source>underline it</source>
         <translation>下划线</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3578"/>
+        <location filename="../Configuration.ui" line="3594"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Messages with worked DXCC, Grid, Call where there is no MyCall will be skipped in the decoded text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解码窗口中没有我呼号的信息, 并隐藏已曾经通联的DXCC, 网格的信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3581"/>
+        <location filename="../Configuration.ui" line="3597"/>
         <source>don&apos;t show it</source>
         <translation>隐藏不显示</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3588"/>
+        <location filename="../Configuration.ui" line="3604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Invert text&lt;-&gt;background color for received messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将文本 &lt;-&gt; 接收到的信息背景色反转&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3591"/>
+        <location filename="../Configuration.ui" line="3607"/>
         <source>Inverse text/background color</source>
         <translation>反转 文本/背景 颜色</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3598"/>
+        <location filename="../Configuration.ui" line="3614"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default &apos;CQ&apos; and &apos;MyCall&apos; messages being only checked, this setting allows to check also other received standard messages for new DXCC, Grid, Call. &apos;Other standard message&apos; color being used for the notification&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默认值情况下只检查 &apos;CQ&apos; 和  &apos;我的呼号&apos; 信息, 此设置还允许检查其他接收到的新 DXCC, 网格, 调用的标准信息. 通知中使用的 &apos;其他标准信息&apos; 颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3601"/>
+        <location filename="../Configuration.ui" line="3617"/>
         <source>Highlight other standard messages</source>
         <translation>突出显示其他标准信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3621"/>
+        <location filename="../Configuration.ui" line="3637"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification as soon as the first message is decoded in the RX interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在接收间隔内解码第一条信息后, 立即使用系统声音进行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3624"/>
+        <location filename="../Configuration.ui" line="3640"/>
         <source>Beep on 1st decoded message</source>
         <translation>第一解码信息发出哔声</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3631"/>
+        <location filename="../Configuration.ui" line="3647"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use system sound for notification if there is MyCall in the received message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果收到的信息中有我的呼号,使用系统声音进行通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3634"/>
+        <location filename="../Configuration.ui" line="3650"/>
         <source>Beep on my call</source>
         <translation>有我呼号发出哔声</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3664"/>
+        <location filename="../Configuration.ui" line="3680"/>
         <source>Markers</source>
         <translation>末端标记</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3671"/>
+        <location filename="../Configuration.ui" line="3687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use blue marker to notify if there is my callsign in the decoded message related to the ongoing QSO (QSO party&apos;s callsign is in the DX Call window), other incoming calls with my callsign will be followed with the red marker.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用蓝色标记通知已解码的信息中是否有与正在进行通联的相关呼号 (通联的呼号在DX窗口中),带有我的呼号的其他传入呼叫将跟随红色标记.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3674"/>
+        <location filename="../Configuration.ui" line="3690"/>
         <source>blue / my call at QSO</source>
         <translation>蓝色/正与我通联</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3720"/>
+        <location filename="../Configuration.ui" line="3736"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use red marker to notify if there is my callsign in the decoded message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用红色标记通知已解码的信息中有我的呼号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3723"/>
+        <location filename="../Configuration.ui" line="3739"/>
         <source>red / my call in message</source>
         <translation>红色/信息中有我呼号</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3733"/>
+        <location filename="../Configuration.ui" line="3749"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use marker at end of message instead of background color to other standard message notification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;所有其他信息末端标记.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3736"/>
+        <location filename="../Configuration.ui" line="3752"/>
         <source>Other standard messages</source>
         <translation>其他标准信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3779"/>
+        <location filename="../Configuration.ui" line="3795"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On top of the preview pane there are types of message that being checked for some criterion, text color being selected for each  type of message.&lt;br&gt;&lt;br&gt;On left side there are criteria allocated in the hierarchy order, and background color being selected for messages for each criterion.&lt;br&gt;&lt;br&gt;&apos;Worked one&apos; notification functionality is based on the residual principle, triggered if all activated &apos;New one&apos; criteria or criterion are not met.&lt;br&gt;&lt;br&gt;&apos;Inverse color&apos; may be used if user would like to highlight CQ and &apos;MyCall&apos; messages by some specific backgroung color.&lt;br&gt;&lt;br&gt;For beginning one criterion can be chose and for new band/mode notifications may be used similar color with the different saturation level, later number of required criteria can be increased.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在预览窗格的顶部有正在检查某些条件的信息类型,为每种类型的信息选择文本颜色.&lt;br&gt;&lt;br&gt;左侧按层次结构顺序分配了条件,并为每个条件的信息选择了背景色.&lt;br&gt;&lt;br&gt;&quot;曾经通联&quot; 通知功能基于剩余原则,如果不符合所有激活的 &quot;新&quot; 标准或条件,则触发.&lt;br&gt;&lt;br&gt;如果用户希望通过某些特定的背景颜色突出显示CQ和 &quot;我的呼号&quot; 信息,则可以使用 &quot;反向颜色&quot;.&lt;br&gt;&lt;br&gt;对于开始,可以选择一个标准,对于新的波段/模式通知,可以使用不同饱和度水平的类似颜色,以后可以增加所需的标准的数量.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3782"/>
-        <location filename="../Configuration.ui" line="6972"/>
+        <location filename="../Configuration.ui" line="3798"/>
+        <location filename="../Configuration.ui" line="6988"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuration tips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;配置提示&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3830"/>
+        <location filename="../Configuration.ui" line="3846"/>
         <source>Transmitted message</source>
         <translation>正在发射的信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3846"/>
-        <location filename="../Configuration.ui" line="3929"/>
-        <location filename="../Configuration.ui" line="3951"/>
-        <location filename="../Configuration.ui" line="3973"/>
-        <location filename="../Configuration.ui" line="4005"/>
-        <location filename="../Configuration.ui" line="4024"/>
-        <location filename="../Configuration.ui" line="4043"/>
-        <location filename="../Configuration.ui" line="4075"/>
-        <location filename="../Configuration.ui" line="4094"/>
-        <location filename="../Configuration.ui" line="4113"/>
-        <location filename="../Configuration.ui" line="4145"/>
-        <location filename="../Configuration.ui" line="4164"/>
-        <location filename="../Configuration.ui" line="4183"/>
-        <location filename="../Configuration.ui" line="4215"/>
-        <location filename="../Configuration.ui" line="4234"/>
-        <location filename="../Configuration.ui" line="4253"/>
-        <location filename="../Configuration.ui" line="4285"/>
-        <location filename="../Configuration.ui" line="4304"/>
-        <location filename="../Configuration.ui" line="4323"/>
-        <location filename="../Configuration.ui" line="4355"/>
-        <location filename="../Configuration.ui" line="4374"/>
-        <location filename="../Configuration.ui" line="4393"/>
-        <location filename="../Configuration.ui" line="4425"/>
-        <location filename="../Configuration.ui" line="4444"/>
-        <location filename="../Configuration.ui" line="4463"/>
-        <location filename="../Configuration.ui" line="4495"/>
-        <location filename="../Configuration.ui" line="4514"/>
-        <location filename="../Configuration.ui" line="4533"/>
-        <location filename="../Configuration.ui" line="4565"/>
-        <location filename="../Configuration.ui" line="4584"/>
-        <location filename="../Configuration.ui" line="4603"/>
-        <location filename="../Configuration.ui" line="4635"/>
-        <location filename="../Configuration.ui" line="4654"/>
-        <location filename="../Configuration.ui" line="4673"/>
-        <location filename="../Configuration.ui" line="4705"/>
-        <location filename="../Configuration.ui" line="4724"/>
-        <location filename="../Configuration.ui" line="4743"/>
-        <location filename="../Configuration.ui" line="4775"/>
-        <location filename="../Configuration.ui" line="4794"/>
-        <location filename="../Configuration.ui" line="4813"/>
-        <location filename="../Configuration.ui" line="4848"/>
-        <location filename="../Configuration.ui" line="4867"/>
-        <location filename="../Configuration.ui" line="4886"/>
+        <location filename="../Configuration.ui" line="3862"/>
+        <location filename="../Configuration.ui" line="3945"/>
+        <location filename="../Configuration.ui" line="3967"/>
+        <location filename="../Configuration.ui" line="3989"/>
+        <location filename="../Configuration.ui" line="4021"/>
+        <location filename="../Configuration.ui" line="4040"/>
+        <location filename="../Configuration.ui" line="4059"/>
+        <location filename="../Configuration.ui" line="4091"/>
+        <location filename="../Configuration.ui" line="4110"/>
+        <location filename="../Configuration.ui" line="4129"/>
+        <location filename="../Configuration.ui" line="4161"/>
+        <location filename="../Configuration.ui" line="4180"/>
+        <location filename="../Configuration.ui" line="4199"/>
+        <location filename="../Configuration.ui" line="4231"/>
+        <location filename="../Configuration.ui" line="4250"/>
+        <location filename="../Configuration.ui" line="4269"/>
+        <location filename="../Configuration.ui" line="4301"/>
+        <location filename="../Configuration.ui" line="4320"/>
+        <location filename="../Configuration.ui" line="4339"/>
+        <location filename="../Configuration.ui" line="4371"/>
+        <location filename="../Configuration.ui" line="4390"/>
+        <location filename="../Configuration.ui" line="4409"/>
+        <location filename="../Configuration.ui" line="4441"/>
+        <location filename="../Configuration.ui" line="4460"/>
+        <location filename="../Configuration.ui" line="4479"/>
+        <location filename="../Configuration.ui" line="4511"/>
+        <location filename="../Configuration.ui" line="4530"/>
+        <location filename="../Configuration.ui" line="4549"/>
+        <location filename="../Configuration.ui" line="4581"/>
+        <location filename="../Configuration.ui" line="4600"/>
+        <location filename="../Configuration.ui" line="4619"/>
+        <location filename="../Configuration.ui" line="4651"/>
+        <location filename="../Configuration.ui" line="4670"/>
+        <location filename="../Configuration.ui" line="4689"/>
+        <location filename="../Configuration.ui" line="4721"/>
+        <location filename="../Configuration.ui" line="4740"/>
+        <location filename="../Configuration.ui" line="4759"/>
+        <location filename="../Configuration.ui" line="4791"/>
+        <location filename="../Configuration.ui" line="4810"/>
+        <location filename="../Configuration.ui" line="4829"/>
+        <location filename="../Configuration.ui" line="4864"/>
+        <location filename="../Configuration.ui" line="4883"/>
+        <location filename="../Configuration.ui" line="4902"/>
         <source>K1ABC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3862"/>
+        <location filename="../Configuration.ui" line="3878"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Treat RR73/73 messages in the same way as CQ messages for auto selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;以与 CQ 信息相同的方式处理 RR73/73 信息, 以便自动选择.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3868"/>
+        <location filename="../Configuration.ui" line="3884"/>
         <source>RR73/73           </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3881"/>
+        <location filename="../Configuration.ui" line="3897"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 在信息内</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3894"/>
+        <location filename="../Configuration.ui" line="3910"/>
         <source>My Call in message</source>
         <translation>我呼号在信息内</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3907"/>
+        <location filename="../Configuration.ui" line="3923"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set text color for non (&apos;CQ&apos; and &apos;MyCall&apos;) standard messages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;为非 (&apos;CQ&apos; 和 &apos;我呼号&apos;) 标准信息设置文本颜色&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3910"/>
+        <location filename="../Configuration.ui" line="3926"/>
         <source>Other standard message</source>
         <translation>其他标准信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="3989"/>
+        <location filename="../Configuration.ui" line="4005"/>
         <source>New CQZ</source>
         <translation>新CQ区域</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4059"/>
+        <location filename="../Configuration.ui" line="4075"/>
         <source>New CQZ on Band/Mode</source>
         <translation>新CQ区域 波段/模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4129"/>
+        <location filename="../Configuration.ui" line="4145"/>
         <source>New ITUZ</source>
         <translation>新ITU地区</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4199"/>
+        <location filename="../Configuration.ui" line="4215"/>
         <source>New ITUZ on Band/Mode</source>
         <translation>新ITU地区 波段/模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4269"/>
+        <location filename="../Configuration.ui" line="4285"/>
         <source>New DXCC</source>
         <translation>新DXCC</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4339"/>
+        <location filename="../Configuration.ui" line="4355"/>
         <source>New DXCC on Band/Mode</source>
         <translation>新DXCC 波段/模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4409"/>
+        <location filename="../Configuration.ui" line="4425"/>
         <source>New Grid</source>
         <translation>新网格</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4479"/>
+        <location filename="../Configuration.ui" line="4495"/>
         <source>New Grid on Band/Mode</source>
         <translation>新网格 波段/模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4549"/>
+        <location filename="../Configuration.ui" line="4565"/>
         <source>New Prefix</source>
         <translation>新前缀</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4619"/>
+        <location filename="../Configuration.ui" line="4635"/>
         <source>New Prefix on Band/Mode</source>
         <translation>新前缀 波段/模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4689"/>
+        <location filename="../Configuration.ui" line="4705"/>
         <source>New Call</source>
         <translation>新呼号</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4759"/>
+        <location filename="../Configuration.ui" line="4775"/>
         <source>New Call on Band/Mode</source>
         <translation>新呼号 波段/模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4829"/>
+        <location filename="../Configuration.ui" line="4845"/>
         <source>Being used for CQ and MyCall messages only</source>
         <translation>仅用于CQ和我呼号信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4832"/>
+        <location filename="../Configuration.ui" line="4848"/>
         <source>Worked one</source>
         <translation>曾经通联</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4929"/>
+        <location filename="../Configuration.ui" line="4945"/>
         <source>Filters</source>
         <translation>过滤</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4940"/>
+        <location filename="../Configuration.ui" line="4956"/>
         <source>Hide messages from continents</source>
         <translation>隐藏来自大洲的信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4952"/>
+        <location filename="../Configuration.ui" line="4968"/>
         <source>Africa</source>
         <translation>非洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4959"/>
+        <location filename="../Configuration.ui" line="4975"/>
         <source>Antarctica</source>
         <translation>南极洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4966"/>
+        <location filename="../Configuration.ui" line="4982"/>
         <source>Asia</source>
         <translation>亚洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4973"/>
+        <location filename="../Configuration.ui" line="4989"/>
         <source>Europe</source>
         <translation>欧洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4980"/>
+        <location filename="../Configuration.ui" line="4996"/>
         <source>Oceania</source>
         <translation>大洋洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4987"/>
+        <location filename="../Configuration.ui" line="5003"/>
         <source>North America</source>
         <translation>北美洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="4994"/>
+        <location filename="../Configuration.ui" line="5010"/>
         <source>South America</source>
         <translation>南美洲</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5004"/>
+        <location filename="../Configuration.ui" line="5020"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;Show DXCC name/prefix&apos; shall be activated in General tab of the settings or any &apos;New one&apos; notification to get this functionality working.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&apos;显示DXCC名称/前缀&apos; 应在设置的常规选项卡或任何 &apos;新的&apos; 使该功能正常工作的通知.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5007"/>
+        <location filename="../Configuration.ui" line="5023"/>
         <source>Hide messages from countries</source>
         <translation>隐藏来自某些国家的信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5027"/>
-        <location filename="../Configuration.ui" line="5092"/>
+        <location filename="../Configuration.ui" line="5043"/>
+        <location filename="../Configuration.ui" line="5108"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable option&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用选项&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5030"/>
-        <location filename="../Configuration.ui" line="5095"/>
+        <location filename="../Configuration.ui" line="5046"/>
+        <location filename="../Configuration.ui" line="5111"/>
         <source>Hide</source>
         <translation>隐藏</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5037"/>
+        <location filename="../Configuration.ui" line="5053"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of country prefixes based on cty.dat file.&lt;br&gt;
 Gaps are not allowed. Accepatble values are: 1A,1S,3A,3B6,3B8,3B9,3C,3C0,3D2,3D2/C,&lt;br&gt;
 3D2/R,3DA,3V,3W,3X,3Y/B,3Y/P,4J,4L,4O,4S,4U1I,4U1U,*4U1V,4W,4X,5A,5B,5H,5N,5R,5T,&lt;br&gt;
@@ -8269,23 +8279,23 @@ XF4,XT,XU,XW,XX9,XZ,YA,YB,YI,YJ,YK,YL,YN,YO,YS,YU,YV,YV0,Z2,Z3,Z6,Z8,ZA,ZB,ZC4,Z
 ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5060"/>
+        <location filename="../Configuration.ui" line="5076"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear country list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;清除国家/地区列表&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5063"/>
-        <location filename="../Configuration.ui" line="5118"/>
+        <location filename="../Configuration.ui" line="5079"/>
+        <location filename="../Configuration.ui" line="5134"/>
         <source>Clear</source>
         <translation>清除</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5075"/>
+        <location filename="../Configuration.ui" line="5091"/>
         <source>Hide messages from callsigns</source>
         <translation>隐藏某些呼号的信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5102"/>
+        <location filename="../Configuration.ui" line="5118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of callsigns,
 gaps are not allowed, base callsign shall be
 used for compound callsigns, for instance:
@@ -8296,582 +8306,582 @@ AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 AA1AAA,BB1BB,CC1CC&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5115"/>
+        <location filename="../Configuration.ui" line="5131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear callsign list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>unfinished</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5130"/>
+        <location filename="../Configuration.ui" line="5146"/>
         <source>Show content related messages in RX frequency window </source>
         <translation>接收信息窗口 </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5147"/>
+        <location filename="../Configuration.ui" line="5163"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pass content related free messages to the RX frequency messages window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将内容相关的自定义文字信息传递到接收信息窗口&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5150"/>
+        <location filename="../Configuration.ui" line="5166"/>
         <source>Enable</source>
         <translation>启用</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5157"/>
+        <location filename="../Configuration.ui" line="5173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma separated list of content names.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;内容名称的逗号分隔列表.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5164"/>
+        <location filename="../Configuration.ui" line="5180"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset content name list to default value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将内容列表重置为默认值值.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5181"/>
-        <location filename="../Configuration.ui" line="5204"/>
-        <location filename="../Configuration.ui" line="5227"/>
+        <location filename="../Configuration.ui" line="5197"/>
+        <location filename="../Configuration.ui" line="5220"/>
+        <location filename="../Configuration.ui" line="5243"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter will be applied out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;滤波器将在接收频率之外应用.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5184"/>
+        <location filename="../Configuration.ui" line="5200"/>
         <source>Show CQ messages only</source>
         <translation>仅显示CQ信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5207"/>
+        <location filename="../Configuration.ui" line="5223"/>
         <source>Show CQ/RRR/RR73/73 messages only</source>
         <translation>仅显示CQ/RRR/RR73/73信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5230"/>
+        <location filename="../Configuration.ui" line="5246"/>
         <source>Show CQ/RR73/73 messages only</source>
         <translation>仅显示CQ/RR73/73信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5252"/>
+        <location filename="../Configuration.ui" line="5268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide decoded free messages located out of the RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;隐藏位于接收频率外解码的自定义文字信息.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5255"/>
+        <location filename="../Configuration.ui" line="5271"/>
         <source>Hide decoded free messages</source>
         <translation>隐藏已解码的自定义文字信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5262"/>
+        <location filename="../Configuration.ui" line="5278"/>
         <source>Hide messages with not associated hash for 2nd callsign</source>
         <translation>隐藏特殊呼号第二个信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5269"/>
+        <location filename="../Configuration.ui" line="5285"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide message exchange between operators of own continent. This option allows user to ease monitoring of communication across intercontinental distances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;隐藏自己所属洲大陆的电台之间通信。 此选项允许用户轻松查看跨洲际距离的通信。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5272"/>
+        <location filename="../Configuration.ui" line="5288"/>
         <source>Hide messages with own continent callsign</source>
         <translation>隐藏自己洲大陆呼号的信息</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5295"/>
+        <location filename="../Configuration.ui" line="5311"/>
         <source>Scheduler</source>
         <translation>计划程序</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5303"/>
+        <location filename="../Configuration.ui" line="5319"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic band switching as per predefined schedule&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据预定义的计划自动波段切换&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5306"/>
+        <location filename="../Configuration.ui" line="5322"/>
         <source>Band scheduler configuration</source>
         <translation>波段程序设置</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5316"/>
+        <location filename="../Configuration.ui" line="5332"/>
         <source>hh</source>
         <translation>时</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5326"/>
+        <location filename="../Configuration.ui" line="5342"/>
         <source>mm</source>
         <translation>分</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5336"/>
+        <location filename="../Configuration.ui" line="5352"/>
         <source>Band</source>
         <translation>波段</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5346"/>
-        <location filename="../Configuration.ui" line="5606"/>
-        <location filename="../Configuration.ui" line="5863"/>
-        <location filename="../Configuration.ui" line="6120"/>
-        <location filename="../Configuration.ui" line="6377"/>
-        <location filename="../Configuration.ui" line="6634"/>
+        <location filename="../Configuration.ui" line="5362"/>
+        <location filename="../Configuration.ui" line="5622"/>
+        <location filename="../Configuration.ui" line="5879"/>
+        <location filename="../Configuration.ui" line="6136"/>
+        <location filename="../Configuration.ui" line="6393"/>
+        <location filename="../Configuration.ui" line="6650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scheduler will set JT65+JT9 mode if JT65 frequency is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果选择了 JT65 频率, 计划程序将设置 JT65+JT9 模式.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5349"/>
+        <location filename="../Configuration.ui" line="5365"/>
         <source>JT65+JT9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5365"/>
-        <location filename="../Configuration.ui" line="5503"/>
-        <location filename="../Configuration.ui" line="5622"/>
-        <location filename="../Configuration.ui" line="5760"/>
-        <location filename="../Configuration.ui" line="5879"/>
-        <location filename="../Configuration.ui" line="6017"/>
-        <location filename="../Configuration.ui" line="6136"/>
-        <location filename="../Configuration.ui" line="6274"/>
-        <location filename="../Configuration.ui" line="6393"/>
-        <location filename="../Configuration.ui" line="6531"/>
+        <location filename="../Configuration.ui" line="5381"/>
+        <location filename="../Configuration.ui" line="5519"/>
+        <location filename="../Configuration.ui" line="5638"/>
+        <location filename="../Configuration.ui" line="5776"/>
+        <location filename="../Configuration.ui" line="5895"/>
+        <location filename="../Configuration.ui" line="6033"/>
+        <location filename="../Configuration.ui" line="6152"/>
+        <location filename="../Configuration.ui" line="6290"/>
+        <location filename="../Configuration.ui" line="6409"/>
+        <location filename="../Configuration.ui" line="6547"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选择时间&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5374"/>
-        <location filename="../Configuration.ui" line="5512"/>
-        <location filename="../Configuration.ui" line="5631"/>
-        <location filename="../Configuration.ui" line="5769"/>
-        <location filename="../Configuration.ui" line="5888"/>
-        <location filename="../Configuration.ui" line="6026"/>
-        <location filename="../Configuration.ui" line="6145"/>
-        <location filename="../Configuration.ui" line="6283"/>
-        <location filename="../Configuration.ui" line="6402"/>
-        <location filename="../Configuration.ui" line="6540"/>
+        <location filename="../Configuration.ui" line="5390"/>
+        <location filename="../Configuration.ui" line="5528"/>
+        <location filename="../Configuration.ui" line="5647"/>
+        <location filename="../Configuration.ui" line="5785"/>
+        <location filename="../Configuration.ui" line="5904"/>
+        <location filename="../Configuration.ui" line="6042"/>
+        <location filename="../Configuration.ui" line="6161"/>
+        <location filename="../Configuration.ui" line="6299"/>
+        <location filename="../Configuration.ui" line="6418"/>
+        <location filename="../Configuration.ui" line="6556"/>
         <source>00</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5379"/>
-        <location filename="../Configuration.ui" line="5636"/>
-        <location filename="../Configuration.ui" line="5893"/>
-        <location filename="../Configuration.ui" line="6150"/>
-        <location filename="../Configuration.ui" line="6407"/>
+        <location filename="../Configuration.ui" line="5395"/>
+        <location filename="../Configuration.ui" line="5652"/>
+        <location filename="../Configuration.ui" line="5909"/>
+        <location filename="../Configuration.ui" line="6166"/>
+        <location filename="../Configuration.ui" line="6423"/>
         <source>01</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5384"/>
-        <location filename="../Configuration.ui" line="5641"/>
-        <location filename="../Configuration.ui" line="5898"/>
-        <location filename="../Configuration.ui" line="6155"/>
-        <location filename="../Configuration.ui" line="6412"/>
+        <location filename="../Configuration.ui" line="5400"/>
+        <location filename="../Configuration.ui" line="5657"/>
+        <location filename="../Configuration.ui" line="5914"/>
+        <location filename="../Configuration.ui" line="6171"/>
+        <location filename="../Configuration.ui" line="6428"/>
         <source>02</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5389"/>
-        <location filename="../Configuration.ui" line="5646"/>
-        <location filename="../Configuration.ui" line="5903"/>
-        <location filename="../Configuration.ui" line="6160"/>
-        <location filename="../Configuration.ui" line="6417"/>
+        <location filename="../Configuration.ui" line="5405"/>
+        <location filename="../Configuration.ui" line="5662"/>
+        <location filename="../Configuration.ui" line="5919"/>
+        <location filename="../Configuration.ui" line="6176"/>
+        <location filename="../Configuration.ui" line="6433"/>
         <source>03</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5394"/>
-        <location filename="../Configuration.ui" line="5651"/>
-        <location filename="../Configuration.ui" line="5908"/>
-        <location filename="../Configuration.ui" line="6165"/>
-        <location filename="../Configuration.ui" line="6422"/>
+        <location filename="../Configuration.ui" line="5410"/>
+        <location filename="../Configuration.ui" line="5667"/>
+        <location filename="../Configuration.ui" line="5924"/>
+        <location filename="../Configuration.ui" line="6181"/>
+        <location filename="../Configuration.ui" line="6438"/>
         <source>04</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5399"/>
-        <location filename="../Configuration.ui" line="5517"/>
-        <location filename="../Configuration.ui" line="5656"/>
-        <location filename="../Configuration.ui" line="5774"/>
-        <location filename="../Configuration.ui" line="5913"/>
-        <location filename="../Configuration.ui" line="6031"/>
-        <location filename="../Configuration.ui" line="6170"/>
-        <location filename="../Configuration.ui" line="6288"/>
-        <location filename="../Configuration.ui" line="6427"/>
-        <location filename="../Configuration.ui" line="6545"/>
+        <location filename="../Configuration.ui" line="5415"/>
+        <location filename="../Configuration.ui" line="5533"/>
+        <location filename="../Configuration.ui" line="5672"/>
+        <location filename="../Configuration.ui" line="5790"/>
+        <location filename="../Configuration.ui" line="5929"/>
+        <location filename="../Configuration.ui" line="6047"/>
+        <location filename="../Configuration.ui" line="6186"/>
+        <location filename="../Configuration.ui" line="6304"/>
+        <location filename="../Configuration.ui" line="6443"/>
+        <location filename="../Configuration.ui" line="6561"/>
         <source>05</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5404"/>
-        <location filename="../Configuration.ui" line="5661"/>
-        <location filename="../Configuration.ui" line="5918"/>
-        <location filename="../Configuration.ui" line="6175"/>
-        <location filename="../Configuration.ui" line="6432"/>
+        <location filename="../Configuration.ui" line="5420"/>
+        <location filename="../Configuration.ui" line="5677"/>
+        <location filename="../Configuration.ui" line="5934"/>
+        <location filename="../Configuration.ui" line="6191"/>
+        <location filename="../Configuration.ui" line="6448"/>
         <source>06</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5409"/>
-        <location filename="../Configuration.ui" line="5666"/>
-        <location filename="../Configuration.ui" line="5923"/>
-        <location filename="../Configuration.ui" line="6180"/>
-        <location filename="../Configuration.ui" line="6437"/>
+        <location filename="../Configuration.ui" line="5425"/>
+        <location filename="../Configuration.ui" line="5682"/>
+        <location filename="../Configuration.ui" line="5939"/>
+        <location filename="../Configuration.ui" line="6196"/>
+        <location filename="../Configuration.ui" line="6453"/>
         <source>07</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5414"/>
-        <location filename="../Configuration.ui" line="5671"/>
-        <location filename="../Configuration.ui" line="5928"/>
-        <location filename="../Configuration.ui" line="6185"/>
-        <location filename="../Configuration.ui" line="6442"/>
+        <location filename="../Configuration.ui" line="5430"/>
+        <location filename="../Configuration.ui" line="5687"/>
+        <location filename="../Configuration.ui" line="5944"/>
+        <location filename="../Configuration.ui" line="6201"/>
+        <location filename="../Configuration.ui" line="6458"/>
         <source>08</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5419"/>
-        <location filename="../Configuration.ui" line="5676"/>
-        <location filename="../Configuration.ui" line="5933"/>
-        <location filename="../Configuration.ui" line="6190"/>
-        <location filename="../Configuration.ui" line="6447"/>
+        <location filename="../Configuration.ui" line="5435"/>
+        <location filename="../Configuration.ui" line="5692"/>
+        <location filename="../Configuration.ui" line="5949"/>
+        <location filename="../Configuration.ui" line="6206"/>
+        <location filename="../Configuration.ui" line="6463"/>
         <source>09</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5424"/>
-        <location filename="../Configuration.ui" line="5522"/>
-        <location filename="../Configuration.ui" line="5681"/>
-        <location filename="../Configuration.ui" line="5779"/>
-        <location filename="../Configuration.ui" line="5938"/>
-        <location filename="../Configuration.ui" line="6036"/>
-        <location filename="../Configuration.ui" line="6195"/>
-        <location filename="../Configuration.ui" line="6293"/>
-        <location filename="../Configuration.ui" line="6452"/>
-        <location filename="../Configuration.ui" line="6550"/>
+        <location filename="../Configuration.ui" line="5440"/>
+        <location filename="../Configuration.ui" line="5538"/>
+        <location filename="../Configuration.ui" line="5697"/>
+        <location filename="../Configuration.ui" line="5795"/>
+        <location filename="../Configuration.ui" line="5954"/>
+        <location filename="../Configuration.ui" line="6052"/>
+        <location filename="../Configuration.ui" line="6211"/>
+        <location filename="../Configuration.ui" line="6309"/>
+        <location filename="../Configuration.ui" line="6468"/>
+        <location filename="../Configuration.ui" line="6566"/>
         <source>10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5429"/>
-        <location filename="../Configuration.ui" line="5686"/>
-        <location filename="../Configuration.ui" line="5943"/>
-        <location filename="../Configuration.ui" line="6200"/>
-        <location filename="../Configuration.ui" line="6457"/>
+        <location filename="../Configuration.ui" line="5445"/>
+        <location filename="../Configuration.ui" line="5702"/>
+        <location filename="../Configuration.ui" line="5959"/>
+        <location filename="../Configuration.ui" line="6216"/>
+        <location filename="../Configuration.ui" line="6473"/>
         <source>11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5434"/>
-        <location filename="../Configuration.ui" line="5691"/>
-        <location filename="../Configuration.ui" line="5948"/>
-        <location filename="../Configuration.ui" line="6205"/>
-        <location filename="../Configuration.ui" line="6462"/>
+        <location filename="../Configuration.ui" line="5450"/>
+        <location filename="../Configuration.ui" line="5707"/>
+        <location filename="../Configuration.ui" line="5964"/>
+        <location filename="../Configuration.ui" line="6221"/>
+        <location filename="../Configuration.ui" line="6478"/>
         <source>12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5439"/>
-        <location filename="../Configuration.ui" line="5696"/>
-        <location filename="../Configuration.ui" line="5953"/>
-        <location filename="../Configuration.ui" line="6210"/>
-        <location filename="../Configuration.ui" line="6467"/>
+        <location filename="../Configuration.ui" line="5455"/>
+        <location filename="../Configuration.ui" line="5712"/>
+        <location filename="../Configuration.ui" line="5969"/>
+        <location filename="../Configuration.ui" line="6226"/>
+        <location filename="../Configuration.ui" line="6483"/>
         <source>13</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5444"/>
-        <location filename="../Configuration.ui" line="5701"/>
-        <location filename="../Configuration.ui" line="5958"/>
-        <location filename="../Configuration.ui" line="6215"/>
-        <location filename="../Configuration.ui" line="6472"/>
+        <location filename="../Configuration.ui" line="5460"/>
+        <location filename="../Configuration.ui" line="5717"/>
+        <location filename="../Configuration.ui" line="5974"/>
+        <location filename="../Configuration.ui" line="6231"/>
+        <location filename="../Configuration.ui" line="6488"/>
         <source>14</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5449"/>
-        <location filename="../Configuration.ui" line="5527"/>
-        <location filename="../Configuration.ui" line="5706"/>
-        <location filename="../Configuration.ui" line="5784"/>
-        <location filename="../Configuration.ui" line="5963"/>
-        <location filename="../Configuration.ui" line="6041"/>
-        <location filename="../Configuration.ui" line="6220"/>
-        <location filename="../Configuration.ui" line="6298"/>
-        <location filename="../Configuration.ui" line="6477"/>
-        <location filename="../Configuration.ui" line="6555"/>
+        <location filename="../Configuration.ui" line="5465"/>
+        <location filename="../Configuration.ui" line="5543"/>
+        <location filename="../Configuration.ui" line="5722"/>
+        <location filename="../Configuration.ui" line="5800"/>
+        <location filename="../Configuration.ui" line="5979"/>
+        <location filename="../Configuration.ui" line="6057"/>
+        <location filename="../Configuration.ui" line="6236"/>
+        <location filename="../Configuration.ui" line="6314"/>
+        <location filename="../Configuration.ui" line="6493"/>
+        <location filename="../Configuration.ui" line="6571"/>
         <source>15</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5454"/>
-        <location filename="../Configuration.ui" line="5711"/>
-        <location filename="../Configuration.ui" line="5968"/>
-        <location filename="../Configuration.ui" line="6225"/>
-        <location filename="../Configuration.ui" line="6482"/>
+        <location filename="../Configuration.ui" line="5470"/>
+        <location filename="../Configuration.ui" line="5727"/>
+        <location filename="../Configuration.ui" line="5984"/>
+        <location filename="../Configuration.ui" line="6241"/>
+        <location filename="../Configuration.ui" line="6498"/>
         <source>16</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5459"/>
-        <location filename="../Configuration.ui" line="5716"/>
-        <location filename="../Configuration.ui" line="5973"/>
-        <location filename="../Configuration.ui" line="6230"/>
-        <location filename="../Configuration.ui" line="6487"/>
+        <location filename="../Configuration.ui" line="5475"/>
+        <location filename="../Configuration.ui" line="5732"/>
+        <location filename="../Configuration.ui" line="5989"/>
+        <location filename="../Configuration.ui" line="6246"/>
+        <location filename="../Configuration.ui" line="6503"/>
         <source>17</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5464"/>
-        <location filename="../Configuration.ui" line="5721"/>
-        <location filename="../Configuration.ui" line="5978"/>
-        <location filename="../Configuration.ui" line="6235"/>
-        <location filename="../Configuration.ui" line="6492"/>
+        <location filename="../Configuration.ui" line="5480"/>
+        <location filename="../Configuration.ui" line="5737"/>
+        <location filename="../Configuration.ui" line="5994"/>
+        <location filename="../Configuration.ui" line="6251"/>
+        <location filename="../Configuration.ui" line="6508"/>
         <source>18</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5469"/>
-        <location filename="../Configuration.ui" line="5726"/>
-        <location filename="../Configuration.ui" line="5983"/>
-        <location filename="../Configuration.ui" line="6240"/>
-        <location filename="../Configuration.ui" line="6497"/>
+        <location filename="../Configuration.ui" line="5485"/>
+        <location filename="../Configuration.ui" line="5742"/>
+        <location filename="../Configuration.ui" line="5999"/>
+        <location filename="../Configuration.ui" line="6256"/>
+        <location filename="../Configuration.ui" line="6513"/>
         <source>19</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5474"/>
-        <location filename="../Configuration.ui" line="5532"/>
-        <location filename="../Configuration.ui" line="5731"/>
-        <location filename="../Configuration.ui" line="5789"/>
-        <location filename="../Configuration.ui" line="5988"/>
-        <location filename="../Configuration.ui" line="6046"/>
-        <location filename="../Configuration.ui" line="6245"/>
-        <location filename="../Configuration.ui" line="6303"/>
-        <location filename="../Configuration.ui" line="6502"/>
-        <location filename="../Configuration.ui" line="6560"/>
+        <location filename="../Configuration.ui" line="5490"/>
+        <location filename="../Configuration.ui" line="5548"/>
+        <location filename="../Configuration.ui" line="5747"/>
+        <location filename="../Configuration.ui" line="5805"/>
+        <location filename="../Configuration.ui" line="6004"/>
+        <location filename="../Configuration.ui" line="6062"/>
+        <location filename="../Configuration.ui" line="6261"/>
+        <location filename="../Configuration.ui" line="6319"/>
+        <location filename="../Configuration.ui" line="6518"/>
+        <location filename="../Configuration.ui" line="6576"/>
         <source>20</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5479"/>
-        <location filename="../Configuration.ui" line="5736"/>
-        <location filename="../Configuration.ui" line="5993"/>
-        <location filename="../Configuration.ui" line="6250"/>
-        <location filename="../Configuration.ui" line="6507"/>
+        <location filename="../Configuration.ui" line="5495"/>
+        <location filename="../Configuration.ui" line="5752"/>
+        <location filename="../Configuration.ui" line="6009"/>
+        <location filename="../Configuration.ui" line="6266"/>
+        <location filename="../Configuration.ui" line="6523"/>
         <source>21</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5484"/>
-        <location filename="../Configuration.ui" line="5741"/>
-        <location filename="../Configuration.ui" line="5998"/>
-        <location filename="../Configuration.ui" line="6255"/>
-        <location filename="../Configuration.ui" line="6512"/>
+        <location filename="../Configuration.ui" line="5500"/>
+        <location filename="../Configuration.ui" line="5757"/>
+        <location filename="../Configuration.ui" line="6014"/>
+        <location filename="../Configuration.ui" line="6271"/>
+        <location filename="../Configuration.ui" line="6528"/>
         <source>22</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5489"/>
-        <location filename="../Configuration.ui" line="5746"/>
-        <location filename="../Configuration.ui" line="6003"/>
-        <location filename="../Configuration.ui" line="6260"/>
-        <location filename="../Configuration.ui" line="6517"/>
+        <location filename="../Configuration.ui" line="5505"/>
+        <location filename="../Configuration.ui" line="5762"/>
+        <location filename="../Configuration.ui" line="6019"/>
+        <location filename="../Configuration.ui" line="6276"/>
+        <location filename="../Configuration.ui" line="6533"/>
         <source>23</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5537"/>
-        <location filename="../Configuration.ui" line="5794"/>
-        <location filename="../Configuration.ui" line="6051"/>
-        <location filename="../Configuration.ui" line="6308"/>
-        <location filename="../Configuration.ui" line="6565"/>
+        <location filename="../Configuration.ui" line="5553"/>
+        <location filename="../Configuration.ui" line="5810"/>
+        <location filename="../Configuration.ui" line="6067"/>
+        <location filename="../Configuration.ui" line="6324"/>
+        <location filename="../Configuration.ui" line="6581"/>
         <source>25</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5542"/>
-        <location filename="../Configuration.ui" line="5799"/>
-        <location filename="../Configuration.ui" line="6056"/>
-        <location filename="../Configuration.ui" line="6313"/>
-        <location filename="../Configuration.ui" line="6570"/>
+        <location filename="../Configuration.ui" line="5558"/>
+        <location filename="../Configuration.ui" line="5815"/>
+        <location filename="../Configuration.ui" line="6072"/>
+        <location filename="../Configuration.ui" line="6329"/>
+        <location filename="../Configuration.ui" line="6586"/>
         <source>30</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5547"/>
-        <location filename="../Configuration.ui" line="5804"/>
-        <location filename="../Configuration.ui" line="6061"/>
-        <location filename="../Configuration.ui" line="6318"/>
-        <location filename="../Configuration.ui" line="6575"/>
+        <location filename="../Configuration.ui" line="5563"/>
+        <location filename="../Configuration.ui" line="5820"/>
+        <location filename="../Configuration.ui" line="6077"/>
+        <location filename="../Configuration.ui" line="6334"/>
+        <location filename="../Configuration.ui" line="6591"/>
         <source>35</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5552"/>
-        <location filename="../Configuration.ui" line="5809"/>
-        <location filename="../Configuration.ui" line="6066"/>
-        <location filename="../Configuration.ui" line="6323"/>
-        <location filename="../Configuration.ui" line="6580"/>
+        <location filename="../Configuration.ui" line="5568"/>
+        <location filename="../Configuration.ui" line="5825"/>
+        <location filename="../Configuration.ui" line="6082"/>
+        <location filename="../Configuration.ui" line="6339"/>
+        <location filename="../Configuration.ui" line="6596"/>
         <source>40</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5557"/>
-        <location filename="../Configuration.ui" line="5814"/>
-        <location filename="../Configuration.ui" line="6071"/>
-        <location filename="../Configuration.ui" line="6328"/>
-        <location filename="../Configuration.ui" line="6585"/>
+        <location filename="../Configuration.ui" line="5573"/>
+        <location filename="../Configuration.ui" line="5830"/>
+        <location filename="../Configuration.ui" line="6087"/>
+        <location filename="../Configuration.ui" line="6344"/>
+        <location filename="../Configuration.ui" line="6601"/>
         <source>45</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5562"/>
-        <location filename="../Configuration.ui" line="5819"/>
-        <location filename="../Configuration.ui" line="6076"/>
-        <location filename="../Configuration.ui" line="6333"/>
-        <location filename="../Configuration.ui" line="6590"/>
+        <location filename="../Configuration.ui" line="5578"/>
+        <location filename="../Configuration.ui" line="5835"/>
+        <location filename="../Configuration.ui" line="6092"/>
+        <location filename="../Configuration.ui" line="6349"/>
+        <location filename="../Configuration.ui" line="6606"/>
         <source>50</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5567"/>
-        <location filename="../Configuration.ui" line="5824"/>
-        <location filename="../Configuration.ui" line="6081"/>
-        <location filename="../Configuration.ui" line="6338"/>
-        <location filename="../Configuration.ui" line="6595"/>
+        <location filename="../Configuration.ui" line="5583"/>
+        <location filename="../Configuration.ui" line="5840"/>
+        <location filename="../Configuration.ui" line="6097"/>
+        <location filename="../Configuration.ui" line="6354"/>
+        <location filename="../Configuration.ui" line="6611"/>
         <source>55</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="5587"/>
-        <location filename="../Configuration.ui" line="5844"/>
-        <location filename="../Configuration.ui" line="6101"/>
-        <location filename="../Configuration.ui" line="6358"/>
-        <location filename="../Configuration.ui" line="6615"/>
+        <location filename="../Configuration.ui" line="5603"/>
+        <location filename="../Configuration.ui" line="5860"/>
+        <location filename="../Configuration.ui" line="6117"/>
+        <location filename="../Configuration.ui" line="6374"/>
+        <location filename="../Configuration.ui" line="6631"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select band&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选择波段&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6664"/>
+        <location filename="../Configuration.ui" line="6680"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activating band scheduler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;激活波段计划程序&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6667"/>
+        <location filename="../Configuration.ui" line="6683"/>
         <source>Use band scheduler</source>
         <translation>使用波段计划程序</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6690"/>
+        <location filename="../Configuration.ui" line="6706"/>
         <source>Advanced</source>
         <translation>高级设置</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6700"/>
+        <location filename="../Configuration.ui" line="6716"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-selectable parameters for JT65 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于 JT65 解码的用户可选参数.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6703"/>
+        <location filename="../Configuration.ui" line="6719"/>
         <source>JT65 decoding parameters</source>
         <translation>JT65解码参数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6731"/>
-        <location filename="../Configuration.ui" line="6744"/>
+        <location filename="../Configuration.ui" line="6747"/>
+        <location filename="../Configuration.ui" line="6760"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义宽频带解码过程的解码尝试次数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6734"/>
-        <location filename="../Configuration.ui" line="7086"/>
+        <location filename="../Configuration.ui" line="6750"/>
+        <location filename="../Configuration.ui" line="7102"/>
         <source>Number of decoding attempts:</source>
         <translation>解码尝试次数:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6770"/>
-        <location filename="../Configuration.ui" line="6783"/>
+        <location filename="../Configuration.ui" line="6786"/>
+        <location filename="../Configuration.ui" line="6799"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of decoding passes for the wideband decoding&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;宽频带解码的解码通过次数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6773"/>
+        <location filename="../Configuration.ui" line="6789"/>
         <source>Number of decoding  passes: </source>
         <translation>解码通过次数: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6803"/>
-        <location filename="../Configuration.ui" line="6816"/>
+        <location filename="../Configuration.ui" line="6819"/>
+        <location filename="../Configuration.ui" line="6832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for RX frequency decoding passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义 接收频率解码次数解码尝试次数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6806"/>
-        <location filename="../Configuration.ui" line="7122"/>
+        <location filename="../Configuration.ui" line="6822"/>
+        <location filename="../Configuration.ui" line="7138"/>
         <source>RX frequency decoding attempts:</source>
         <translation>接收频率解码尝试次数:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6842"/>
-        <location filename="../Configuration.ui" line="6855"/>
-        <location filename="../Configuration.ui" line="7013"/>
+        <location filename="../Configuration.ui" line="6858"/>
+        <location filename="../Configuration.ui" line="6871"/>
+        <location filename="../Configuration.ui" line="7029"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This DT window being used only for RX frequency CALL3 data based Hint decoders focused on CQ and &apos;mycall hiscall hisgrid&apos; messages. Higher values may increase number of the false decodes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此 DT 窗口仅用于基于接收频率 CALL3 数据的提示解码, 专注于 CQ 和&quot;我的呼叫他调用他网格&quot;信息.值越高, 假解码数就越多.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6845"/>
+        <location filename="../Configuration.ui" line="6861"/>
         <source>Hinted decoding DT range:</source>
         <translation>提示解码时差范围:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6876"/>
+        <location filename="../Configuration.ui" line="6892"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activate two additional frequency mask JT65 decoding passes for overcrowded band conditions. This decoding passes being activated automatically if there are few signals on the band. Use this setting only for fast CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;针对过度拥挤的频段条件, 激活两个额外的频率屏蔽JT65解码通道. 如果频带上的信号很少, 则自动激活该解码过程. 仅将此设置用于快速CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6882"/>
+        <location filename="../Configuration.ui" line="6898"/>
         <source>Use frequency mask decoding</source>
         <translation>使用频率掩码解码</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6894"/>
-        <location filename="../Configuration.ui" line="6904"/>
+        <location filename="../Configuration.ui" line="6910"/>
+        <location filename="../Configuration.ui" line="6920"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines ceiling for decoding of the JT65a signals, default value is 3000 Hz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义用于解码 JT65a 信号的上限, 默认值值为 3000赫兹.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6897"/>
+        <location filename="../Configuration.ui" line="6913"/>
         <source>Top decoding frequency: </source>
         <translation>最佳解码频率: </translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6930"/>
-        <location filename="../Configuration.ui" line="6943"/>
+        <location filename="../Configuration.ui" line="6946"/>
+        <location filename="../Configuration.ui" line="6959"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal distortion in RX or TX path can produce harmonics of the JT65A signal (JT65B, JT65C etc.) Decoding harmonics of JT65A signal can improve overall decoding efficiency via subtraction of the decoded signals. Decoding depth is proportional to the required CPU resources, set it to 1 for slow CPU. Greater value of depth will allow to decode more harmonics. JT65B and JT65C decoding is being supported.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接收或发射路径中的信号失真会产生 JT65A 信号(JT65B、JT65C 等)的谐波通过解码信号的减法, 解码JT65A信号谐波可以提高整体解码效率.解码深度与所需的 CPU 资源成正比, 将其设置为 1 以表示 CPU 速度较慢.更高的深度值将允许解码更多的谐波.支持 JT65B 和 JT65C 解码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6933"/>
+        <location filename="../Configuration.ui" line="6949"/>
         <source>Harmonics decoding depth:</source>
         <translation>谐波解码深度:</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="6969"/>
+        <location filename="../Configuration.ui" line="6985"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings depend on the CPU power, try to use maximum number of decoding passes for overcrowded HF bands.&lt;br&gt;&lt;br&gt;Number of decoding passes may be decreased for low populated HF/VHF bands while an increase of the number of decoding attempts might bring better decoding efficiency for the weak signals there.&lt;br&gt;&lt;br&gt;Number of decoding attempts affecting decoding efficiency of the low SNR signals: wideband or RX frequency one.&lt;br&gt;&lt;br&gt;Number of decoding passes affecting maximum number of the signals that can be decoded on the same frequency or located close to each other with largely overlapped spectra, it is possible to decode up to 4 signals on the same frequency and up to 7 signals on the RX frequency if number of decoding passes is set to 4.&lt;br&gt;&lt;br&gt;Increase number of decoding attempts to the value allowing to get decoding finished until end of the RX minute interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置取决于 CPU 功率, 尝试对过度拥挤的HF频段使用最大解码通道数.&lt;br&gt;&lt;br&gt;对于低稠密的HF/VHF频带, 解码遍数可以减少, 而解码尝试次数的增加可以为那里的弱信号带来更好的解码效率.&lt;br&gt;&lt;br&gt;影响低信噪比信号解码效率的解码尝试次数:宽带或接收频率.&lt;br&gt;&lt;br&gt;解码遍数影响可以在相同频率上解码的信号的最大数量, 或者在频谱重叠很大的情况下彼此接近, 如果解码遍数设置为4, 则可以在相同频率上解码多达4个信号, 在接收频率上解码多达7个信号.&lt;br&gt;&lt;br&gt;将解码尝试次数增加到允许解码完成的值, 直到接收分钟间隔结束.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7057"/>
+        <location filename="../Configuration.ui" line="7073"/>
         <source>T10 decoding parameters</source>
         <translation>T10解码参数</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7083"/>
-        <location filename="../Configuration.ui" line="7093"/>
+        <location filename="../Configuration.ui" line="7099"/>
+        <location filename="../Configuration.ui" line="7109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of decoding attempts for the wideband T10 decoding.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义宽带 T10 解码尝试次数.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7119"/>
-        <location filename="../Configuration.ui" line="7132"/>
+        <location filename="../Configuration.ui" line="7135"/>
+        <location filename="../Configuration.ui" line="7148"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines number of T10 decoding attempts for RX frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义接收频率的 T10 解码尝试次数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="7223"/>
+        <location filename="../Configuration.ui" line="7239"/>
         <source>Discard or apply configuration changes including
 resetting the radio interface and applying any
 soundcard changes</source>
