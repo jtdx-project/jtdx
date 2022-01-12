@@ -82,6 +82,7 @@ public:
   #define rig__power_off 0x80000
   #define tci__audio 0x100000
   #define tci__agcc 0x200000
+  #define ptt__share 0x400000
 
   TransceiverFactory ();
   ~TransceiverFactory ();

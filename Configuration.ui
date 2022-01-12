@@ -1317,6 +1317,22 @@ other hardware interface for PTT.</string>
             </attribute>
            </widget>
           </item>
+         <item row="0" column="2">
+          <widget class="QCheckBox" name="rig_ptt_share_check_box">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Share PTT</string>
+           </property>
+          </widget>
+         </item>
           <item row="0" column="1">
            <widget class="QRadioButton" name="PTT_DTR_radio_button">
             <property name="toolTip">

@@ -304,6 +304,7 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
   if (!is_dummy_)
     {
 
+//      printf("Hamlib open params: power_on=%d power_off=%d ptt_share=%d\n",(params.poll_interval & rig__power) == rig__power,(params.poll_interval & rig__power_off) == rig__power_off,(params.poll_interval & ptt__share) == ptt__share);
       if (params.poll_interval & rig__power) { set_conf ("auto_power_on","1"); }
       if (params.poll_interval & rig__power_off) { set_conf ("auto_power_off","1"); }
       if (params.poll_interval & do__snr) do_snr_ = true;
@@ -395,7 +396,7 @@ HamlibTransceiver::HamlibTransceiver (unsigned model_number, TransceiverFactory:
         {
           set_conf ("ptt_type", "RTS");
         }
-      set_conf ("ptt_share", "1");
+      if (params.poll_interval & ptt__share) set_conf ("ptt_share", "1"); else set_conf ("ptt_share", "0");
     }
 
   // Make Icom CAT split commands less glitchy
