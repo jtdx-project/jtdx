@@ -2888,7 +2888,8 @@ void Configuration::impl::set_rig_invariants ()
   auto enable_ptt_port = TransceiverFactory::PTT_method_CAT != ptt_method && TransceiverFactory::PTT_method_VOX != ptt_method;
   ui_->PTT_port_combo_box->setEnabled (enable_ptt_port);
   ui_->PTT_port_label->setEnabled (enable_ptt_port);
-
+  ui_->rig_ptt_share_check_box->setEnabled (enable_ptt_port);
+  
   if (CAT_indirect_serial_PTT)
     {
       ui_->PTT_port_combo_box->setItemData (ui_->PTT_port_combo_box->findText ("CAT")

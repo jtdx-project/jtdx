@@ -127,22 +127,22 @@ Lehet, hogy egy másik alkalmazás használja a könyvtárat</translation>
         <translation>&amp;Reset</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2955"/>
+        <location filename="../Configuration.cpp" line="2956"/>
         <source>Serial Port:</source>
         <translation>Soros port:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2956"/>
+        <location filename="../Configuration.cpp" line="2957"/>
         <source>Serial port used for CAT control</source>
         <translation>A CAT vezérléshez használt soros port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2963"/>
+        <location filename="../Configuration.cpp" line="2964"/>
         <source>TCI Server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2964"/>
+        <location filename="../Configuration.cpp" line="2965"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -152,12 +152,12 @@ Formats:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2976"/>
+        <location filename="../Configuration.cpp" line="2977"/>
         <source>Network Server:</source>
         <translation>Hálózati szerver:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2977"/>
+        <location filename="../Configuration.cpp" line="2978"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -172,12 +172,12 @@ Formátumok:
 	[IPv6-cím]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2989"/>
+        <location filename="../Configuration.cpp" line="2990"/>
         <source>USB Device:</source>
         <translation>USB eszköz:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2990"/>
+        <location filename="../Configuration.cpp" line="2991"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -188,137 +188,137 @@ Formátum:
 	[VID[:PID[:VENDOR[:PRODUCT]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3025"/>
+        <location filename="../Configuration.cpp" line="3026"/>
         <source>Invalid audio input device</source>
         <translation>Helytelen hangkártya kiválasztása a bemenethez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3032"/>
+        <location filename="../Configuration.cpp" line="3033"/>
         <source>Invalid audio output device</source>
         <translation>Helytelen hangkártya kiválasztása a kimenethez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3038"/>
+        <location filename="../Configuration.cpp" line="3039"/>
         <source>Invalid PTT method</source>
         <translation>Helytelen PTT-módszer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3048"/>
+        <location filename="../Configuration.cpp" line="3049"/>
         <source>Invalid PTT port</source>
         <translation>Helytelen PTT-port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3597"/>
+        <location filename="../Configuration.cpp" line="3598"/>
         <source>CQ/73 in message</source>
         <translation>CQ/73 az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3598"/>
+        <location filename="../Configuration.cpp" line="3599"/>
         <source>CQ in message</source>
         <translation>CQ az üzenetben</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4781"/>
+        <location filename="../Configuration.cpp" line="4782"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>A JTDX dekódolt szövegének betűtípus választása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4903"/>
+        <location filename="../Configuration.cpp" line="4904"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5439"/>
-        <location filename="../Configuration.cpp" line="5470"/>
+        <location filename="../Configuration.cpp" line="5440"/>
+        <location filename="../Configuration.cpp" line="5471"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5435"/>
+        <location filename="../Configuration.cpp" line="5436"/>
         <source>Load Working Frequencies</source>
         <translation>Munkafrekvenciák betöltése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5466"/>
+        <location filename="../Configuration.cpp" line="5467"/>
         <source>Merge Working Frequencies</source>
         <translation>Munkafrekvenciák összevonása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5493"/>
-        <location filename="../Configuration.cpp" line="5502"/>
-        <location filename="../Configuration.cpp" line="5512"/>
+        <location filename="../Configuration.cpp" line="5494"/>
+        <location filename="../Configuration.cpp" line="5503"/>
+        <location filename="../Configuration.cpp" line="5513"/>
         <source>Not a valid frequencies file</source>
         <translation>Helytelen frekvenciafájl</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5493"/>
+        <location filename="../Configuration.cpp" line="5494"/>
         <source>Incorrect file magic</source>
         <translation>Helytelen fájl verzió</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5502"/>
+        <location filename="../Configuration.cpp" line="5503"/>
         <source>Version is too new</source>
         <translation>A verzió nagyon új</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5512"/>
+        <location filename="../Configuration.cpp" line="5513"/>
         <source>Contents corrupt</source>
         <translation>A tartalom sérült</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5523"/>
         <source>Save Working Frequencies</source>
         <translation>Munkafrekvenciák mentése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5532"/>
+        <location filename="../Configuration.cpp" line="5533"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Csak a kiválasztott munkafrekvenciákat mentse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5534"/>
+        <location filename="../Configuration.cpp" line="5535"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Biztos benne, hogy csak a jelenleg kiválasztott munkafrekvenciákat szeretné menteni? Az összes mentéséhez kattintson a Nem gombra.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5561"/>
+        <location filename="../Configuration.cpp" line="5562"/>
         <source>Reset Working Frequencies</source>
         <translation>Alaphelyzetbe állítja a munkafrekvenciákat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5563"/>
+        <location filename="../Configuration.cpp" line="5564"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Biztos benne, hogy el akarja hagyni a jelenlegi munkafrekvenciákat, és helyettesíteni azokat az alapértelmezettekkel?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5623"/>
+        <location filename="../Configuration.cpp" line="5624"/>
         <source>Save Directory</source>
         <translation>Mentés a könyvtárba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5639"/>
+        <location filename="../Configuration.cpp" line="5640"/>
         <source>Failed to open connection to rig</source>
         <translation>Hiba a rig-hez való csatlakozáskor</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6029"/>
+        <location filename="../Configuration.cpp" line="6030"/>
         <source>Rig failure</source>
         <translation>Rig hiba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5437"/>
-        <location filename="../Configuration.cpp" line="5468"/>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5438"/>
+        <location filename="../Configuration.cpp" line="5469"/>
+        <location filename="../Configuration.cpp" line="5523"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Frekvencia fájlok (*.qrg);;Minden fájl (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5453"/>
+        <location filename="../Configuration.cpp" line="5454"/>
         <source>Replace Working Frequencies</source>
         <translation>Munkafrekvenciák kicserélése</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5454"/>
+        <location filename="../Configuration.cpp" line="5455"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Biztos benne, hogy el akarja hagyni a jelenlegi munkafrekvenciákat, és helyettesíteni azokat a betöltöttekkel?</translation>
     </message>
@@ -5255,7 +5255,7 @@ UDP szerver %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -5263,99 +5263,99 @@ UDP szerver %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Directory:</source>
         <translation>Könyvtár:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>File &amp;name:</source>
         <translation>Fájl&amp;név:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Open</source>
         <translation>Megny&amp;it</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>&amp;Choose</source>
         <translation>&amp;Választás</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>&amp;Save</source>
         <translation>Menté&amp;s</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>All files (*)</source>
         <translation>Minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5397"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>New Folder</source>
         <translation>Új mappa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Delete</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>&amp;Rename</source>
         <translation>Átn&amp;evez</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5402"/>
         <source>Show &amp;hidden files</source>
         <translation>Rejtett &amp;fájlok mutatása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>&amp;New Folder</source>
         <translation>Új &amp;mappa</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Look in:</source>
         <translation>Betekintés:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Files of type:</source>
         <translation>Fájltípusok:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>A &apos;%1&apos; írásvédett.
 Szeretné törölni?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Biztosan törli a &apos;%1&apos; fájlt?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Could not delete directory.</source>
         <translation>Nem sikerült törölni a könyvtárat.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5364,92 +5364,92 @@ A könyvtár nem található.
 Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Recent Places</source>
         <translation>Legutóbbi helyek</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Back</source>
         <translation>Vissza</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Go back</source>
         <translation>Visszatér</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Alt+Left</source>
         <translation>Alt+Bal</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>Forward</source>
         <translation>Előre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Go forward</source>
         <translation>Folytat</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5416"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Alt+Right</source>
         <translation>Alt+Jobb</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Parent Directory</source>
         <translation>Szülő könyvtár</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Go to the parent directory</source>
         <translation>Menjen a szülő könyvtárba</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>Alt+Up</source>
         <translation>Alt+Fel</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5421"/>
         <source>Create New Folder</source>
         <translation>Új mappa létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5421"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>Create a New Folder</source>
         <translation>Egy új mappa létrehozása</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5422"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>List View</source>
         <translation>Lista nézet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Change to list view mode</source>
         <translation>Váltás lista nézetre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5424"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Detail View</source>
         <translation>Részletes nézet</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
+        <location filename="../Configuration.cpp" line="5426"/>
         <source>Change to detail view mode</source>
         <translation>Váltás a részletes nézetre</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5426"/>
+        <location filename="../Configuration.cpp" line="5427"/>
         <source>Sidebar</source>
         <translation>Oldalsáv</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5427"/>
+        <location filename="../Configuration.cpp" line="5428"/>
         <source>List of places and bookmarks</source>
         <translation>Helyek és könyvjelzők listája</translation>
     </message>
@@ -5457,22 +5457,22 @@ Ellenőrizze, hogy a helyes könyvtárnevet adta-e meg.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5429"/>
+        <location filename="../Configuration.cpp" line="5430"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5430"/>
+        <location filename="../Configuration.cpp" line="5431"/>
         <source>Size</source>
         <translation>Méret</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5431"/>
+        <location filename="../Configuration.cpp" line="5432"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5432"/>
+        <location filename="../Configuration.cpp" line="5433"/>
         <source>Date Modified</source>
         <translation>Módosítás dátuma</translation>
     </message>
@@ -6572,7 +6572,7 @@ csendes időszakban küldi el, amikor a dekódolás megtörtént.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="885"/>
-        <location filename="../Configuration.ui" line="1386"/>
+        <location filename="../Configuration.ui" line="1370"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
@@ -6779,39 +6779,49 @@ más hardver interfész a PTT vezérléséhez.</translation>
         <translation>C&amp;AT</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1339"/>
+        <location filename="../Configuration.ui" line="1323"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használja az RS-232, DTR vezérlővonalat a rádió PTT-jének váltásához, hardver szükséges a vonal összekapcsolásához (számítógép COM port).&lt;/p&gt;&lt;p&gt;Néhány kereskedelemben kapható interfész egység is ezt a módszert használja.&lt;/p&gt;&lt;p&gt;Ehhez a CAT soros port DTR vezérlő vezetékét, vagy egy másik COM port DTR vezérlő vonalát lehet használni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1342"/>
+        <location filename="../Configuration.ui" line="1326"/>
         <source>&amp;DTR</source>
         <translation>&amp;DTR</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1355"/>
+        <location filename="../Configuration.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nincs PTT aktiválás, ehelyett a rádió VOX-ját használja az adó kapcsolásához.&lt;/p&gt;&lt;p&gt;Ezt akkor használja, ha nincs interfész hardvere a PTT számára.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1358"/>
+        <location filename="../Configuration.ui" line="1342"/>
         <source>VO&amp;X</source>
         <translation>VO&amp;X</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1368"/>
+        <location filename="../Configuration.ui" line="1352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Használja az RS-232, RTS vezérlővonalat a rádió PTT-jének váltásához, hardver szükséges a vonal összekapcsolásához.&lt;/p&gt;&lt;p&gt;Néhány kereskedelemben kapható interfész egység is ezt a módszert használja.&lt;/p&gt;&lt;p&gt;Ehhez a CAT soros port RTS vezérlő vezetékét, vagy egy másik COM port RTS vezérlő vonalát lehet használni. Vegye figyelembe, hogy ez az opció nem érhető el a CAT soros porton, ha Hardware áramlásvezérlőt használ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1371"/>
+        <location filename="../Configuration.ui" line="1355"/>
         <source>R&amp;TS</source>
         <translation>R&amp;TS</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1402"/>
+        <location filename="../Configuration.ui" line="1386"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Válassza ki a PTT vezérléséhez használlni kívánt RS-232 soros portot. Ez az opció akkor érhető el, ha fentebb a DTR vagy az RTS lehetőséget választotta az adási módszernek.&lt;/p&gt;&lt;p&gt;Ez a port ugyanaz lehet, mint a CAT vezérléshez használt port.&lt;/p&gt;&lt;p&gt;Néhány interfésztípushoz kiválasztható egy speciális CAT érték, amelyet nem soros CAT interfészekhez használnak, és amelyek távolról vezérelhetik a soros port vezérlő vonalait (például OmniRig).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1411"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1414"/>
+        <source>Share PTT port</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1433"/>
@@ -7694,16 +7704,6 @@ A jobb gombbal kattintva, a beillesztési és törlési lehetőségek elérhető
     <message>
         <location filename="../Configuration.ui" line="782"/>
         <source>Off Rig power</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="1329"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="1332"/>
-        <source>Share PTT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

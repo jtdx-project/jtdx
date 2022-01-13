@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>700</width>
-    <height>567</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>686</width>
-    <height>550</height>
+    <height>586</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -1317,22 +1317,6 @@ other hardware interface for PTT.</string>
             </attribute>
            </widget>
           </item>
-         <item row="0" column="2">
-          <widget class="QCheckBox" name="rig_ptt_share_check_box">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Share PTT</string>
-           </property>
-          </widget>
-         </item>
           <item row="0" column="1">
            <widget class="QRadioButton" name="PTT_DTR_radio_button">
             <property name="toolTip">
@@ -1375,7 +1359,7 @@ other hardware interface for PTT.</string>
             </attribute>
            </widget>
           </item>
-          <item row="2" column="0" rowspan="2" colspan="2">
+          <item row="2" column="0" rowspan="3" colspan="2">
            <layout class="QFormLayout" name="formLayout_4">
             <property name="fieldGrowthPolicy">
              <enum>QFormLayout::ExpandingFieldsGrow</enum>
@@ -1412,6 +1396,22 @@ other hardware interface for PTT.</string>
               </property>
               <property name="insertPolicy">
                <enum>QComboBox::NoInsert</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QCheckBox" name="rig_ptt_share_check_box">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Share PTT port</string>
               </property>
              </widget>
             </item>

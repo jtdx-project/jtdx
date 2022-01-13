@@ -131,22 +131,22 @@ Una altra aplicació pot bloquejar el directori</translation>
         <translation>&amp;Restablir</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2955"/>
+        <location filename="../Configuration.cpp" line="2956"/>
         <source>Serial Port:</source>
         <translation>Port sèrie:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2956"/>
+        <location filename="../Configuration.cpp" line="2957"/>
         <source>Serial port used for CAT control</source>
         <translation>Port sèrie utilitzat per al control CAT</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2963"/>
+        <location filename="../Configuration.cpp" line="2964"/>
         <source>TCI Server:</source>
         <translation>Servidor TCI:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2964"/>
+        <location filename="../Configuration.cpp" line="2965"/>
         <source>Optional hostname and port of TCI service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -161,12 +161,12 @@ Formats:
 	[Adreça-IPv6]:port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2976"/>
+        <location filename="../Configuration.cpp" line="2977"/>
         <source>Network Server:</source>
         <translation>Servidor de xarxa:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2977"/>
+        <location filename="../Configuration.cpp" line="2978"/>
         <source>Optional hostname and port of network service.
 Leave blank for a sensible default on this machine.
 Formats:
@@ -181,12 +181,12 @@ Adreça IPv4: port
 [Adreça IPv6]: port</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2989"/>
+        <location filename="../Configuration.cpp" line="2990"/>
         <source>USB Device:</source>
         <translation>Dispositiu USB:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="2990"/>
+        <location filename="../Configuration.cpp" line="2991"/>
         <source>Optional device identification.
 Leave blank for a sensible default for the rig.
 Format:
@@ -197,137 +197,137 @@ Format:
 [VID [: PID [: VENDOR [: PRODUCTE]]]]</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3025"/>
+        <location filename="../Configuration.cpp" line="3026"/>
         <source>Invalid audio input device</source>
         <translation>El dispositiu d&apos;entrada d&apos;àudio no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3032"/>
+        <location filename="../Configuration.cpp" line="3033"/>
         <source>Invalid audio output device</source>
         <translation>El dispositiu de sortida d&apos;àudio no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3038"/>
+        <location filename="../Configuration.cpp" line="3039"/>
         <source>Invalid PTT method</source>
         <translation>El mètode PTT no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3048"/>
+        <location filename="../Configuration.cpp" line="3049"/>
         <source>Invalid PTT port</source>
         <translation>El port PTT no és vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3597"/>
+        <location filename="../Configuration.cpp" line="3598"/>
         <source>CQ/73 in message</source>
         <translation>CQ / 73 en missatge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="3598"/>
+        <location filename="../Configuration.cpp" line="3599"/>
         <source>CQ in message</source>
         <translation>CQ al missatge</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4781"/>
+        <location filename="../Configuration.cpp" line="4782"/>
         <source>JTDX Decoded Text Font Chooser</source>
         <translation>Tria la font de text descodificada JTDX</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4903"/>
+        <location filename="../Configuration.cpp" line="4904"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
         <translation>Introdueix l&apos;error del Locator: s&apos;acceptarà un locator de 4/6/8/10 caràcters</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5435"/>
+        <location filename="../Configuration.cpp" line="5436"/>
         <source>Load Working Frequencies</source>
         <translation>Freqüència de treball de càrrega</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5437"/>
-        <location filename="../Configuration.cpp" line="5468"/>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5438"/>
+        <location filename="../Configuration.cpp" line="5469"/>
+        <location filename="../Configuration.cpp" line="5523"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>Arxius de freqüència (* .qrg) ;; Tots els arxius (*. *)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5439"/>
-        <location filename="../Configuration.cpp" line="5470"/>
+        <location filename="../Configuration.cpp" line="5440"/>
+        <location filename="../Configuration.cpp" line="5471"/>
         <source>Cancel</source>
         <translation>Cancel·lar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5453"/>
+        <location filename="../Configuration.cpp" line="5454"/>
         <source>Replace Working Frequencies</source>
         <translation>Substituïu les freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5454"/>
+        <location filename="../Configuration.cpp" line="5455"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>Segur que vols descartar les vostres freqüències de treball actuals i reemplaçar-les per les carregades?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5466"/>
+        <location filename="../Configuration.cpp" line="5467"/>
         <source>Merge Working Frequencies</source>
         <translation>Combina freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5493"/>
-        <location filename="../Configuration.cpp" line="5502"/>
-        <location filename="../Configuration.cpp" line="5512"/>
+        <location filename="../Configuration.cpp" line="5494"/>
+        <location filename="../Configuration.cpp" line="5503"/>
+        <location filename="../Configuration.cpp" line="5513"/>
         <source>Not a valid frequencies file</source>
         <translation>No és un arxiu de freqüències vàlid</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5493"/>
+        <location filename="../Configuration.cpp" line="5494"/>
         <source>Incorrect file magic</source>
         <translation>Màgia d&apos;arxiu incorrecta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5502"/>
+        <location filename="../Configuration.cpp" line="5503"/>
         <source>Version is too new</source>
         <translation>La versió és massa nova</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5512"/>
+        <location filename="../Configuration.cpp" line="5513"/>
         <source>Contents corrupt</source>
         <translation>Continguts corruptes</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5522"/>
+        <location filename="../Configuration.cpp" line="5523"/>
         <source>Save Working Frequencies</source>
         <translation>Desa les freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5532"/>
+        <location filename="../Configuration.cpp" line="5533"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>Desa només les freqüències de treball seleccionades</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5534"/>
+        <location filename="../Configuration.cpp" line="5535"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>Estàs segur que vols desar només les freqüències de treball seleccionades actualment? Fes clic a No per desar-ho tot.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5561"/>
+        <location filename="../Configuration.cpp" line="5562"/>
         <source>Reset Working Frequencies</source>
         <translation>Restablir les freqüències de treball</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5563"/>
+        <location filename="../Configuration.cpp" line="5564"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>Segur que vols descartar les teves freqüències de treball actuals i reemplaçar-les per altres?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5623"/>
+        <location filename="../Configuration.cpp" line="5624"/>
         <source>Save Directory</source>
         <translation>Guardar directori</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5639"/>
+        <location filename="../Configuration.cpp" line="5640"/>
         <source>Failed to open connection to rig</source>
         <translation>No s&apos;ha pogut obrir la connexió al equip</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6029"/>
+        <location filename="../Configuration.cpp" line="6030"/>
         <source>Rig failure</source>
         <translation>Fallida del equip</translation>
     </message>
@@ -5331,7 +5331,7 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5388"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>OK</source>
         <translation>D&apos;acord</translation>
     </message>
@@ -5339,99 +5339,99 @@ Servidor UDP %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5390"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>Directory:</source>
         <translation>Directori:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>File &amp;name:</source>
         <translation>&amp;Nom de l&apos;arxiu:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Open</source>
         <translation>&amp;Obrir</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>&amp;Choose</source>
         <translation>&amp;Tria</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>&amp;Save</source>
         <translation>&amp;Desar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>Cancel</source>
         <translation>Cancel·lar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>All files (*)</source>
         <translation>Tots els arxius (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5397"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>New Folder</source>
         <translation>Carpeta nova</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>Delete</source>
         <translation>Esborrar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>&amp;Delete</source>
         <translation>&amp;Esborrar</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>&amp;Rename</source>
         <translation>&amp;Canviar el nom</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5402"/>
         <source>Show &amp;hidden files</source>
         <translation>Mostra &amp;arxius ocults</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>&amp;New Folder</source>
         <translation>&amp;Carpeta nova</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>Look in:</source>
         <translation>Mira:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Files of type:</source>
         <translation>Arxius de tipus:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>%1 està protegit contra escriptura.
 De tota manera vols esborrar-lo?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>Segur que voleu esborrar-lo %1?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5408"/>
         <source>Could not delete directory.</source>
         <translation>No s&apos;ha pogut esborrar el directori.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5440,92 +5440,92 @@ Directori no trobat.
 Verifica el nom del directori correcte.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5410"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Recent Places</source>
         <translation>Llocs recents</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Back</source>
         <translation>Darrer</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Go back</source>
         <translation>Torna</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Alt+Left</source>
         <translation>Alt+Esquerra</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>Forward</source>
         <translation>Endavant</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Go forward</source>
         <translation>Anar endavant</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5416"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Alt+Right</source>
         <translation>Alt+Dret</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Parent Directory</source>
         <translation>Directori Pare</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Go to the parent directory</source>
         <translation>Vés al directori pare</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>Alt+Up</source>
         <translation>Alt+Amunt</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5421"/>
         <source>Create New Folder</source>
         <translation>Crea una nova carpeta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5421"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>Create a New Folder</source>
         <translation>Crea una nova carpeta</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5422"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>List View</source>
         <translation>Visualització de llista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Change to list view mode</source>
         <translation>Canvia al mode de visualització de llista</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5424"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Detail View</source>
         <translation>Vista detallada</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
+        <location filename="../Configuration.cpp" line="5426"/>
         <source>Change to detail view mode</source>
         <translation>Canvia al mode de visualització de detalls</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5426"/>
+        <location filename="../Configuration.cpp" line="5427"/>
         <source>Sidebar</source>
         <translation>Barra lateral</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5427"/>
+        <location filename="../Configuration.cpp" line="5428"/>
         <source>List of places and bookmarks</source>
         <translation>Llista de llocs i punts d&apos;interès</translation>
     </message>
@@ -5533,22 +5533,22 @@ Verifica el nom del directori correcte.</translation>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5429"/>
+        <location filename="../Configuration.cpp" line="5430"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5430"/>
+        <location filename="../Configuration.cpp" line="5431"/>
         <source>Size</source>
         <translation>Mida</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5431"/>
+        <location filename="../Configuration.cpp" line="5432"/>
         <source>Type</source>
         <translation>Tipus</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5432"/>
+        <location filename="../Configuration.cpp" line="5433"/>
         <source>Date Modified</source>
         <translation>Data de modificació</translation>
     </message>
@@ -6651,7 +6651,7 @@ període tranquil quan es realitza la descodificació.</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="885"/>
-        <location filename="../Configuration.ui" line="1386"/>
+        <location filename="../Configuration.ui" line="1370"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
@@ -6858,39 +6858,49 @@ una altra interfície de hardware per PTT.</translation>
         <translation>CA&amp;T</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1339"/>
+        <location filename="../Configuration.ui" line="1323"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 DTR control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The DTR control line of the CAT serial port may be used for this or a DTR control line on a different serial port may be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Utilitza la línia de control RS-232 DTR per activar el PTT del teu equip, requereix hardware per interfase amb la línia. &lt;/p&gt; &lt;p&gt; Algunes unitats d&apos;interfície comercials també fan servir aquest mètode. &lt;/p&gt; &lt;p&gt; La línia de control DTR del port sèrie CAT es pot utilitzar per això o es pot utilitzar una línia de control DTR en un port sèrie diferent. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1342"/>
+        <location filename="../Configuration.ui" line="1326"/>
         <source>&amp;DTR</source>
         <translation>&amp;DTR</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1355"/>
+        <location filename="../Configuration.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No PTT activation, instead the radio&apos;s automatic VOX is used to key the transmitter.&lt;/p&gt;&lt;p&gt;Use this if you have no radio interface hardware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Sense activació PTT, al seu lloc, s&apos;utilitza el VOX automàtic de l&apos;equip per connectar el transmissor. &lt;/p&gt; &lt;p&gt; Fes-lo servir si no tens hardware d&apos;interfície de l&apos;equip. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1358"/>
+        <location filename="../Configuration.ui" line="1342"/>
         <source>VO&amp;X</source>
         <translation>VO&amp;X</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1368"/>
+        <location filename="../Configuration.ui" line="1352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the RS-232 RTS control line to toggle your radio&apos;s PTT, requires hardware to inteface the line.&lt;/p&gt;&lt;p&gt;Some commercial interface units also use this method.&lt;/p&gt;&lt;p&gt;The RTS control line of the CAT serial port may be used for this or a RTS control line on a different serial port may be used. Note that this option is not available on the CAT serial port when hardware flow control is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Utilitza la línia de control RS-232 RTS per activar el PTT del teu equip, requereix hardware per interfase amb la línia. &lt;/p&gt; &lt;p&gt; Algunes unitats d&apos;interfície comercials també fan servir aquest mètode. &lt;/p&gt; &lt;p&gt; La línia de control RTS del port sèrie CAT es pot utilitzar per això o es pot utilitzar una línia de control RTS en un port sèrie diferent. Tingues en compte que aquesta opció no està disponible al port sèrie CAT quan s&apos;utilitza el control de flux de hardware. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1371"/>
+        <location filename="../Configuration.ui" line="1355"/>
         <source>R&amp;TS</source>
         <translation>RT&amp;S</translation>
     </message>
     <message>
-        <location filename="../Configuration.ui" line="1402"/>
+        <location filename="../Configuration.ui" line="1386"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Selecciona el port sèrie RS-232 utilitzat per al control PTT, aquesta opció està disponible quan es selecciona DTR o RTS a dalt com a mètode de transmissió. &lt;/p&gt; &lt;p&gt; Aquest port pot ser el mateix que l&apos;utilitzat per al control CAT. &lt;/p&gt; &lt;p&gt;Per a alguns tipus d&apos;interfície, es pot triar el valor especial CAT, això s&apos;utilitza per interfícies CAT no serials que poden controlar les línies de control del port sèrie de forma remota (OmniRig, per exemple). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1411"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Configuration.ui" line="1414"/>
+        <source>Share PTT port</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1433"/>
@@ -7779,16 +7789,6 @@ Fes clic dret per inserir i eliminar opcions.</translation>
         <location filename="../Configuration.ui" line="782"/>
         <source>Off Rig power</source>
         <translation>Apagar l&apos;equip</translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="1329"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Configuration.ui" line="1332"/>
-        <source>Share PTT</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1852"/>
