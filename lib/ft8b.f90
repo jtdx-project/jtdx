@@ -25,7 +25,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
   integer*1 message77(77),apmask(174),cw(174)
-  integer itone(79),ip(1),ka(1)
+  integer itone(79),ip(1),ka(1),nqsoend(3)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,ipass,nft8rxfsens
   logical newdat1,lsubtract,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
@@ -33,7 +33,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
-             lcqdxcnssig,lqsocandave,lcall1hash,l73sig,lrr73sig
+             lcqdxcnssig,lqsocandave,lcall1hash,l73sig,lrr73sig,lqsosigtype3,lqso73,lqsorr73,lqsorrr
 
   type tmpcqdec_struct
     real freq
@@ -508,14 +508,44 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
     ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
 
-    lqsosig=.false. ! has support to nonstandard callsign
+    lqsosig=.false.; lqsosigtype3=.false.; lqso73=.false.; lqsorr73=.false.; lqsorrr=.false. ! lqsosig have support to nonstandard callsign
     if((dfqso.lt.napwid .or. abs(nftx-f1).lt.napwid) .and. lapmyc .and. len_trim(hiscall).gt.2) then
-    nqsot=0
-    do k11=8,26
-      ip=maxloc(s8(:,k11))
-      if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
-    enddo
-    if(nqsot.gt.6) lqsosig=.true.
+      nqsot=0
+      do k11=8,26
+        ip=maxloc(s8(:,k11))
+        if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
+      enddo
+      if(nqsot.gt.6) lqsosig=.true.
+      do k11=27,29
+        ip=maxloc(s8(:,k11))
+        if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
+      enddo
+      if(nqsot.gt.7) lqsosigtype3=.true.
+      if(lqsosig .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4)) then
+        nqsoend=0 ! array 73,rr73,rrr
+        do k11=31,36
+          ip=maxloc(s8(:,k11))
+          if(ip(1).eq.idtone56(56,k11-7)+1) nqsoend(1)=nqsoend(1)+1
+          if(ip(1).eq.idtone56(55,k11-7)+1) nqsoend(2)=nqsoend(2)+1
+          if(ip(1).eq.idtone56(54,k11-7)+1) nqsoend(3)=nqsoend(3)+1
+        enddo
+        do k11=44,72
+          ip=maxloc(s8(:,k11))
+          if(ip(1).eq.idtone56(56,k11-14)+1) nqsoend(1)=nqsoend(1)+1
+          if(ip(1).eq.idtone56(55,k11-14)+1) nqsoend(2)=nqsoend(2)+1
+          if(ip(1).eq.idtone56(54,k11-14)+1) nqsoend(3)=nqsoend(3)+1
+        enddo
+        ip=maxloc(nqsoend)
+        if(nqsoend(ip(1)).gt.10) then
+          if(ip(1).eq.1) then; lqso73=.true.
+          else if(ip(1).eq.2) then; lqsorr73=.true.
+          else if(ip(1).eq.3) then; lqsorrr=.true.
+          endif
+        endif
+!print *,lqso73,lqsorr73,lqsorrr
+!write(*,1018) ip(1),nqsoend
+!1018 format(i1,1x,i2,1x,i2,1x,i2)
+      endif
     endif
 
     lcqsignal=.false.
