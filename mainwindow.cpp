@@ -7266,6 +7266,10 @@ void MainWindow::handle_transceiver_update (Transceiver::TransceiverState const&
       } else {
           m_freqTxNominal = s.split () ? s.tx_frequency (): s.frequency ();
       }
+      if (s.split ()) {
+        if (m_tci) QThread::currentThread()->msleep(200);
+        setXIT (ui->TxFreqSpinBox->value ());
+      }
   }
 
   displayDialFrequency ();

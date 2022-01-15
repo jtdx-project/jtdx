@@ -4774,7 +4774,7 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
         <location filename="../mainwindow.cpp" line="4545"/>
         <location filename="../mainwindow.cpp" line="4784"/>
         <location filename="../mainwindow.cpp" line="7254"/>
-        <location filename="../mainwindow.cpp" line="7497"/>
+        <location filename="../mainwindow.cpp" line="7501"/>
         <source>File Open Error</source>
         <translation>Filöppningsfel</translation>
     </message>
@@ -4786,8 +4786,8 @@ lista. Listan kan underhållas i Inställningar (F2).</translation>
         <location filename="../mainwindow.cpp" line="4546"/>
         <location filename="../mainwindow.cpp" line="4785"/>
         <location filename="../mainwindow.cpp" line="7255"/>
-        <location filename="../mainwindow.cpp" line="7498"/>
-        <location filename="../mainwindow.cpp" line="7852"/>
+        <location filename="../mainwindow.cpp" line="7502"/>
+        <location filename="../mainwindow.cpp" line="7856"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Kan inte öppna &quot;%1&quot; för bilaga:%2</translation>
     </message>
@@ -5180,55 +5180,55 @@ finns redan i CALL3.TXT, vill du ersätta det?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Tryck på knappen för att låsa Tx-frekvensen till Rx AF-frekvensen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7290"/>
+        <location filename="../mainwindow.cpp" line="7294"/>
         <source>Rig Control Error</source>
         <translation>Rig kontrollfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7370"/>
+        <location filename="../mainwindow.cpp" line="7374"/>
         <source>Tune digital gain</source>
         <translation>Justera digital förstärkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7371"/>
+        <location filename="../mainwindow.cpp" line="7375"/>
         <source>Transmit digital gain</source>
         <translation>Överför digital förstärkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7391"/>
+        <location filename="../mainwindow.cpp" line="7395"/>
         <source>Prefixes</source>
         <translation>Prefixen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7467"/>
-        <location filename="../mainwindow.cpp" line="7468"/>
+        <location filename="../mainwindow.cpp" line="7471"/>
+        <location filename="../mainwindow.cpp" line="7472"/>
         <source>Logd </source>
         <translation>Loggad </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7703"/>
+        <location filename="../mainwindow.cpp" line="7707"/>
         <source>Network Error</source>
         <translation>Nätverksfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7704"/>
+        <location filename="../mainwindow.cpp" line="7708"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Fel:%1
 UDP-server%2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7851"/>
+        <location filename="../mainwindow.cpp" line="7855"/>
         <source>File Error</source>
         <translation>Filfel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8073"/>
+        <location filename="../mainwindow.cpp" line="8077"/>
         <source>Tx watchdog expired</source>
         <translation>Tx &quot;watchdog&quot; utgått</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8087"/>
+        <location filename="../mainwindow.cpp" line="8091"/>
         <source>WD %1m</source>
         <translation>WD%1m</translation>
     </message>
