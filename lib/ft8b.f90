@@ -515,14 +515,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         ip=maxloc(s8(:,k11))
         if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
       enddo
-      if(nqsot.gt.6) lqsosig=.true.
+      if(nqsot.gt.6) lqsosig=.true. ! decoding depth only
       do k11=27,29
         ip=maxloc(s8(:,k11))
         if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
       enddo
-      if(nqsot.gt.7) lqsosigtype3=.true.
-      if(lqsosig .and. dfqso.lt.napwid .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4)) then ! QSO RX freq only
-        nqsoend=0 ! array 73,rr73,rrr
+      if(nqsot.gt.3) lqsosigtype3=.true.
+      nqsoend=0 ! array 73,rr73,rrr
+      if(dfqso.lt.napwid .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4)) then ! QSO RX freq only
         do k11=31,36
           ip=maxloc(s8(:,k11))
           if(ip(1).eq.idtone56(56,k11-7)+1) nqsoend(1)=nqsoend(1)+1
@@ -536,13 +536,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(ip(1).eq.idtone56(54,k11-14)+1) nqsoend(3)=nqsoend(3)+1
         enddo
         ip=maxloc(nqsoend)
-        if(nqsoend(ip(1)).gt.10) then
+        if(nqsoend(ip(1)).gt.6) then
           if(ip(1).eq.1) then; lqso73=.true.
           else if(ip(1).eq.2) then; lqsorr73=.true.
           else if(ip(1).eq.3) then; lqsorrr=.true.
           endif
         endif
-!print *,lqso73,lqsorr73,lqsorrr
 !write(*,1018) ip(1),nqsoend
 !1018 format(i1,1x,i2,1x,i2,1x,i2)
       endif
@@ -915,7 +914,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.gt.2 .and. lnohiscall) cycle ! no DXCall
               if(iaptype.gt.2 .and. iaptype.lt.31 .and. loutapwid) cycle
               if(iaptype.eq.3 .and. .not.lqsosigtype3) cycle ! not QSO signal
-              if(iaptype.eq.3 .and. (lqso73 .or. lqsorr73 .or. lqsorrr)) cycle ! other mask needed
               if(iaptype.eq.4 .and. .not.lqsorrr) cycle ! not RRR signal
               if(iaptype.eq.5 .and. .not.lqso73) cycle ! not 73 signal
               if(iaptype.eq.6 .and. .not.lqsorr73) cycle ! not RR73 signal
