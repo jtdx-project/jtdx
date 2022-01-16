@@ -4764,7 +4764,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4545"/>
         <location filename="../mainwindow.cpp" line="4784"/>
         <location filename="../mainwindow.cpp" line="7254"/>
-        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7500"/>
         <source>File Open Error</source>
         <translation>ファイルオープンエラー</translation>
     </message>
@@ -4776,8 +4776,8 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4546"/>
         <location filename="../mainwindow.cpp" line="4785"/>
         <location filename="../mainwindow.cpp" line="7255"/>
-        <location filename="../mainwindow.cpp" line="7502"/>
-        <location filename="../mainwindow.cpp" line="7856"/>
+        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7855"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>付加のために&quot;%1&quot;を開くことができない：%2</translation>
     </message>
@@ -5150,18 +5150,18 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>QSO LOGを消去してよろしいですね?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7294"/>
+        <location filename="../mainwindow.cpp" line="7293"/>
         <source>Rig Control Error</source>
         <translation>リグコントロールエラー</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7470"/>
         <location filename="../mainwindow.cpp" line="7471"/>
-        <location filename="../mainwindow.cpp" line="7472"/>
         <source>Logd </source>
         <translation>ログ </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7708"/>
+        <location filename="../mainwindow.cpp" line="7707"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>エラー：%1UDPサーバー%2：%3</translation>
@@ -5240,37 +5240,37 @@ UDP server %2:%3</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Tx周波数をRx AF周波数に固定するプッシュボタン。.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7374"/>
+        <location filename="../mainwindow.cpp" line="7373"/>
         <source>Tune digital gain</source>
         <translation>デジタルのゲインを調整</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7375"/>
+        <location filename="../mainwindow.cpp" line="7374"/>
         <source>Transmit digital gain</source>
         <translation>デジタルのゲインを送信</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7395"/>
+        <location filename="../mainwindow.cpp" line="7394"/>
         <source>Prefixes</source>
         <translation>プリフィックス</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7707"/>
+        <location filename="../mainwindow.cpp" line="7706"/>
         <source>Network Error</source>
         <translation>ネットワークエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7855"/>
+        <location filename="../mainwindow.cpp" line="7854"/>
         <source>File Error</source>
         <translation>ファイルエラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8077"/>
+        <location filename="../mainwindow.cpp" line="8076"/>
         <source>Tx watchdog expired</source>
         <translation>Tx ウオッチドッグは時間切れ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8091"/>
+        <location filename="../mainwindow.cpp" line="8090"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -6012,49 +6012,48 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1483"/>
+        <location filename="../TCITransceiver.cpp" line="1477"/>
         <source>TCI could not be opened</source>
         <translation>TCIを開くことができません</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1267"/>
+        <location filename="../TCITransceiver.cpp" line="1284"/>
         <source>TCI failed to set ptt</source>
         <translation>TCIのPTTを設定するのに失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1276"/>
+        <location filename="../TCITransceiver.cpp" line="1293"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCIはPTTをCAT経由で行います</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1319"/>
+        <location filename="../TCITransceiver.cpp" line="1336"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCIは受信周波数の設定に失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1338"/>
-        <location filename="../TCITransceiver.cpp" line="1465"/>
+        <location filename="../TCITransceiver.cpp" line="1355"/>
+        <location filename="../TCITransceiver.cpp" line="1459"/>
         <source>TCI failed set mode</source>
         <translation>TCIはモードの設定に失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1389"/>
-        <location filename="../TCITransceiver.cpp" line="1432"/>
+        <location filename="../TCITransceiver.cpp" line="1136"/>
         <source>TCI failed set split</source>
         <translation>TCIはスプリットに設定ができませんでした</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1406"/>
+        <location filename="../TCITransceiver.cpp" line="1412"/>
         <source>TCI failed set txfreq</source>
         <translation>TCIは送信周波数の設定に失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1617"/>
+        <location filename="../TCITransceiver.cpp" line="1611"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCIは認識されていない周波数を送信しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1678"/>
+        <location filename="../TCITransceiver.cpp" line="1672"/>
         <source>TCI modulator not Idle</source>
         <translation>TCIモジュラーはアイドルではありません</translation>
     </message>

@@ -4772,7 +4772,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="4545"/>
         <location filename="../mainwindow.cpp" line="4784"/>
         <location filename="../mainwindow.cpp" line="7254"/>
-        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7500"/>
         <source>File Open Error</source>
         <translation>Fájl megnyitási hiba</translation>
     </message>
@@ -4784,8 +4784,8 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="4546"/>
         <location filename="../mainwindow.cpp" line="4785"/>
         <location filename="../mainwindow.cpp" line="7255"/>
-        <location filename="../mainwindow.cpp" line="7502"/>
-        <location filename="../mainwindow.cpp" line="7856"/>
+        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7855"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot; -t a hozzáadáshoz: %2</translation>
     </message>
@@ -5182,55 +5182,55 @@ már a CALL3.TXT-ben van, szeretné cserélni?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nyomja meg a gombot a VFO eltolás megszűntetéséhez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7294"/>
+        <location filename="../mainwindow.cpp" line="7293"/>
         <source>Rig Control Error</source>
         <translation>Adó  frekvenciavezérlés hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7374"/>
+        <location filename="../mainwindow.cpp" line="7373"/>
         <source>Tune digital gain</source>
         <translation>Hangolás digitális erősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7375"/>
+        <location filename="../mainwindow.cpp" line="7374"/>
         <source>Transmit digital gain</source>
         <translation>Adás digitális erősítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7395"/>
+        <location filename="../mainwindow.cpp" line="7394"/>
         <source>Prefixes</source>
         <translation>Prefixek</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7470"/>
         <location filename="../mainwindow.cpp" line="7471"/>
-        <location filename="../mainwindow.cpp" line="7472"/>
         <source>Logd </source>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7707"/>
+        <location filename="../mainwindow.cpp" line="7706"/>
         <source>Network Error</source>
         <translation>Hálózati hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7708"/>
+        <location filename="../mainwindow.cpp" line="7707"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Hiba: %1
 UDP szerver %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7855"/>
+        <location filename="../mainwindow.cpp" line="7854"/>
         <source>File Error</source>
         <translation>Fájlhiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8077"/>
+        <location filename="../mainwindow.cpp" line="8076"/>
         <source>Tx watchdog expired</source>
         <translation>Az időzítő lejárt és megszakította az adást.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8091"/>
+        <location filename="../mainwindow.cpp" line="8090"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -5982,49 +5982,48 @@ Hiba(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1483"/>
+        <location filename="../TCITransceiver.cpp" line="1477"/>
         <source>TCI could not be opened</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1267"/>
+        <location filename="../TCITransceiver.cpp" line="1284"/>
         <source>TCI failed to set ptt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1276"/>
+        <location filename="../TCITransceiver.cpp" line="1293"/>
         <source>TCI should use PTT via CAT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1319"/>
+        <location filename="../TCITransceiver.cpp" line="1336"/>
         <source>TCI failed set rxfreq</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1338"/>
-        <location filename="../TCITransceiver.cpp" line="1465"/>
+        <location filename="../TCITransceiver.cpp" line="1355"/>
+        <location filename="../TCITransceiver.cpp" line="1459"/>
         <source>TCI failed set mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1389"/>
-        <location filename="../TCITransceiver.cpp" line="1432"/>
+        <location filename="../TCITransceiver.cpp" line="1136"/>
         <source>TCI failed set split</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1406"/>
+        <location filename="../TCITransceiver.cpp" line="1412"/>
         <source>TCI failed set txfreq</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1617"/>
+        <location filename="../TCITransceiver.cpp" line="1611"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1678"/>
+        <location filename="../TCITransceiver.cpp" line="1672"/>
         <source>TCI modulator not Idle</source>
         <translation type="unfinished"></translation>
     </message>

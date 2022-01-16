@@ -4780,7 +4780,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <location filename="../mainwindow.cpp" line="4545"/>
         <location filename="../mainwindow.cpp" line="4784"/>
         <location filename="../mainwindow.cpp" line="7254"/>
-        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7500"/>
         <source>File Open Error</source>
         <translation>Fejl ved åbning af fil</translation>
     </message>
@@ -4792,8 +4792,8 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <location filename="../mainwindow.cpp" line="4546"/>
         <location filename="../mainwindow.cpp" line="4785"/>
         <location filename="../mainwindow.cpp" line="7255"/>
-        <location filename="../mainwindow.cpp" line="7502"/>
-        <location filename="../mainwindow.cpp" line="7856"/>
+        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7855"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Kan ikke åbne &quot;%1&quot; for tilføjelse: %2</translation>
     </message>
@@ -5252,54 +5252,54 @@ er allerede i CALL3.TXT. Vil du erstatte det?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tryk på knappen for at låse Tx frekvens til Rx AF Frekvensen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7294"/>
+        <location filename="../mainwindow.cpp" line="7293"/>
         <source>Rig Control Error</source>
         <translation>Radio kontrol fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7374"/>
+        <location filename="../mainwindow.cpp" line="7373"/>
         <source>Tune digital gain</source>
         <translation>Tune digital forstærkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7375"/>
+        <location filename="../mainwindow.cpp" line="7374"/>
         <source>Transmit digital gain</source>
         <translation>Sender digital forstærkning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7395"/>
+        <location filename="../mainwindow.cpp" line="7394"/>
         <source>Prefixes</source>
         <translation>Præfixer</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7470"/>
         <location filename="../mainwindow.cpp" line="7471"/>
-        <location filename="../mainwindow.cpp" line="7472"/>
         <source>Logd </source>
         <translation>Logget </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7707"/>
+        <location filename="../mainwindow.cpp" line="7706"/>
         <source>Network Error</source>
         <translation>Netværls fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7708"/>
+        <location filename="../mainwindow.cpp" line="7707"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7855"/>
+        <location filename="../mainwindow.cpp" line="7854"/>
         <source>File Error</source>
         <translation>Fil Fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8077"/>
+        <location filename="../mainwindow.cpp" line="8076"/>
         <source>Tx watchdog expired</source>
         <translation>TX vagthund udløbet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8091"/>
+        <location filename="../mainwindow.cpp" line="8090"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
@@ -6051,49 +6051,48 @@ Fejl (%2):%3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1483"/>
+        <location filename="../TCITransceiver.cpp" line="1477"/>
         <source>TCI could not be opened</source>
         <translation>TCI fungerer ikke</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1267"/>
+        <location filename="../TCITransceiver.cpp" line="1284"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI fejl -  kan ikke sette PTT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1276"/>
+        <location filename="../TCITransceiver.cpp" line="1293"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI skal bruge CAT til PTT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1319"/>
+        <location filename="../TCITransceiver.cpp" line="1336"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI kan ikke SET rxfrekv</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1338"/>
-        <location filename="../TCITransceiver.cpp" line="1465"/>
+        <location filename="../TCITransceiver.cpp" line="1355"/>
+        <location filename="../TCITransceiver.cpp" line="1459"/>
         <source>TCI failed set mode</source>
         <translation>TCI kan ikke Set Mode</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1389"/>
-        <location filename="../TCITransceiver.cpp" line="1432"/>
+        <location filename="../TCITransceiver.cpp" line="1136"/>
         <source>TCI failed set split</source>
         <translation>TCI fejl ved Set Split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1406"/>
+        <location filename="../TCITransceiver.cpp" line="1412"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI kan ikke SET txfrekv</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1617"/>
+        <location filename="../TCITransceiver.cpp" line="1611"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI har sendt en ukendt frekvens</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1678"/>
+        <location filename="../TCITransceiver.cpp" line="1672"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI modulator er ikke i tomgang</translation>
     </message>

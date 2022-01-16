@@ -4772,7 +4772,7 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.cpp" line="4545"/>
         <location filename="../mainwindow.cpp" line="4784"/>
         <location filename="../mainwindow.cpp" line="7254"/>
-        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7500"/>
         <source>File Open Error</source>
         <translation>Błąd otwierania pliku</translation>
     </message>
@@ -4784,8 +4784,8 @@ listy. Listą można zarządzać w zakładce Ustawienia (F2).</translation>
         <location filename="../mainwindow.cpp" line="4546"/>
         <location filename="../mainwindow.cpp" line="4785"/>
         <location filename="../mainwindow.cpp" line="7255"/>
-        <location filename="../mainwindow.cpp" line="7502"/>
-        <location filename="../mainwindow.cpp" line="7856"/>
+        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7855"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nie można otworzyć &quot;%1&quot; dla dopisania: %2</translation>
     </message>
@@ -5179,55 +5179,55 @@ jest już w CALL3.TXT, czy chcesz go zamienić?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7294"/>
+        <location filename="../mainwindow.cpp" line="7293"/>
         <source>Rig Control Error</source>
         <translation>Błąd sterowania TRCVR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7374"/>
+        <location filename="../mainwindow.cpp" line="7373"/>
         <source>Tune digital gain</source>
         <translation>Cyfrowe wzmocnienie przy strojeniu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7375"/>
+        <location filename="../mainwindow.cpp" line="7374"/>
         <source>Transmit digital gain</source>
         <translation>Cyfrowe wzmocnienie przy nadawaniu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7395"/>
+        <location filename="../mainwindow.cpp" line="7394"/>
         <source>Prefixes</source>
         <translation>Prefiksy</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7470"/>
         <location filename="../mainwindow.cpp" line="7471"/>
-        <location filename="../mainwindow.cpp" line="7472"/>
         <source>Logd </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7707"/>
+        <location filename="../mainwindow.cpp" line="7706"/>
         <source>Network Error</source>
         <translation>Błąd sieci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7708"/>
+        <location filename="../mainwindow.cpp" line="7707"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Błąd: %1
 srever UDP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7855"/>
+        <location filename="../mainwindow.cpp" line="7854"/>
         <source>File Error</source>
         <translation>Błąd pliku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8077"/>
+        <location filename="../mainwindow.cpp" line="8076"/>
         <source>Tx watchdog expired</source>
         <translation>Upłynął czas nadawania</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8091"/>
+        <location filename="../mainwindow.cpp" line="8090"/>
         <source>WD %1m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5979,49 +5979,48 @@ Error(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="461"/>
-        <location filename="../TCITransceiver.cpp" line="1483"/>
+        <location filename="../TCITransceiver.cpp" line="1477"/>
         <source>TCI could not be opened</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1267"/>
+        <location filename="../TCITransceiver.cpp" line="1284"/>
         <source>TCI failed to set ptt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1276"/>
+        <location filename="../TCITransceiver.cpp" line="1293"/>
         <source>TCI should use PTT via CAT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1319"/>
+        <location filename="../TCITransceiver.cpp" line="1336"/>
         <source>TCI failed set rxfreq</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1338"/>
-        <location filename="../TCITransceiver.cpp" line="1465"/>
+        <location filename="../TCITransceiver.cpp" line="1355"/>
+        <location filename="../TCITransceiver.cpp" line="1459"/>
         <source>TCI failed set mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1389"/>
-        <location filename="../TCITransceiver.cpp" line="1432"/>
+        <location filename="../TCITransceiver.cpp" line="1136"/>
         <source>TCI failed set split</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1406"/>
+        <location filename="../TCITransceiver.cpp" line="1412"/>
         <source>TCI failed set txfreq</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1617"/>
+        <location filename="../TCITransceiver.cpp" line="1611"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1678"/>
+        <location filename="../TCITransceiver.cpp" line="1672"/>
         <source>TCI modulator not Idle</source>
         <translation type="unfinished"></translation>
     </message>
