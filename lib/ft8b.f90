@@ -30,10 +30,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical newdat1,lsubtract,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand,levenint,loddint,lnohiscall,lnomycall,lnohisgrid
-  logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg, &
-             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid, &
+  logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg,          &
+             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,       &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
-             lcqdxcnssig,lqsocandave,lcall1hash,l73sig,lrr73sig,lqsosigtype3,lqso73,lqsorr73,lqsorrr
+             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lqsons73,lqsonsrr73,lqsonsrrr
 
   type tmpcqdec_struct
     real freq
@@ -508,44 +508,78 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
     ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
 
-    lqsosig=.false.; lqsosigtype3=.false.; lqso73=.false.; lqsorr73=.false.; lqsorrr=.false. ! so far std callsigns only
-    if((dfqso.lt.napwid .or. abs(nftx-f1).lt.napwid) .and. lapmyc .and. len_trim(hiscall).gt.2) then
+    lqsosig=.false.; lqsosigtype3=.false.; lqso73=.false.; lqsorr73=.false.; lqsorrr=.false. ! 73/rr73/rrr for std callsigns
+    if(.not.lqsomsgdcd .and. (dfqso.lt.napwid .or. abs(nftx-f1).lt.napwid) .and. lapmyc .and. len_trim(hiscall).gt.2) then
       nqsot=0
-      do k11=8,26
-        ip=maxloc(s8(:,k11))
-        if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
+      do i=1,19
+        ip=maxloc(s8(:,i+7))
+        if(ip(1).eq.idtone56(1,i)+1) nqsot=nqsot+1
       enddo
       if(nqsot.gt.6) lqsosig=.true. ! decoding depth only
-      do k11=27,29
-        ip=maxloc(s8(:,k11))
-        if(ip(1).eq.idtone56(1,k11-7)+1) nqsot=nqsot+1
+      do i=20,22
+        ip=maxloc(s8(:,i+7))
+        if(ip(1).eq.idtone56(1,i)+1) nqsot=nqsot+1
       enddo
       if(nqsot.gt.3) lqsosigtype3=.true.
-      nqsoend=0 ! array 73,rr73,rrr
-      if(dfqso.lt.napwid .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4)) then ! QSO RX freq only
-        do k11=31,36
-          ip=maxloc(s8(:,k11))
-          if(ip(1).eq.idtone56(56,k11-7)+1) nqsoend(1)=nqsoend(1)+1
-          if(ip(1).eq.idtone56(55,k11-7)+1) nqsoend(2)=nqsoend(2)+1
-          if(ip(1).eq.idtone56(54,k11-7)+1) nqsoend(3)=nqsoend(3)+1
-        enddo
-        do k11=44,72
-          ip=maxloc(s8(:,k11))
-          if(ip(1).eq.idtone56(56,k11-14)+1) nqsoend(1)=nqsoend(1)+1
-          if(ip(1).eq.idtone56(55,k11-14)+1) nqsoend(2)=nqsoend(2)+1
-          if(ip(1).eq.idtone56(54,k11-14)+1) nqsoend(3)=nqsoend(3)+1
-        enddo
-        ip=maxloc(nqsoend)
-        if(nqsoend(ip(1)).gt.6) then
-          if(ip(1).eq.1) then; lqso73=.true.
-          else if(ip(1).eq.2) then; lqsorr73=.true.
-          else if(ip(1).eq.3) then; lqsorrr=.true.
+      if(lcallsstd) then
+        nqsoend=0 ! array 73,rr73,rrr
+        if(dfqso.lt.napwid .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4)) then ! QSO RX freq only
+          do i=24,29
+            ip=maxloc(s8(:,i+7))
+            if(ip(1).eq.idtone56(56,i)+1) nqsoend(1)=nqsoend(1)+1
+            if(ip(1).eq.idtone56(55,i)+1) nqsoend(2)=nqsoend(2)+1
+            if(ip(1).eq.idtone56(54,i)+1) nqsoend(3)=nqsoend(3)+1
+          enddo
+          do i=30,58
+            ip=maxloc(s8(:,i+14))
+            if(ip(1).eq.idtone56(56,i)+1) nqsoend(1)=nqsoend(1)+1
+            if(ip(1).eq.idtone56(55,i)+1) nqsoend(2)=nqsoend(2)+1
+            if(ip(1).eq.idtone56(54,i)+1) nqsoend(3)=nqsoend(3)+1
+          enddo
+          ip=maxloc(nqsoend)
+          if(nqsoend(ip(1)).gt.6) then
+            if(ip(1).eq.1) then; lqso73=.true.
+            else if(ip(1).eq.2) then; lqsorr73=.true.
+            else if(ip(1).eq.3) then; lqsorrr=.true.
+            endif
           endif
-        endif
 !write(*,1018) ip(1),nqsoend
 !1018 format(i1,1x,i2,1x,i2,1x,i2)
+        endif
       endif
     endif
+
+    lqsons73=.false.; lqsonsrr73=.false.; lqsonsrrr=.false.
+    if(lnomycall .or. lnohiscall .or. (.not.lmycallstd .and. .not.lhiscallstd)) go to 512
+    if(.not.lcallsstd) then ! one call is nonstandard
+      if(.not.lqsomsgdcd .and. .not.stophint .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4) &
+         .and. abs(f1-nfqso).lt.napwid) then
+        nqsoend=0 ! array 73,rr73,rrr
+        do i=24,27
+          ip=maxloc(s8(:,i+7))
+          if(ip(1).eq.idtone56(56,i)+1) nqsoend(1)=nqsoend(1)+1
+          if(ip(1).eq.idtone56(55,i)+1) nqsoend(2)=nqsoend(2)+1
+          if(ip(1).eq.idtone56(54,i)+1) nqsoend(3)=nqsoend(3)+1
+        enddo
+        do i=30,58
+          ip=maxloc(s8(:,i+14))
+          if(ip(1).eq.idtone56(56,i)+1) nqsoend(1)=nqsoend(1)+1
+          if(ip(1).eq.idtone56(55,i)+1) nqsoend(2)=nqsoend(2)+1
+          if(ip(1).eq.idtone56(54,i)+1) nqsoend(3)=nqsoend(3)+1
+        enddo
+        ip=maxloc(nqsoend)
+        if(nqsoend(ip(1)).gt.5) then
+          if(ip(1).eq.1) then; lqsons73=.true.
+          else if(ip(1).eq.2) then; lqsonsrr73=.true.
+          else if(ip(1).eq.3) then; lqsonsrrr=.true.
+          endif
+        endif
+!write(*,1019) ip(1),nqsoend
+!1019 format(i1,1x,i2,1x,i2,1x,i2)
+      endif
+    endif
+
+512 continue
 
     lcqsignal=.false.
     ip(1)=maxloc(s256,1)
@@ -782,6 +816,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !   1         CQ     ???    ???        (29+3=32 ap bits)
 !   40       <MyCall> ???  ???         (29+3=32 ap bits) incoming call
 !   41       <MyCall> DxCall ???       (58 ap bits) REPORT/RREPORT
+!   42        MyCall <DxCall> RRR      (77 ap bits)
 !   43        MyCall <DxCall> 73       (77 ap bits)
 !   44        MyCall <DxCall> RR73     (77 ap bits)
 !   31        CQ  DxCall Grid(???)     (77 ap bits) standard DxCall tracking
@@ -835,26 +870,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !  data nhaptypes(3,1:14)/21,21,21,22,22,22,23,23,23,24,24,24,31,36/ ! Tx3 RRreport
 !  data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
 !  data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
-
-      n73=0; nrr73=0; l73sig=.false.; lrr73sig=.false.
-      if(lnomycall .or. lnohiscall .or. (.not.lmycallstd .and. .not.lhiscallstd)) go to 512
-      if(.not.stophint .and. (nQSOProgress.eq.3 .or. nQSOProgress.eq.4) .and. abs(f1-nfqso).lt.napwid) then
-! need to rework it
-        if(.not.lcallsstd) then ! one call is nonstandard
-          do i=32,58
-            if(i.gt.34 .and. i.lt.45) cycle
-            k11=i+14 ! sync shift
-            ip=maxloc(s8(:,k11))
-            if(ip(1).eq.idtone56(55,i)+1) nrr73=nrr73+1; if(ip(1).eq.idtone56(56,i)+1) n73=n73+1
-          enddo
-        endif
-        nthreshr73=5; if(lcallsstd) nthreshr73=6
-        if(nrr73.gt.nthreshr73 .and. nrr73.gt.n73+1) then; lrr73sig=.true.
-        else if(n73.gt.nthreshr73 .and. n73.gt.nrr73+1) then; l73sig=.true.
-        endif
-      endif
-
-512   continue
 
       npasses=4
 ! iaptype 31,35,36 DX Call searching
@@ -1016,8 +1031,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             else if(lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
               if((lqsomsgdcd .or. .not.lapmyc) .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
-              if((iaptype.eq.13 .and. lrr73sig) .or. (iaptype.eq.14 .and. l73sig)) cycle ! skip RR73/73 masks if no need
-              if((iaptype.eq.13 .and. n73.lt.2) .or. (iaptype.eq.14 .and. nrr73.lt.2)) cycle ! skip RR73 or 73 mask
+              if(iaptype.eq.12 .and. .not.lqsonsrrr) cycle ! not RRR signal
+              if(iaptype.eq.13 .and. .not.lqsons73) cycle ! not 73 signal
+              if(iaptype.eq.14 .and. .not.lqsonsrr73) cycle ! not RR73 signal
               if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
               if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
@@ -1086,8 +1102,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(isubp1.eq.2 .and. nweak.eq.1) cycle
               if(isubp1.gt.5) cycle ! so far CQ averaging only
               if(iaptype.gt.40 .and. iaptype.lt.45 .and. lqsomsgdcd) cycle ! already decoded
-              if((iaptype.eq.43 .and. lrr73sig) .or. (iaptype.eq.44 .and. l73sig)) cycle ! skip RR73/73 masks if no need
-              if((iaptype.eq.43 .and. n73.lt.2) .or. (iaptype.eq.44 .and. nrr73.lt.2)) cycle ! skip RR73 or 73 mask
+              if(iaptype.eq.42 .and. .not.lqsonsrrr) cycle ! not RRR signal
+              if(iaptype.eq.43 .and. .not.lqsons73) cycle ! not 73 signal
+              if(iaptype.eq.44 .and. .not.lqsonsrr73) cycle ! not RR73 signal
               if(iaptype.gt.39 .and. .not.lapmyc) cycle
               if(lnomycall .and. iaptype.gt.39 .and. iaptype.lt.45) cycle ! skip QSO signals if mycall is empty
               if(lnohiscall .and. (iaptype.ne.1 .or. iaptype.ne.40)) cycle ! skip DXCall masks if empty
