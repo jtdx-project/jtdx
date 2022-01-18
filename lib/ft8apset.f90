@@ -3,7 +3,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
   use packjt77
   use ft8_mod1, only : apsym,mycall,hiscall,apsymsp,lhound,apsymdxns1,apsymdxnsrrr,mybcall,hisbcall,apcqsym,hisgrid4,     &
                        apsymdxnsrr73,apsymdxns73,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd,apsymdxnsr73, &
-                       apsymdxns732
+                       apsymdxns732,apsymmynsrrr
   character*77 c77
   character*37 msg,msgchk
   character*12 hiscallt,mycallprev,hiscallprev
@@ -99,6 +99,12 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
         if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 7
         read(c77,'(77i1)',err=7) apsymmyns73(1:77)
         apsymmyns73=2*apsymmyns73-1
+        msg=trim(mycall)//' <'//trim(hiscall)//'> RRR'
+        call pack77(msg,i3,n3,c77,0)
+        call unpack77(c77,1,msgchk,unpk77_success,25)
+        if(i3.ne.4 .or. msg.ne.msgchk .or. .not.unpk77_success) go to 15
+        read(c77,'(77i1)',err=15) apsymmynsrrr(1:77)
+        apsymmynsrrr=2*apsymmynsrrr-1
 
       else if(lnohiscall) then
 
@@ -202,6 +208,7 @@ subroutine ft8apset(lmycallstd,lhiscallstd,numthreads)
 12 apsymdxnsrrr=0; apsymdxnsrrr(1)=99; apsymdxnsrrr(30)=99; go to 32
 13 apsymdxnsr73=0; apsymdxnsr73(1)=99; apsymdxnsr73(30)=99; go to 32
 14 apsymdxns732=0; apsymdxns732(1)=99; apsymdxns732(30)=99; go to 32
+15 apsymmynsrrr=0; apsymmynsrrr(1)=99; apsymmynsrrr(30)=99; go to 32
 
 32 continue
 
