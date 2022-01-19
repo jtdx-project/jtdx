@@ -13,7 +13,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall,          &
                        maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56,       &
                        idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd,  &
-                       apsymdxnsr73,apsymdxns732,ltxing,apsymmynsrrr
+                       apsymdxnsr73,apsymdxns732,ltxing,apsymmynsrrr,idtonedxcns73
 
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
@@ -558,27 +558,26 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       if(ndxt.gt.3) ldxcsig=.true.
       if(lcqsignal .and. ldxcsig) lcqdxcsig=.true.
     endif
-    if(lmycallstd) then ! DXCall search or QSOsig
-      if(.not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! nonstandard DXCall
-        ncqdxcnst=0
-        do k11=8,11
-          ip=maxloc(s8(:,k11))
-          if(ip(1).eq.idtonecqdxcns(k11-7)+1) ncqdxcnst=ncqdxcnst+1
-        enddo
-        ndxt=0
-        do k11=12,30
-          ip=maxloc(s8(:,k11))
-          if(ip(1).eq.idtone56(54,k11-7)+1) ndxt=ndxt+1
-          if(ip(1).eq.idtonecqdxcns(k11-7)+1) ncqdxcnst=ncqdxcnst+1
-        enddo
-        ldxcsig=.false.
-        if(dfqso.lt.napwid) then
-          if(ndxt.gt.7) ldxcsig=.true. ! relaxed threshold for RXF napwid
-          if(ncqdxcnst.gt.9) lcqdxcnssig=.true.
-        else
-          if(ndxt.gt.8) ldxcsig=.true.
-          if(ncqdxcnst.gt.10) lcqdxcnssig=.true.
-        endif
+! nonstd DXCall search in idle mode
+    if(.not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! nonstandard DXCall
+      ncqdxcnst=0
+      do i=1,4
+        ip=maxloc(s8(:,i+7))
+        if(ip(1).eq.idtonecqdxcns(i)+1) ncqdxcnst=ncqdxcnst+1
+      enddo
+      ndxt=0
+      do i=5,23
+        ip=maxloc(s8(:,i+7))
+        if(ip(1).eq.idtonedxcns73(i)+1) ndxt=ndxt+1
+        if(ip(1).eq.idtonecqdxcns(i)+1) ncqdxcnst=ncqdxcnst+1
+      enddo
+      ldxcsig=.false.
+      if(dfqso.lt.napwid) then
+        if(ndxt.gt.4) ldxcsig=.true. ! relaxed threshold for RXF napwid
+        if(ncqdxcnst.gt.5) lcqdxcnssig=.true.
+      else
+        if(ndxt.gt.5) ldxcsig=.true.
+        if(ncqdxcnst.gt.6) lcqdxcnssig=.true.
       endif
     endif
 
@@ -885,7 +884,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
               if(iaptype.eq.31 .and. .not.lcqdxcsig) cycle ! not CQ signal from std DXCall
-              if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
+              if(iaptype.eq.35 .and. .not.lqso73) cycle ! DXCall searching, not 73 signal
+              if(iaptype.eq.36 .and. .not.lqsorr73) cycle ! DXCall searching, not RR73 signal
               if(lqsocandave .and. isubp1.gt.8 .and. (iaptype.lt.3 .or. iaptype.gt.6)) cycle ! QSO signal
               if(.not.lqsocandave .and. lmycsignal .and. isubp1.gt.5 .and. isubp1.lt.9 .and. iaptype.ne.2) cycle ! skip other AP if lmycsignal extra subpasses)
 
@@ -991,7 +991,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
               if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
-              if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
+              if(iaptype.eq.35 .and. .not.lqso73) cycle ! DXCall searching, not 73 signal
+              if(iaptype.eq.36 .and. .not.lqsorr73) cycle ! DXCall searching, not RR73 signal
               if(lqsocandave .and. isubp1.gt.8 .and. (iaptype.lt.11 .or. iaptype.gt.14)) cycle ! QSO signal
               if(iaptype.gt.2 .and. iaptype.lt.15 .and. loutapwid) cycle
 
@@ -1085,6 +1086,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
               if(iaptype.gt.1 .and. iaptype.lt.31) cycle
               if(.not.stophint .and. iaptype.gt.1) cycle ! on air, QSO is not possible
+              if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
+              if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
 
               if(iaptype.eq.1) then
                 if(.not.swl .and. isubp2.eq.20) then
