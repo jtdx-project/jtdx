@@ -793,6 +793,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !------------------------
 !   0         cycle
 !   1         CQ     ???    ???            (29+3=32 ap bits)
+!   2         MyCall ???    ???            (29+3=32 ap bits)
 !   11        MyCall <DxCall> ???          (58 ap bits) REPORT/RREPORT
 !   12       <MyCall> DxCall RRR           (77 ap bits)
 !   13       <MyCall> DxCall 73            (77 ap bits)
@@ -802,12 +803,12 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !   36        ??? DxCall RR73              (64 ap bits) ! full compound or just nonstandard callsign
 
 ! ndxnsaptypes(nQSOProgress, extra decoding pass)
-!  data ndxnsaptypes(0,1:27)/1,1,1,31,31,0,36,36,0,0,31,36,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0/       ! Tx6 CQ
-!  data ndxnsaptypes(1,1:27)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0/      ! Tx1 Grid
-!  data ndxnsaptypes(2,1:27)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0/      ! Tx2 Report
-!  data ndxnsaptypes(3,1:27)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0,0,0,0,0,0,0,0,0,0/ ! Tx3 RRreport
-!  data ndxnsaptypes(4,1:27)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0,0,0,0,0,0,0,0,0,0/ ! Tx4 RRR,RR73
-!  data ndxnsaptypes(5,1:27)/14,14,14,13,13,13,1,1,1,12,31,36,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0/    ! Tx5 73
+!  data ndxnsaptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx6 CQ
+!  data ndxnsaptypes(1,1:27)/11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/          ! Tx1 Grid
+!  data ndxnsaptypes(2,1:27)/11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/          ! Tx2 Report
+!  data ndxnsaptypes(3,1:27)/11,11,11,14,14,14,13,13,13,12,12,12,0,0,0,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx3 RRreport
+!  data ndxnsaptypes(4,1:27)/11,11,11,14,14,14,13,13,13,12,12,12,2,2,2,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx4 RRR,RR73
+!  data ndxnsaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx5 73
 
 ! iaptype Hound mode
 !------------------------
@@ -982,6 +983,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
             else if(lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+              if(.not.stophint .and. iaptype.gt.30) cycle ! no DXCall searching at QSO, reduce Lag
               if((lqsomsgdcd .or. .not.lapmyc) .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
               if(iaptype.eq.12 .and. .not.lqsorrr) cycle ! not RRR signal
               if(iaptype.eq.13 .and. .not.lqso73) cycle ! not 73 signal
@@ -991,51 +993,78 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
               if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
               if(lqsocandave .and. isubp1.gt.8 .and. (iaptype.lt.11 .or. iaptype.gt.14)) cycle ! QSO signal
-              if(iaptype.gt.1 .and. iaptype.lt.15 .and. loutapwid) cycle
+              if(iaptype.gt.2 .and. iaptype.lt.15 .and. loutapwid) cycle
 
-              if(isubp2.eq.5 .or. isubp2.eq.8 .or. isubp2.eq.11) then; llrz=llra
-              else if(isubp2.eq.6 .or. isubp2.eq.9 .or. isubp2.eq.12) then; llrz=llrb
-              else if(isubp2.eq.7 .or. isubp2.eq.10 .or. isubp2.gt.12) then; llrz=llrc
+              if(iaptype.eq.1) then
+                if(.not.swl .and. isubp2.eq.20) then
+                  scqlev=0.; do i4=1,9; scqlev=scqlev+s8(idtone25(2,i4),i4+7); enddo
+                  snoiselev=(sum(s8(0:7,8:16))-scqlev)/7.0; scqnr=scqlev/snoiselev
+                  if(scqnr.lt.1.0 .and. .not.lcqsignal) cycle
+                endif
+                if(isubp2.eq.21) then
+                  if(.not.swl .and. (lft8lowth .or. lft8subpass)) then
+                    if(scqnr.lt.1.2 .and. .not.lcqsignal) cycle
+                  endif
+                  if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) then
+                    if(scqnr.lt.1.3 .and. .not.lcqsignal) cycle
+                  endif
+                endif
+              endif
+
+              if(iaptype.eq.2) then
+                if(.not.swl .and. isubp2.eq.17) then
+                  smyclev=0.; do i4=1,9; smyclev=smyclev+s8(idtonemyc(i4),i4+7); enddo
+                  snoiselev=(sum(s8(0:7,8:16))-smyclev)/7.0; smycnr=smyclev/snoiselev
+                  if(smycnr.lt.1.0 .and. .not.lmycsignal) cycle
+                endif
+                if(isubp2.eq.18) then
+                  if(.not.swl .and. (lft8lowth .or. lft8subpass)) then
+                    if(smycnr.lt.1.2 .and. .not.lmycsignal) cycle
+                  endif
+                endif
               endif
 
               apmask=0
               if(iaptype.eq.1) then ! CQ ??? ???
+                if(isubp2.eq.20) then; llrz=llrc
+                else if(isubp2.eq.21) then; llrz=llrb
+                else if(isubp2.eq.22) then; llrz=llra
+                endif
                 apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
+              else if(iaptype.eq.2) then ! MyCall ??? ???
+                if(isubp2.eq.17) then; llrz=llrc
+                else if(isubp2.eq.18) then; llrz=llrb
+                else if(isubp2.eq.19) then; llrz=llra
+                endif
+                apmask(1:29)=1; llrz(1:29)=apmag*apsym(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
               else if(iaptype.eq.11) then ! MyCall <DxCall> ???  ! report rreport type 1 msg
+                if(isubp2.eq.5) then; llrz=llrc
+                else if(isubp2.eq.6) then; llrz=llrb
+                else if(isubp2.eq.7) then; llrz=llra
+                endif
                 apmask(1:58)=1; llrz(1:58)=apmag*apsymdxns1; apmask(75:77)=1; llrz(75:76)=apmag*(-1); llrz(77)=apmag*(+1)
               else if(iaptype.eq.12) then  ! type 4 <MyCall> DxCall RRR
+                if(isubp2.eq.14) then; llrz=llrc
+                else if(isubp2.eq.15) then; llrz=llrb
+                else if(isubp2.eq.16) then; llrz=llra
+                endif
                 apmask(1:77)=1; llrz(1:77)=apmag*apsymdxnsrrr
               else if(iaptype.eq.13) then  ! type 4 <MyCall> DxCall 73
+                if(isubp2.eq.11) then; llrz=llrc
+                else if(isubp2.eq.12) then; llrz=llrb
+                else if(isubp2.eq.13) then; llrz=llra
+                endif
                 apmask(1:77)=1; llrz(1:77)=apmag*apsymdxns732
               else if(iaptype.eq.14) then  ! type 4 <MyCall> DxCall RR73
+                if(isubp2.eq.8) then; llrz=llrc
+                else if(isubp2.eq.9) then; llrz=llrb
+                else if(isubp2.eq.10) then; llrz=llra
+                endif
                 apmask(1:77)=1; llrz(1:77)=apmag*apsymdxnsr73
               else if(iaptype.eq.31) then ! CQ  DxCall ! full compound or nonstandard
-                apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
-              else if(iaptype.eq.35) then ! ??? DxCall 73 ! full compound or nonstandard
-                apmask(14:77)=1; llrz(14:77)=apmag*apsymdxns73(14:77)
-              else if(iaptype.eq.36) then ! ??? DxCall RR73 ! full compound or nonstandard
-                apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77)
-              endif
-
-            else if(.not.lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! empty calls or compound/nonstandard calls
-              iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
-              if(iaptype.gt.1 .and. iaptype.lt.31) cycle
-              if(.not.stophint .and. iaptype.gt.1) cycle ! on air, QSO is not possible
-
-              apmask=0
-              if(iaptype.eq.1) then ! CQ ??? ???
-                if(isubp2.eq.5 .or. isubp2.eq.8 .or. isubp2.eq.11 .or. isubp2.eq.18) then; llrz=llrc
-                else if(isubp2.eq.6 .or. isubp2.eq.9 .or. isubp2.eq.12) then; llrz=llrb
-                else if(isubp2.eq.7 .or. isubp2.eq.10 .or. isubp2.eq.13) then; llrz=llra
-                endif
-                apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1)
-                llrz(77)=apmag*(+1)
-! nonstandard DXCall search masks below are for monitoring purpose in idle mode, QSO is not possible
-! wideband searching being used by default
-              else if(iaptype.eq.31) then ! CQ  DxCall ! full compound or nonstandard
-                if(isubp2.eq.8 .or. isubp2.eq.11) then; llrz=llrb
-                else if(isubp2.eq.9) then; llrz=llra
-                else if(isubp2.eq.15) then; llrz=llrc
+                if(isubp2.eq.23) then; llrz=llrc
+                else if(isubp2.eq.24) then; llrz=llrb
+                else if(isubp2.eq.25) then; llrz=llra
                 endif
                 apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
               else if(iaptype.eq.35) then ! ??? DxCall 73 ! full compound or nonstandard
@@ -1045,9 +1074,60 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 endif
                 apmask(14:77)=1; llrz(14:77)=apmag*apsymdxns73(14:77)
               else if(iaptype.eq.36) then ! ??? DxCall RR73 ! full compound or nonstandard
-                if(isubp2.eq.16) then; llrz=llrc
-                else if(isubp2.eq.12) then; llrz=llrb
-                else if(isubp2.eq.11) then; llrz=llra
+                if(isubp2.eq.26) then; llrz=llrc
+                else if(isubp2.eq.27) then; llrz=llrb
+                else if(isubp2.eq.28) then; llrz=llra
+                endif
+                apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77)
+              endif
+
+            else if(.not.lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! empty calls or compound/nonstandard calls
+              iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+              if(iaptype.gt.1 .and. iaptype.lt.31) cycle
+              if(.not.stophint .and. iaptype.gt.1) cycle ! on air, QSO is not possible
+
+              if(iaptype.eq.1) then
+                if(.not.swl .and. isubp2.eq.20) then
+                  scqlev=0.; do i4=1,9; scqlev=scqlev+s8(idtone25(2,i4),i4+7); enddo
+                  snoiselev=(sum(s8(0:7,8:16))-scqlev)/7.0; scqnr=scqlev/snoiselev
+                  if(scqnr.lt.1.0 .and. .not.lcqsignal) cycle
+                endif
+                if(isubp2.eq.21) then
+                  if(.not.swl .and. (lft8lowth .or. lft8subpass)) then
+                    if(scqnr.lt.1.2 .and. .not.lcqsignal) cycle
+                  endif
+                  if(.not.swl .and. .not. lft8subpass .and. .not.lft8lowth) then
+                    if(scqnr.lt.1.3 .and. .not.lcqsignal) cycle
+                  endif
+                endif
+              endif
+
+              apmask=0
+              if(iaptype.eq.1) then ! CQ ??? ???
+                if(isubp2.eq.20) then; llrz=llrc
+                else if(isubp2.eq.21) then; llrz=llrb
+                else if(isubp2.eq.22) then; llrz=llra
+                endif
+                apmask(1:29)=1; llrz(1:29)=apmag*mcq(1:29); apmask(75:77)=1; llrz(75:76)=apmag*(-1)
+                llrz(77)=apmag*(+1)
+! nonstandard DXCall search masks below are for monitoring purpose in idle mode, QSO is not possible
+! wideband searching being used by default
+              else if(iaptype.eq.31) then ! CQ  DxCall ! full compound or nonstandard
+                if(isubp2.eq.23) then; llrz=llrc
+                else if(isubp2.eq.24) then; llrz=llrb
+                else if(isubp2.eq.25) then; llrz=llra
+                endif
+                apmask(1:77)=1; llrz(1:77)=apmag*apcqsym
+              else if(iaptype.eq.35) then ! ??? DxCall 73 ! full compound or nonstandard
+                if(isubp2.eq.29) then; llrz=llrc
+                else if(isubp2.eq.30) then; llrz=llrb
+                else if(isubp2.eq.31) then; llrz=llra
+                endif
+                apmask(14:77)=1; llrz(14:77)=apmag*apsymdxns73(14:77)
+              else if(iaptype.eq.36) then ! ??? DxCall RR73 ! full compound or nonstandard
+                if(isubp2.eq.26) then; llrz=llrc
+                else if(isubp2.eq.27) then; llrz=llrb
+                else if(isubp2.eq.28) then; llrz=llra
                 endif
                 apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77)
               endif
@@ -1217,7 +1297,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         if(nharderrors.lt.0 .or. nharderrors+dmin.ge.60.0 .or. (isubp2.gt.2 .and. nharderrors.gt.39)) then ! chk isubp2 value
           if(nweak.eq.2 .and. isubp1.eq.2) then
             if(ipass.eq.npass-1) then
-              if(lcqsignal .and. (lhiscallstd .or. lnohiscall)) then
+              if(lcqsignal) then
                 if(isubp2.eq.22) then ! last pass, std and nonstd mycall
                   lfoundcq=.false.
                   do ik=1,numdeccq
@@ -1284,7 +1364,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
           if(nweak.eq.1 .and. isubp1.eq.1) then
             if(ipass.eq.npass-1) then
-              if(lcqsignal .and. (lhiscallstd .or. lnohiscall)) then
+              if(lcqsignal) then
                 if(isubp2.eq.22) then ! last pass, std and nonstd mycall
                   lfoundcq=.false.
                   do ik=1,numdeccq
