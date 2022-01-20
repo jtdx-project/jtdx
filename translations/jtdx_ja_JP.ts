@@ -4481,8 +4481,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="5653"/>
         <source>early start of decoder</source>
-        <translatorcomment>デコーダーの早い開始</translatorcomment>
-        <translation></translation>
+        <translation>デコーダーの早い開始</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5661"/>
@@ -6756,12 +6755,12 @@ Error(%2): %3</source>
     <message>
         <location filename="../Configuration.ui" line="1411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;HamlibのPTTポート共有の有効化をする。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1414"/>
         <source>Share PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>PTTポートを共有する</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1438"/>
