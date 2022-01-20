@@ -3304,7 +3304,7 @@ Error: %2 - %3</translation>
         <location filename="../mainwindow.ui" line="1979"/>
         <location filename="../mainwindow.ui" line="2055"/>
         <source>Clr</source>
-        <translation>Clr</translation>
+        <translation>Esb</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1993"/>
@@ -6894,12 +6894,12 @@ una altra interfície de hardware per PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demana habilitar l&apos;ús compartit del port PTT a Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1414"/>
         <source>Share PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>Comparteix el port del PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1433"/>
