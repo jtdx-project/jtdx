@@ -409,6 +409,10 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
                     } else if (!hisCall.isEmpty () && checkCall.contains(hisCall)) {
                         qsoHistory.rx(checkCall,decodedText->frequencyOffset());
                         checkCall = "";
+                    } else if (!decodedText->isNonStd2()) {
+                        std_type = 3;
+                        if (!grid.isEmpty ()) param = grid;
+                        if (!hisCall.isEmpty () && checkCall.contains(hisCall)) qsoHistory.rx(checkCall,decodedText->frequencyOffset());
                     } else {
                         checkCall = "";
                     }
