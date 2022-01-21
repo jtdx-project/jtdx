@@ -1548,6 +1548,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
         if(falsedec) then; nbadcrc=1; msg37=''; return; endif
       endif
     endif
+
 ! contest messages:
 ! -23  1.0 1229 ~ JL6GSC/P R 571553 CJ76MV i3=0 n3=2
 ! -23  0.2 2482 ~ G59XTB R 521562 RA82SJ i3=0 n3=2
@@ -1618,11 +1619,19 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     endif
 
 ! -22  0.3 1000 ~ 9Y4DWY <...> BF70  iaptype=0 i3=1 n3=2  invalid message in FT8 protocol, can be transmitted manually
-    ispc1=index(msg37,' ')
+    if(i3.eq.1) then
+      ispc1=index(msg37,' ')
       if(msg37(ispc1+1:ispc1+2).eq.'<.') then
-        call_b=''; call_b=msg37(1:ispc1-1)
-         falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
-         if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+        ispc2=index(msg37((ispc1+1):),' ')+ispc1
+        ispc3=index(msg37((ispc2+1):),' ')+ispc2
+        if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then ! there is a valid grid in message
+          call_b=''; call_b=msg37(1:ispc1-1)
+          falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
+          if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+        endif
+      endif
     endif
 
 ! prior to subtraction we need to parse message below as 'TU DE 632TGU' + 'QV4UPP 632TGU 529 xxxx'
