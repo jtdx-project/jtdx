@@ -198,11 +198,12 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 
 ! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, both callsigns are correct, checking for valid grid
 ! ES6DO TK60CNES R MJ79 ! non standard DXCall, iaptype 11
-  if(iaptype.eq.3 .or. iaptype.eq.11) then
+! JH4PUL/3 HB9CEX R PN76 * ! non standard mycall, iaptype 41
+  if(iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.41) then
     indxr=index(msg37,' R ')
     if(indxr.gt.7) then
-      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-      if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if(ispc1.gt.3 .and. ispc2.gt.7) then
         if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
           ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
           if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
