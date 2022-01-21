@@ -198,21 +198,24 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 
 ! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, both callsigns are correct, checking for valid grid
 ! ES6DO TK60CNES R MJ79 ! non standard DXCall, iaptype 11
+! UA0ZZZ AA1AAA/1 R GC45 ! non standard DXCall, iaptype 11
 ! JH4PUL/3 HB9CEX R PN76 * ! non standard mycall, iaptype 41
   if(iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.41) then
     indxr=index(msg37,' R ')
     if(indxr.gt.7) then
-      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
       if(ispc1.gt.3 .and. ispc2.gt.7) then
-        if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
-          ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
-          if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
-             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
-             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
-            grid=msg37(ispc3+1:ispc4-1)
-            if(grid.ne.hisgrid4) then ! correctly decoded contest message
-              call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
-              if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+        if(islash1.lt.ispc1 .or. (islash1.eq.ispc2-2 .and. msg37(ispc2-1:ispc2-1).lt.':' )) then ! AA1AAA/1 can be first or 2nd callsign
+          if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
+            ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
+            if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+               msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+               msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
+              grid=msg37(ispc3+1:ispc4-1)
+              if(grid.ne.hisgrid4) then ! correctly decoded contest message
+                call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
+                if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+              endif
             endif
           endif
         endif
