@@ -6906,12 +6906,12 @@ other hardware interface for PTT.</source>
     <message>
         <location filename="../Configuration.ui" line="1411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Запрос на совместное использование PTT порта в Hamlib, например JTDX и какой либо другой программой, либо двумя одновременно работающими JTDX.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1414"/>
         <source>Share PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>Общий PTT порт</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1433"/>
