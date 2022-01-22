@@ -2390,7 +2390,7 @@ Error: %2 - %3</source>
         <location filename="../FrequencyList.cpp" line="597"/>
         <location filename="../FrequencyList.cpp" line="703"/>
         <source>Frequency (MHz)</source>
-        <translation>Frequeência (MHz)</translation>
+        <translation>Frequência (MHz)</translation>
     </message>
     <message>
         <location filename="../FrequencyList.cpp" line="620"/>
@@ -2910,7 +2910,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../logqso.ui" line="250"/>
         <source>Grid</source>
-        <translation></translation>
+        <translation>Grid</translation>
     </message>
     <message>
         <location filename="../logqso.ui" line="282"/>
@@ -2965,7 +2965,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Média: DT médio acumulado de sinais descodificados na banda atual. &lt;/p&gt; &lt;p&gt; Lag: é o atraso do descodificador calculado relativamente ao início do próximo intervalo, valores negativos significam há tempo livre disponível para aumentar a profundidade da descodificação, valores positivos são o atraso do descodificador em TX ou no próximo intervalo, o que significa que pode não haver recursos suficientes da CPU para a profundidade de descodificação selecionada para fornecer transmissão de sinal confiável. &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p &gt; O atraso depende do desempenho da CPU, das condições de ruído, da largura de banda e de outros programas usando no computador; pode ser diminuído pela redução da largura de banda da cascata. Se o Lag for constantemente negativo, a CPU manipulará a descodificação dos intervalo de tempo e você poderá tentar tornar a descodificação mais agressiva para obter mais descodificações. &lt;/p&gt; &lt;p&gt; FT8: se o Lag for 0 .. 0.4, você ainda poderá usar o Autoseq 3/7 (a seleção automática acionará a alteração da mensagem TX com antecedência suficiente para transmitir a mensagem completa). Se Lag&gt; 0,4, você deve tentar diminuir a agressividade da descodificação. Se ainda houver Lag&gt; 0,4, o Autoseq 2/6 deve ser usado, pois a resposta à chamada recebida será parcialmente danificada na transmissão no AutoSeq 3/7. Se o Lag for constantemente  &gt; 2, o seu CPU não é adequado para operar em FT8 com as configurações atuais do descodificador. Ainda assim você pode monitorar como SWL. &lt;/p&gt; &lt;p&gt; / xx: número de mensagens descodificadas no último intervalo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Média: DT médio acumulado de sinais descodificados na banda atual. &lt;/p&gt; &lt;p&gt; Lag: é o atraso do descodificador calculado relativamente ao início do próximo intervalo, valores negativos significam há tempo livre disponível para aumentar a profundidade da descodificação, valores positivos são o atraso do descodificador em TX ou no próximo intervalo, o que significa que pode não haver recursos suficientes da CPU para a profundidade de descodificação selecionada para fornecer transmissão de sinal confiável. &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p &gt; O atraso depende do desempenho da CPU, das condições de ruído, da largura de banda e de outros programas usando no computador; pode ser diminuído pela redução da largura de banda da cascata. Se o Lag for constantemente negativo, a CPU manipulará a descodificação dos intervalo de tempo e você poderá tentar tornar a descodificação mais agressiva para obter mais descodificações. &lt;/p&gt; &lt;p&gt; FT8: se o Lag for 0 .. 0.4, você ainda poderá usar o Autoseq 3/7 (a seleção automática acionará a alteração da mensagem TX com antecedência suficiente para transmitir a mensagem completa). Se Lag&gt; 0,4, você deve tentar diminuir a agressividade da descodificação. Se ainda houver Lag&gt; 0,4, o Autoseq 2/6 deve ser usado, pois a resposta à chamada recebida será parcialmente danificada na transmissão no AutoSeq 3/7. Se o Lag for constantemente  &gt; 2, o seu CPU não é adequado para operar em FT8 com as configurações atuais do descodificador. Ainda assim você pode monitorar como SWL. &lt;/p&gt; &lt;p&gt; / xx: número de mensagens descodificadas no último intervalo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -4513,12 +4513,12 @@ Lista. A lista pode ser mantida em Configurações (F2).</translation>
     <message>
         <location filename="../mainwindow.ui" line="5712"/>
         <source>Switch Filter OFF at sending 73</source>
-        <translation>Desliguar o filtro ao enviar 73</translation>
+        <translation>Desligar o filtro ao enviar 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5720"/>
         <source>Switch Filter OFF at getting 73</source>
-        <translation>Desligue o filtro ao obter 73</translation>
+        <translation>Desliguar o filtro ao receber 73</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5728"/>
@@ -6861,17 +6861,17 @@ outra interface de hardware para PTT.</translation>
     <message>
         <location filename="../Configuration.ui" line="1386"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the RS-232 serial port utilised for PTT control, this option is available when DTR or RTS is selected above as a transmit method.&lt;/p&gt;&lt;p&gt;This port can be the same one as the one used for CAT control.&lt;/p&gt;&lt;p&gt;For some interface types the special value CAT may be chosen, this is used for non-serial CAT interfaces that can control serial port control lines remotely (OmniRig for example).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Selecione a porta serie RS-232 utilizada para o controle PTT, esta opção estará disponível quando DTR ou RTS for selecionado acima como método de transmissão. &lt;/p&gt; &lt;p&gt; Esta porta pode ser a mesmo usado para o controle CAT. &lt;/p&gt; &lt;p&gt; Para alguns tipos de interface, o valor especial CAT pode ser escolhido, usado para interfaces CAT não serial que podem controlar remotamente as linhas de controle de porta serial (OmniRig, por exemplo). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Selecione a porta serie RS-232 utilizada para o controle PTT, esta opção estará disponível quando DTR ou RTS for selecionado acima como método de transmissão. &lt;/p&gt; &lt;p&gt; Esta porta pode ser a mesma usada para o controle CAT. &lt;/p&gt; &lt;p&gt; Para alguns tipos de interface, o valor especial CAT pode ser escolhido, usado para interfaces CAT não serial que podem controlar remotamente as linhas de controle de porta serial (OmniRig, por exemplo). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Request enable PTT port sharing in Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pedido de habilitar a partilha de porta PTT no Hamlib.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1414"/>
         <source>Share PTT port</source>
-        <translation type="unfinished"></translation>
+        <translation>Partilhar porta PTT</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1433"/>
@@ -6999,7 +6999,7 @@ interface de rádio se comporta conforme esperado.</translation>
     <message>
         <location filename="../Configuration.ui" line="1730"/>
         <source>A&amp;udio</source>
-        <translation>A&amp;udio</translation>
+        <translation>Á&amp;udio</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1733"/>
@@ -7092,7 +7092,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="1898"/>
         <source>Transmit</source>
-        <translation>Transmitir</translation>
+        <translation>Transmissão</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="1905"/>
@@ -7137,12 +7137,12 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="2005"/>
         <source>Sequencing</source>
-        <translation>Sequenciamento</translation>
+        <translation>Sequência</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2029"/>
         <source>Message sequencing short scenarios</source>
-        <translation>Cenários curtos de sequenciamento de mensagens</translation>
+        <translation>Cenário de sequenciamento de mensagens curtas</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2037"/>
@@ -7152,7 +7152,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="2040"/>
         <source>Counters. Search through decoded messages, call CQ or Halt Tx if:</source>
-        <translation>Contadores. Pesquisa mensagens descodificadas, ligue para CQ ou Halt Tx se:</translation>
+        <translation>Contadores. Pesquisa nas mensagens descodificadas, chamada CQ ou Parar Tx se:</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2072"/>
@@ -7190,7 +7190,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="2236"/>
         <source>Halt TX if operator I called answered to other operator</source>
-        <translation>Parar TX se o operador que eu chamei atendeu outro operador</translation>
+        <translation>Parar TX se o operador que eu chamei respondeu a outra estação</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2243"/>
@@ -7200,7 +7200,7 @@ ambos .</translation>
     <message>
         <location filename="../Configuration.ui" line="2246"/>
         <source>Strict directional CQ operation</source>
-        <translation>Operação direccional estrita do CQ</translation>
+        <translation>Operação CQ direccional estrita</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2304"/>
@@ -7358,7 +7358,7 @@ e DX Grid quando uma mensagem de texto livre ou 73 é enviada.</translation>
     <message>
         <location filename="../Configuration.ui" line="2530"/>
         <source>Send logged QSO ADIF data</source>
-        <translation>Enviar dados de QSOregistados em ADIF</translation>
+        <translation>Enviar dados de QSO registados em ADIF</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="2564"/>
