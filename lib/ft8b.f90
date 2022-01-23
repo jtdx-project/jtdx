@@ -313,14 +313,29 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
 ! sync quality check
     is1=0; is2=0; is3=0; nsyncscore=0; nsyncscore1=0; nsyncscore2=0; nsyncscore3=0
-    scoreratio=0.; scoreratio1=0.; scoreratio2=0.; scoreratio3=0.
+    scoreratio=0.; scoreratio1=0.; scoreratio2=0.; scoreratio3=0.; nsync2=0
     do k=1,7
-      ip=maxloc(s8(:,k))
-      if(icos7(k-1).eq.(ip(1)-1)) is1=is1+1
-      ip=maxloc(s8(:,k+36))
-      if(icos7(k-1).eq.(ip(1)-1)) is2=is2+1
-      ip=maxloc(s8(:,k+72))
-      if(icos7(k-1).eq.(ip(1)-1)) is3=is3+1
+      s81(:)=s8(:,k); ip=maxloc(s81)
+      if(icos7(k-1).eq.(ip(1)-1)) then
+        is1=is1+1
+      else
+        s81(ip(1)-1)=0.; ip=maxloc(s81)
+        if(icos7(k-1).eq.(ip(1)-1)) nsync2=nsync2+1
+      endif
+      s81=s8(:,k+36); ip=maxloc(s81)
+      if(icos7(k-1).eq.(ip(1)-1)) then
+        is2=is2+1
+      else
+        s81(ip(1)-1)=0.; ip=maxloc(s81)
+        if(icos7(k-1).eq.(ip(1)-1)) nsync2=nsync2+1
+      endif
+      s81=s8(:,k+72); ip=maxloc(s81)
+      if(icos7(k-1).eq.(ip(1)-1)) then
+        is3=is3+1
+      else
+        s81(ip(1)-1)=0.; ip=maxloc(s81)
+        if(icos7(k-1).eq.(ip(1)-1)) nsync2=nsync2+1
+      endif
       if(rrxdt.ge.-0.5) then
         synck=s8(icos7(k-1),k); sumk=(sum(s8(:,k))-synck)/7.0
         if(synck.gt.sumk) then; nsyncscore1=nsyncscore1+1; scoreratio1=scoreratio1+synck/sumk; endif
@@ -336,7 +351,23 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 ! hard sync sum - max is 21
     nsync=is1+is2+is3
 ! bail out
-    if(nsync.le.6) then; nbadcrc=1; return; endif
+    if(lcqcand .and. nsync.lt.7 .and. nsync.gt.1) then
+!f1mod=modulo(f1,50.)
+!if(f1mod.lt.1.5) print *,f1,nsync,nsync2
+      if(nsync+nsync2.lt.9) then
+        rscq=0.
+        do k11=8,16
+          ip=maxloc(s8(:,k11))
+          if(k11.lt.16) then; if(ip(1).eq.1) rscq=rscq+1.; else; if(ip(1).eq.2) rscq=rscq+1.; endif
+        enddo
+        ip=maxloc(s8(:,17)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+        ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+        ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
+        if(rscq.lt.4.9) then; nbadcrc=1; return; endif
+      endif
+    else
+      if(nsync.lt.7) then; nbadcrc=1; return; endif
+    endif
     if(nsyncscore.gt.0) then; scoreratio=scoreratio/nsyncscore; else; scoreratio=0.; endif 
     if(nsyncscore1.gt.0) then; scoreratio1=scoreratio1/nsyncscore1; else; scoreratio1=0.; endif 
     if(nsyncscore3.gt.0) then; scoreratio3=scoreratio3/nsyncscore3; else; scoreratio3=0.; endif
