@@ -352,8 +352,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     nsync=is1+is2+is3
 ! bail out
     if(lcqcand .and. nsync.lt.7 .and. nsync.gt.1) then
-!f1mod=modulo(f1,50.)
-!if(f1mod.lt.1.5) print *,f1,nsync,nsync2
       if(nsync+nsync2.lt.9) then
         rscq=0.
         do k11=8,16
@@ -578,7 +576,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       ip(1)=maxloc(s2563,1)
       if(ip(1).eq.4 .or. ip(1).eq.6) lcqsignal=.true.
     endif
-    lmycsignal=.false.; if(lapmyc .and. nmic.gt.3) lmycsignal=.true.
+    lmycsignal=.false.; if(lapmyc .and. nmic.gt.2) lmycsignal=.true.
 
     ldxcsig=.false.; lcqdxcsig=.false.; lcqdxcnssig=.false.; ndxt=0
     if(lhiscallstd) then
