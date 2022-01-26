@@ -12,7 +12,7 @@ module ft8_mod1
        xdtincall(174)
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58),     &
           idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,27),icos7(0:6),graymap(0:7),nappasses(0:5), &
-          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66),  &
+          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,27),apsymsp(66),  &
           apsymdxns1(58),apsymdxnsrrr(77),ndxnsaptypes(0:5,27),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),       &
           nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58),              &
           apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,27),apsymdxstd(58),     &
@@ -45,12 +45,12 @@ module ft8_mod1
   data nmycnsaptypes(4,1:27)/41,41,41,44,44,44,43,43,43,42,42,42,40,40,40,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx4 RRR,RR73
   data nmycnsaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,40,40,40,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx5 73
 ! Hound mode
-  data nhaptypes(0,1:14)/1,1,1,111,111,111,31,31,31,36,36,36,0,0/ ! Tx6 CQ, possible in idle mode
-  data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
-  data nhaptypes(2,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx2 none
-  data nhaptypes(3,1:14)/21,21,21,22,22,22,23,23,23,24,24,24,31,36/ ! Tx3 RRreport
-  data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
-  data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
+  data nhaptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,111,111,111/       ! Tx6 CQ, possible in idle mode if DXCall is empty
+  data nhaptypes(1,1:27)/21,21,21,22,22,22,0,0,0,0,0,0,0,0,0,31,31,31,0,0,0,36,36,36,0,0,0/ ! Tx1 Grid idle mode or transmitting
+  data nhaptypes(2,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/             ! Tx2 none
+  data nhaptypes(3,1:27)/21,21,21,22,22,22,23,23,23,24,24,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/ ! Tx3 RRreport QSO in progress or QSO is finished
+  data nhaptypes(4,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/             ! Tx4 none
+  data nhaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/             ! Tx5 none
 !non-standard DXCall
   data ndxnsaptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx6 CQ
   data ndxnsaptypes(1,1:27)/11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/          ! Tx1 Grid
