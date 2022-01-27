@@ -13,7 +13,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                        mybcall,hisbcall,lskiptx1,nft8cycles,nft8swlcycles,ctwkw,ctwkn,nincallthr,msgincall,xdtincall,          &
                        maskincallthr,ctwk256,numcqsig,numdeccq,evencq,oddcq,nummycsig,numdecmyc,evenmyc,oddmyc,idtone56,       &
                        idtonecqdxcns,evenqso,oddqso,nmycnsaptypes,apsymmyns1,apsymmyns2,apsymmynsrr73,apsymmyns73,apsymdxstd,  &
-                       apsymdxnsr73,apsymdxns732,ltxing,apsymmynsrrr,idtonedxcns73
+                       apsymdxnsr73,apsymdxns732,ltxing,apsymmynsrrr,idtonedxcns73,idtonefox73,idtonespec
 
   include 'ft8_params.f90'
   character c77*77,msg37*37,msg37_2*37,msgd*37,msgbase37*37,call_a*12,call_b*12,callsign*12,grid*12
@@ -33,7 +33,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg,          &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,       &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
-             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr
+             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lfoxspecrpt,lfoxstdr73
 
   type tmpcqdec_struct
     real freq
@@ -610,6 +610,42 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     endif
 
+    lfoxstdr73=.false.; lfoxspecrpt=.false.
+    nfoxspecrpt=0 ! checking fo special message with report to mybcall
+    if(lhound) then
+      nfoxstdbase=0 ! checking for report signal and base of RR73 signal
+      nfoxspecr73=0 ! checking fo special message with RR73 to mybcall
+      nfoxr73=0 ! checking for RR73 signal with standard message
+      fdelta=abs(f1-nfqso); fdeltam=modulo(fdelta,60.)
+      if(fdelta.lt.245.0 .and. fdeltam.lt.3.0 .and. (nQSOProgress.eq.1 .or. nQSOProgress.eq.3)) then ! calculate on possible Fox frequencies only
+        do i=1,18
+          ip=maxloc(s8(:,i+7))
+          if(ip(1).eq.idtonefox73(i)+1) then
+            nfoxstdbase=nfoxstdbase+1
+            if(i.gt.10) nfoxspecrpt=nfoxspecrpt+1
+          endif
+        enddo
+        do i=20,22 ! hash10
+          ip=maxloc(s8(:,i+7))
+          if(ip(1).eq.idtonespec(i)+1) then; nfoxspecrpt=nfoxspecrpt+1; nfoxspecr73=nfoxspecr73+1; endif
+        enddo
+        do i=57,58 ! i3,n3
+          ip=maxloc(s8(:,i+14))
+          if(ip(1).eq.idtonespec(i)+1) then; nfoxspecrpt=nfoxspecrpt+1; nfoxspecr73=nfoxspecr73+1; endif
+        enddo
+        rspecstdrpt=(nfoxspecrpt*18.)/(13.*nfoxstdbase)
+        if(rspecstdrpt.gt.1.) lfoxspecrpt=.true.
+        if(nQSOProgress.eq.3) then
+          do i=24,58
+            if(i.lt.30) then; ip=maxloc(s8(:,i+7)); else; ip=maxloc(s8(:,i+14)); endif
+            if(ip(1).eq.idtonefox73(i)+1) nfoxr73=nfoxr73+1
+          enddo
+          rstdr73=(nfoxr73*5.)/(35.*nfoxspecr73)
+          if(rstdr73.gt.1.) lfoxstdr73=.true.
+        endif
+      endif
+    endif
+
     lsubptxfreq=.false.
     if(lapmyc .and. abs(f1-nftx).lt.2.0 .and. .not.lhound .and. .not.lft8sdec .and. .not.lqsomsgdcd .and. &
       ((.not.lskiptx1 .and. nlasttx.eq.1) .or. (lskiptx1 .and. nlasttx.eq.2))) lsubptxfreq=.true.
@@ -842,9 +878,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 !------------------------
 !    0        cycle
 !    1        CQ     ???    ???            (29+3=32 ap bits) standard callsign
-!   21        BaseMyCall BaseDxCall ???    (58+3=61 ap bits) Report
+!   21        MyBaseCall DxBaseCall ???    (58+3=61 ap bits) Report
 !   22        ??? RR73; MyCall <???> ???   (28+6=34 ap bits)
-!   23        BaseMyCall BaseDxCall RR73   (77 ap bits)
+!   23        MyBaseCall DxBaseCall RR73   (77 ap bits)
 !   24        MyCall RR73; ??? <???> ???   (28+6=34 ap bits)
 !   31        CQ  DxCall (DXGrid)          (77 ap bits) ! standard/full compound or just nonstandard callsign
 !   36        ??? DxCall RR73              (29+19/64 ap bits) ! standard/ full compound or just nonstandard callsign
@@ -1248,12 +1284,32 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             if(lnomycall .and. iaptype.gt.1 .and. iaptype.lt.31) cycle ! skip AP if mycall is missed in config
             if(lhiscallstd .and. iaptype.eq.31 .and. .not.lcqsignal) cycle ! not CQ signal, skip CQ DXCall DXgrid mask
             if(lqsomsgdcd .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! QSO message already decoded
-            if(.not.stophint .and. (iaptype.eq.31 .or. iaptype.eq.36)) cycle ! in attempt to start QSO, CQ and RR73 decoding not needed
-! can be staying in queue, need to process possible incoming report even if TX is switched off:
+            if(.not.stophint .and. (iaptype.eq.31 .or. iaptype.eq.36)) cycle ! CQ and RR73 decoding not needed if TX is on
+            if(nQSOProgress.eq.1) then
+              if(lfoxspecrpt) then
+                if(iaptype.eq.21) cycle ! it is not standard message report signal
+                if((iaptype.eq.31 .or. iaptype.eq.36) .and. nfoxspecrpt.gt.3) cycle ! probably special message signal
+              else
+                if(iaptype.eq.22) cycle ! it is not special message report signal
+                if((iaptype.eq.31 .or. iaptype.eq.36) .and. nmic.gt.3) cycle ! probably standard message signal with mybcall
+              endif
+            endif
+            if(nQSOProgress.eq.3) then
+              if(lfoxspecrpt) then
+                if(iaptype.eq.21) cycle ! it is not standard message report signal
+              else
+                if(iaptype.eq.22) cycle ! it is not special message report signal
+              endif
+              if(lfoxstdr73) then
+                if(iaptype.eq.24) cycle ! it is not special message RR73 signal
+              else
+                if(iaptype.eq.23) cycle ! it is not standard message RR73 signal
+              endif
+            endif
+! can be staying in queue, need to process possible incoming report iaptype 21/22 even if TX is switched off
             if(.not.lapmyc .and. (iaptype.eq.23 .or. iaptype.eq.24)) cycle ! skip AP for mycall RR73 in 2..3 minutes after last TX
-            if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching and iaptype 111 disabled
-            fdelta=abs(f1-nfqso); fdeltam=modulo(fdelta,60.)
-            if(nQSOProgress.gt.0 .and. iaptype.lt.31 .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! AP shall be applied to Fox frequencies
+            fdelta=abs(f1-nfqso); fdeltam=modulo(fdelta,60.) ! dupe string to prevent compiler warning
+            if(nQSOProgress.gt.0 .and. iaptype.lt.31 .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! AP shall be applied to Fox frequencies only
             if((iaptype.eq.31 .or. iaptype.eq.36) .and. .not.lwidedxcsearch .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! only Fox frequencies DX Call searching
 
             apmask=0

@@ -1,6 +1,7 @@
 subroutine tone8(lmycallstd,lhiscallstd)
 
-  use ft8_mod1, only : itone56,idtone56,msg,csynce,mycall,hiscall,idtonecqdxcns,idtonedxcns73
+  use ft8_mod1, only : itone56,idtone56,msg,csynce,mycall,hiscall,idtonecqdxcns,idtonedxcns73,mybcall,hisbcall,lhound, &
+                       idtonefox73,idtonespec
   complex csig0(151680)
   character msg37*37,msgsent37*37,mycall14*14,hiscall14*14
   character*4 rpt(56)
@@ -18,6 +19,19 @@ subroutine tone8(lmycallstd,lhiscallstd)
 ! taken from ft8_mod1
 !    integer itone56(56,79),idtone56(56,58)
 !    character*37 msg(56)
+
+  if(lhound .and. len_trim(mybcall).gt.2 .and. len_trim(hisbcall).gt.2) then
+    msg37=''; msg37=trim(mybcall)//' '//trim(hisbcall)//' RR73'
+    i3=-1; n3=-1
+    call genft8(msg37,i3,n3,0,msgsent37,msgbits,itone)
+    idtonefox73(1:29)=itone(8:36)
+    idtonefox73(30:58)=itone(44:72)
+    msg37=''; msg37=trim(mybcall)//' RR73; '//trim(mybcall)//' <'//trim(hiscall)//'> -12'
+    i3=-1; n3=-1
+    call genft8(msg37,i3,n3,0,msgsent37,msgbits,itone)
+    idtonespec(1:29)=itone(8:36)
+    idtonespec(30:58)=itone(44:72)
+  endif
 
   if(.not.lhiscallstd .and. len(trim(hiscall)).gt.2) then
     msg37=''; msg37='CQ '//trim(hiscall)

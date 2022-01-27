@@ -45,13 +45,14 @@ subroutine multimode_decoder(params)
   end type counting_ft4_decoder
 
   logical first,firstsd
-  logical(1) swlold
+  logical(1) swlold,lhoundprev
   integer nutc,ndelay
   type(params_block) :: params
   data ndelay/0/
   data first/.true./
   data firstsd/.true./
   data swlold/.false./
+  data lhoundprev/.false./
 !  character(len=20) :: datetime
   character(len=6) :: hisgrid !, mygrid,
   save
@@ -139,11 +140,12 @@ subroutine multimode_decoder(params)
      nft8cycles=params%nft8cycles; nft8swlcycles=params%nft8swlcycles
      if(params%nagcc) call agccft8(params%nfa,params%nfb)
      if((hiscall.ne.hiscall12_0 .and. hiscall.ne.'            ') &
-        .or. (mycall.ne.mycall12_0 .and. mycall.ne.'            ')) then
+        .or. (mycall.ne.mycall12_0 .and. mycall.ne.'            ') .or. (lhound.neqv.lhoundprev)) then
         if(hiscall.ne.'            ') then
           call tone8(params%lmycallstd,params%lhiscallstd)
           hiscall12_0=hiscall; mycall12_0=mycall
         endif
+        lhoundprev=lhound
      endif
      if(params%lmycallstd .and. mycall.ne.'            ' .and. mycall12_00.ne.mycall) then
        call tone8myc(); mycall12_00=mycall
