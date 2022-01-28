@@ -365,18 +365,22 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   busy_PTT_ = false;
   busy_rx2_ = false;
   rx2_ = false;
+  requested_rx2_ = false;
+  started_rx2_ = false;
   split_ = false;
   requested_split_ = false;
+  started_split_ = false;
   PTT_ = false;
   requested_PTT_ = false;
-  requested_rx2_ = false;
-  requested_mode_ = "";
-  started_rx2_ = false;
   mode_ = "";
+  requested_mode_ = "";
+  started_mode_ = "";
   requested_rx_frequency_ = "";
   rx_frequency_ = "";
   requested_other_frequency_ = "";
   other_frequency_ = "";
+  requested_drive_ = "";
+  drive_ = "";
   level_ = -54;
   power_ = 0;
   swr_ = 0;
@@ -434,7 +438,16 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     if (!requested_rx_frequency_.isEmpty()) do_frequency(string_to_frequency (requested_rx_frequency_),get_mode(true),false);
     if (!requested_other_frequency_.isEmpty()) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
 //    else if (requested_split_ != split_) {/*printf("splt from start %d\n",requested_split_);*/ rig_split();} // split_ = requested_split_; mysleep2(100);}
-
+    if (!requested_drive_.isEmpty() && requested_drive_ != drive_) {
+        busy_drive_ = true;
+        if (ESDR3) {
+          const QString cmd = CmdDrive + SmDP + rx_ + SmCM + requested_drive_ + SmTZ;
+          sendTextMessage(cmd);
+        } else {
+          const QString cmd = CmdDrive + SmDP + requested_drive_ + SmTZ;
+          sendTextMessage(cmd);
+        }
+    }
     do_poll ();
     if (ESDR3) {
       const QString cmd = CmdTxSensorsEnable + SmDP + (do_pwr_ ? "true" : "false") + SmCM + "500" +  SmTZ;
@@ -481,12 +494,12 @@ void TCITransceiver::do_stop ()
 #endif
   }
   if (tci_Ready && inConnected && _power_) {
-    requested_split_ = false;
     requested_other_frequency_ = "";
-    if (requested_split_ != split_) rig_split();
-  }
-  if (!started_rx2_ && rx2_) {
-    rx2_enable (false);
+    if (started_split_ != split_) {requested_split_ = started_split_; rig_split();}
+    if (started_mode_ != mode_) sendTextMessage(mode_to_command(started_mode_));
+    if (!started_rx2_ && rx2_) {
+      rx2_enable (false);
+    }
   }
   if (_power_ && rig_power_off_ && tci_Ready && inConnected && _power_) {
     rig_power(false);
@@ -652,7 +665,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
               if (ESDR3) {
                 if (args.at(1) == "0" ) mode_ = args.at(2).toLower(); else mode_ = args.at(1).toLower();
               }  else mode_ = args.at(1);
-              if (requested_mode_.isEmpty()) requested_mode_ = mode_;
+              if (started_mode_.isEmpty()) {requested_mode_ = mode_; started_mode_ = mode_;}
               if (busy_mode_) tci_done1();
               else if (requested_mode_ != mode_ && !band_change) {
                 sendTextMessage(mode_to_command(requested_mode_));
@@ -669,7 +682,8 @@ void TCITransceiver::onMessageReceived(const QString &str)
             if(args.at(0)==rx_) {
               if (args.at(1) == "false") split_ = false;
               else if (args.at(1) == "true") split_ = true;
-              if (busy_split_) tci_done2();
+              if (!tci_Ready) {requested_split_ = split_; started_split_ = split_;} 
+              else if (busy_split_) tci_done2();
               else if (requested_split_ != split_ && !tci_timer2_->isActive()) {
                 tci_timer2_->start(200);
                 rig_split();
@@ -684,7 +698,8 @@ void TCITransceiver::onMessageReceived(const QString &str)
             fclose (pFile);
 #endif
             if(!ESDR3 || args.at(0)==rx_) {
-              if (ESDR3)drive_ = args.at(1); else drive_ = args.at(0);
+              if (ESDR3) drive_ = args.at(1); else drive_ = args.at(0);
+              if (requested_drive_.isEmpty()) requested_drive_ = drive_;
               busy_drive_ = false;
             }
             break;
@@ -1212,17 +1227,17 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
 {
   TRACE_CAT ("TCITransceiver", volume << state ());
   QString drive = QString::number(round(100 - volume * 2.2222222));
-//  printf ("%s(%0.1f) TCI do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
+//  printf ("%s(%0.1f) TCI tci_Ready:%d do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_Ready,volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
+  fprintf (pFile,"%s(%0.1f) TCI tci_Ready:%d do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),volume,state().volume(),drive.toStdString().c_str(),tci_Ready,drive_.toStdString().c_str(),busy_drive_);
   fclose (pFile);
 #endif
-  if (busy_drive_ || !tci_Ready || requested_drive_ == drive || drive_ == drive){ 
+  requested_drive_ = drive;
+  if (busy_drive_ || !tci_Ready || drive_ == drive){ 
   if (busy_drive_) busy_drive_ = false;
   return;
   } else  busy_drive_ = true;
-  requested_drive_ = drive;
   if (ESDR3) {
     const QString cmd = CmdDrive + SmDP + rx_ + SmCM + drive + SmTZ;
     sendTextMessage(cmd);

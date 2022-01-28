@@ -240,6 +240,7 @@ private:
 // CAT internal variables
   QString requested_mode_;
   QString mode_;
+  QString started_mode_;
   QString requested_rx_frequency_;
   QString rx_frequency_;
   QString requested_other_frequency_;
@@ -255,6 +256,7 @@ private:
   bool PTT_;
   bool requested_split_;
   bool split_;
+  bool started_split_;
   bool requested_rx2_;
   bool rx2_;
   bool started_rx2_;
