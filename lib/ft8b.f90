@@ -935,6 +935,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(.not.lhound) then
             if(lmycallstd .and. (lhiscallstd .or. lnohiscall)) then
               iaptype=naptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+              if(iaptype.eq.1) then ! check if CQ signal ia already decoded
+                nfoundcqdcd=0
+                do ik=1,numdeccq
+                  if(tmpcqdec(ik)%freq.gt.5001.0) exit
+                  if(abs(tmpcqdec(ik)%freq-f1).lt.3.0 .and. abs(tmpcqdec(ik)%xdt-xdt).lt.0.1) then
+                    nfoundcqdcd=1; exit
+                  endif
+                enddo
+                if(nfoundcqdcd.eq.1) cycle
+              endif
               if(lqsomsgdcd .and. iaptype.gt.2 .and. iaptype.lt.31) cycle ! QSO message already decoded
               if(iaptype.eq.2) then
                 if(.not.lapmyc) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
@@ -1051,6 +1061,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
             else if(lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+              if(iaptype.eq.1) then ! check if CQ signal ia already decoded
+                nfoundcqdcd=0
+                do ik=1,numdeccq
+                  if(tmpcqdec(ik)%freq.gt.5001.0) exit
+                  if(abs(tmpcqdec(ik)%freq-f1).lt.3.0 .and. abs(tmpcqdec(ik)%xdt-xdt).lt.0.1) then
+                    nfoundcqdcd=1; exit
+                  endif
+                enddo
+                if(nfoundcqdcd.eq.1) cycle
+              endif
               if(.not.stophint .and. iaptype.gt.30) cycle ! no DXCall searching at QSO, reduce Lag
               if((lqsomsgdcd .or. .not.lapmyc) .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
               if(iaptype.eq.12 .and. .not.lqsorrr) cycle ! not RRR signal
@@ -1152,6 +1172,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
             else if(.not.lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! empty calls or compound/nonstandard calls
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+              if(iaptype.eq.1) then ! check if CQ signal ia already decoded
+                nfoundcqdcd=0
+                do ik=1,numdeccq
+                  if(tmpcqdec(ik)%freq.gt.5001.0) exit
+                  if(abs(tmpcqdec(ik)%freq-f1).lt.3.0 .and. abs(tmpcqdec(ik)%xdt-xdt).lt.0.1) then
+                    nfoundcqdcd=1; exit
+                  endif
+                enddo
+                if(nfoundcqdcd.eq.1) cycle
+              endif
               if(iaptype.gt.1 .and. iaptype.lt.31) cycle
               if(.not.stophint .and. iaptype.gt.1) cycle ! on air, QSO is not possible
               if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
@@ -1205,6 +1235,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
             else if(.not.lmycallstd .and. (lhiscallstd .or. lnohiscall)) then
               iaptype=nmycnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+              if(iaptype.eq.1) then ! check if CQ signal ia already decoded
+                nfoundcqdcd=0
+                do ik=1,numdeccq
+                  if(tmpcqdec(ik)%freq.gt.5001.0) exit
+                  if(abs(tmpcqdec(ik)%freq-f1).lt.3.0 .and. abs(tmpcqdec(ik)%xdt-xdt).lt.0.1) then
+                    nfoundcqdcd=1; exit
+                  endif
+                enddo
+                if(nfoundcqdcd.eq.1) cycle
+              endif
               if(isubp1.eq.2 .and. nweak.eq.1) cycle
               if(isubp1.gt.5) cycle ! so far CQ averaging only
               if(iaptype.gt.40 .and. iaptype.lt.45 .and. lqsomsgdcd) cycle ! already decoded
@@ -1285,6 +1325,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
           else if(lhound) then
             iaptype=nhaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
+            if(iaptype.eq.1) then ! check if CQ signal ia already decoded, in Hound mode is needed in common FT8 bands
+              nfoundcqdcd=0
+              do ik=1,numdeccq
+                if(tmpcqdec(ik)%freq.gt.5001.0) exit
+                if(abs(tmpcqdec(ik)%freq-f1).lt.3.0 .and. abs(tmpcqdec(ik)%xdt-xdt).lt.0.1) then
+                  nfoundcqdcd=1; exit
+                endif
+              enddo
+              if(nfoundcqdcd.eq.1) cycle
+            endif
             if(lnomycall .and. iaptype.gt.1 .and. iaptype.lt.31) cycle ! skip AP if mycall is missed in config
             if(lhiscallstd .and. iaptype.eq.31 .and. .not.lcqsignal) cycle ! not CQ signal, skip CQ DXCall DXgrid mask
             if(lqsomsgdcd .and. iaptype.gt.0 .and. iaptype.lt.25) cycle ! QSO message already decoded
