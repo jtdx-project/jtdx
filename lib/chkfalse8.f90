@@ -196,6 +196,32 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
     return ! no need in other checks
   endif
 
+  if(iaptype.eq.40) then ! AP mask '<mycall> ??? ???'
+! JH4PUL/3 BG4NSA RQ43 * reported false decodes
+! JH4PUL/3 M06FLK R AE10 * at least it is possible to transmit the message
+    ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+    callsign=''; grid=''
+    callsign=msg37(ispc1+1:ispc2-1)
+    include 'callsign_q.f90'
+    ispc3=index(msg37((ispc2+1):),' ')+ispc2
+    indxr=index(msg37,' R ')
+    if(indxr.gt.7) then
+      ispc4=index(msg37((ispc3+1):),' ')+ispc3
+      if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+         msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+         msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
+    else if(indxr.lt.1) then
+      if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+         msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+         msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
+    endif
+    if(len_trim(grid).eq.4) then
+      call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+      if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+    endif
+    return ! no need in other checks for iaptype 40
+  endif
+
 ! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, both callsigns are correct, checking for valid grid
 ! ES6DO TK60CNES R MJ79 ! non standard DXCall, iaptype 11
 ! UA0ZZZ AA1AAA/1 R GC45 ! non standard DXCall, iaptype 11
