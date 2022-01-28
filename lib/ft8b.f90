@@ -620,27 +620,31 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       if(fdelta.lt.245.0 .and. fdeltam.lt.3.0 .and. (nQSOProgress.eq.1 .or. nQSOProgress.eq.3)) then ! calculate on possible Fox frequencies only
         do i=1,18
           ip=maxloc(s8(:,i+7))
-          if(ip(1).eq.idtonefox73(i)+1) then
-            nfoxstdbase=nfoxstdbase+1
-            if(i.gt.10) nfoxspecrpt=nfoxspecrpt+1
-          endif
+          if(ip(1).eq.idtonefox73(i)+1) nfoxstdbase=nfoxstdbase+1
+          if(i.gt.10 .and. ip(1).eq.idtonespec(i)+1) nfoxspecrpt=nfoxspecrpt+1
         enddo
         do i=20,22 ! hash10
           ip=maxloc(s8(:,i+7))
           if(ip(1).eq.idtonespec(i)+1) then; nfoxspecrpt=nfoxspecrpt+1; nfoxspecr73=nfoxspecr73+1; endif
         enddo
-        do i=57,58 ! i3,n3
-          ip=maxloc(s8(:,i+14))
-          if(ip(1).eq.idtonespec(i)+1) then; nfoxspecrpt=nfoxspecrpt+1; nfoxspecr73=nfoxspecr73+1; endif
-        enddo
-        rspecstdrpt=(nfoxspecrpt*18.)/(13.*nfoxstdbase)
+        ip=maxloc(s8(:,25+7)) ! i3,n3
+        if(ip(1).eq.idtonespec(25)+1) then; nfoxspecrpt=nfoxspecrpt+1; nfoxspecr73=nfoxspecr73+1; endif
+        if(nfoxstdbase.eq.0) then
+          rspecstdrpt=(nfoxspecrpt*18.)/(1.2)
+        else
+          rspecstdrpt=(nfoxspecrpt*18.)/(12.*nfoxstdbase)
+        endif
         if(rspecstdrpt.gt.1.) lfoxspecrpt=.true.
         if(nQSOProgress.eq.3) then
           do i=24,58
             if(i.lt.30) then; ip=maxloc(s8(:,i+7)); else; ip=maxloc(s8(:,i+14)); endif
             if(ip(1).eq.idtonefox73(i)+1) nfoxr73=nfoxr73+1
           enddo
-          rstdr73=(nfoxr73*5.)/(35.*nfoxspecr73)
+          if(nfoxspecr73.eq.0) then
+            rstdr73=(nfoxr73*4.)/(3.5)
+          else
+            rstdr73=(nfoxr73*4.)/(35.*nfoxspecr73)
+          endif
           if(rstdr73.gt.1.) lfoxstdr73=.true.
         endif
       endif

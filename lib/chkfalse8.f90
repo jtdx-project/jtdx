@@ -201,8 +201,9 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! UA0ZZZ AA1AAA/1 R GC45 ! non standard DXCall, iaptype 11
 ! JH4PUL/3 HB9CEX R PN76 * ! non standard mycall, iaptype 41
 ! JH4PUL/3 JT1DN HB30 * ! non standard mycall, iaptype 41
-  if(iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.41) then
+  if(iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.21 .or. iaptype.eq.41) then
     indxr=index(msg37,' R ')
+    if(iaptype.eq.21 .and. indxr.gt.0) then; nbadcrc=1; msg37=''; return; endif ! not valid message in Hound mode
     islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     if(ispc1.gt.3 .and. ispc2.gt.7) then
       if(islash1.lt.ispc1 .or. (islash1.eq.ispc2-2 .and. msg37(ispc2-1:ispc2-1).lt.':' )) then ! AA1AAA/1 can be first or 2nd callsign
@@ -219,6 +220,13 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
                msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
           endif
           if(len_trim(grid).eq.4 .and. grid.ne.hisgrid4) then ! correctly decoded contest message
+            if(iaptype.eq.21) then
+              if(grid.eq.'RR73') then
+                return ! AP mask 'mybcall hisbcall ???' can trigger RR73 message
+              else
+                nbadcrc=1; msg37=''; return ! not valid message in Hound mode
+              endif
+            endif
             call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
             if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
           endif
