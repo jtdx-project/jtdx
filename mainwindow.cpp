@@ -1520,8 +1520,7 @@ void MainWindow::readSettings()
      QVariant::fromValue<Frequency> (default_frequency)).value<Frequency> ();
   // setup initial value of tx attenuator, range 0...450 (0...45dB attenuation)
   if(m_settings->value("OutAttenuation").toInt()>=0 && m_settings->value("OutAttenuation").toInt()<=450)
-    ui->outAttenuation->setValue (m_settings->value ("OutAttenuation", 225).toInt ());
-  else ui->outAttenuation->setValue(225);
+    m_outAttenuation = m_settings->value ("OutAttenuation", 225).toInt ();
 
   int n=m_settings->value("GUItab",0).toInt(); if(!(n>=0 && n<=1)) n=0; ui->tabWidget->setCurrentIndex(n);
 
@@ -6657,6 +6656,7 @@ void MainWindow::band_changed (Frequency f)
     setRig ();
     setXIT (ui->TxFreqSpinBox->value ());
     qint64 fDelta = m_lastDisplayFreq - m_freqNominal;
+    if (ui->outAttenuation->value() == 1 && m_outAttenuation != 1 ) {ui->outAttenuation->setValue (m_outAttenuation); m_outAttenuation = 1;}
     if (qAbs(fDelta)>1000000) {
         m_qsoHistory.init(); if(m_config.write_decoded_debug()) writeToALLTXT("QSO history initialized by band_changed");
         clearDX (" cleared, triggered by erase both windows option upon band change, delta frequency"); // Request from Boris UX8IW

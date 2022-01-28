@@ -424,6 +424,7 @@ private:
   SoundOutput * m_soundOutput;
   int m_rx_audio_buffer_frames;
   int m_tx_audio_buffer_frames;
+  int m_outAttenuation = 225;
   QThread m_audioThread;
   QClipboard *clipboard = QGuiApplication::clipboard();
 
