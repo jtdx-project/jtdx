@@ -30,10 +30,10 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical newdat1,lsubtract,lFreeText,nagainfil,lspecial,unpk77_success
   logical(1), intent(in) :: swl,stophint,lft8subpass,lhidehash,lmycallstd,lhiscallstd,lqsothread,lft8lowth, &
                             lhighsens,lcqcand,levenint,loddint,lnohiscall,lnomycall,lnohisgrid
-  logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg,          &
-             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,       &
-             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig, &
-             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lfoxspecrpt,lfoxstdr73
+  logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg,                &
+             lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,             &
+             lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig,       &
+             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lfoxspecrpt,lfoxstdr73,lapcqonly
 
   type tmpcqdec_struct
     real freq
@@ -351,21 +351,51 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 ! hard sync sum - max is 21
     nsync=is1+is2+is3
 ! bail out
-    if(lcqcand .and. nsync.lt.7 .and. nsync.gt.1) then
-      if(nsync+nsync2.lt.9) then
-        rscq=0.
-        do k11=8,16
-          ip=maxloc(s8(:,k11))
-          if(k11.lt.16) then; if(ip(1).eq.1) rscq=rscq+1.; else; if(ip(1).eq.2) rscq=rscq+1.; endif
-        enddo
-        ip=maxloc(s8(:,17)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
-        ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
-        ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
-        if(rscq.lt.4.9) then; nbadcrc=1; return; endif
+    rscq=0.
+    if(lcqcand) then
+      do k11=8,16
+        ip=maxloc(s8(:,k11))
+        if(k11.lt.16) then; if(ip(1).eq.1) rscq=rscq+1.; else; if(ip(1).eq.2) rscq=rscq+1.; endif
+      enddo
+      ip=maxloc(s8(:,17)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+      ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+      ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
+    endif
+    lapcqonly=.false.
+    if(lcqcand .and. nsync.eq.4) then
+      if(nsync+nsync2.lt.12) then
+        if(rscq.lt.6.6) then; nbadcrc=1; return; endif
       endif
+    lapcqonly=.true.
+    else if(lcqcand .and. nsync.eq.5) then
+      if(nsync+nsync2.lt.12) then
+        if(rscq.lt.6.1) then; nbadcrc=1; return; endif
+      endif
+    lapcqonly=.true.
+    else if(lcqcand .and. nsync.eq.6) then
+      if(nsync+nsync2.lt.11) then
+        if(rscq.lt.5.6) then; nbadcrc=1; return; endif
+      endif
+    lapcqonly=.true.
     else
       if(nsync.lt.7) then; nbadcrc=1; return; endif
     endif
+
+!    if(lcqcand .and. nsync.lt.7 .and. nsync.gt.1) then
+!      if(nsync+nsync2.lt.9) then
+!        rscq=0.
+!        do k11=8,16
+!          ip=maxloc(s8(:,k11))
+!          if(k11.lt.16) then; if(ip(1).eq.1) rscq=rscq+1.; else; if(ip(1).eq.2) rscq=rscq+1.; endif
+!        enddo
+!        ip=maxloc(s8(:,17)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+!        ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
+!        ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
+!        if(rscq.lt.4.9) then; nbadcrc=1; return; endif
+!      endif
+!    else
+!      if(nsync.lt.7) then; nbadcrc=1; return; endif
+!    endif
     if(nsyncscore.gt.0) then; scoreratio=scoreratio/nsyncscore; else; scoreratio=0.; endif 
     if(nsyncscore1.gt.0) then; scoreratio1=scoreratio1/nsyncscore1; else; scoreratio1=0.; endif 
     if(nsyncscore3.gt.0) then; scoreratio3=scoreratio3/nsyncscore3; else; scoreratio3=0.; endif
@@ -903,6 +933,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
       do isubp2=1,31
         if(isubp2.lt.5) then
+          if(lapcqonly) cycle
           if(ltxing) then ! enabled Tx and transmitted message including CQ at last interval
             if(abs(f1-nfqso).lt.3.0) then ! +- 3Hz sync8 QSOfreq candidate list
               if(syncavemax.lt.1.8) cycle
@@ -935,7 +966,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(.not.lhound) then
             if(lmycallstd .and. (lhiscallstd .or. lnohiscall)) then
               iaptype=naptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
-              if(iaptype.eq.1) then ! check if CQ signal ia already decoded
+              if(iaptype.eq.1) then ! check if CQ signal is already decoded
+!print *,'iaptype1 attempted',f1
                 nfoundcqdcd=0
                 do ik=1,numdeccq
                   if(tmpcqdec(ik)%freq.gt.5001.0) exit
@@ -943,6 +975,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                     nfoundcqdcd=1; exit
                   endif
                 enddo
+!                if(nfoundcqdcd.eq.1) then; print *,'iaptype1 cycled',f1; cycle; endif
                 if(nfoundcqdcd.eq.1) cycle
               endif
               if(lqsomsgdcd .and. iaptype.gt.2 .and. iaptype.lt.31) cycle ! QSO message already decoded
