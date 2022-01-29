@@ -1603,9 +1603,13 @@ void MainWindow::setDecodedTextFont (QFont const& font)
 {
   ui->decodedTextBrowser->setContentFont (font);
   ui->decodedTextBrowser2->setContentFont (font);
+  QFontMetrics fm(font);
   auto style_sheet = "QLabel {" + font_as_stylesheet (font) + '}';
+  
   ui->decodedTextLabel->setStyleSheet (ui->decodedTextLabel->styleSheet () + style_sheet);
+  ui->decodedTextLabel->setMaximumHeight (fm.height());
   ui->decodedTextLabel2->setStyleSheet (ui->decodedTextLabel2->styleSheet () + style_sheet);
+  ui->decodedTextLabel2->setMaximumHeight (fm.height());
   updateGeometry ();
 }
 
