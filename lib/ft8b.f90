@@ -168,6 +168,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
   if(nqso.eq.4) cd1=cd0
   do iqso=1,nqso
+    lapcqonly=.false.
     if(iqso.gt.1 .and. iqso.lt.4 .and. nqso.eq.4) cycle
     if(xdt0.lt.-4.9 .or. xdt0.gt.4.9) cycle
     if(lvirtual2 .and. iqso.ne.2) cycle; if(lvirtual3 .and. iqso.lt.2) cycle
@@ -361,7 +362,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       ip=maxloc(s8(:,27)); if(ip(1).eq.1 .or. ip(1).eq.2) rscq=rscq+0.5
       ip=maxloc(s8(:,33)); if(ip(1).eq.3 .or. ip(1).eq.4) rscq=rscq+0.5
     endif
-    lapcqonly=.false.
     if(lcqcand .and. nsync.eq.4) then
       if(nsync+nsync2.lt.12) then
         if(rscq.lt.6.6) then; nbadcrc=1; return; endif
@@ -980,7 +980,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               endif
               if(lqsomsgdcd .and. iaptype.gt.2 .and. iaptype.lt.31) cycle ! QSO message already decoded
               if(iaptype.eq.2) then
-                if(.not.lapmyc) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
+                if(.not.lapmyc .or. lapcqonly) cycle ! skip AP for 'mycall ???? ????' in 2..3 minutes after last TX
                 if(nQSOProgress.ne.0 .and. nmic.lt.2) cycle ! reduce CPU load at QSO
               endif
               if(.not.stophint .and. iaptype.gt.30) cycle ! no DXCall searching at QSO, reduce Lag
@@ -995,6 +995,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
               if(iaptype.eq.31 .and. .not.lcqdxcsig) cycle ! not CQ signal from std DXCall
+              if(iaptype.eq.31 .and. .not.lhiscallstd .and. lapcqonly) cycle ! skip weak CQ signals with std call
+              if(iaptype.gt.31 .and. lapcqonly) cycle ! skip weak CQ signals
               if(iaptype.eq.35 .and. .not.lqso73) cycle ! DXCall searching, not 73 signal
               if(iaptype.eq.36 .and. .not.lqsorr73) cycle ! DXCall searching, not RR73 signal
               if(lqsocandave .and. isubp1.gt.8 .and. (iaptype.lt.3 .or. iaptype.gt.6)) cycle ! QSO signal
@@ -1104,6 +1106,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 enddo
                 if(nfoundcqdcd.eq.1) cycle
               endif
+              if(iaptype.eq.2 .and. lapcqonly) cycle ! skip weak CQ signals
               if(.not.stophint .and. iaptype.gt.30) cycle ! no DXCall searching at QSO, reduce Lag
               if((lqsomsgdcd .or. .not.lapmyc) .and. iaptype.gt.1 .and. iaptype.lt.15) cycle ! skip AP for mycall in 2..3 minutes after last TX
               if(iaptype.eq.12 .and. .not.lqsorrr) cycle ! not RRR signal
@@ -1111,6 +1114,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(iaptype.eq.14 .and. .not.lqsorr73) cycle ! not RR73 signal
               if(iaptype.gt.30 .and. .not.lenabledxcsearch) cycle ! in QSO or TXing CQ or last logged is DX Call: searching disabled
               if(iaptype.gt.30 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! only RX freq DX Call searching
+              if(iaptype.gt.30 .and. lapcqonly) cycle ! skip weak CQ signals
               if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
               if(iaptype.eq.35 .and. .not.lqso73) cycle ! DXCall searching, not 73 signal
               if(iaptype.eq.36 .and. .not.lqsorr73) cycle ! DXCall searching, not RR73 signal
@@ -1203,7 +1207,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
                 apmask(14:77)=1; llrz(14:77)=apmag*apsymdxnsrr73(14:77)
               endif
 
-            else if(.not.lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! empty calls or compound/nonstandard calls
+            else if(.not.lmycallstd .and. .not.lhiscallstd .and. len_trim(hiscall).gt.2) then ! empty mycall or compound/nonstandard both calls
               iaptype=ndxnsaptypes(nQSOProgress,isubp2-4); if(iaptype.eq.0) cycle
               if(iaptype.eq.1) then ! check if CQ signal ia already decoded
                 nfoundcqdcd=0
@@ -1217,6 +1221,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               endif
               if(iaptype.gt.1 .and. iaptype.lt.31) cycle
               if(.not.stophint .and. iaptype.gt.1) cycle ! on air, QSO is not possible
+              if(iaptype.gt.30 .and. lapcqonly) cycle ! skip weak CQ signals with std call
               if(iaptype.eq.31 .and. .not.lcqdxcnssig) cycle ! it is not CQ signal of non-standard DXCall
               if(iaptype.gt.34 .and. .not.ldxcsig) cycle ! not DXCall signal
 
@@ -1280,6 +1285,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               endif
               if(isubp1.eq.2 .and. nweak.eq.1) cycle
               if(isubp1.gt.5) cycle ! so far CQ averaging only
+              if(iaptype.eq.40 .and. lapcqonly) cycle ! skip weak CQ signals
               if(iaptype.gt.40 .and. iaptype.lt.45 .and. lqsomsgdcd) cycle ! already decoded
               if(iaptype.eq.42 .and. .not.lqsorrr) cycle ! not RRR signal
               if(iaptype.eq.43 .and. .not.lqso73) cycle ! not 73 signal
@@ -1289,7 +1295,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
               if(lnohiscall .and. iaptype.ne.1 .and. iaptype.ne.40) cycle ! skip DXCall masks if empty
               if(iaptype.gt.30 .and. iaptype.lt.40 .and. .not.stophint) cycle ! in QSO, reduce number of CPU cycles
               if(iaptype.eq.31 .and. .not.lcqdxcsig) cycle ! not CQ signal from std DXCall
-              if(iaptype.gt.34 .and. iaptype.lt.37 .and. .not.ldxcsig) cycle ! not DXCall signal
+              if(iaptype.gt.34 .and. iaptype.lt.37 .and. (.not.ldxcsig .or. lapcqonly)) cycle ! not DXCall signal, skip weak CQ signals
               if(iaptype.gt.30 .and. iaptype.lt.40 .and. .not.lwidedxcsearch .and. loutapwid) cycle ! if wideband DX search disabled
 
               apmask=0
@@ -1398,6 +1404,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             fdelta=abs(f1-nfqso); fdeltam=modulo(fdelta,60.) ! dupe string to prevent compiler warning
             if(nQSOProgress.gt.0 .and. iaptype.lt.31 .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! AP shall be applied to Fox frequencies only
             if((iaptype.eq.31 .or. iaptype.eq.36) .and. .not.lwidedxcsearch .and. (fdelta.gt.245.0 .or. fdeltam.gt.3.0)) cycle ! only Fox frequencies DX Call searching
+            if(iaptype.eq.31 .and. .not.lhiscallstd .and. lapcqonly) cycle ! skip weak CQ signals with std call
+            if(iaptype.eq.36 .and. lwidedxcsearch .and. lapcqonly) cycle ! skip weak CQ signals
+            if(iaptype.eq.111 .and. lapcqonly) cycle ! skip weak CQ signals with std call
 
             apmask=0
             if(iaptype.eq.1) then ! CQ ??? ??? type 1 msg
