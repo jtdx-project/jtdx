@@ -1707,9 +1707,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
           if(.not.lfound) then; nbadcrc=1; msg37=''; return; endif
         endif
       endif
-    else if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. &
-            (iaptype.eq.1 .and. xsnr.lt.-18.5) .or. iaptype.eq.2 .or. iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.21 &
-            .or. iaptype.eq.40 .or. iaptype.eq.41) then
+    else if(qual.lt.0.39 .or. xsnr.lt.-20.5 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.9 .or. (iaptype.gt.0 .and. iaptype.lt.4) .or. &
+            iaptype.eq.11 .or. iaptype.eq.21 .or. iaptype.eq.40 .or. iaptype.eq.41) then
       if(iaptype.gt.3 .and. iaptype.lt.7) go to 4 ! skip, nothing to check
       if(iaptype.ne.2 .and. iaptype.ne.3 .and. iaptype.ne.11 .and. iaptype.ne.21 &
             .and. iaptype.ne.40 .and. iaptype.ne.41) then

@@ -85,19 +85,26 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 ! i=1 n=7 'CQ 2A1GKO/R GC63        *'
 ! -24 -1.8 2389 ~ CQ N9OAT/R RP25         *
 ! -24  0.3  550 ~ CQ DZ0BIL/R AD94          *
+!  -7  0.2  400 ~ CQ LI9NAI/R CF97          * in some noisy setups such decodes possible with a high SNR
     else if(iaptype.eq.1) then
       ispc3=index(msg37((ispc2+1):),' ')+ispc2
       if(msg37(ispc2-2:ispc2-1).eq.'/R' .or. msg37(ispc2-2:ispc2-1).eq.'/P') then; callsign=msg37(ispc1+1:ispc2-3)
       else; callsign=msg37(ispc1+1:ispc2-1)
       endif
-      grid=msg37(ispc2+1:ispc3-1)
       include 'callsign_q.f90'
-      call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-      if(lwrongcall) then; nbadcrc=1; msg37=''; return; endif
-      if(lchkcall .or. .not.lgvalid) then
-        falsedec=.false.
-        call chkflscall('CQ          ',callsign,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+         msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+         msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
+      indxr=index(msg37,'/R ')
+      if(len_trim(grid).eq.4) then
+        call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+        if(lwrongcall) then; nbadcrc=1; msg37=''; return; endif
+        if(.not.lgvalid .and. indxr.gt.6) then; nbadcrc=1; msg37=''; return; endif
+        if(lchkcall .and. .not.lgvalid .and. indxr.lt.1) then ! sometimes /MM callsigns can use base callsign to transmit grid via free text CQ message
+          falsedec=.false.
+          call chkflscall('CQ          ',callsign,falsedec)
+          if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+        endif
       endif
     endif
 
