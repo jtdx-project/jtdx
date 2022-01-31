@@ -33,7 +33,8 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
   logical(1) falsedec,lastsync,ldupemsg,lft8s,lft8sdec,lft8sd,lsdone,ldupeft8sd,lrepliedother,lhashmsg,                &
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,             &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig,       &
-             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lfoxspecrpt,lfoxstdr73,lapcqonly
+             lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lfoxspecrpt,lfoxstdr73,lapcqonly, &
+             lcall2hash
 
   type tmpcqdec_struct
     real freq
@@ -70,7 +71,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
-  lcall1hash=.false.
+  lcall1hash=.false.; lcall2hash=.false.
   ldeepsync=.false.; if(lft8lowth .or. lft8subpass .or. swl) ldeepsync=.true.
   lcallsstd=.true.; if(.not.lmycallstd .or. .not.lhiscallstd) lcallsstd=.false.
 
@@ -1647,7 +1648,9 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 ! 0.0  Free text
         if(i3.eq.0 .and. n3.eq.0) then; lFreeText=.true.; else; lFreeText=.false.; endif
 ! delete braces
+        lcall2hash=.false.
         if(.not.lFreeText .and. i3bit.ne.1 .and. index(msg37,'<').gt.0) then
+          if(index(msg37,'<').gt.4) lcall2hash=.true.
           if(index(msg37,'<').gt.0) then; lhashmsg=.true.; call delbraces(msg37); endif
         endif
 !print *,msg37
@@ -1720,42 +1723,45 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
       if(nbadcrc.eq.1) then; msg37=''; return; endif
     endif
-    if(iaptype.eq.2 .or. iaptype.eq.3) go to 4 ! already checked
+    if(iaptype.eq.2 .or. iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.21 .or. iaptype.eq.40 .or. iaptype.eq.41) go to 4 ! already checked
 
-! still some false decodes can come around the thresholds, will focus on ' R ' in the message
-! i3=2 'JC6OFB VF3BXC/P R GQ99'
-!print *,i3,n3,msg37
-!print *,iaptype,msg37
-256 if(i3.ge.1 .and. i3.le.3 .and. (qual.lt.0.6 .or. xsnr.lt.-22.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0) .and. &
-       index(msg37,' R ').gt.0) then
-!print *,msg37
-      islash1=index(msg37,'/')
-      call_a=''; call_b=''
-      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-      if(islash1.le.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
-        call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:ispc2-1)
-        include 'call_q1.f90'
-        falsedec=.false.
-        call chkflscall(call_a,call_b,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-      endif
-
-      if(islash1.gt.0 .and. ispc1.gt.3 .and. ispc2.gt.7) then
-        islash2=index(msg37((islash1+1):),'/')+islash1
-        if(islash1.gt.ispc1) then
-          call_a=msg37(1:ispc1-1); call_b=msg37(ispc1+1:islash1-1)
-        else
-          call_a=msg37(1:islash1-1)
-          if(islash2.gt.islash1) then; call_b=msg37(ispc1+1:islash2-1); else; call_b=msg37(ispc1+1:ispc2-1); endif
+! i3=1,2 false decodes with ' R '
+! 3B4NDC/R C40AUZ/R R IR83  i3=1
+! MS8QQS UX3QBS/P R NG63  i3=2
+! <...> P32WRF R LR56
+! P32WRF <...> R LR56
+256 if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
+      if(ispc3-ispc2.eq.2) then
+        if(msg37(ispc2:ispc3).eq.' R ') then
+          call_b=''
+          if((i3.eq.1 .and. msg37(ispc2-2:ispc2-1).eq.'/R') .or. (i3.eq.2 .and. msg37(ispc2-2:ispc2-1).eq.'/P')) then
+            call_b=msg37(ispc1+1:ispc2-3)
+          else
+            call_b=msg37(ispc1+1:ispc2-1)
+          endif
+          if(lcall2hash) then ! valid call_b can be found in hash table, check call_a then
+            call_a=''
+            if((i3.eq.1 .and. msg37(ispc1-2:ispc1-1).eq.'/R') .or. (i3.eq.2 .and. msg37(ispc1-2:ispc1-1).eq.'/R')) then
+              call_a=msg37(1:ispc1-3)
+            else
+              call_a=msg37(1:ispc1-1)
+            endif
+            falsedec=.false.; call chkflscall('CQ          ',call_a,falsedec)
+            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+          else if(len_trim(call_b).gt.2) then
+            ispc4=index(msg37((ispc3+1):),' ')+ispc3
+            if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+               msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+               msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
+            call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
+            if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+          endif
         endif
-        include 'call_q1.f90'
-        falsedec=.false.
-        call chkflscall(call_a,call_b,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
       endif
     endif
 
-! contest messages:
+! contest messages: is n3 checking valid there?
 ! -23  1.0 1229 ~ JL6GSC/P R 571553 CJ76MV i3=0 n3=2
 ! -23  0.2 2482 ~ G59XTB R 521562 RA82SJ i3=0 n3=2
 ! -23  3.1  197 ~ Z67BGE H67HJI 22G EMA i3=0 n3=4
@@ -1857,31 +1863,6 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       lspecial=.true.
       msg37_2=msg37(5:37)//'    '
       msg37=''; msg37='DE '//trim(call_b)//' TU'
-    endif
-
-! MS8QQS UX3QBS/P R NG63  i3=2 n3=7
-! 3B4NDC/R C40AUZ/R R IR83  i3=1 n3=7
-    if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
-      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
-      if(msg37(ispc2:ispc3).eq.' R ' .and. ispc1.gt.3) then
-        call_a=''; call_b=''
-        if(msg37(1:ispc1-1).eq.trim(mycall)) then
-          call_a='CQ          '
-        else
-          if((i3.eq.1 .and. msg37(ispc1-2:ispc1-1).eq.'/R') .or. (i3.eq.2 .and. msg37(ispc1-2:ispc1-1).eq.'/R')) then
-            call_a=msg37(1:ispc1-3)
-          else
-            call_a=msg37(1:ispc1-1)
-          endif
-        endif
-        if((i3.eq.1 .and. msg37(ispc2-2:ispc2-1).eq.'/R') .or. (i3.eq.2 .and. msg37(ispc2-2:ispc2-1).eq.'/P')) then
-          call_b=msg37(ispc1+1:ispc2-3)
-        else
-          call_b=msg37(ispc1+1:ispc2-1)
-        endif
-        falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-      endif
     endif
 
 ! DX Call searching false decodes, search for 1st callsign in ALLCALL7
