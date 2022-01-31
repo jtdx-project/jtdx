@@ -1840,16 +1840,16 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     endif
 
-! prior to subtraction we need to parse message below as 'TU DE 632TGU' + 'QV4UPP 632TGU 529 xxxx'
-! i3=3 n3=4 'TU; 6C6VOU IQ5NVQ 599 71' 		  
-! i3=3 n3=3 'TU; QV4UPP 632TGU 529'
-! 'TU; D47IAQ <...> 559 032'
-! 'TU; G3AAA K1ABC R 569 MA'
-    if(i3.eq.3 .and. (n3.eq.3 .or. n3.eq.4) .and. msg37(1:3).eq.'TU;') then
+! i3=3 parse ARRL RTTY contest message
+! i3 n3                                      Bits               Total  Message type
+! 3     TU; W9XYZ K1ABC R 579 MA             1 28 28 1 3 13       74   ARRL RTTY contest
+! 3     TU; W9XYZ G8ABC R 559 0013           1 28 28 1 3 13       74   ARRL RTTY (DX)
+! TU; D47IAQ <...> 559 032' does protocol support the message?
+    if(i3.eq.3 .and. msg37(1:3).eq.'TU;') then
       ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1 
       ispc3=index(msg37((ispc2+1):),' ')+ispc2
       call_a=''; call_b=''; call_a=msg37(ispc1+1:ispc2-1); call_b=msg37(ispc2+1:ispc3-1)
-! check for false
+! check for false, too tough, need to rework if contest is supported
       falsedec=.false.
       call chkflscall(call_a,call_b,falsedec)
       if(falsedec) then; nbadcrc=1; msg37=''; return; endif
