@@ -2560,14 +2560,18 @@ endif
       if(callsign(1:2).eq.'1A' .and. grid(1:4).eq.'JN61') then
         lgvalid=.true.
 
+! 1B
+      else if(callsign(1:2).eq.'1B') then
+      if((grid(1:3).eq.'KM6' .or. grid(1:3).eq.'KM7') .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'6') lgvalid=.true.
+
 ! Spratly Islands 1S,9M0,BM9S,BN9S,BO9S,BP9S,BQ9S,BU9S,BV9S,BW9S,BX9S
       else if(callsign(1:2).eq.'1S') then
       if((grid(1:2).eq.'OK' .and. grid(3:3).gt.'5' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2').or. &
          (grid(1:2).eq.'OJ' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'9' .and. grid(4:4).gt.'6' .and. grid(4:4).lt.':')) &
         lgvalid=.true.
 
-! not valid callsigns 1B..1R 1T..Z
-      else if((callsign(2:2).gt.'A' .and. callsign(2:2).lt.'S') .or. (callsign(2:2).gt.'S' .and. callsign(2:2).lt.'[')) then
+! not valid callsigns 1C..1R 1T..1Z
+      else if((callsign(2:2).gt.'B' .and. callsign(2:2).lt.'S') .or. (callsign(2:2).gt.'S' .and. callsign(2:2).lt.'[')) then
         lwrongcall=.true.; return
 
       endif ! '1'
