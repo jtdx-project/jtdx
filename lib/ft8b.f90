@@ -1784,37 +1784,67 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       endif
     endif
 
-! contest messages: is n3 checking valid there?
-! -23  1.0 1229 ~ JL6GSC/P R 571553 CJ76MV i3=0 n3=2
-! -23  0.2 2482 ~ G59XTB R 521562 RA82SJ i3=0 n3=2
+! 0.3   WA9XYZ KA1ABC R 16A EMA            28 28 1 4 3 7    71   ARRL Field Day
+! 0.4   WA9XYZ KA1ABC R 32A EMA            28 28 1 4 3 7    71   ARRL Field Day
 ! -23  3.1  197 ~ Z67BGE H67HJI 22G EMA i3=0 n3=4
 !  -3  2.2 FY4IML UV7BEA R 24F NNJ   i3=0 n3=4
-    if(i3.eq.0 .and. (n3.eq.2 .or. n3.eq.4) .and. (xsnr.lt.-19.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0)) then
-      if(n3.eq.2) then
-        ispc1=index(msg37,' ')
-        if(ispc1.gt.3) then
-          call_b=''
-          if(msg37(ispc1-2:ispc1-1).eq.'/R' .or. msg37(ispc1-2:ispc1-1).eq.'/P') then; call_b=msg37(1:ispc1-3)
-          else; call_b=msg37(1:ispc1-1)
+    if(i3.eq.0 .and. n3.gt.2 .and. n3.lt.5) then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if(ispc1.gt.3 .and. ispc2.gt.7) then
+        call_a=''; call_b=''
+        if(msg37(1:ispc1-1).eq.'/R' .or. msg37(1:ispc1-1).eq.'/P') then; call_a=msg37(1:ispc1-3)
+        else; call_a=msg37(1:ispc1-1)
+        endif
+        if(msg37(ispc1+1:ispc2-1).eq.'/R' .or. msg37(ispc1+1:ispc2-1).eq.'/P') then; call_b=msg37(ispc1+1:ispc2-3)
+        else; call_b=msg37(ispc1+1:ispc2-1)
+        endif
+! operators outside USA and Canada shall transmit ' DX '
+        if(call_b(1:1).ne.'A' .and. call_b(1:1).ne.'K' .and. call_b(1:1).ne.'N' .and. &
+          call_b(1:1).ne.'W' .and. call_b(1:1).ne.'V' .and. call_b(1:1).ne.'C' .and. call_b(1:1).ne.'X') then
+            if(index(msg37,' DX ').lt.1) then; nbadcrc=1; msg37=''; return; endif
+        endif
+! USA AA..AL
+        if(call_b(1:1).eq.'A' .and. (call_b(2:2).lt.'A' .or. call_b(2:2).gt.'L')) then
+            if(index(msg37,' DX ').lt.1) then; nbadcrc=1; msg37=''; return; endif
+        endif
+! Canada CF..CK,CY,CZ,VA..VG,VO,VX,VY,XJ..XO
+        if(call_b(1:1).eq.'C' .and. (call_b(2:2).lt.'F' .or. call_b(2:2).gt.'K')) then
+          if(call_b(2:2).ne.'Y' .and. call_b(2:2).ne.'Z') then
+            if(index(msg37,' DX ').lt.1) then; nbadcrc=1; msg37=''; return; endif
           endif
-          falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
+        endif
+        if(call_b(1:1).eq.'V' .and. (call_b(2:2).lt.'A' .or. call_b(2:2).gt.'G')) then
+          if(call_b(2:2).ne.'O' .and. call_b(2:2).ne.'X' .and. call_b(2:2).ne.'Y') then
+            if(index(msg37,' DX ').lt.1) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
+        if(call_b(1:1).eq.'X' .and. (call_b(2:2).lt.'J' .or. call_b(2:2).gt.'O')) then
+          if(index(msg37,' DX ').lt.1) then; nbadcrc=1; msg37=''; return; endif
+        endif
+        if(xsnr.lt.-19.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0) then
+          falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
           if(falsedec) then; nbadcrc=1; msg37=''; return; endif
         endif
-      else if(n3.eq.4) then
-        ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-          if(ispc1.gt.3 .and. ispc2.gt.7) then
-            call_a=''; call_b=''
-            if(msg37(1:ispc1-1).eq.'/R' .or. msg37(1:ispc1-1).eq.'/P') then; call_a=msg37(1:ispc1-3)
-            else; call_a=msg37(1:ispc1-1)
-            endif
-            if(msg37(ispc1+1:ispc2-1).eq.'/R' .or. msg37(ispc1+1:ispc2-1).eq.'/P') then; call_b=msg37(ispc1+1:ispc2-3)
-            else; call_b=msg37(ispc1+1:ispc2-1)
-            endif
-            falsedec=.false.; call chkflscall(call_a,call_b,falsedec)
-            if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-          endif
       endif
     endif
+
+! EU VHF contest exchange i3=5
+! <PA3XYZ> <G4ABC/P> R 590003 IO91NP      h12 h22 r1 s3 S11 g25
+! packing is not implemented in WSJT-X 2.5.4?
+! old implementation with i3=0 n3=2
+! JL6GSC/P R 571553 CJ76MV i3=5
+! G59XTB R 521562 RA82SJ
+!    if(i3.eq.0 .and. n3.eq.2 .and. (xsnr.lt.-19.0 .or. rxdt.lt.-0.5 .or. rxdt.gt.1.0)) then
+!      ispc1=index(msg37,' ')
+!      if(ispc1.gt.3) then
+!        call_b=''
+!        if(msg37(ispc1-2:ispc1-1).eq.'/P') then; call_b=msg37(1:ispc1-3)
+!        else; call_b=msg37(1:ispc1-1)
+!        endif
+!        falsedec=.false.; call chkflscall('CQ          ',call_b,falsedec)
+!        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+!      endif
+!    endif
 
 ! FT8OPG/R Z27HRN/R OH12 check all standard messages with contest callsigns
 ! /P has i3.eq.2 .and. n3.eq.0
