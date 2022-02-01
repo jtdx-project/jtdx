@@ -1725,12 +1725,33 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     endif
     if(iaptype.eq.2 .or. iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.21 .or. iaptype.eq.40 .or. iaptype.eq.41) go to 4 ! already checked
 
+! decoded without AP masks:
+! CQ PLIB U40OKH FE61
+! CQ 000 RO8JSV GJ38
+256 if(iaptype.eq.0 .and. i3.eq.1 .and. msg37(1:3).eq.'CQ ') then
+      ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+      if((ispc2-ispc1).eq.4 .or. (ispc2-ispc1).eq.5) then
+        ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
+        if((ispc3-ispc2).gt.3 .and. (ispc4-ispc3).eq.5) then
+          grid=''
+          if(msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
+          if(grid.ne.'') then
+            callsign=''; callsign=msg37(ispc2+1:ispc3-1)
+            call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+            if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+          endif
+        endif
+      endif
+    endif
+
 ! i3=1,2 false decodes with ' R '
 ! 3B4NDC/R C40AUZ/R R IR83  i3=1
 ! MS8QQS UX3QBS/P R NG63  i3=2
 ! <...> P32WRF R LR56
 ! P32WRF <...> R LR56
-256 if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
+    if((i3.eq.1 .or. i3.eq.2) .and. index(msg37,' R ').gt.0) then
       ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
       if(ispc3-ispc2.eq.2) then
         if(msg37(ispc2:ispc3).eq.' R ') then
@@ -1750,12 +1771,14 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
             falsedec=.false.; call chkflscall('CQ          ',call_a,falsedec)
             if(falsedec) then; nbadcrc=1; msg37=''; return; endif
           else if(len_trim(call_b).gt.2) then
-            ispc4=index(msg37((ispc3+1):),' ')+ispc3
+            ispc4=index(msg37((ispc3+1):),' ')+ispc3; grid=''
             if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
                msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
                msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
-            call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
-            if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+            if(grid.ne.'') then
+              call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
+              if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+            endif
           endif
         endif
       endif
