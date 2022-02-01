@@ -1607,8 +1607,10 @@ void MainWindow::setDecodedTextFont (QFont const& font)
   auto style_sheet = "QLabel {" + font_as_stylesheet (font) + '}';
   
   ui->decodedTextLabel->setStyleSheet (ui->decodedTextLabel->styleSheet () + style_sheet);
+  ui->decodedTextLabel->setMinimumHeight (fm.height());
   ui->decodedTextLabel->setMaximumHeight (fm.height());
   ui->decodedTextLabel2->setStyleSheet (ui->decodedTextLabel2->styleSheet () + style_sheet);
+  ui->decodedTextLabel2->setMinimumHeight (fm.height());
   ui->decodedTextLabel2->setMaximumHeight (fm.height());
   updateGeometry ();
 }
