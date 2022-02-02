@@ -1230,7 +1230,7 @@ quint32 TCITransceiver::writeAudioData (float * data, qint32 maxSize)
 //  printf ("%s(%0.1f) TCI tci_Ready:%d do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_Ready,volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI tci_Ready:%d do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),volume,state().volume(),drive.toStdString().c_str(),tci_Ready,drive_.toStdString().c_str(),busy_drive_);
+  fprintf (pFile,"%s(%0.1f) TCI tci_Ready:%d do_txvolume:%0.1f state:%0.1f drive:%s drive_:%s drive_busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),tci_Ready,volume,state().volume(),drive.toStdString().c_str(),drive_.toStdString().c_str(),busy_drive_);
   fclose (pFile);
 #endif
   requested_drive_ = drive;
