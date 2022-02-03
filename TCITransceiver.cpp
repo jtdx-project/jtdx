@@ -437,7 +437,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
     }
     if (!requested_rx_frequency_.isEmpty()) do_frequency(string_to_frequency (requested_rx_frequency_),get_mode(true),false);
     if (!requested_other_frequency_.isEmpty()) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
-//    else if (requested_split_ != split_) {/*printf("splt from start %d\n",requested_split_);*/ rig_split();} // split_ = requested_split_; mysleep2(100);}
+    else if (requested_split_ != split_) {/*printf("splt from start %d\n",requested_split_);*/ rig_split();} // split_ = requested_split_; mysleep2(100);}
     if (!requested_drive_.isEmpty() && requested_drive_ != drive_) {
         busy_drive_ = true;
         if (ESDR3) {
@@ -682,7 +682,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
             if(args.at(0)==rx_) {
               if (args.at(1) == "false") split_ = false;
               else if (args.at(1) == "true") split_ = true;
-              if (!tci_Ready) {requested_split_ = split_; started_split_ = split_;} 
+              if (!tci_Ready) {started_split_ = split_;} 
               else if (busy_split_) tci_done2();
               else if (requested_split_ != split_ && !tci_timer2_->isActive()) {
                 tci_timer2_->start(200);
