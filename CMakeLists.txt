@@ -1202,9 +1202,9 @@ set_target_properties (jtdx PROPERTIES
   )
 
 target_include_directories (jtdx PRIVATE ${FFTW3_INCLUDE_DIRS})
-if (APPLE)
+if ((NOT ${OPENMP_FOUND}) OR APPLE)
   target_link_libraries (jtdx Qt5::SerialPort wsjt_fort wsjt_cxx wsjt_qt wsjt_qtmm ${FFTW3_LIBRARIES})
-else (APPLE)
+else ((NOT ${OPENMP_FOUND}) OR APPLE)
   target_link_libraries (jtdx Qt5::SerialPort wsjt_fort_omp wsjt_cxx wsjt_qt wsjt_qtmm ${FFTW3_LIBRARIES})
   if (OpenMP_C_FLAGS)
     set_target_properties (jtdx PROPERTIES
