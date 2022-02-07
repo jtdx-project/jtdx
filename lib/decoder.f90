@@ -9,9 +9,9 @@ subroutine multimode_decoder(params)
   use jt10_decode
   use ft8_decode
   use ft4_decode
-  use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,mycall12_0,mycall12_00,hiscall12_0,nmsg,odd,even,oddcopy,   &
-                       evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,nFT8decdt,sumxdtt,avexdt, &
-                       nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4, &
+  use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,mycall12_0,mycall12_00,hiscall12_0,nmsg,odd,even,oddcopy,     &
+                       evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,sumxdtt,avexdt,             &
+                       nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4,   &
                        lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandallthr,nincallthr,incall,msgincall,xdtincall, &
                        maskincallthr,ltxing
   use ft4_mod1, only : llagcc,nFT4decd,nfafilt,nfbfilt,lfilter,lhidetest,lhidetelemetry,dd4
@@ -38,6 +38,7 @@ subroutine multimode_decoder(params)
   
   type, extends(ft8_decoder) :: counting_ft8_decoder
      integer :: decoded
+     real :: xdtt(200)
   end type counting_ft8_decoder
 
   type, extends(ft4_decoder) :: counting_ft4_decoder
@@ -80,7 +81,8 @@ subroutine multimode_decoder(params)
   hisgrid=transfer(params%hisgrid,hisgrid)
   hisgrid4=hisgrid(1:4)
 
-  my_jt65%decoded=0; my_jt9%decoded=0; my_jt9s%decoded=0; my_jt10%decoded=0; my_ft8%decoded=0; my_ft4%decoded=0
+  my_ft8%decoded=0; my_ft8%xdtt=0.
+  my_jt65%decoded=0; my_jt9%decoded=0; my_jt9s%decoded=0; my_jt10%decoded=0; my_ft4%decoded=0
   nagainjt9=.false.;  nagainjt9s=.false.;  nagainjt10=.false.; ncandall=0; ncandallthr=0
 
   if(params%lmodechanged) avexdt=0.
@@ -206,7 +208,7 @@ subroutine multimode_decoder(params)
        oddcopy%dt=odd%dt; oddcopy%lstate=odd%lstate
        odd%lstate=.false.
      endif
-     nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0; nFT8decdt=0; sumxdtt=0.0
+     nlasttx=params%nlasttx; lapmyc=params%lapmyc; nFT8decd=0; sumxdt=0.0; if(params%nmode.eq.4) sumxdtt=0.0
      call fillhash(numthreads,.false.)
      if(params%nmode.eq.8) call ft8apset(params%lmycallstd,params%lhiscallstd,numthreads)
 !do i=9595,9605; print *,i,dd8(i); enddo ! check wav files processing
@@ -2275,13 +2277,36 @@ endif
 !  if(nsec.eq.15 .or. nsec.eq.45) print *, odd(i)%msg
 !enddo
 
-    nFT8decd=sum(nFT8decdt(1:numthreads)); sumxdt=sum(sumxdtt(1:numthreads))
     if(params%ndelay.eq.0) then
-      if(nFT8decd.gt.5) then; avexdt=(avexdt+sumxdt/nFT8decd)/2
-      else if(nFT8decd.eq.5) then; avexdt=(1.1*avexdt+0.9*sumxdt/nFT8decd)/2
-      else if(nFT8decd.eq.4) then; avexdt=(1.25*avexdt+0.75*sumxdt/nFT8decd)/2
-      else if(nFT8decd.eq.3) then; avexdt=(1.35*avexdt+0.65*sumxdt/nFT8decd)/2
-      else if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
+      nFT8decd=my_ft8%decoded; dtmed=0.
+      if(nFT8decd.gt.5) then
+        do i=1,nFT8decd
+          if(i.lt.nFT8decd-1) then
+            if((my_ft8%xdtt(i).gt.my_ft8%xdtt(i+1) .and. my_ft8%xdtt(i).lt.my_ft8%xdtt(i+2)) &
+               .or. (my_ft8%xdtt(i).lt.my_ft8%xdtt(i+1) .and. my_ft8%xdtt(i).gt.my_ft8%xdtt(i+2))) then
+              dtmed=my_ft8%xdtt(i)
+            else if((my_ft8%xdtt(i+1).gt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+1).lt.my_ft8%xdtt(i+2)) &
+               .or. (my_ft8%xdtt(i+1).lt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+1).gt.my_ft8%xdtt(i+2))) then
+              dtmed=my_ft8%xdtt(i+1)
+            else if((my_ft8%xdtt(i+2).gt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+2).lt.my_ft8%xdtt(i+1)) &
+               .or. (my_ft8%xdtt(i+2).lt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+2).gt.my_ft8%xdtt(i+1))) then
+              dtmed=my_ft8%xdtt(i+2)
+            else
+              dtmed=my_ft8%xdtt(i)
+            endif
+            sumxdt=sumxdt+dtmed
+          else
+            sumxdt=sumxdt+dtmed ! use last median value
+          endif
+        enddo
+        avexdt=(avexdt+sumxdt/nFT8decd)/2
+      else if(nFT8decd.gt.1) then
+        sumxdt=sum(my_ft8%xdtt(1:nFT8decd))
+        if(nFT8decd.eq.5) then; avexdt=(1.1*avexdt+0.9*sumxdt/nFT8decd)/2
+        else if(nFT8decd.eq.4) then; avexdt=(1.25*avexdt+0.75*sumxdt/nFT8decd)/2
+        else if(nFT8decd.eq.3) then; avexdt=(1.35*avexdt+0.65*sumxdt/nFT8decd)/2
+        else if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
+        endif
       endif
     endif
     call fillhash(numthreads,.true.)
@@ -2569,10 +2594,11 @@ contains
 !1002 format(i6.6,i5,f6.1,f8.0,i4,3x,a26,' FT8')
     call flush(6)
 !    call flush(13)
-    
+
     select type(this)
     type is (counting_ft8_decoder)
        this%decoded = this%decoded + 1
+       this%xdtt(this%decoded)=dt
     end select
 
     return

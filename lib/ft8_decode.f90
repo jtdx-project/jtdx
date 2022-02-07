@@ -21,15 +21,14 @@ module ft8_decode
 contains
 
   subroutine decode(this,callback,nQSOProgress,nfqso,nft8rxfsens,nftx,nutc,nfa,nfb,ncandthin,ndtcenter,nsec, &
-                    napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads, &
-                    nagainfil,lft8lowth,lft8subpass,lhideft8dupes,lhidehash)
+                    napwid,swl,lmycallstd,lhiscallstd,filter,stophint,nthr,numthreads,nagainfil,lft8lowth,   &
+                    lft8subpass,lhideft8dupes,lhidehash)
 !use wavhdr
 !    use timer_module, only: timer
  !$ use omp_lib
     use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,odd,even,nmsg,lastrxmsg,lasthcall,calldteven,calldtodd,incall, &
-                         oddcopy,evencopy,nFT8decdt,sumxdtt,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr,  &
-                         nincallthr,evencq,oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc,evenqso,oddqso, &
-                         lqsomsgdcd,hisgrid4
+                         oddcopy,evencopy,avexdt,mycall,hiscall,dd8,nft8cycles,nft8swlcycles,ncandallthr,nincallthr,evencq,  &
+                         oddcq,numcqsig,numdeccq,evenmyc,oddmyc,nummycsig,numdecmyc,lapmyc,evenqso,oddqso,lqsomsgdcd,hisgrid4
     use ft4_mod1, only : lhidetest,lhidetelemetry
     include 'ft8_params.f90'
 !type(hdr) h
@@ -300,7 +299,6 @@ contains
 !print *,msg37
                 msg26=msg37(1:26)
                 if(associated(this%callback)) call this%callback(nsnr,xdt,f1,msg26,servis8)
-                nFT8decdt(nthr)=nFT8decdt(nthr)+1; sumxdtt(nthr)=sumxdtt(nthr)+xdt
               endif
 
               if(msg37(1:3).eq.'CQ ' .and. nmsgcq.lt.numdeccq) then
