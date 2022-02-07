@@ -40,7 +40,13 @@ public:
     heartbeat_timer_->start (NetworkMessage::pulse * 1000);
 
     // bind to an ephemeral port
+#if defined(Q_OS_LINUX) || defined(Q_OS_MAC) || defined(Q_OS_WIN)
     bind ();
+#else
+    // use QHostAddress::LocalHost to prevent creating IPv6 socket
+    // (for IPv4-mapped IPv6 address unsupported platforms)
+    bind (QHostAddress::LocalHost, 0, DefaultForPlatform);
+#endif
   }
 
   ~impl ()
