@@ -275,7 +275,7 @@ private:
   // from Detector
     void clear ();                // discard buffer contents
 
-  double m_period;
+  double m_period = 120.0;
   unsigned m_downSampleFactor;
   qint32 m_samplesPerFFT;       // after any down sampling
   qint32 m_ns;

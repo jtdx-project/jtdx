@@ -193,7 +193,6 @@ TCITransceiver::TCITransceiver (std::unique_ptr<TransceiverBase> wrapped,QString
   , wav_file_ {QDir(QStandardPaths::writableLocation (QStandardPaths::DataLocation)).absoluteFilePath ("tx.wav").toStdString()}
 {
     m_samplesPerFFT = 6912 / 2;
-    m_period = 120.0;
     tci_Ready = false;
     trxA = 0;
     trxB = 0;
@@ -295,7 +294,7 @@ void TCITransceiver::onError(QAbstractSocket::SocketError err)
 
 int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
 {
-    if (tci_audio_) QThread::currentThread()->setPriority(QThread::HighPriority);
+  if (tci_audio_) QThread::currentThread()->setPriority(QThread::HighPriority);
 //  printf("do_start tci_Ready:%d\n",tci_Ready);
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
@@ -640,18 +639,14 @@ void TCITransceiver::onMessageReceived(const QString &str)
               rx_frequency_ = args.at(2);
               if (requested_rx_frequency_.isEmpty()) {requested_rx_frequency_ = rx_frequency_; }
               if (busy_rx_frequency_) {/*printf ("cmdvfo0 done1\n");*/ tci_done1();}
-              else if (!tci_timer2_->isActive() && split_) tci_timer2_->start(200);
+              else if (!tci_timer2_->isActive() && split_) tci_timer2_->start(300);
             }
             else if (args.at(0)==rx_ && args.at(1) == "1") {
               other_frequency_ = args.at(2);
 //              if (requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
               if (band_change) tci_done1();
               else if (busy_other_frequency_) tci_done2();
-              else if (other_frequency_ != requested_other_frequency_ && tci_Ready && split_){
-                const QString cmd = CmdVFO + SmDP + rx_ + SmCM + "1" + SmCM + requested_other_frequency_ + SmTZ;
-                QThread::msleep(500);
-                sendTextMessage(cmd);
-              } 
+              else if (other_frequency_ != requested_other_frequency_ && tci_Ready && split_ && !tci_timer2_->isActive()) tci_timer2_->start(300);
             }
             break;
         case Cmd_Mode:
@@ -1387,10 +1382,10 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
 {
   TRACE_CAT ("TCITransceiver", tx << state ());
   auto f_string = frequency_to_string (tx);
-//  printf ("%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
+//  printf ("%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d timer:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_,tci_timer2_->isActive());
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_);
+  fprintf (pFile,"%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d timer:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_,tci_timer2_->isActive();
   fclose (pFile);
 #endif
   if  (tci_Ready && busy_other_frequency_ && no_ignore) {
@@ -1492,7 +1487,10 @@ void TCITransceiver::do_poll ()
   else if (!tci_Ready) throw error {tr ("TCI could not be opened")};
   update_rx_frequency (string_to_frequency (rx_frequency_));
   update_split(split_);
-  if (state ().split ()) update_other_frequency (string_to_frequency (other_frequency_));
+  if (state ().split ()) {
+    if (other_frequency_ == requested_other_frequency_) update_other_frequency (string_to_frequency (other_frequency_));
+    else if (!busy_rx_frequency_) do_tx_frequency(string_to_frequency (requested_other_frequency_),get_mode(true),false);
+  }
   update_mode (get_mode());
   if (do_pwr_ && PTT_) {update_power (power_ * 100); update_swr (swr_*10);}
   if (do_snr_ && !PTT_) {

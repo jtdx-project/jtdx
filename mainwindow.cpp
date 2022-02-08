@@ -1121,7 +1121,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
   
   progressBar->setMaximum(int(m_TRperiod));
   if (m_tci) Q_EMIT m_config.transceiver_period(m_TRperiod);
-  else m_modulator->setPeriod(m_TRperiod); // TODO - not thread safe
+  else { m_modulator->setPeriod(m_TRperiod); m_detector->setPeriod(m_TRperiod); }// TODO - not thread safe
   connect( wsprNet, SIGNAL(uploadStatus(QString)), this, SLOT(uploadResponse(QString)));
 
 //  setting up CQ message on init
@@ -2072,6 +2072,7 @@ void MainWindow::on_actionSettings_triggered()               //Setup Dialog
         if (m_tci) {
           Q_EMIT transmitFrequency (ui->TxFreqSpinBox->value () - m_XIT);
           m_modulator->setPeriod(m_TRperiod);
+          m_detector->setPeriod(m_TRperiod);
         }
       } else {
         if(m_transmitting || g_iptt==1) {
@@ -3492,6 +3493,7 @@ void MainWindow::process_Auto()
   if (!hisCall.isEmpty ()) {
     if (m_houndMode) count = -1; //marker for changing status to FIN when status is RRR73
     m_status = m_qsoHistory.autoseq(hisCall,grid,rpt,rx,tx,time,count,prio,mode);
+    if (m_transmitting) count -=1;
     if(m_config.write_decoded_debug()) {
       QString StrDirection = "";
       if(m_status == QsoHistory::FIN) StrDirection = " auto sequence is finished;";
@@ -3500,13 +3502,13 @@ void MainWindow::process_Auto()
     }
     if (m_houndMode ) { //WSJT-X Fox will drop QSO if R+Report from Hound is not decoded after three attempts 
       if (m_status == QsoHistory::SRREPORT || m_status == QsoHistory::RREPORT) {
-        if(count > (m_transmitting ? 4 : 3)) {
+        if(count > 3) {
           haltTx("DXpQSO failed after three TX of R+REPORT message ");
           count = m_qsoHistory.reset_count(hisCall,QsoHistory::RCQ);
           ui->TxFreqSpinBox->setValue (m_lastCallingFreq);
           m_status = QsoHistory::RCQ;
          } else if (m_houndTXfreqJumps && rx > 199 && rx < 1000) {
-          if (count == (m_transmitting ? 2 : 1)) {
+          if (count == 1) {
              ui->TxFreqSpinBox->setValue (rx);
            } else if (rx < 600) {
              ui->TxFreqSpinBox->setValue (rx+300);
@@ -3522,7 +3524,7 @@ void MainWindow::process_Auto()
       grid = m_hisGrid;
       m_status = QsoHistory::NONE;
     } else if ((m_status == QsoHistory::RCQ || m_status == QsoHistory::SCALL || (m_status == QsoHistory::SREPORT && m_skipTx1 && !m_houndMode)) && m_config.answerCQCount() &&
-        ((prio > 4 && prio < 17) || prio < 2 || m_strictdirCQ) && ((!m_transmitting && m_config.nAnswerCQCounter() <= count) || (m_transmitting && m_config.nAnswerCQCounter() < count) || m_reply_other)) {
+        ((prio > 4 && prio < 17) || prio < 2 || m_strictdirCQ) && (m_config.nAnswerCQCounter() <= count || m_reply_other)) {
       clearDX (" cleared, RCQ/SCALL/SREPORT count reached");
       if (m_reply_other)
           counters2 = false;
@@ -3537,7 +3539,7 @@ void MainWindow::process_Auto()
       if (m_singleshot)
         counters = false;
     } else if ((m_status == QsoHistory::RCALL || (m_status == QsoHistory::SREPORT && !m_skipTx1)) && m_config.answerInCallCount() && 
-        ((!m_transmitting && m_config.nAnswerInCallCounter() <= count) || (m_transmitting && m_config.nAnswerInCallCounter() < count)  || m_reply_other)) {
+        (m_config.nAnswerInCallCounter() <= count || m_reply_other)) {
       clearDX (" cleared, RCALL/SREPORT count reached");
       m_qsoHistory.calllist(hisCall,rpt.toInt(),time);
       count = m_qsoHistory.reset_count(hisCall);
@@ -3548,7 +3550,7 @@ void MainWindow::process_Auto()
       if (m_singleshot)
         counters = false;
     } else if ((m_status == QsoHistory::RREPORT || m_status == QsoHistory::SRREPORT) && m_config.sentRReportCount() && 
-        ((!m_transmitting && m_config.nSentRReportCounter() <= count) || (m_transmitting && m_config.nSentRReportCounter() < count))) {
+        m_config.nSentRReportCounter() <= count) {
       clearDX (" cleared, RREPORT/SRREPORT count reached");
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
@@ -3558,7 +3560,7 @@ void MainWindow::process_Auto()
       if (m_singleshot)
         counters = false;
     } else if ((m_status == QsoHistory::RRR || m_status == QsoHistory::RRR73 || m_status == QsoHistory::R73 || m_status == QsoHistory::SRR73 || m_status == QsoHistory::S73) && 
-        m_config.sentRR7373Count() && ((!m_transmitting && m_config.nSentRR7373Counter() <= count) || (m_transmitting && m_config.nSentRR7373Counter() < count))) {
+        m_config.sentRR7373Count() && m_config.nSentRR7373Counter() <= count) {
       clearDX (" cleared, RRR|RR73|R73 count reached");
       count = m_qsoHistory.reset_count(hisCall);
       hisCall = m_hisCall;
