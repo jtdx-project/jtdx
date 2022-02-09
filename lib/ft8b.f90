@@ -24,7 +24,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
        s256(0:8),s2563(0:26),syncavpart(3)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
-  integer*1 message77(77),apmask(174),cw(174)
+  integer*1 message77(77),apmask(174),cw(174),snmax(8)
   integer itone(79),ip(1),ka(1),nqsoend(3)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,ipass,nft8rxfsens
   logical newdat1,lsubtract,lFreeText,nagainfil,lspecial,unpk77_success
@@ -34,7 +34,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
              lvirtual2,lvirtual3,lsd,lcq,ldeepsync,lcallsstd,lfound,lsubptxfreq,lreverse,lchkcall,lgvalid,             &
              lwrongcall,lsubtracted,lcqsignal,loutapwid,lfoundcq,lmycsignal,lfoundmyc,lqsosig,ldxcsig,lcqdxcsig,       &
              lcqdxcnssig,lqsocandave,lcall1hash,lqsosigtype3,lqso73,lqsorr73,lqsorrr,lfoxspecrpt,lfoxstdr73,lapcqonly, &
-             lcall2hash
+             lcall2hash,lskipnotap
 
   type tmpcqdec_struct
     real freq
@@ -71,7 +71,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
   max_iterations=30; nharderrors=-1; nbadcrc=1; delfbest=0.; ibest=0; dfqso=500.; rrxdt=0.5
   fs2=200.; dt2=0.005 ! fs2=12000.0/NDOWN; dt2=1.0/fs2
-  lcall1hash=.false.; lcall2hash=.false.
+  lcall1hash=.false.; lcall2hash=.false.; lskipnotap=.false.
   ldeepsync=.false.; if(lft8lowth .or. lft8subpass .or. swl) ldeepsync=.true.
   lcallsstd=.true.; if(.not.lmycallstd .or. .not.lhiscallstd) lcallsstd=.false.
 
@@ -380,6 +380,20 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     lapcqonly=.true.
     else
       if(nsync.lt.7) then; nbadcrc=1; return; endif
+    endif
+
+    lskipnotap=.false.
+    if(.not.lapcqonly .and. nsync.lt.11 .and. .not.lcqcand) then
+      snmax=0
+      do k=1,7
+        s81(:)=s8(:,k); ip=maxloc(s81)
+        include 'syncdist.f90'
+        s81=s8(:,k+36); ip=maxloc(s81)
+        include 'syncdist.f90'
+        s81=s8(:,k+72); ip=maxloc(s81)
+        include 'syncdist.f90'
+      enddo
+      if(sum(snmax(7:8)).gt.sum(snmax(2:3)) .or. sum(snmax(5:6)).gt.sum(snmax(2:3))) lskipnotap=.true.
     endif
 
 !    if(lcqcand .and. nsync.lt.7 .and. nsync.gt.1) then
@@ -934,7 +948,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
 
       do isubp2=1,31
         if(isubp2.lt.5) then
-          if(lapcqonly) cycle
+          if(lapcqonly .or. lskipnotap) cycle
           if(ltxing) then ! enabled Tx and transmitted message including CQ at last interval
             if(abs(f1-nfqso).lt.3.0) then ! +- 3Hz sync8 QSOfreq candidate list
               if(syncavemax.lt.1.8) cycle
