@@ -628,6 +628,29 @@ endif
        (grid(1:2).eq.'OJ' .and. ((grid(3:3).eq.'0' .and. grid(4:4).gt.'4' .and. grid(4:4).lt.':').or.grid(3:4).eq.'16')).or. &
        grid(1:4).eq.'NL90' .or. grid(1:4).eq.'OL00') lgvalid=.true.
 
+! Eritrea E3
+    else if(callsign(1:2).eq.'E3') then
+      if((grid(1:2).eq.'KK' .and. grid(3:3).gt.'7' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'8').or. &
+         (grid(1:2).eq.'LK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.'7')) &
+        lgvalid=.true.
+
+! Palestine E4
+    else if(callsign(1:2).eq.'E4' .and. (grid(1:4).eq.'KM71' .or. grid(1:4).eq.'KM72')) then
+      lgvalid=.true.
+
+! North Cook and South Cook Islands E5
+    else if(callsign(1:2).eq.'E5') then
+      if((grid(1:2).eq.'BH' .and. (grid(3:4).eq.'00' .or. grid(3:4).eq.'01' .or. grid(3:4).eq.'10')) .or. &
+         (grid(1:2).eq.'BG' .and. (grid(3:4).eq.'08' .or. grid(3:4).eq.'09'.or.grid(3:4).eq.'18'.or.grid(3:4).eq.'19')) .or. &
+         (grid(1:2).eq.'AH' .and. (grid(3:4).eq.'78' .or. grid(3:4).eq.'79'.or.grid(3:4).eq.'81'.or.grid(3:4).eq.'86' .or. &
+          grid(3:4).eq.'99')) .or. &
+         (grid(1:2).eq.'BI' .and. (grid(3:4).eq.'00' .or. grid(3:4).eq.'01'.or.grid(3:4).eq.'10'.or.grid(3:4).eq.'11'))) &
+        lgvalid=.true.
+
+! Niue E6
+    else if(callsign(1:2).eq.'E6') then
+      if(grid(1:4).eq.'AH50' .or. grid(1:4).eq.'AH51') lgvalid=.true.
+
 ! Bosnia-Herzegovina E7
     else if(callsign(1:2).eq.'E7') then
       if(grid(1:2).eq.'JN' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.'6' .and. &
@@ -672,16 +695,6 @@ endif
          (grid(1:2).eq.'MN' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'2')) &
         lgvalid=.true.
 
-! Eritrea E3
-    else if(callsign(1:2).eq.'E3') then
-      if((grid(1:2).eq.'KK' .and. grid(3:3).gt.'7' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'8').or. &
-         (grid(1:2).eq.'LK' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'2' .and. grid(4:4).gt.'1' .and. grid(4:4).lt.'7')) &
-        lgvalid=.true.
-
-! Palestine E4
-    else if(callsign(1:2).eq.'E4' .and. (grid(1:4).eq.'KM71' .or. grid(1:4).eq.'KM72')) then
-      lgvalid=.true.
-
 ! Liberia 5L,5M,6Z,A8,D5,EL
     else if(callsign(1:2).eq.'EL') then
       if(grid(1:2).eq.'IJ' .and. grid(3:3).gt.'3' .and. grid(3:3).lt.'7' .and. grid(4:4).gt.'3' .and. grid(4:4).lt.'9' .and. &
@@ -711,8 +724,8 @@ endif
          (grid(1:2).eq.'KK' .and. grid(3:3).gt.'6' .and. grid(3:3).lt.':' .and. grid(4:4).gt.'/' .and. grid(4:4).lt.'5')) &
         lgvalid=.true.
 
-! not valid callsigns E0 E1
-    else if(callsign(2:2).eq.'0' .or. callsign(2:2).eq.'1') then
+! not valid callsigns E0 E1 E8 E9
+    else if(callsign(2:2).eq.'0' .or. callsign(2:2).eq.'1' .or. callsign(2:2).eq.'8' .or. callsign(2:2).eq.'9') then
       lwrongcall=.true.; return
 
     endif ! 'E'
