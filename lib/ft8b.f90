@@ -24,7 +24,7 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
        s256(0:8),s2563(0:26),syncavpart(3)
   real bmeta(174),bmetb(174),bmetc(174),bmetd(174)
   real llra(174),llrb(174),llrc(174),llrd(174),llrz(174)
-  integer*1 message77(77),apmask(174),cw(174),snmax(8)
+  integer*1 message77(77),apmask(174),cw(174),nsmax(8)
   integer itone(79),ip(1),ka(1),nqsoend(3)
   integer, intent(in) :: nQSOProgress,nfqso,nftx,napwid,nthr,ipass,nft8rxfsens
   logical newdat1,lsubtract,lFreeText,nagainfil,lspecial,unpk77_success
@@ -383,17 +383,17 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
     endif
 
     lskipnotap=.false.
-    if(.not.lapcqonly .and. nsync.lt.11 .and. .not.lcqcand) then
-      snmax=0
+    if(.not.lapcqonly .and. nsync.lt.11) then
+      nsmax=0
       do k=1,7
-        s81(:)=s8(:,k); ip=maxloc(s81)
+        s81=s8(:,k)
         include 'syncdist.f90'
-        s81=s8(:,k+36); ip=maxloc(s81)
+        s81=s8(:,k+36)
         include 'syncdist.f90'
-        s81=s8(:,k+72); ip=maxloc(s81)
+        s81=s8(:,k+72)
         include 'syncdist.f90'
       enddo
-      if(sum(snmax(7:8)).gt.sum(snmax(2:3)) .or. sum(snmax(5:6)).gt.sum(snmax(2:3))) lskipnotap=.true.
+      if(sum(nsmax(7:8)).gt.sum(nsmax(2:3)) .or. sum(nsmax(5:6)).gt.sum(nsmax(2:3))) lskipnotap=.true.
     endif
 
 !    if(lcqcand .and. nsync.lt.7 .and. nsync.gt.1) then
