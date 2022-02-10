@@ -1385,7 +1385,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
 //  printf ("%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d timer:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_,tci_timer2_->isActive());
 #if JTDX_DEBUG_TO_FILE
   FILE * pFile = fopen (debug_file_.c_str(),"a");  
-  fprintf (pFile,"%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d timer:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_,tci_timer2_->isActive();
+  fprintf (pFile,"%s(%0.1f) TCI do_tx_frequency:%s current_frequency:%s mode:%s no_ignore:%d busy:%d timer:%d\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),f_string.toStdString().c_str(),other_frequency_.toStdString().c_str(),map_mode(mode).toStdString().c_str(),no_ignore,busy_other_frequency_,tci_timer2_->isActive());
   fclose (pFile);
 #endif
   if  (tci_Ready && busy_other_frequency_ && no_ignore) {
