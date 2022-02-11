@@ -4785,7 +4785,7 @@ A listát a menü, Fájl -&gt; Beállítások (F2)-ban lehet karbantartani.</tra
         <location filename="../mainwindow.cpp" line="4792"/>
         <location filename="../mainwindow.cpp" line="7263"/>
         <location filename="../mainwindow.cpp" line="7509"/>
-        <location filename="../mainwindow.cpp" line="7863"/>
+        <location filename="../mainwindow.cpp" line="7864"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Nem lehet megnyitni a &quot;%1&quot; -t a hozzáadáshoz: %2</translation>
     </message>
@@ -5208,29 +5208,29 @@ már a CALL3.TXT-ben van, szeretné cserélni?</translation>
         <translation>Logd </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7714"/>
+        <location filename="../mainwindow.cpp" line="7715"/>
         <source>Network Error</source>
         <translation>Hálózati hiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7715"/>
+        <location filename="../mainwindow.cpp" line="7716"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Hiba: %1
 UDP szerver %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7862"/>
+        <location filename="../mainwindow.cpp" line="7863"/>
         <source>File Error</source>
         <translation>Fájlhiba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8084"/>
+        <location filename="../mainwindow.cpp" line="8085"/>
         <source>Tx watchdog expired</source>
         <translation>Az időzítő lejárt és megszakította az adást.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8098"/>
+        <location filename="../mainwindow.cpp" line="8099"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>

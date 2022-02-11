@@ -4790,7 +4790,7 @@ list. The list can be maintained in Settings (F2).</source>
         <location filename="../mainwindow.cpp" line="4792"/>
         <location filename="../mainwindow.cpp" line="7263"/>
         <location filename="../mainwindow.cpp" line="7509"/>
-        <location filename="../mainwindow.cpp" line="7863"/>
+        <location filename="../mainwindow.cpp" line="7864"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>无法打开 &quot;%1&quot; 用于附加: %2</translation>
     </message>
@@ -4995,7 +4995,7 @@ list. The list can be maintained in Settings (F2).</source>
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8098"/>
+        <location filename="../mainwindow.cpp" line="8099"/>
         <source>WD %1m</source>
         <translation>WD %1分钟</translation>
     </message>
@@ -5278,24 +5278,24 @@ is already in CALL3.TXT, do you wish to replace it?</source>
         <translation>记录 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7714"/>
+        <location filename="../mainwindow.cpp" line="7715"/>
         <source>Network Error</source>
         <translation>网络错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7715"/>
+        <location filename="../mainwindow.cpp" line="7716"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>错误: %1
 UDP 服务器 %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7862"/>
+        <location filename="../mainwindow.cpp" line="7863"/>
         <source>File Error</source>
         <translation>文件错误</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8084"/>
+        <location filename="../mainwindow.cpp" line="8085"/>
         <source>Tx watchdog expired</source>
         <translation>发射监管计时器已过期</translation>
     </message>

@@ -4793,7 +4793,7 @@ liste. Listen kan oprettes og vedligeholdes under Indstillinger (F2).</translati
         <location filename="../mainwindow.cpp" line="4792"/>
         <location filename="../mainwindow.cpp" line="7263"/>
         <location filename="../mainwindow.cpp" line="7509"/>
-        <location filename="../mainwindow.cpp" line="7863"/>
+        <location filename="../mainwindow.cpp" line="7864"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Kan ikke åbne &quot;%1&quot; for tilføjelse: %2</translation>
     </message>
@@ -5278,28 +5278,28 @@ er allerede i CALL3.TXT. Vil du erstatte det?</translation>
         <translation>Logget </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7714"/>
+        <location filename="../mainwindow.cpp" line="7715"/>
         <source>Network Error</source>
         <translation>Netværls fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7715"/>
+        <location filename="../mainwindow.cpp" line="7716"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7862"/>
+        <location filename="../mainwindow.cpp" line="7863"/>
         <source>File Error</source>
         <translation>Fil Fejl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8084"/>
+        <location filename="../mainwindow.cpp" line="8085"/>
         <source>Tx watchdog expired</source>
         <translation>TX vagthund udløbet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8098"/>
+        <location filename="../mainwindow.cpp" line="8099"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>

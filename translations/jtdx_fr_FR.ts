@@ -4798,7 +4798,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="4792"/>
         <location filename="../mainwindow.cpp" line="7263"/>
         <location filename="../mainwindow.cpp" line="7509"/>
-        <location filename="../mainwindow.cpp" line="7863"/>
+        <location filename="../mainwindow.cpp" line="7864"/>
         <source>Cannot open &quot;%1&quot; for append: %2</source>
         <translation>Ne peut pas ouvrir &quot;%1&quot; pour l&apos;annexe : %2</translation>
     </message>
@@ -5284,29 +5284,29 @@ est déjà dans CALL3.TXT, souhaitez-vous le remplacer ?</translation>
         <translation>Logger </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7714"/>
+        <location filename="../mainwindow.cpp" line="7715"/>
         <source>Network Error</source>
         <translation>Erreur de réseau</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7715"/>
+        <location filename="../mainwindow.cpp" line="7716"/>
         <source>Error: %1
 UDP server %2:%3</source>
         <translation>Erreur : %1
 Serveur UDP %2:%3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7862"/>
+        <location filename="../mainwindow.cpp" line="7863"/>
         <source>File Error</source>
         <translation>Erreur de fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8084"/>
+        <location filename="../mainwindow.cpp" line="8085"/>
         <source>Tx watchdog expired</source>
         <translation>Le temps de surveillance de la Tx a expiré</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8098"/>
+        <location filename="../mainwindow.cpp" line="8099"/>
         <source>WD %1m</source>
         <translation>WD %1m</translation>
     </message>
