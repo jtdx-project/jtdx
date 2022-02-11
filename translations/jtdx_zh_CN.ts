@@ -6047,6 +6047,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation>TCI无法打开</translation>
     </message>
@@ -6067,6 +6068,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
         <translation>TCI设置模式失败</translation>
     </message>
@@ -6081,12 +6083,14 @@ Error(%2): %3</source>
         <translation>TCI设置发射频率失败</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="vanished">TCI发送了无法识别的频率</translation>
+        <translation>TCI发送了无法识别的频率</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
         <source>TCI modulator not Idle</source>
-        <translation type="vanished">TCI调制器被占用</translation>
+        <translation>TCI调制器被占用</translation>
     </message>
 </context>
 <context>

@@ -1370,7 +1370,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
     } 
     if (band_change) {
       band_change = false;
-      tci_done2();
+      if (tci_timer2_->isActive()) tci_done2(); else if (split_) tci_timer2_->start(300);
     }
   } else { 
     update_rx_frequency (f);
@@ -1403,7 +1403,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
     {
       requested_split_ = true;
       if (tci_Ready && _power_) {
-        if (band_change) mysleep2(500); else if (busy_rx_frequency_) mysleep2(300);
+        if ((band_change || busy_rx_frequency_) && !tci_timer2_->isActive()) mysleep2(300);
         if (requested_split_ != split_) rig_split();
         if (other_frequency_ != requested_other_frequency_) {
           busy_other_frequency_ = true;

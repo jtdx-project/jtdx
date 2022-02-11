@@ -5982,6 +5982,7 @@ Hiba(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6002,7 +6003,18 @@ Hiba(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
+        <source>TCI sent an unrecognized frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
+        <source>TCI modulator not Idle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

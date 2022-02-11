@@ -6060,6 +6060,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation>Невозможно открыть TCI</translation>
     </message>
@@ -6080,6 +6081,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
         <translation>Сбой установки вида модуляции через TCI</translation>
     </message>
@@ -6094,12 +6096,14 @@ Error(%2): %3</source>
         <translation>Сбой установки TX частоты через TCI</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="vanished">TCI отправил нераспознаваемую частоту</translation>
+        <translation>TCI отправил нераспознаваемую частоту</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
         <source>TCI modulator not Idle</source>
-        <translation type="vanished">TCI модулятор уже используется</translation>
+        <translation>TCI модулятор уже используется</translation>
     </message>
 </context>
 <context>

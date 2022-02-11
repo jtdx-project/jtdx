@@ -6044,6 +6044,7 @@ Greška(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation>TCI se nije moguće otvoriti</translation>
     </message>
@@ -6064,6 +6065,7 @@ Greška(%2): %3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
         <translation>TCI nije uspio postaviti način rada</translation>
     </message>
@@ -6078,12 +6080,14 @@ Greška(%2): %3</translation>
         <translation>TCI nije uspio postaviti txfreq</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="vanished">TCI je poslao neprepoznatu frekvenciju</translation>
+        <translation>TCI je poslao neprepoznatu frekvenciju</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
         <source>TCI modulator not Idle</source>
-        <translation type="vanished">TCI modulator nije u praznom hodu</translation>
+        <translation>TCI modulator nije u praznom hodu</translation>
     </message>
 </context>
 <context>

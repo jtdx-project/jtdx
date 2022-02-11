@@ -6036,6 +6036,7 @@ Erro (%2):%3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation>TCI não pôde ser aberto</translation>
     </message>
@@ -6056,6 +6057,7 @@ Erro (%2):%3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
         <translation>TCI falhou no modo de definição</translation>
     </message>
@@ -6070,12 +6072,14 @@ Erro (%2):%3</translation>
         <translation>TCI falhou ao selecionar txfreq</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="vanished">TCI enviou uma frequência não reconhecida</translation>
+        <translation>TCI enviou uma frequência não reconhecida</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
         <source>TCI modulator not Idle</source>
-        <translation type="vanished">Modulador TCI não ocioso</translation>
+        <translation>Modulador TCI não ocioso</translation>
     </message>
 </context>
 <context>

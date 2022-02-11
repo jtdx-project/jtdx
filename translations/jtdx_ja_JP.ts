@@ -6011,6 +6011,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation>TCIを開くことができません</translation>
     </message>
@@ -6031,6 +6032,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
         <translation>TCIはモードの設定に失敗しました</translation>
     </message>
@@ -6045,12 +6047,14 @@ Error(%2): %3</source>
         <translation>TCIは送信周波数の設定に失敗しました</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="vanished">TCIは認識されていない周波数を送信しました</translation>
+        <translation>TCIは認識されていない周波数を送信しました</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
         <source>TCI modulator not Idle</source>
-        <translation type="vanished">TCIモジュラーはアイドルではありません</translation>
+        <translation>TCIモジュラーはアイドルではありません</translation>
     </message>
 </context>
 <context>

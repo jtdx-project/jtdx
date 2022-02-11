@@ -6051,6 +6051,7 @@ Fejl (%2):%3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
+        <location filename="../TCITransceiver.cpp" line="1487"/>
         <source>TCI could not be opened</source>
         <translation>TCI fungerer ikke</translation>
     </message>
@@ -6071,6 +6072,7 @@ Fejl (%2):%3</translation>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
+        <location filename="../TCITransceiver.cpp" line="1469"/>
         <source>TCI failed set mode</source>
         <translation>TCI kan ikke Set Mode</translation>
     </message>
@@ -6085,12 +6087,14 @@ Fejl (%2):%3</translation>
         <translation>TCI kan ikke SET txfrekv</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1624"/>
         <source>TCI sent an unrecognized frequency</source>
-        <translation type="vanished">TCI har sendt en ukendt frekvens</translation>
+        <translation>TCI har sendt en ukendt frekvens</translation>
     </message>
     <message>
+        <location filename="../TCITransceiver.cpp" line="1685"/>
         <source>TCI modulator not Idle</source>
-        <translation type="vanished">TCI modulator er ikke i tomgang</translation>
+        <translation>TCI modulator er ikke i tomgang</translation>
     </message>
 </context>
 <context>
