@@ -7644,8 +7644,9 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
 //          processMessage (message, kbmod);
           processMessage (messages, position, false, false);
           txwatchdog (false);
-          QApplication::alert (this);
+          if(m_windowPopup) QApplication::alert (this); // raise up toolbar under window popup option
           m_decodedText2 = false;
+          if(message_text.contains(" " + m_hisCall + " ")) statusChanged(); // provide JTAlert->Log4OM interaction in scenario where the call is in DX Call window
           if(m_config.write_decoded_debug()) writeToALLTXT("UDP Reply request processed");
       } else {
 //          qDebug () << "reply to message request ignored, decode not found:" << msgText;
