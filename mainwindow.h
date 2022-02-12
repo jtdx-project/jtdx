@@ -330,6 +330,7 @@ private slots:
   void enableTx_mode(bool);
   void enableTxButton_off();
   void on_hintButton_clicked(bool);
+  void on_syncButton_clicked();
   void on_HoundButton_clicked(bool);
   void on_AutoTxButton_clicked(bool);
   void on_AutoSeqButton_clicked(bool);

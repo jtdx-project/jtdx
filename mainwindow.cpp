@@ -2140,6 +2140,7 @@ void MainWindow::on_hintButton_clicked (bool checked)
   m_hint=checked;
 }
 
+void MainWindow::on_syncButton_clicked() {}
 void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked);}
 
 void MainWindow::on_AutoTxButton_clicked (bool checked)
@@ -6244,7 +6245,8 @@ void MainWindow::on_actionFT8_triggered()
   m_TRperiod=15.0;
   commonActions();
   if(!m_hint) ui->hintButton->click();
-  ui->hintButton->setEnabled(false); ui->candListSpinBox->setEnabled(true); ui->DTCenterSpinBox->setEnabled(true);
+  ui->hintButton->setEnabled(false); ui->hintButton->setVisible(false);
+  ui->candListSpinBox->setEnabled(true); ui->DTCenterSpinBox->setEnabled(true);
   ui->DTCenterSpinBox->setVisible(true); ui->pbTxMode->setVisible(false);
   enableHoundAccess(true);
 }
@@ -6392,6 +6394,9 @@ void MainWindow::commonActions ()
   if(m_mode!="FT8") {
     ui->candListSpinBox->setEnabled(false); ui->DTCenterSpinBox->setEnabled(false);
     ui->DTCenterSpinBox->setVisible(false); ui->pbTxMode->setVisible(true);
+    ui->hintButton->setVisible(true); ui->syncButton->setVisible(false);
+  } else {
+    ui->syncButton->setVisible(true);
   }
   m_modeChanged=true;
 }
@@ -6409,6 +6414,7 @@ void MainWindow::WSPR_config(bool b)
   ui->AGCcButton->setEnabled(!b); ui->swlButton->setEnabled(!b); ui->ClearDxButton->setEnabled(!b);
   ui->hintButton->setEnabled(!b); ui->AutoTxButton->setEnabled(!b); ui->AutoSeqButton->setEnabled(!b);
   ui->bypassButton->setEnabled(!b); ui->singleQSOButton->setEnabled(!b); ui->AnsB4Button->setEnabled(!b);
+  ui->syncButton->setEnabled(!b); ui->syncButton->setVisible(!b);
   if(b) {
     ui->decodedTextLabel->setText("UTC    dB   DT "+tr("    Freq     Drift  Call          Grid    dBm   Dist"));
     ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
@@ -7644,9 +7650,17 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
 //          processMessage (message, kbmod);
           processMessage (messages, position, false, false);
           txwatchdog (false);
-          if(m_windowPopup) QApplication::alert (this); // raise up toolbar under window popup option
+          if(m_windowPopup) QApplication::alert (this); // raise up task bar under window popup option, Logger32 compatibility
           m_decodedText2 = false;
-          if(message_text.contains(" " + m_hisCall + " ")) statusChanged(); // provide JTAlert->Log4OM interaction in scenario where the call is in DX Call window
+// provide JTAlert->Log4OM interaction in scenario where the call is in DX Call window:
+          if(message_text.contains(" " + m_hisCall + " ")) {
+            QChar submode {0};
+            m_messageClient->status_update (m_freqNominal, m_mode, m_hisCall, QString::number (ui->rptSpinBox->value ()),
+                                            m_modeTx, ui->enableTxButton->isChecked (), m_transmitting, m_decoderBusy,
+                                            ui->RxFreqSpinBox->value (), ui->TxFreqSpinBox->value (),
+                                            m_config.my_callsign (), m_config.my_grid (), m_hisGrid, m_txwatchdog,
+                                            submode != QChar::Null ? QString {submode} : QString {}, false, m_txFirst);
+          }
           if(m_config.write_decoded_debug()) writeToALLTXT("UDP Reply request processed");
       } else {
 //          qDebug () << "reply to message request ignored, decode not found:" << msgText;
