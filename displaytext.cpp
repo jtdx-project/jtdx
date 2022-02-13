@@ -871,11 +871,17 @@ int DisplayText::displayDecodedText(DecodedText* decodedText, QString myCall, QS
             if (callsigns.contains(Radio::base_callsign (checkCall)))
                 show_line = false;
         }
-        if ((enableMyConinentFilter_) && std_type != 2 && !jt65bc) {
+        if (enableMyConinentFilter_ && std_type != 2 && !jt65bc) {
             logBook.getDXCC(/*in*/ checkCall2, /*out*/ countryName2);
-            QString coninent2 =  countryName2.split(',')[0];
-            if (coninent2 == myContinent_ || (std_type == 1 && myContinent_ == items[0])) show_line = false;
+            QString continent2 =  countryName2.split(',')[0];
+            if (continent2 == "  ") continent2 = myContinent_;
+            if ((std_type == 1 && myContinent_ == items[0]) || (continent2 == myContinent_ && (items[0] == myContinent_ || items[0] == "  ")) || (continent2 != myContinent_ && items[0] != myContinent_)) show_line = false;
         }
+    } else if (enableMyConinentFilter_ && !jt65bc) {
+        logBook.getDXCC(/*in*/ checkCall2, /*out*/ countryName2);
+        QString continent2 =  countryName2.split(',')[0];
+        if (continent2 == "  ") continent2 = myContinent_;
+        if (continent2 == myContinent_) show_line = false;
     }
     
     if (show_line && decodedText->isNonStd2() && hidefree_ && !decodedText->message().contains(myCall) && std_type != 1 && !jt65bc) {
