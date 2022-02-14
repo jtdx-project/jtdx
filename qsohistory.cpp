@@ -446,7 +446,7 @@ void QsoHistory::message(QString const& callsign, Status status, int priority, Q
                     t.status = RCQ;
                     t.srx_c = RCQ;
                   }
-                  if (status == t.stx_c) t.count += 1;
+                  if (status == t.stx_c) { if (t.tx == freq) t.count += 1;}
                   else {
                     t.count = 1;
                   }
