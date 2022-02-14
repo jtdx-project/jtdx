@@ -7635,6 +7635,15 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
                                            .arg (message_text));
       }
       if (position >= 0) {
+// provide JTAlert->Log4OM interaction in scenario where the call is in DX Call window:
+          if(message_text.contains(" " + m_hisCall + " ")) {
+            QChar submode {0};
+            m_messageClient->status_update (m_freqNominal, m_mode, m_hisCall, QString::number (ui->rptSpinBox->value ()),
+                                            m_modeTx, ui->enableTxButton->isChecked (), m_transmitting, m_decoderBusy,
+                                            ui->RxFreqSpinBox->value (), ui->TxFreqSpinBox->value (),
+                                            m_config.my_callsign (), m_config.my_grid (), m_hisGrid, m_txwatchdog,
+                                            submode != QChar::Null ? QString {submode} : QString {}, false, m_txFirst, true);
+          }
           if (m_config.udpWindowToFront ()) {
               show ();
               raise ();
@@ -7656,15 +7665,6 @@ void MainWindow::replyToUDP (QTime time, qint32 snr, float delta_time, quint32 d
           txwatchdog (false);
           if(m_windowPopup) QApplication::alert (this); // raise up task bar under window popup option, Logger32 compatibility
           m_decodedText2 = false;
-// provide JTAlert->Log4OM interaction in scenario where the call is in DX Call window:
-          if(message_text.contains(" " + m_hisCall + " ")) {
-            QChar submode {0};
-            m_messageClient->status_update (m_freqNominal, m_mode, m_hisCall, QString::number (ui->rptSpinBox->value ()),
-                                            m_modeTx, ui->enableTxButton->isChecked (), m_transmitting, m_decoderBusy,
-                                            ui->RxFreqSpinBox->value (), ui->TxFreqSpinBox->value (),
-                                            m_config.my_callsign (), m_config.my_grid (), m_hisGrid, m_txwatchdog,
-                                            submode != QChar::Null ? QString {submode} : QString {}, false, m_txFirst);
-          }
           if(m_config.write_decoded_debug()) writeToALLTXT("UDP Reply request processed");
       } else {
 //          qDebug () << "reply to message request ignored, decode not found:" << msgText;
@@ -8044,7 +8044,7 @@ void MainWindow::statusUpdate () const
                                   ui->RxFreqSpinBox->value (), ui->TxFreqSpinBox->value (),
                                   m_config.my_callsign (), m_config.my_grid (),
                                   m_hisGrid, m_txwatchdog, submode != QChar::Null ? QString {submode} : QString {},
-                                  false, m_txFirst);
+                                  false, m_txFirst, false);
 }
 
 void MainWindow::childEvent (QChildEvent * e)

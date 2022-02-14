@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200207
-
 #include "MessageClient.hpp"
 
 #include <stdexcept>
@@ -32,6 +30,7 @@ public:
     , version_ {version}
     , server_port_ {server_port}
     , schema_ {2}  // use 2 prior to negotiation not 1 which is broken
+    , force_ {false}
     , heartbeat_timer_ {new QTimer {this}}
   {
     connect (heartbeat_timer_, &QTimer::timeout, this, &impl::heartbeat);
@@ -77,6 +76,7 @@ public:
   port_type server_port_;
   QHostAddress server_;
   quint32 schema_;
+  bool force_;
   QTimer * heartbeat_timer_;
   std::vector<QHostAddress> blocked_addresses_;
 
@@ -281,8 +281,9 @@ void MessageClient::impl::send_message (QByteArray const& message)
     {
       if (!server_.isNull ())
         {
-          if (message != last_message_) // avoid duplicates
+          if (force_ || message != last_message_) // avoid duplicates, force status dupe for same callsign UDP reply
             {
+              force_=false;
               writeDatagram (message, server_, server_port_);
               last_message_ = message;
             }
@@ -410,7 +411,7 @@ void MessageClient::status_update (Frequency f, QString const& mode, QString con
                                    , qint32 rx_df, qint32 tx_df, QString const& de_call
                                    , QString const& de_grid, QString const& dx_grid
                                    , bool watchdog_timeout, QString const& sub_mode
-                                   , bool fast_mode, bool tx_first)
+                                   , bool fast_mode, bool tx_first, bool force)
 {
   if (m_->server_port_ && !m_->server_string_.isEmpty ())
     {
@@ -420,6 +421,7 @@ void MessageClient::status_update (Frequency f, QString const& mode, QString con
           << tx_enabled << transmitting << decoding << rx_df << tx_df << de_call.toUtf8 ()
           << de_grid.toUtf8 () << dx_grid.toUtf8 () << watchdog_timeout << sub_mode.toUtf8 ()
           << fast_mode << tx_first;
+      if(force) m_->force_=true;
       m_->send_message (out, message);
     }
 }
