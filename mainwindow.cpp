@@ -3778,6 +3778,10 @@ void MainWindow::readFromStdout()                             //readFromStdout
             else  ui->label_6->setText(tr("Band Activity"));
           }
           else m_lostaudio=false;
+          if (ui->syncButton->isChecked()) {
+            if (navexdt > 29) m_jtdxtime->SetOffset(m_jtdxtime->GetOffset() - avexdt.toFloat());
+            ui->syncButton->setChecked(false);
+          }
         }
         else if (m_mode=="FT4") {
           if(navexdt<41) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
