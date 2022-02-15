@@ -2522,7 +2522,11 @@ void MainWindow::displayDialFrequency ()
     bool commonFT8b=false;
     for(long unsigned int i=0; i < sizeof (m_ft8Freq) / sizeof (m_ft8Freq[0]); i++) {
       int kHzdiff=dial_frequency/1000 - m_ft8Freq[i];
-      if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
+      if(kHzdiff < 0) {
+        if(qAbs(kHzdiff) < 2) { commonFT8b=true; break; }
+      } else {
+        if(qAbs(kHzdiff) < 3) { commonFT8b=true; break; }
+      }
     }
     m_commonFT8b=commonFT8b; first_freq=false;
     if (m_houndMode) {
@@ -6702,7 +6706,11 @@ void MainWindow::band_changed (Frequency f)
     } else {
       for(long unsigned int i=0; i < sizeof (m_ft8Freq) / sizeof (m_ft8Freq[0]); i++) {
         int kHzdiff=m_freqNominal/1000 - m_ft8Freq[i];
-        if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
+        if(kHzdiff < 0) {
+          if(qAbs(kHzdiff) < 2) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
+        } else {
+          if(qAbs(kHzdiff) < 3) { if(m_houndMode) ui->actionEnable_hound_mode->setChecked(false); commonFT8b=true; break; }
+        }
       }
       m_commonFT8b=commonFT8b;
       if (m_houndMode) {
