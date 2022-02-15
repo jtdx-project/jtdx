@@ -19,7 +19,7 @@ module ft8_mod1
           apsymdxnsr73(77),apsymdxns732(77),apsymmynsrrr(77),idtonedxcns73(58),idtonefox73(58),idtonespec(58)
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
-  logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1,ltxing,lforcesync
+  logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1,ltxing
   data maskincallthr/0,30,45,55,65,75,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155,160,165,170,175/
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/
   data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/
