@@ -2589,6 +2589,7 @@ ui->enableTxButton->setStyleSheet(QString("QPushButton{color: %1;background: %2;
   ui->filterButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
   ui->AGCcButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
   ui->hintButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
+  ui->syncButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ff00",m_useDarkStyle)));
   ui->DecodeButton->setStyleSheet(QString("QPushButton:checked{background: %1}").arg(Radio::convert_dark("#00ffff",m_useDarkStyle)));
   m_wideGraph->setDarkStyle(m_useDarkStyle);
   statusUpdate ();
@@ -3781,7 +3782,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
           if (ui->syncButton->isChecked()) {
             if (navexdt > 29) m_jtdxtime->SetOffset(m_jtdxtime->GetOffset() - avexdt.toFloat());
             ui->syncButton->setChecked(false);
-          }
+          } else if (!ui->syncButton->isEnabled()) ui->syncButton->setEnabled(true);
         }
         else if (m_mode=="FT4") {
           if(navexdt<41) ui->label_6->setStyleSheet(QString("QLabel{background: %1}").arg(Radio::convert_dark("#fdedc5",m_useDarkStyle)));
@@ -6808,6 +6809,11 @@ void MainWindow::mousePressEvent(QMouseEvent *event)             //mousePressEve
     }   
   }
   
+  if(ui->syncButton->hasFocus() && (event->button() & Qt::RightButton) && m_jtdxtime->GetOffset() != 0.0) {
+    m_jtdxtime->SetOffset(0);
+    ui->syncButton->setEnabled(false);
+  }
+
   if(ui->EraseButton->hasFocus() && (event->button() & Qt::RightButton)) {
     qint64 ms=m_jtdxtime->currentMSecsSinceEpoch2();
     ui->decodedTextBrowser2->clear();
