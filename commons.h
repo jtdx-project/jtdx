@@ -105,6 +105,7 @@ typedef struct dec_data {
     bool lwidedxcsearch;
     bool lmultinst;
     bool lskiptx1;
+    bool lforcesync;
     } params;
 } dec_data_t;
 

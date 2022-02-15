@@ -3361,8 +3361,7 @@ void MainWindow::decode()                                       //decode()
 //FT8 block of parameters
   dec_data.params.nQSOProgress = m_QSOProgress;
   dec_data.params.nftx = ui->TxFreqSpinBox->value ();
-// FT8AP decoding bandwidth for 'mycall hiscall ???' and RRR,RR73,73 messages
-  if(m_freqNominal < 30000000) dec_data.params.napwid=5;
+  if(m_freqNominal < 30000000) dec_data.params.napwid=5; // FT8AP decoding bandwidth for 'mycall hiscall ???' and RRR,RR73,73 messages
   else if(m_freqNominal < 100000000) dec_data.params.napwid=15;
   else dec_data.params.napwid=50;
   dec_data.params.nmt=m_ft8threads;
@@ -3390,6 +3389,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
+  dec_data.params.lforcesync=false;
   dec_data.params.nlasttx=m_nlasttx;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;

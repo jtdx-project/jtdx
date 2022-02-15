@@ -10,7 +10,7 @@ subroutine multimode_decoder(params)
   use ft8_decode
   use ft4_decode
   use ft8_mod1, only : ndecodes,allmessages,allsnrs,allfreq,mycall12_0,mycall12_00,hiscall12_0,nmsg,odd,even,oddcopy,     &
-                       evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,sumxdtt,avexdt,             &
+                       evencopy,nlasttx,lqsomsgdcd,mycalllen1,msgroot,msgrootlen,lapmyc,lagcc,sumxdtt,avexdt,lforcesync,  &
                        nfawide,nfbwide,mycall,hiscall,lhound,mybcall,hisbcall,lenabledxcsearch,lwidedxcsearch,hisgrid4,   &
                        lmultinst,dd8,nft8cycles,nft8swlcycles,lskiptx1,ncandallthr,nincallthr,incall,msgincall,xdtincall, &
                        maskincallthr,ltxing
@@ -138,7 +138,7 @@ subroutine multimode_decoder(params)
   if(params%nmode.eq.8) then
      mycalllen1=len_trim(mycall)+1
      msgroot=''; msgroot=trim(mycall)//' '//trim(hiscall)//' '; msgrootlen=len_trim(msgroot)
-     lcommonft8b=params%lcommonft8b; lagcc=params%nagcc; lhound=params%lhound
+     lcommonft8b=params%lcommonft8b; lagcc=params%nagcc; lhound=params%lhound; lforcesync=params%lforcesync
      nft8cycles=params%nft8cycles; nft8swlcycles=params%nft8swlcycles
      if(params%nagcc) call agccft8(params%nfa,params%nfb)
      if((hiscall.ne.hiscall12_0 .and. hiscall.ne.'            ') &
@@ -2311,6 +2311,7 @@ endif
     endif
     call fillhash(numthreads,.true.)
     ncandall=sum(ncandallthr(1:numthreads))
+    lforcesync=.false.
 !     call timer('decft8  ',1)
     go to 800
   endif
