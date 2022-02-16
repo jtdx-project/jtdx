@@ -3389,7 +3389,7 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
-  dec_data.params.lforcesync=false;
+  dec_data.params.lforcesync=ui->syncButton->isChecked() && m_mode=="FT8";
   dec_data.params.nlasttx=m_nlasttx;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
