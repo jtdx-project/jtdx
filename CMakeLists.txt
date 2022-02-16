@@ -175,6 +175,7 @@ set (wsjt_qt_CXXSRCS
   revision_utils.cpp
   WFPalette.cpp
   Radio.cpp
+  NonInheritingProcess.cpp
   IARURegions.cpp
   Bands.cpp
   Modes.cpp

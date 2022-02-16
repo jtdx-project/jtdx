@@ -738,7 +738,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
 
   createStatusBar();
 
-  connect(&proc_jtdxjt9, SIGNAL(readyReadStandardOutput()),this, SLOT(readFromStdout()));
+  connect(&proc_jtdxjt9, &QProcess::readyReadStandardOutput,this, &MainWindow::readFromStdout);
 #if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
   connect(&proc_jtdxjt9, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
@@ -759,7 +759,7 @@ MainWindow::MainWindow(bool multiple, QSettings * settings, QSharedMemory *shdme
               }
           });
 
-  connect(&p1, SIGNAL(readyReadStandardOutput()),this, SLOT(p1ReadFromStdout()));
+  connect(&p1, &QProcess::readyReadStandardOutput,this, &MainWindow::p1ReadFromStdout);
 #if QT_VERSION < QT_VERSION_CHECK (5, 6, 0)
   connect(&p1, static_cast<void (QProcess::*) (QProcess::ProcessError)> (&QProcess::error),
           [this] (QProcess::ProcessError error) {
