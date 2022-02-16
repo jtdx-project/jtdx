@@ -3549,7 +3549,15 @@ Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Позволяет сместить внутреннее время JTDX для синхронизации декодера с сигналами во входящем RX звуковом потоке.&lt;br&gt;
+Два варианта работы:&lt;br&gt;
+- грубая синхронизация, если на водопаде сигналы смещены и не декодируются декодером, в декодере определяется смещение до начала интервала поиском минимального значения мощности в сигнале&lt;br&gt;
+- относительно точная синхронизация, выполняется если в предыдущем интервале декодированы сигналы и среднее значение DT декодированных сигналов находится вне диапазона -0.29 .. 0.29 секунды. Среднее значение DT используется для смещения времени JTDX.&lt;br&gt;
+При последовательном выполнении грубой и точной синхронизации рекомендуется промежуток времени не менее 5 интервалов.&lt;br&gt;
+При смещении внутреннего времени JTDX возможна потеря декодирования сигналов в текущем и следующем интервалах.&lt;br&gt;
+Примечание:&lt;br&gt;
+- если часы Вашего компьютера отличаются от точного времени более чем на 7.5 секунд то при смещении времени JTDX есть вероятность того что Ваши споты будут показываться в неверном интервале, также время начала/окончания QSO будет с ошибкой&lt;br&gt;
+- DT TX сигнала изменится в противоположную сторону на величину смещения времени JTDX если Вы пытаетесь скомпенсировать задержку RX звукового потока вызванную буферизацией в программном обеспечении SDR.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3201"/>
@@ -3926,7 +3934,7 @@ list. The list can be maintained in Settings (F2).</source>
     <message>
         <location filename="../mainwindow.ui" line="3047"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Синхр</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4434"/>
