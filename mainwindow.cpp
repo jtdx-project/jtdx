@@ -1991,15 +1991,9 @@ QString MainWindow::save_wave_file (QString const& name, short const * data, int
   return QString {};
 }
 
-void MainWindow::showSoundInError(const QString& errorMsg)
-{JTDXMessageBox::critical_message(this, "", tr("Error in SoundInput"), errorMsg);}
-
-
-void MainWindow::showSoundOutError(const QString& errorMsg)
-{JTDXMessageBox::critical_message(this, "", tr("Error in SoundOutput"), errorMsg);}
-
-void MainWindow::showStatusMessage(const QString& statusMsg)
-{statusBar()->showMessage(statusMsg);}
+void MainWindow::showSoundInError(const QString& errorMsg) { JTDXMessageBox::critical_message(this, "", tr("Error in SoundInput"), errorMsg); }
+void MainWindow::showSoundOutError(const QString& errorMsg) { JTDXMessageBox::critical_message(this, "", tr("Error in SoundOutput"), errorMsg); }
+void MainWindow::showStatusMessage(const QString& statusMsg) { statusBar()->showMessage(statusMsg); }
 
 void MainWindow::on_actionSettings_triggered()               //Setup Dialog
 {
@@ -2134,13 +2128,7 @@ void MainWindow::escapeHalt() { haltTx("TX halted via Escape button from widegra
 void MainWindow::filter_on() { if(!m_filter) ui->filterButton->click(); }
 void MainWindow::on_swlButton_clicked (bool checked) { if(checked) m_swl=true; else m_swl=false; }
 void MainWindow::on_AGCcButton_clicked(bool checked) { if(checked) m_agcc=true; else m_agcc=false; }
-
-void MainWindow::on_hintButton_clicked (bool checked)
-{
-  m_hint=checked;
-}
-
-void MainWindow::on_syncButton_clicked() {}
+void MainWindow::on_hintButton_clicked (bool checked) { m_hint=checked; }
 void MainWindow::on_HoundButton_clicked (bool checked) { ui->actionEnable_hound_mode->setChecked(checked);}
 
 void MainWindow::on_AutoTxButton_clicked (bool checked)
@@ -2232,10 +2220,7 @@ void MainWindow::monitor (bool state)
   if(m_monitoring && m_txbColorSet) { resetTxMsgBtnColor(); m_txbColorSet=false; }
 }
 
-void MainWindow::on_actionAbout_triggered()                  //Display "About"
-{
-  CAboutDlg {this}.exec ();
-}
+void MainWindow::on_actionAbout_triggered() { CAboutDlg {this}.exec (); } //Display "About"
 
 void MainWindow::on_enableTxButton_clicked (bool checked)
 {
@@ -2258,16 +2243,8 @@ void MainWindow::on_enableTxButton_clicked (bool checked)
   }
 }
 
-void MainWindow::enableTx_mode (bool state)
-{
-  ui->enableTxButton->setChecked (state);
-  on_enableTxButton_clicked (state);
-}
-
-void MainWindow::enableTxButton_off ()
-{
-	enableTx_mode (false);
-}
+void MainWindow::enableTx_mode (bool state) { ui->enableTxButton->setChecked (state); on_enableTxButton_clicked (state); }
+void MainWindow::enableTxButton_off () { enableTx_mode (false); }
 
 void MainWindow::keyPressEvent( QKeyEvent *e )                //keyPressEvent
 {
@@ -2782,12 +2759,7 @@ void MainWindow::closeEvent(QCloseEvent * e)
   QMainWindow::closeEvent (e);
 }
 
-void MainWindow::on_stopButton_clicked()                       //stopButton
-{
-  monitor (false);
-  m_loopall=false;  
-}
-
+void MainWindow::on_stopButton_clicked() { monitor (false); m_loopall=false; }
 void MainWindow::on_AnsB4Button_clicked (bool checked) { ui->actionAnswerWorkedB4->setChecked(checked); }
 void MainWindow::on_singleQSOButton_clicked (bool checked) { ui->actionSingleShot->setChecked(checked); }
 void MainWindow::on_bypassButton_clicked (bool checked) { ui->actionBypass_all_text_filters->setChecked(checked); }
@@ -2847,8 +2819,7 @@ void MainWindow::on_actionLocal_User_Guide_triggered()
 #endif
 }*/
 
-//Display Waterfalls
-void MainWindow::on_actionWide_Waterfall_triggered() { m_wideGraph->show(); }
+void MainWindow::on_actionWide_Waterfall_triggered() { m_wideGraph->show(); } //Display Waterfalls
 
 void MainWindow::on_actionCopyright_Notice_triggered()
 {
@@ -3082,14 +3053,8 @@ void MainWindow::on_actionMaxDistance_toggled(bool checked)
   m_maxDistance=checked;
 }
 
-void MainWindow::on_actionAnswerWorkedB4_toggled(bool checked)
-{
-  m_answerWorkedB4=checked;
-  ui->AnsB4Button->setChecked(checked);
-}
-
+void MainWindow::on_actionAnswerWorkedB4_toggled(bool checked) { m_answerWorkedB4=checked; ui->AnsB4Button->setChecked(checked); }
 void MainWindow::on_actionCallWorkedB4_toggled(bool checked) { m_callWorkedB4=checked; }
-
 void MainWindow::on_actionCallHigherNewCall_toggled(bool checked) { m_callHigherNewCall=checked; }
 
 void MainWindow::on_actionSingleShot_toggled(bool checked)
@@ -3193,13 +3158,7 @@ void MainWindow::on_actionFT8subpass_toggled(bool checked) { if(checked) m_ft8Se
 void MainWindow::on_actionFT8EarlyStart_toggled(bool checked) { m_FT8EarlyStart=checked; }
 void MainWindow::on_actionFT8WidebandDXCallSearch_toggled(bool checked) { m_FT8WideDxCallSearch=checked; }
 void MainWindow::on_actionBypass_text_filters_on_RX_frequency_toggled(bool checked) { m_bypassRxfFilters=checked; }
-
-void MainWindow::on_actionBypass_all_text_filters_toggled(bool checked)
-{
-  m_bypassAllFilters=checked;
-  ui->bypassButton->setChecked(checked);
-}
-
+void MainWindow::on_actionBypass_all_text_filters_toggled(bool checked) { m_bypassAllFilters=checked; ui->bypassButton->setChecked(checked); }
 void MainWindow::on_actionEnable_main_window_popup_toggled(bool checked) { m_windowPopup=checked; }
 void MainWindow::on_actionAutoErase_toggled(bool checked) { m_autoErase=checked; }
 void MainWindow::on_actionEraseWindowsAtBandChange_toggled(bool checked) { m_autoEraseBC=checked; }
@@ -4113,10 +4072,7 @@ void MainWindow::on_EraseButton_clicked()                          //Erase
   m_msErase=ms;
 }
 
-void MainWindow::on_ClearDxButton_clicked()                          //Erase
-{
-  clearDX (" is cleared by ClearDxButton, user action");
-}
+void MainWindow::on_ClearDxButton_clicked() { clearDX (" is cleared by ClearDxButton, user action"); } //Erase
 
 void MainWindow::decodeBusy(bool b)                             //decodeBusy()
 {
@@ -4720,11 +4676,7 @@ void MainWindow::set_scheduler(QString const& setto,bool mixed)
   m_wideGraph->setRxBand (m_config.bands ()->find (frq));
 }
 
-void MainWindow::haltTx(QString reason)
-{
-  m_haltTxWritten=true; writeHaltTxEvent(reason);
-  on_stopTxButton_clicked();
-}
+void MainWindow::haltTx(QString reason) { m_haltTxWritten=true; writeHaltTxEvent(reason); on_stopTxButton_clicked(); }
 
 void MainWindow::haltTxTuneTimer()
 {
@@ -4887,11 +4839,7 @@ void MainWindow::on_rrr1CheckBox_stateChanged(int nrrr)        //RRR or RR73
   if(!ui->tx4->text().isEmpty ()) genStdMsgs(m_rpt); // can change message for non tx4 transmission?
 }
 
-void MainWindow::set_ntx(int n)                                   //set_ntx()
-{
-  m_ntx=n;
-  m_nlasttx=n;
-}
+void MainWindow::set_ntx(int n) { m_ntx=n; m_nlasttx=n; } //set_ntx()
 
 void MainWindow::on_txb1_clicked()                                //txb1
 {
@@ -5600,10 +5548,7 @@ void MainWindow::genStdMsgs(QString rpt)                       //genStdMsgs()
   if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());
 }
 
-void MainWindow::TxAgain()
-{
-  enableTx_mode(true);
-}
+void MainWindow::TxAgain() { enableTx_mode(true); }
 
 void MainWindow::clearDX (QString reason)
 {
@@ -5664,11 +5609,7 @@ void MainWindow::countQSOs ()
   qso_count_label->setText(c_txt);
 }
 
-void MainWindow::autoFilter (bool action)
-{
-  ui->filterButton->setChecked(action);
-  on_filterButton_clicked (action);
-}
+void MainWindow::autoFilter (bool action) { ui->filterButton->setChecked(action); on_filterButton_clicked (action); }
 
 void MainWindow::enableTab1TXRB(bool state)
 {
@@ -5680,10 +5621,7 @@ void MainWindow::enableTab1TXRB(bool state)
   ui->txrb6->setEnabled(state);
 }
 
-void MainWindow::dxbcallTxHaltedClear ()
-{
-	m_dxbcallTxHalted = "";
-}
+void MainWindow::dxbcallTxHaltedClear () { m_dxbcallTxHalted = ""; }
 
 void MainWindow::lookup()                                       //lookup()
 {
@@ -5718,12 +5656,9 @@ void MainWindow::lookup()                                       //lookup()
     }
 }
 
-void MainWindow::on_lookupButton_clicked()                    //Lookup button
-{
-  lookup();
-}
+void MainWindow::on_lookupButton_clicked() { lookup(); }
 
-void MainWindow::on_addButton_clicked()                       //Add button
+void MainWindow::on_addButton_clicked()
 {
   if(m_hisGrid.isEmpty()) {
     JTDXMessageBox::warning_message (this, "", tr ("Add to CALL3.TXT")
@@ -5830,29 +5765,10 @@ void MainWindow::msgtype(QString t, QLineEdit* tx)               //msgtype()
   tx->setCursorPosition (pos);
 }
 
-void MainWindow::on_tx1_editingFinished()                       //tx1 edited
-{
-  QString t=ui->tx1->text();
-  msgtype(t, ui->tx1);
-}
-
-void MainWindow::on_tx2_editingFinished()                       //tx2 edited
-{
-  QString t=ui->tx2->text();
-  msgtype(t, ui->tx2);
-}
-
-void MainWindow::on_tx3_editingFinished()                       //tx3 edited
-{
-  QString t=ui->tx3->text();
-  msgtype(t, ui->tx3);
-}
-
-void MainWindow::on_tx4_editingFinished()                       //tx4 edited
-{
-  QString t=ui->tx4->text();
-  msgtype(t, ui->tx4);
-}
+void MainWindow::on_tx1_editingFinished() { QString t=ui->tx1->text(); msgtype(t, ui->tx1); }
+void MainWindow::on_tx2_editingFinished() { QString t=ui->tx2->text(); msgtype(t, ui->tx2); }
+void MainWindow::on_tx3_editingFinished() { QString t=ui->tx3->text(); msgtype(t, ui->tx3); }
+void MainWindow::on_tx4_editingFinished() { QString t=ui->tx4->text(); msgtype(t, ui->tx4); }
 
 void MainWindow::on_tx5_currentTextChanged (QString const& text) //tx5 edited
 {
@@ -5881,11 +5797,7 @@ void MainWindow::on_tx5_currentIndexChanged(int index)
   m_oldTx5Index=index;
 }
 
-void MainWindow::on_tx6_editingFinished()                       //tx6 edited
-{
-  QString t=ui->tx6->text();
-  msgtype(t, ui->tx6);
-}
+void MainWindow::on_tx6_editingFinished() { QString t=ui->tx6->text(); msgtype(t, ui->tx6); }
 
 void MainWindow::on_wantedCall_textChanged(const QString &wcall)
 {
@@ -6094,12 +6006,9 @@ void MainWindow::on_dxGridEntry_textChanged(const QString &t) //dxGrid changed
   if(!ui->spotLineEdit->text().isEmpty() && ui->spotLineEdit->text().contains("#")) on_spotLineEdit_textChanged(ui->spotLineEdit->text());
 }
 
-void MainWindow::on_genStdMsgsPushButton_clicked()         //genStdMsgs button
-{
-  genStdMsgs(m_rpt);
-}
+void MainWindow::on_genStdMsgsPushButton_clicked() { genStdMsgs(m_rpt); }
 
-void MainWindow::on_logQSOButton_clicked()                 //Log QSO button
+void MainWindow::on_logQSOButton_clicked()
 {
   if (m_hisCall.isEmpty()) return;
   auto currenttime = m_jtdxtime->currentDateTimeUtc2();
@@ -6988,11 +6897,7 @@ void MainWindow::stop_tuning ()
   m_tune=false;
 }
 
-void MainWindow::stopTuneATU()
-{
-  on_tuneButton_clicked(false);
-  m_bTxTime=false;
-}
+void MainWindow::stopTuneATU() { on_tuneButton_clicked(false); m_bTxTime=false; }
 
 void MainWindow::on_stopTxButton_clicked()                    //Stop Tx
 {
@@ -7944,15 +7849,8 @@ void MainWindow::on_cbUploadWSPR_Spots_toggled(bool b)
   if(!m_uploadSpots) ui->cbUploadWSPR_Spots->setStyleSheet(QString("QCheckBox{background: %1}").arg(Radio::convert_dark("#ffff00",m_useDarkStyle)));
 }
 
-void MainWindow::on_WSPRfreqSpinBox_valueChanged(int n)
-{
-  ui->TxFreqSpinBox->setValue(n);
-}
-
-void MainWindow::on_pbTxNext_clicked(bool b)
-{
-  m_txNext=b;
-}
+void MainWindow::on_WSPRfreqSpinBox_valueChanged(int n) { ui->TxFreqSpinBox->setValue(n); }
+void MainWindow::on_pbTxNext_clicked(bool b) { m_txNext=b; }
 
 void MainWindow::WSPR_scheduling ()
 {
