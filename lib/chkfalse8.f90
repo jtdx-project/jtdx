@@ -144,15 +144,27 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
       endif
     endif
 
-! CQ CJ3OPE/R FP61 i3=1 n3=1
+! CQ CJ3OPE/R FP61 i3=1
+! CQ KU3XIK NN41
     if(i3.eq.1 .and. iaptype.eq.0) then
+      callsign=''; grid=''
       islash=index(msg37,'/R ')
-      if(islash.eq.9 .or. islash.eq.10) then
-        callsign=''; grid=''; callsign=msg37(4:islash-1); grid=msg37(islash+3:islash+6); nlengrid=len_trim(grid)
-        if(nlengrid.eq.4 .and. grid(1:1).gt.'@' .and. grid(4:4).lt.':') then
-          call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-          if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+      if(islash.gt.6) then
+        callsign=msg37(4:islash-1); grid=msg37(islash+3:islash+6)
+      else if(islash.lt.1) then
+        ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
+        if(len_trim(msg37).eq.ispc3-1) then
+          callsign=msg37(ispc1+1:ispc2-1); grid=msg37(ispc2+1:ispc3-1)
+        else
+          return ! 4-word message, will be processed in ft8b.f90
         endif
+      endif
+      nlengrid=len_trim(grid)
+      if(nlengrid.eq.4 .and. grid(1:1).gt.'@' .and. grid(4:4).lt.':') then
+        call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+        if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+      endif
+      if(islash.gt.6) then
         falsedec=.false.
         call chkflscall('MYCALL      ',callsign,falsedec)
         if(falsedec) then; nbadcrc=1; msg37=''; return; endif
