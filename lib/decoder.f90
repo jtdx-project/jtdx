@@ -2467,6 +2467,7 @@ endif
 write(*,1010) avexdt,ncandall
 1010 format('<DecodeFinished><avexdt>',f6.2,'<ncand>',i5)
   call flush(6)
+  if(params%lforcesync .and. nFT8decd.eq.0) avexdt=0. ! reset value to let correct sliding in decoder
 !  close(13)
 
   do i=1,1000
