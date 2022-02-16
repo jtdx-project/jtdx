@@ -2279,36 +2279,41 @@ endif
 
     if(params%ndelay.eq.0) then
       nFT8decd=my_ft8%decoded; dtmed=0.
-      if(nFT8decd.gt.5) then
-        do i=1,nFT8decd
-          if(i.lt.nFT8decd-1) then
-            if((my_ft8%xdtt(i).gt.my_ft8%xdtt(i+1) .and. my_ft8%xdtt(i).lt.my_ft8%xdtt(i+2)) &
-               .or. (my_ft8%xdtt(i).lt.my_ft8%xdtt(i+1) .and. my_ft8%xdtt(i).gt.my_ft8%xdtt(i+2))) then
-              dtmed=my_ft8%xdtt(i)
-            else if((my_ft8%xdtt(i+1).gt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+1).lt.my_ft8%xdtt(i+2)) &
-               .or. (my_ft8%xdtt(i+1).lt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+1).gt.my_ft8%xdtt(i+2))) then
-              dtmed=my_ft8%xdtt(i+1)
-            else if((my_ft8%xdtt(i+2).gt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+2).lt.my_ft8%xdtt(i+1)) &
-               .or. (my_ft8%xdtt(i+2).lt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+2).gt.my_ft8%xdtt(i+1))) then
-              dtmed=my_ft8%xdtt(i+2)
+      if(params%lforcesync .and. nFT8decd.eq.0) then
+        avexdt=forcedt
+      else
+        if(nFT8decd.gt.2) then
+          do i=1,nFT8decd
+            if(i.lt.nFT8decd-1) then
+              if((my_ft8%xdtt(i).gt.my_ft8%xdtt(i+1) .and. my_ft8%xdtt(i).lt.my_ft8%xdtt(i+2)) &
+                 .or. (my_ft8%xdtt(i).lt.my_ft8%xdtt(i+1) .and. my_ft8%xdtt(i).gt.my_ft8%xdtt(i+2))) then
+                dtmed=my_ft8%xdtt(i)
+              else if((my_ft8%xdtt(i+1).gt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+1).lt.my_ft8%xdtt(i+2)) &
+                 .or. (my_ft8%xdtt(i+1).lt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+1).gt.my_ft8%xdtt(i+2))) then
+                dtmed=my_ft8%xdtt(i+1)
+              else if((my_ft8%xdtt(i+2).gt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+2).lt.my_ft8%xdtt(i+1)) &
+                 .or. (my_ft8%xdtt(i+2).lt.my_ft8%xdtt(i) .and. my_ft8%xdtt(i+2).gt.my_ft8%xdtt(i+1))) then
+                dtmed=my_ft8%xdtt(i+2)
+              else
+                dtmed=my_ft8%xdtt(i)
+              endif
+              sumxdt=sumxdt+dtmed
             else
-              dtmed=my_ft8%xdtt(i)
+              sumxdt=sumxdt+dtmed ! use last median value
             endif
-            sumxdt=sumxdt+dtmed
-          else
-            sumxdt=sumxdt+dtmed ! use last median value
+          enddo
+          if(nFT8decd.gt.5) then; avexdt=(avexdt+sumxdt/nFT8decd)/2
+          else if(nFT8decd.eq.5) then; avexdt=(1.1*avexdt+0.9*sumxdt/nFT8decd)/2
+          else if(nFT8decd.eq.4) then; avexdt=(1.25*avexdt+0.75*sumxdt/nFT8decd)/2
+          else if(nFT8decd.eq.3) then; avexdt=(1.35*avexdt+0.65*sumxdt/nFT8decd)/2
           endif
-        enddo
-        avexdt=(avexdt+sumxdt/nFT8decd)/2
-      else if(nFT8decd.gt.1) then
-        sumxdt=sum(my_ft8%xdtt(1:nFT8decd))
-        if(nFT8decd.eq.5) then; avexdt=(1.1*avexdt+0.9*sumxdt/nFT8decd)/2
-        else if(nFT8decd.eq.4) then; avexdt=(1.25*avexdt+0.75*sumxdt/nFT8decd)/2
-        else if(nFT8decd.eq.3) then; avexdt=(1.35*avexdt+0.65*sumxdt/nFT8decd)/2
-        else if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
+        else if(nFT8decd.gt.0) then
+          sumxdt=sum(my_ft8%xdtt(1:nFT8decd))
+          if(nFT8decd.eq.2) then; avexdt=(1.5*avexdt+0.5*sumxdt/nFT8decd)/2
+          else if(nFT8decd.eq.1) then; avexdt=(1.75*avexdt+0.25*sumxdt)/2
+          endif
         endif
       endif
-      if(params%lforcesync .and. nFT8decd.eq.0) avexdt=forcedt
     endif
     call fillhash(numthreads,.true.)
     ncandall=sum(ncandallthr(1:numthreads))
