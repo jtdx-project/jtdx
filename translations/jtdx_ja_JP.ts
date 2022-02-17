@@ -3933,12 +3933,24 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;マウスの左ボタンでクリックすると、JTDXの内部時刻がシフトし、RXオーディオストリームに入力される信号にデコーダがよりよく同期するようになります。
+2つのシナリオがサポートされています。&lt;br&gt;
+- 粗い同期: ウォーターフォール上にシフトした信号があり、デコードされた信号がない場合、最小電力値がデコーダで使用されピリオドの開始までの時間シフトを評価します。&lt;br&gt;
+
+- より精密な同期:前の区間でデコードした信号があり、平均DTが-0.29～0.29秒の範囲外である場合。平均 DT 値が JTDX のタイムシフトに使用されます。&lt;br&gt;
+
+粗い同期と精密同期の2回の試行には、少なくとも5ピリオドの間隔を空けることを推奨します。&lt;br&gt;
+またこのタイムシフトにより、現在と次のピリオドのデコードが中断されることがあります。&lt;br&gt;
+
+注意&lt;br&gt;
+- コンピュータのクロック差が7.5秒以上ある場合、間違った間合いでスポットを報告する可能性があり、QSOの開始/終了時刻にも影響を与える可能性があります。&lt;br&gt;
+- SDRソフトウェアのバッファリングによるRXオーディオストリームの遅延を補正しようとすると、TX信号のDTが誤った方向に影響されます。&lt;br&gt;
+マウスの右ボタンでクリックすると、JTDXの内部時刻をシステム時刻に戻します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>同期</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4508"/>

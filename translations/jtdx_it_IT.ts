@@ -3917,12 +3917,21 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clicare con il pulsante sinistro del mouse per cambiare l&apos;ora interna di JTDX per fornire una migliore sincronizzazione del decoder ai segnali nel flusso audio RX in ingresso. &lt;br&gt;
+Sono supportati due scenari: &lt;br&gt;
+- sincronizzazione approssimativa, se ci sono segnali spostati sulla cascata e nessun segnale decodificato, il valore minimo di potenza viene utilizzato nel decoder per valutare lo spostamento temporale fino all&apos;inizio dell&apos;intervallo &lt;br&gt;
+- sincronizzazione più precisa, se ci sono segnali decodificati nell&apos;intervallo precedente e il DT medio è fuori dall&apos;intervallo -0,29 .. 0,29 sec. Il valore DT medio viene utilizzato per il time shift JTDX. &lt;br&gt;
+Si raccomanda di mantenere almeno cinque pumti di intervallo tra due tentativi consequenziali di sincronizzazione approssimativa e precisa. &lt;br&gt;
+La decodifica dell&apos;intervallo corrente e successivo può essere interrotta dallo spostamento temporale. &lt;br&gt;
+Note: &lt;br&gt;
+- se la differenza dell&apos;orologio del tuo computer è superiore a 7,5 secondi, è possibile che vengano segnalati punti in un intervallo errato, anche l&apos;ora di inizio / fine del QSO può essere influenzata &lt;br&gt;
+- Il segnale DT del TX verrà influenzato in modo errato se si sta tentando di compensare il ritardo del flusso audio RX causato dal buffering nel software SDR. &lt;br&gt; &lt;br&gt;
+Fare clic con il pulsante destro del mouse riporta l&apos;ora interna di JTDX all&apos;ora di sistema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>

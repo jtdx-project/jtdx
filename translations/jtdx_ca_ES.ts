@@ -3919,12 +3919,20 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fes clic amb el botó esquerre del ratolí per canviar el temps intern del JTDX per tal de proporcionar una millor sincronització del descodificador als senyals del flux d&apos;àudio del RX entrant.&lt;br&gt;
+S&apos;admeten dos escenaris:&lt;br&gt;
+- sincronització més precisa, si hi ha senyals descodificats en l&apos;interval anterior i la mitjana DT està fora del rang -0,29 .. 0,29 s. El valor DT mitjà s&apos;utilitza per al canvi de temps JTDX.
+Es recomana mantenir almenys cinc intervals entre dos intents consecutius de sincronització aproximada i precisa.&lt;br&gt;
+La descodificació de l&apos;interval actual i següent es pot trencar pel canvi de temps.&lt;br&gt;
+Nota:&lt;br&gt;
+- Si la diferència del rellotge del teu ordinador és de més de 7,5 segons, hi ha la possibilitat que informis de punts en un interval incorrecte, també l&apos;hora d&apos;inici i final de QSO es pot veure afectada&lt;br&gt;
+- La DT del senyal de TX es veurà afectada de manera incorrecta si intentes compensar el retard de la transmissió d&apos;àudio de RX causat per l&apos;emmagatzematge en memòria intermèdia al programari SDR.&lt;br&gt;&lt;br&gt;
+En fer clic amb el botó dret del ratolí, l&apos;hora interna de JTDX torna a l&apos;hora del sistema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincronitzar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>
