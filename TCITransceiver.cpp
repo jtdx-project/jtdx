@@ -637,13 +637,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
 #endif
             if(args.at(0)==rx_ && args.at(1) == "0") {
               rx_frequency_ = args.at(2);
-              if (requested_rx_frequency_.isEmpty()) {requested_rx_frequency_ = rx_frequency_; }
+              if (!tci_Ready) {requested_rx_frequency_ = rx_frequency_; }
               if (busy_rx_frequency_) {/*printf ("cmdvfo0 done1\n");*/ tci_done1();}
               else if (!tci_timer2_->isActive() && split_) tci_timer2_->start(300);
             }
             else if (args.at(0)==rx_ && args.at(1) == "1") {
               other_frequency_ = args.at(2);
-//              if (requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
+              if (!tci_Ready) requested_other_frequency_ = other_frequency_;
               if (band_change) tci_done1();
               else if (busy_other_frequency_) tci_done2();
               else if (other_frequency_ != requested_other_frequency_ && tci_Ready && split_ && !tci_timer2_->isActive()) tci_timer2_->start(300);
@@ -726,8 +726,8 @@ void TCITransceiver::onMessageReceived(const QString &str)
 #endif
             if(args.at(0)==rx_) {
               stream_audio_ = true;
-//              printf ("cmdaudiostart done1\n");
-              tci_done1();
+              if (tci_Ready) { //printf ("cmdaudiostart done1\n");
+              tci_done1();}
             }
           break;	
         case Cmd_RxEnable:
@@ -753,8 +753,8 @@ void TCITransceiver::onMessageReceived(const QString &str)
 #endif
             if(args.at(0)==rx_) {
               stream_audio_ = false;
-//              printf ("cmdaudiostop done1\n");
-              tci_done1();
+              if (tci_Ready) { //printf ("cmdaudiostop done1\n");
+              tci_done1();}
             }
           break;	
         case Cmd_Start:
