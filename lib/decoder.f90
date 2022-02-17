@@ -2279,6 +2279,9 @@ endif
 
     if(params%ndelay.eq.0) then
       nFT8decd=my_ft8%decoded; dtmed=0.
+      if(params%lforcesync) then; nintcount=3
+      else if(nintcount.gt.0) then; nintcount=nintcount-1
+      endif
       if(params%lforcesync .and. nFT8decd.eq.0) then
         avexdt=forcedt
       else
@@ -2315,6 +2318,7 @@ endif
         endif
       endif
     endif
+    if(nFT8decd.gt.15 .and. nintcount.eq.1) avexdt=sumxdt/nFT8decd ! fast track after Sync on overcrowded band
     call fillhash(numthreads,.true.)
     ncandall=sum(ncandallthr(1:numthreads))
 !     call timer('decft8  ',1)

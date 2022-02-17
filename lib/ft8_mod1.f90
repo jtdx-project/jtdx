@@ -16,7 +16,7 @@ module ft8_mod1
           apsymdxns1(58),apsymdxnsrrr(77),ndxnsaptypes(0:5,27),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),       &
           nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58),              &
           apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,27),apsymdxstd(58),     &
-          apsymdxnsr73(77),apsymdxns732(77),apsymmynsrrr(77),idtonedxcns73(58),idtonefox73(58),idtonespec(58)
+          apsymdxnsr73(77),apsymdxns732(77),apsymmynsrrr(77),idtonedxcns73(58),idtonefox73(58),idtonespec(58),nintcount
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
   logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1,ltxing
@@ -58,6 +58,7 @@ module ft8_mod1
   data ndxnsaptypes(3,1:27)/11,11,11,14,14,14,13,13,13,12,12,12,0,0,0,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx3 RRreport
   data ndxnsaptypes(4,1:27)/11,11,11,14,14,14,13,13,13,12,12,12,2,2,2,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx4 RRR,RR73
   data ndxnsaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx5 73
+  data nintcount/0/
   data avexdt/0.0/
   data first_osd/.true./
   
