@@ -4337,7 +4337,7 @@ void MainWindow::guiUpdate()
           QTextStream out(&f);
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Retransmitting " << qSetRealNumberPrecision (12) << (m_freqNominal / 1.e6)
-              << " MHz  " << m_modeTx
+              << " MHz +" << ui->TxFreqSpinBox->value () <<"Hz  " << m_modeTx
               << ":  " << m_currentMessage << 
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                  endl;
@@ -4475,7 +4475,7 @@ void MainWindow::guiUpdate()
           QString autoseqa=ui->AutoSeqButton->text(); int indx=autoseqa.length()-1; QString autoseq="AutoSeq"+autoseqa[indx];
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  JTDX v" << QCoreApplication::applicationVersion () << revision () <<" Transmitting " << qSetRealNumberPrecision (12)
-              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
+              << (m_freqNominal / 1.e6) << " MHz + " << ui->TxFreqSpinBox->value () <<"Hz  " << m_modeTx << ":  " << m_currentMessage <<
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                  endl
 #else
@@ -4502,7 +4502,7 @@ void MainWindow::guiUpdate()
         else {
           out << m_jtdxtime->currentDateTimeUtc2().toString("yyyyMMdd_hhmmss.zzz") << "(" << m_jtdxtime->GetOffset() << ")"
               << "  Transmitting " << qSetRealNumberPrecision (12)
-              << (m_freqNominal / 1.e6) << " MHz  " << m_modeTx << ":  " << m_currentMessage <<
+              << (m_freqNominal / 1.e6) << " MHz + " << ui->TxFreqSpinBox->value () <<"Hz  " << m_modeTx << ":  " << m_currentMessage <<
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                  endl;
 #else
