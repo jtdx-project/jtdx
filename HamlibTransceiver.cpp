@@ -1273,10 +1273,10 @@ void HamlibTransceiver::do_poll ()
                     fclose (pFile);
 #endif
 //                    printf ("SWR %.3f\n",strength.f);
-//                    if (strength.f > 1.000)
+                    if (strength.f >= 1.000)
                       update_swr (strength.f*100);
-//                    else
-//                      update_swr (0);
+                    else
+                      update_swr (0);
                   } else {
                     TRACE_CAT_POLL ("HamlibTransceiver", "rig_get_level RIG_LEVEL_SWR failed with rc:" << rc << "ignoring");
 #if JTDX_DEBUG_TO_FILE
