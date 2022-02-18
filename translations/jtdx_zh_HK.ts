@@ -3261,7 +3261,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="1589"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候選清單細化, 該特性專用於慢速中央處理器的寬頻帶解碼和&quot;最小&quot;寬頻帶解碼器靈敏度設定. 按應用的 DT 權重因數的同步模式級別對候選清單進行排序, 低值候選者將不由解碼器處理, 以減少間隔解碼所花費的時間. 此功能不應用於通聯接收頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;候選清單細化, 該特性專用於慢速中央處理器的寬頻帶解碼和 &apos;最小&apos; 寬頻帶解碼器靈敏度設定. 按應用的 DT 權重因數的同步模式級別對候選清單進行排序, 低值候選者將不由解碼器處理, 以減少間隔解碼所花費的時間. 此功能不應用於通聯接收頻率.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
@@ -3912,12 +3912,21 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;滑鼠左鍵點擊可改變JTDX的內部時間以提供更好的解碼器同步使訊號進入接收音訊流.&lt;br&gt;
+支持兩種方案:&lt;br&gt;
+- 粗略同步, 如果瀑布上有移位訊號, 且沒有解碼訊號, 則解碼器中使用最小能量值來評估時間偏移, 直到間隔開始&lt;br&gt;
+- 更精確的同步, 若在前一個間隔中有解碼的訊號, 且平均DT超出 -0.29 .. 0.29 秒範圍。 平均DT值用於JTDX時移.&lt;br&gt;
+建議在粗略同步和精確同步的兩次後續嘗試之間保持至少五個間隔.&lt;br&gt;
+當前和下一個間隔的解碼可以通過時間偏移中斷.&lt;br&gt;
+注釋:&lt;br&gt;
+- 如果你的電腦時鐘差超過7.5秒, 你就有可能在錯誤的時間間隔報告點, 通聯的開始/結束時間也會受到影響&lt;br&gt;
+- 如果您試圖補償SDR軟件中緩衝造成的接收音訊流延遲, 則發射訊號的時差將以錯誤方向受到影響.&lt;br&gt;&lt;br&gt;
+按一下滑鼠右鍵將JTDX內部時間設定回系統時間.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>同步</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>
