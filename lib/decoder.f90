@@ -85,7 +85,7 @@ subroutine multimode_decoder(params)
   my_jt65%decoded=0; my_jt9%decoded=0; my_jt9s%decoded=0; my_jt10%decoded=0; my_ft4%decoded=0
   nagainjt9=.false.;  nagainjt9s=.false.;  nagainjt10=.false.; ncandall=0; ncandallthr=0
 
-  if(params%lmodechanged) avexdt=0.
+  if(params%lmodechanged) then; avexdt=0.; if(params%nmode.eq.8) nintcount=3; endif ! avexdt fast track in FT8 after mode change
   if(params%lbandchanged .and. (params%nmode.eq.8 .or. params%nmode.eq.4)) then; ihash22=-1; calls22=''; calls12=''; endif
 
   if(.not.params%nagain) ndelay=params%ndelay
@@ -2279,7 +2279,7 @@ endif
 
     if(params%ndelay.eq.0) then
       nFT8decd=my_ft8%decoded; dtmed=0.
-      if(params%lforcesync) then; nintcount=3
+      if(params%lforcesync) then; nintcount=3 ! fast track after Sync
       else if(nintcount.gt.0) then; nintcount=nintcount-1
       endif
       if(params%lforcesync .and. nFT8decd.eq.0) then
@@ -2318,7 +2318,7 @@ endif
         endif
       endif
     endif
-    if(nFT8decd.gt.15 .and. nintcount.eq.1) avexdt=sumxdt/nFT8decd ! fast track after Sync on overcrowded band
+    if(nFT8decd.gt.10 .and. nintcount.eq.1) avexdt=sumxdt/nFT8decd ! fast track after Sync or mode change on crowded bands
     call fillhash(numthreads,.true.)
     ncandall=sum(ncandallthr(1:numthreads))
 !     call timer('decft8  ',1)
