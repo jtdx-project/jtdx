@@ -3900,12 +3900,21 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Botão esquerdo do mouse: muda o tempo interno do JTDX, fornecendo melhor sincronização do decodificador para o fluxo dos sinais de áudio RX.&lt;br&gt;
+Dois cenários são suportados:&lt;br&gt;
+- Sincronização aproximada, se houver sinais deslocados na cascata e nenhum sinal decodificado, o valor mais fraco será usado no decodificador para avaliar o deslocamento de tempo até o início do intervalo.&lt;br&gt;
+- Sincronização mais precisa, se houver sinais decodificados no intervalo anterior e o DT médio estiver fora da faixa de -0,29 .. 0,29 seg. O valor médio de DT será usado para o sincronismo do JTDX.&lt;br&gt;
+Recomenda-se manter, pelo menos, cinco intervalos de tempo entre duas tentativas consecutivas de sincronização aproximada ou precisa.&lt;br&gt;
+A decodificação do intervalo atual e do próximo intervalo pode ser interrompida pela tentativa de sincronismo.&lt;br&gt;
+Observação:&lt;br&gt;
+- Se a diferença do relógio do seu computador for superior a 7,5 segundos, há uma chance de você decodificar contatos no intervalo errado, também o horário de início/término do QSO pode ser afetado.&lt;br&gt;
+- O DT do sinal TX será afetado de maneira errada se você estiver tentando compensar o atraso do fluxo de áudio RX causado pelo buffer no software SDR.&lt;br&gt;&lt;br&gt;
+Botão direito do mouse: define o sincronismo interno do JTDX conforme o tempo do sistema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincronismo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>
