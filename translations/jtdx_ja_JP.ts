@@ -3933,7 +3933,10 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;マウスの左ボタンでクリックすると、JTDXの内部時刻がシフトし、RXオーディオストリームに入力される信号にデコーダがよりよく同期するようになります。
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;この機能はインターネットでNTPサーバーで時計を合わすことができる方、GPSを使って時計を合わせることができる方には
+必要のない機能です。移動運用などで時計合わせができない方には便利な機能です。&lt;br&gt;
+-------------------------------------------------------------------&lt;br&gt;
+マウスの左ボタンでクリックすると、JTDXの内部時刻がシフトし、RXオーディオストリームに入力される信号にデコーダがよりよく同期するようになります。
 2つのシナリオがサポートされています。&lt;br&gt;
 - 粗い同期: ウォーターフォール上にシフトした信号があり、デコードされた信号がない場合、最小電力値がデコーダで使用されピリオドの開始までの時間シフトを評価します。&lt;br&gt;
 
