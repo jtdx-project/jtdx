@@ -3493,7 +3493,7 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
     <message>
         <location filename="../mainwindow.ui" line="3092"/>
         <source>S&amp;WL mode</source>
-        <translation>S&amp;WL 模式</translation>
+        <translation>多次解码(&amp;W)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2980"/>
@@ -3912,12 +3912,21 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;单击鼠标左键可移动 JTDX 内部时间，以提供更好的解码器同步信号给传入的 RX 音频流。&lt;br&gt;
+支持两种方案：&lt;br&gt;
+* 粗略同步，如果瀑布上有信号而没有信号解码，则解码器中使用最小功率值来评估时间偏移，直到间隔开始&lt;br&gt;
+* 精确同步，如果有信号在前一个间隔解码并且平均 DT 超出 -0.29 .. 0.29 秒范围。平均 DT 值用于 JTDX 时移。&lt;br&gt;
+建议在两次粗略和精确同步的后续尝试之间至少保留五个周期间隔。&lt;br&gt;
+时移可以打破当前和下一个间隔的解码。&lt;br&gt;
+注意：&lt;br&gt;
+* 如果您的计算机时钟误差超过 7.5 秒，您可能会以错误的时间间隔报告点，也会影响 QSO 开始/结束时间&lt;br&gt;
+* 如果您试图补偿由于 SDR 软件中的缓冲而导致的 RX 音频流延迟，则会以错误的方式影响 TX 信号的 DT。&lt;br&gt;&lt;br&gt;
+单击鼠标右键将 JTDX 内部时间设置回系统时间。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>同步</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>
@@ -3982,7 +3991,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
     <message>
         <location filename="../mainwindow.ui" line="4705"/>
         <source>SWL decoding cycles</source>
-        <translation>SWL解码次数</translation>
+        <translation>多次解码尝试次数</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4723"/>
@@ -4656,7 +4665,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
     <message>
         <location filename="../mainwindow.ui" line="6037"/>
         <source>6 pass SWL mode</source>
-        <translation>通过6次 SWL 模式</translation>
+        <translation>通过6次 SWL 模式(多次解码)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6048"/>
