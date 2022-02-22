@@ -4780,9 +4780,7 @@ void Configuration::impl::on_decoded_text_font_push_button_clicked ()
 {
   next_decoded_text_font_ = QFontDialog::getFont (0, decoded_text_font_ , this
                                                   , tr ("JTDX Decoded Text Font Chooser")
-#if QT_VERSION >= 0x050201
                                                   , QFontDialog::MonospacedFonts
-#endif
                                                   );
 }
 
