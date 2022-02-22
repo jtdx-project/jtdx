@@ -226,6 +226,7 @@ private:
   bool inConnected;
   bool tci_Ready;
   bool ESDR3;
+  bool HPSDR;
   bool tx_top_;
   bool band_change;
   QUrl url_;

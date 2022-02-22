@@ -353,6 +353,7 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   tx_fifo = 0; tx_top_ = true;
   tci_Ready = false;
   ESDR3 = false;
+  HPSDR = false;
   band_change = false;
   trxA = 0;
   trxB = 0;
@@ -400,6 +401,13 @@ int TCITransceiver::do_start (JTDXDateTime * jtdxtime)
   mysleep1 (1500);
   if (ESDR3) mysleep1 (500); else mysleep1 (100);
 //  mysleep1 (100);
+  if (HPSDR) {
+      busy_split_ = true;
+      const QString cmd = CmdSplitEnable + SmDP + rx_ + SmTZ;
+      sendTextMessage(cmd);
+      mysleep2(500);
+      busy_split_ = false;
+  }
   if (error_.isEmpty()) {
     tci_Ready = true;
     if (!_power_) {
@@ -798,12 +806,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
           fclose (pFile);
 #endif
           if(args.at(0)=="ExpertSDR3") ESDR3 = true;
+          else if (args.at(0)=="Thetis") HPSDR = true;
           break;	
         case Cmd_Device:
 //          printf("%s(%0.1f) CmdDevice : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
 #if JTDX_DEBUG_TO_FILE
           pFile = fopen (debug_file_.c_str(),"a");  
-          fprintf (pFile,"%s(%0.1f) CmdVersion : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
+          fprintf (pFile,"%s(%0.1f) CmdDevice : %s\n",m_jtdxtime->currentDateTimeUtc2().toString("hh:mm:ss.zzz").toStdString().c_str(),m_jtdxtime->GetOffset(),args.join("|").toStdString().c_str());
           fclose (pFile);
 #endif
           if((args.at(0)=="SunSDR2DX" || args.at(0)=="SunSDR2PRO") && !ESDR3) tx_top_ = false;
