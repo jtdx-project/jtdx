@@ -228,102 +228,102 @@ Format:
         <translation>JTDX 解碼文本字型選擇</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="4904"/>
+        <location filename="../Configuration.cpp" line="4902"/>
         <source>Enter Grid error: 4/6/8/10 char grid will be accepted</source>
         <translation>輸入網格錯誤: 祗接受4/6/8/10字元網格</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5440"/>
-        <location filename="../Configuration.cpp" line="5471"/>
+        <location filename="../Configuration.cpp" line="5438"/>
+        <location filename="../Configuration.cpp" line="5469"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5436"/>
+        <location filename="../Configuration.cpp" line="5434"/>
         <source>Load Working Frequencies</source>
         <translation>載入工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5438"/>
-        <location filename="../Configuration.cpp" line="5469"/>
-        <location filename="../Configuration.cpp" line="5523"/>
+        <location filename="../Configuration.cpp" line="5436"/>
+        <location filename="../Configuration.cpp" line="5467"/>
+        <location filename="../Configuration.cpp" line="5521"/>
         <source>Frequency files (*.qrg);;All files (*.*)</source>
         <translation>頻率檔案 (*.qrg);;全部檔案 (*.*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5454"/>
+        <location filename="../Configuration.cpp" line="5452"/>
         <source>Replace Working Frequencies</source>
         <translation>替換工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5455"/>
+        <location filename="../Configuration.cpp" line="5453"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with the loaded ones?</source>
         <translation>是否確實要放棄當前工作頻率, 並將其替換為載入的頻率?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5467"/>
+        <location filename="../Configuration.cpp" line="5465"/>
         <source>Merge Working Frequencies</source>
         <translation>合併工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5494"/>
-        <location filename="../Configuration.cpp" line="5503"/>
-        <location filename="../Configuration.cpp" line="5513"/>
+        <location filename="../Configuration.cpp" line="5492"/>
+        <location filename="../Configuration.cpp" line="5501"/>
+        <location filename="../Configuration.cpp" line="5511"/>
         <source>Not a valid frequencies file</source>
         <translation>不是有效頻率檔案</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5494"/>
+        <location filename="../Configuration.cpp" line="5492"/>
         <source>Incorrect file magic</source>
         <translation>不正確的檔案內容</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5503"/>
+        <location filename="../Configuration.cpp" line="5501"/>
         <source>Version is too new</source>
         <translation>版本太新</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5513"/>
+        <location filename="../Configuration.cpp" line="5511"/>
         <source>Contents corrupt</source>
         <translation>內容已損壞</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5523"/>
+        <location filename="../Configuration.cpp" line="5521"/>
         <source>Save Working Frequencies</source>
         <translation>儲存工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5533"/>
+        <location filename="../Configuration.cpp" line="5531"/>
         <source>Only Save Selected  Working Frequencies</source>
         <translation>只儲存選取的工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5535"/>
+        <location filename="../Configuration.cpp" line="5533"/>
         <source>Are you sure you want to save only the working frequencies that are currently selected? Click No to save all.</source>
         <translation>是否要儲存目前選擇的工作頻率? 按一下 否 可儲存全部.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5562"/>
+        <location filename="../Configuration.cpp" line="5560"/>
         <source>Reset Working Frequencies</source>
         <translation>重置工作頻率</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5564"/>
+        <location filename="../Configuration.cpp" line="5562"/>
         <source>Are you sure you want to discard your current working frequencies and replace them with default ones?</source>
         <translation>您確定要放棄您當前的工作頻率並用預設值頻率替換它們嗎?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5624"/>
+        <location filename="../Configuration.cpp" line="5622"/>
         <source>Save Directory</source>
         <translation>儲存目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5640"/>
+        <location filename="../Configuration.cpp" line="5638"/>
         <source>Failed to open connection to rig</source>
         <translation>無法開啟與無線電設備的連接</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="6030"/>
+        <location filename="../Configuration.cpp" line="6028"/>
         <source>Rig failure</source>
         <translation>無線電設備故障</translation>
     </message>
@@ -331,1737 +331,1737 @@ Format:
 <context>
     <name>CountryDat</name>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="33"/>
+        <location filename="../logbook/countrydat.cpp" line="35"/>
         <source>where?</source>
         <translation>不詳?</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="34"/>
+        <location filename="../logbook/countrydat.cpp" line="36"/>
         <source>Sov Mil Order of Malta</source>
         <translation>馬耳他騎士團</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="35"/>
+        <location filename="../logbook/countrydat.cpp" line="37"/>
         <source>Spratly Is.</source>
         <translation>南沙群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="36"/>
+        <location filename="../logbook/countrydat.cpp" line="38"/>
         <source>Monaco</source>
         <translation>摩納哥</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="37"/>
+        <location filename="../logbook/countrydat.cpp" line="39"/>
         <source>Agalega &amp; St. Brandon</source>
         <translation>阿加萊加群島及聖布蘭登群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="38"/>
+        <location filename="../logbook/countrydat.cpp" line="40"/>
         <source>Mauritius</source>
         <translation>毛里裘斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="39"/>
+        <location filename="../logbook/countrydat.cpp" line="41"/>
         <source>Rodriguez Is.</source>
         <translation>羅德里格斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="40"/>
+        <location filename="../logbook/countrydat.cpp" line="42"/>
         <source>Equatorial Guinea</source>
         <translation>赤道幾內亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="41"/>
+        <location filename="../logbook/countrydat.cpp" line="43"/>
         <source>Annobon Is.</source>
         <translation>安諾本島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="42"/>
+        <location filename="../logbook/countrydat.cpp" line="44"/>
         <source>Fiji</source>
         <translation>斐濟</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="43"/>
+        <location filename="../logbook/countrydat.cpp" line="45"/>
         <source>Conway Reef</source>
         <translation>康威礁</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="44"/>
+        <location filename="../logbook/countrydat.cpp" line="46"/>
         <source>Rotuma Is.</source>
         <translation>羅圖馬島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="45"/>
+        <location filename="../logbook/countrydat.cpp" line="47"/>
         <source>Kingdom of Eswatini</source>
         <translation>斯威士蘭王國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="46"/>
+        <location filename="../logbook/countrydat.cpp" line="48"/>
         <source>Tunisia</source>
         <translation>突尼斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="47"/>
+        <location filename="../logbook/countrydat.cpp" line="49"/>
         <source>Vietnam</source>
         <translation>越南</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="48"/>
+        <location filename="../logbook/countrydat.cpp" line="50"/>
         <source>Guinea</source>
         <translation>幾內亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="49"/>
+        <location filename="../logbook/countrydat.cpp" line="51"/>
         <source>Bouvet</source>
         <translation>布韋島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="50"/>
+        <location filename="../logbook/countrydat.cpp" line="52"/>
         <source>Peter 1 Is.</source>
         <translation>彼得一世島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="51"/>
+        <location filename="../logbook/countrydat.cpp" line="53"/>
         <source>Azerbaijan</source>
         <translation>阿塞拜疆</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="52"/>
+        <location filename="../logbook/countrydat.cpp" line="54"/>
         <source>Georgia</source>
         <translation>格魯吉亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="53"/>
+        <location filename="../logbook/countrydat.cpp" line="55"/>
         <source>Montenegro</source>
         <translation>黑山共和國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="54"/>
+        <location filename="../logbook/countrydat.cpp" line="56"/>
         <source>Sri Lanka</source>
         <translation>斯里蘭卡</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="55"/>
+        <location filename="../logbook/countrydat.cpp" line="57"/>
         <source>ITU HQ</source>
         <translation>國際電聯總部</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="56"/>
+        <location filename="../logbook/countrydat.cpp" line="58"/>
         <source>United Nations HQ</source>
         <translation>聯合國總部</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="57"/>
+        <location filename="../logbook/countrydat.cpp" line="59"/>
         <source>Vienna Intl Ctr</source>
         <translation>維也納國際中心</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="58"/>
+        <location filename="../logbook/countrydat.cpp" line="60"/>
         <source>Timor - Leste</source>
         <translation>東帝汶</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="59"/>
+        <location filename="../logbook/countrydat.cpp" line="61"/>
         <source>Israel</source>
         <translation>以色列</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="60"/>
+        <location filename="../logbook/countrydat.cpp" line="62"/>
         <source>Libya</source>
         <translation>利比亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="61"/>
+        <location filename="../logbook/countrydat.cpp" line="63"/>
         <source>Cyprus</source>
         <translation>塞浦路斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="62"/>
+        <location filename="../logbook/countrydat.cpp" line="64"/>
         <source>Tanzania</source>
         <translation>坦桑尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="63"/>
+        <location filename="../logbook/countrydat.cpp" line="65"/>
         <source>Nigeria</source>
         <translation>尼日利亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="64"/>
+        <location filename="../logbook/countrydat.cpp" line="66"/>
         <source>Madagascar</source>
         <translation>馬達加斯加</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="65"/>
+        <location filename="../logbook/countrydat.cpp" line="67"/>
         <source>Mauritania</source>
         <translation>毛里塔尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="66"/>
+        <location filename="../logbook/countrydat.cpp" line="68"/>
         <source>Niger</source>
         <translation>尼日爾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="67"/>
+        <location filename="../logbook/countrydat.cpp" line="69"/>
         <source>Togo</source>
         <translation>多哥</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="68"/>
+        <location filename="../logbook/countrydat.cpp" line="70"/>
         <source>Samoa</source>
         <translation>薩摩亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="69"/>
+        <location filename="../logbook/countrydat.cpp" line="71"/>
         <source>Uganda</source>
         <translation>烏干達</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="70"/>
+        <location filename="../logbook/countrydat.cpp" line="72"/>
         <source>Kenya</source>
         <translation>肯尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="71"/>
+        <location filename="../logbook/countrydat.cpp" line="73"/>
         <source>Senegal</source>
         <translation>塞內加爾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="72"/>
+        <location filename="../logbook/countrydat.cpp" line="74"/>
         <source>Jamaica</source>
         <translation>牙買加</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="73"/>
+        <location filename="../logbook/countrydat.cpp" line="75"/>
         <source>Yemen</source>
         <translation>也門</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="74"/>
+        <location filename="../logbook/countrydat.cpp" line="76"/>
         <source>Lesotho</source>
         <translation>萊索托</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="75"/>
+        <location filename="../logbook/countrydat.cpp" line="77"/>
         <source>Malawi</source>
         <translation>馬拉維</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="76"/>
+        <location filename="../logbook/countrydat.cpp" line="78"/>
         <source>Algeria</source>
         <translation>阿爾及利亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="77"/>
+        <location filename="../logbook/countrydat.cpp" line="79"/>
         <source>Barbados</source>
         <translation>巴巴多斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="78"/>
+        <location filename="../logbook/countrydat.cpp" line="80"/>
         <source>Maldives</source>
         <translation>馬爾代夫</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="79"/>
+        <location filename="../logbook/countrydat.cpp" line="81"/>
         <source>Guyana</source>
         <translation>圭亞那</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="80"/>
+        <location filename="../logbook/countrydat.cpp" line="82"/>
         <source>Croatia</source>
         <translation>克羅地亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="81"/>
+        <location filename="../logbook/countrydat.cpp" line="83"/>
         <source>Ghana</source>
         <translation>加納</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="82"/>
+        <location filename="../logbook/countrydat.cpp" line="84"/>
         <source>Malta</source>
         <translation>馬爾他</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="83"/>
+        <location filename="../logbook/countrydat.cpp" line="85"/>
         <source>Zambia</source>
         <translation>贊比亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="84"/>
+        <location filename="../logbook/countrydat.cpp" line="86"/>
         <source>Kuwait</source>
         <translation>科威特</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="85"/>
+        <location filename="../logbook/countrydat.cpp" line="87"/>
         <source>Sierra Leone</source>
         <translation>塞拉利昂</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="86"/>
+        <location filename="../logbook/countrydat.cpp" line="88"/>
         <source>W. Malaysia</source>
         <translation>西.馬來西亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="87"/>
+        <location filename="../logbook/countrydat.cpp" line="89"/>
         <source>E. Malaysia</source>
         <translation>東.馬來西亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="88"/>
+        <location filename="../logbook/countrydat.cpp" line="90"/>
         <source>Nepal</source>
         <translation>尼泊爾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="89"/>
+        <location filename="../logbook/countrydat.cpp" line="91"/>
         <source>Dem. Rep. of the Congo</source>
         <translation>剛果民主共和國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="90"/>
+        <location filename="../logbook/countrydat.cpp" line="92"/>
         <source>Burundi</source>
         <translation>布隆迪</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="91"/>
+        <location filename="../logbook/countrydat.cpp" line="93"/>
         <source>Singapore</source>
         <translation>新加坡</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="92"/>
+        <location filename="../logbook/countrydat.cpp" line="94"/>
         <source>Rwanda</source>
         <translation>盧旺達</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="93"/>
+        <location filename="../logbook/countrydat.cpp" line="95"/>
         <source>Trinidad &amp; Tobago</source>
         <translation>特立尼達和多巴哥共和國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="94"/>
+        <location filename="../logbook/countrydat.cpp" line="96"/>
         <source>Botswana</source>
         <translation>博茨瓦納</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="95"/>
+        <location filename="../logbook/countrydat.cpp" line="97"/>
         <source>Tonga</source>
         <translation>湯加</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="96"/>
+        <location filename="../logbook/countrydat.cpp" line="98"/>
         <source>Oman</source>
         <translation>阿曼</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="97"/>
+        <location filename="../logbook/countrydat.cpp" line="99"/>
         <source>Bhutan</source>
         <translation>不丹</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="98"/>
+        <location filename="../logbook/countrydat.cpp" line="100"/>
         <source>United Arab Emirates</source>
         <translation>阿拉伯聯合酋長國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="99"/>
+        <location filename="../logbook/countrydat.cpp" line="101"/>
         <source>Qatar</source>
         <translation>卡塔爾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="100"/>
+        <location filename="../logbook/countrydat.cpp" line="102"/>
         <source>Bahrain</source>
         <translation>巴林</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="101"/>
+        <location filename="../logbook/countrydat.cpp" line="103"/>
         <source>Pakistan</source>
         <translation>巴基斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="102"/>
+        <location filename="../logbook/countrydat.cpp" line="104"/>
         <source>Scarborough Reef</source>
         <translation>黃岩島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="103"/>
+        <location filename="../logbook/countrydat.cpp" line="105"/>
         <source>Taiwan</source>
         <translation>臺灣</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="104"/>
+        <location filename="../logbook/countrydat.cpp" line="106"/>
         <source>Pratas Is.</source>
         <translation>東沙群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="105"/>
+        <location filename="../logbook/countrydat.cpp" line="107"/>
         <source>China</source>
         <translation>中國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="106"/>
+        <location filename="../logbook/countrydat.cpp" line="108"/>
         <source>Nauru</source>
         <translation>瑙魯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="107"/>
+        <location filename="../logbook/countrydat.cpp" line="109"/>
         <source>Andorra</source>
         <translation>安道爾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="108"/>
+        <location filename="../logbook/countrydat.cpp" line="110"/>
         <source>The Gambia</source>
         <translation>岡比亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="109"/>
+        <location filename="../logbook/countrydat.cpp" line="111"/>
         <source>Bahamas</source>
         <translation>巴哈馬</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="110"/>
+        <location filename="../logbook/countrydat.cpp" line="112"/>
         <source>Mozambique</source>
         <translation>莫桑比克</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="111"/>
+        <location filename="../logbook/countrydat.cpp" line="113"/>
         <source>Chile</source>
         <translation>智利</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="112"/>
+        <location filename="../logbook/countrydat.cpp" line="114"/>
         <source>San Felix &amp; San Ambrosio</source>
         <translation>聖菲力斯島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="113"/>
+        <location filename="../logbook/countrydat.cpp" line="115"/>
         <source>Easter Is.</source>
         <translation>復活節島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="114"/>
+        <location filename="../logbook/countrydat.cpp" line="116"/>
         <source>Juan Fernandez Is.</source>
         <translation>胡安費南德斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="115"/>
+        <location filename="../logbook/countrydat.cpp" line="117"/>
         <source>Antarctica</source>
         <translation>南極洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="116"/>
+        <location filename="../logbook/countrydat.cpp" line="118"/>
         <source>Cuba</source>
         <translation>古巴</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="117"/>
+        <location filename="../logbook/countrydat.cpp" line="119"/>
         <source>Morocco</source>
         <translation>摩洛哥</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="118"/>
+        <location filename="../logbook/countrydat.cpp" line="120"/>
         <source>Bolivia</source>
         <translation>玻利維亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="119"/>
+        <location filename="../logbook/countrydat.cpp" line="121"/>
         <source>Portugal</source>
         <translation>葡萄牙</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="120"/>
+        <location filename="../logbook/countrydat.cpp" line="122"/>
         <source>Madeira Is.</source>
         <translation>馬德拉島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="121"/>
+        <location filename="../logbook/countrydat.cpp" line="123"/>
         <source>Azores</source>
         <translation>亞速爾群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="122"/>
+        <location filename="../logbook/countrydat.cpp" line="124"/>
         <source>Uruguay</source>
         <translation>烏拉圭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="123"/>
+        <location filename="../logbook/countrydat.cpp" line="125"/>
         <source>Sable Is.</source>
         <translation>塞布爾島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="124"/>
+        <location filename="../logbook/countrydat.cpp" line="126"/>
         <source>St. Paul Is.</source>
         <translation>聖保羅島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="125"/>
+        <location filename="../logbook/countrydat.cpp" line="127"/>
         <source>Angola</source>
         <translation>安哥拉</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="126"/>
+        <location filename="../logbook/countrydat.cpp" line="128"/>
         <source>Cape Verde</source>
         <translation>佛得角</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="127"/>
+        <location filename="../logbook/countrydat.cpp" line="129"/>
         <source>Comoros</source>
         <translation>科摩羅</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="128"/>
+        <location filename="../logbook/countrydat.cpp" line="130"/>
         <source>Germany</source>
         <translation>德國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="129"/>
+        <location filename="../logbook/countrydat.cpp" line="131"/>
         <source>Philippines</source>
         <translation>菲律賓</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="130"/>
+        <location filename="../logbook/countrydat.cpp" line="132"/>
         <source>Eritrea</source>
         <translation>厄立特里亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="131"/>
+        <location filename="../logbook/countrydat.cpp" line="133"/>
         <source>Palestine</source>
         <translation>巴勒斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="132"/>
+        <location filename="../logbook/countrydat.cpp" line="134"/>
         <source>N. Cook Is.</source>
         <translation>北庫克群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="133"/>
+        <location filename="../logbook/countrydat.cpp" line="135"/>
         <source>S. Cook Is.</source>
         <translation>南庫克群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="134"/>
+        <location filename="../logbook/countrydat.cpp" line="136"/>
         <source>Niue</source>
         <translation>紐埃</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="135"/>
+        <location filename="../logbook/countrydat.cpp" line="137"/>
         <source>Bosnia-Herzegovina</source>
         <translation>波斯尼亞和黑塞哥維那</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="136"/>
+        <location filename="../logbook/countrydat.cpp" line="138"/>
         <source>Spain</source>
         <translation>西班牙</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="137"/>
+        <location filename="../logbook/countrydat.cpp" line="139"/>
         <source>Balearic Is.</source>
         <translation>巴里亞利群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="138"/>
+        <location filename="../logbook/countrydat.cpp" line="140"/>
         <source>Canary Is.</source>
         <translation>加那利群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="139"/>
+        <location filename="../logbook/countrydat.cpp" line="141"/>
         <source>Ceuta &amp; Melilla</source>
         <translation>休達和梅利利亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="140"/>
+        <location filename="../logbook/countrydat.cpp" line="142"/>
         <source>Ireland</source>
         <translation>愛爾蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="141"/>
+        <location filename="../logbook/countrydat.cpp" line="143"/>
         <source>Armenia</source>
         <translation>亞美尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="142"/>
+        <location filename="../logbook/countrydat.cpp" line="144"/>
         <source>Liberia</source>
         <translation>利比里亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="143"/>
+        <location filename="../logbook/countrydat.cpp" line="145"/>
         <source>Iran</source>
         <translation>伊朗</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="144"/>
+        <location filename="../logbook/countrydat.cpp" line="146"/>
         <source>Moldova</source>
         <translation>摩爾多瓦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="145"/>
+        <location filename="../logbook/countrydat.cpp" line="147"/>
         <source>Estonia</source>
         <translation>愛沙尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="146"/>
+        <location filename="../logbook/countrydat.cpp" line="148"/>
         <source>Ethiopia</source>
         <translation>埃塞俄比亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="147"/>
+        <location filename="../logbook/countrydat.cpp" line="149"/>
         <source>Belarus</source>
         <translation>白俄羅斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="148"/>
+        <location filename="../logbook/countrydat.cpp" line="150"/>
         <source>Kyrgyzstan</source>
         <translation>吉爾吉斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="149"/>
+        <location filename="../logbook/countrydat.cpp" line="151"/>
         <source>Tajikistan</source>
         <translation>塔吉克斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="150"/>
+        <location filename="../logbook/countrydat.cpp" line="152"/>
         <source>Turkmenistan</source>
         <translation>土庫曼斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="151"/>
+        <location filename="../logbook/countrydat.cpp" line="153"/>
         <source>France</source>
         <translation>法國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="152"/>
+        <location filename="../logbook/countrydat.cpp" line="154"/>
         <source>Guadeloupe</source>
         <translation>瓜德羅普島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="153"/>
+        <location filename="../logbook/countrydat.cpp" line="155"/>
         <source>Mayotte</source>
         <translation>馬約特島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="154"/>
+        <location filename="../logbook/countrydat.cpp" line="156"/>
         <source>St. Barthelemy</source>
         <translation>聖巴特勒米島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="155"/>
+        <location filename="../logbook/countrydat.cpp" line="157"/>
         <source>New Caledonia</source>
         <translation>新喀里多尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="156"/>
+        <location filename="../logbook/countrydat.cpp" line="158"/>
         <source>Chesterfield Is.</source>
         <translation>切斯特菲爾德島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="157"/>
+        <location filename="../logbook/countrydat.cpp" line="159"/>
         <source>Martinique</source>
         <translation>馬提尼克島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="158"/>
+        <location filename="../logbook/countrydat.cpp" line="160"/>
         <source>Fr. Polynesia</source>
         <translation>法屬波利尼西亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="159"/>
+        <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Austral Is.</source>
         <translation>南方群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="160"/>
+        <location filename="../logbook/countrydat.cpp" line="162"/>
         <source>Clipperton Is.</source>
         <translation>克利珀頓島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="161"/>
+        <location filename="../logbook/countrydat.cpp" line="163"/>
         <source>Marquesas Is.</source>
         <translation>馬克薩斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="162"/>
+        <location filename="../logbook/countrydat.cpp" line="164"/>
         <source>St. Pierre &amp; Miquelo</source>
         <translation>聖皮埃爾和密克隆島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="163"/>
+        <location filename="../logbook/countrydat.cpp" line="165"/>
         <source>Reunion Is.</source>
         <translation>留尼旺島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="164"/>
+        <location filename="../logbook/countrydat.cpp" line="166"/>
         <source>St. Martin</source>
         <translation>聖馬丁島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="165"/>
+        <location filename="../logbook/countrydat.cpp" line="167"/>
         <source>Glorioso Is.</source>
         <translation>格洛里厄斯群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="166"/>
+        <location filename="../logbook/countrydat.cpp" line="168"/>
         <source>Juan de Nova, Europa</source>
         <translation>新胡安島歐羅巴島, 歐洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="167"/>
+        <location filename="../logbook/countrydat.cpp" line="169"/>
         <source>Tromelin Is.</source>
         <translation>特羅姆蘭島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="168"/>
+        <location filename="../logbook/countrydat.cpp" line="170"/>
         <source>Crozet Is.</source>
         <translation>克羅澤特島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="169"/>
+        <location filename="../logbook/countrydat.cpp" line="171"/>
         <source>Kerguelen Is.</source>
         <translation>凱爾蓋朗群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="170"/>
+        <location filename="../logbook/countrydat.cpp" line="172"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
         <translation>阿姆斯特丹島和聖保羅島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="171"/>
+        <location filename="../logbook/countrydat.cpp" line="173"/>
         <source>Wallis &amp; Futuna Is.</source>
         <translation>瓦利斯和富圖納群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="172"/>
+        <location filename="../logbook/countrydat.cpp" line="174"/>
         <source>Fr. Guiana</source>
         <translation>法屬圭亞那</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="173"/>
+        <location filename="../logbook/countrydat.cpp" line="175"/>
         <source>England</source>
         <translation>英國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="174"/>
+        <location filename="../logbook/countrydat.cpp" line="176"/>
         <source>Isle of Man</source>
         <translation>馬恩島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="175"/>
+        <location filename="../logbook/countrydat.cpp" line="177"/>
         <source>N. Ireland</source>
         <translation>北愛爾蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="176"/>
+        <location filename="../logbook/countrydat.cpp" line="178"/>
         <source>Jersey</source>
         <translation>澤西島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="177"/>
+        <location filename="../logbook/countrydat.cpp" line="179"/>
         <source>Shetland Is.</source>
         <translation>南設特蘭群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="178"/>
+        <location filename="../logbook/countrydat.cpp" line="180"/>
         <source>Scotland</source>
         <translation>蘇格蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="179"/>
+        <location filename="../logbook/countrydat.cpp" line="181"/>
         <source>Guernsey</source>
         <translation>根息島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="180"/>
+        <location filename="../logbook/countrydat.cpp" line="182"/>
         <source>Wales</source>
         <translation>威爾士</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="181"/>
+        <location filename="../logbook/countrydat.cpp" line="183"/>
         <source>Solomon Is.</source>
         <translation>所羅門群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="182"/>
+        <location filename="../logbook/countrydat.cpp" line="184"/>
         <source>Temotu Province</source>
         <translation>泰莫圖省</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="183"/>
+        <location filename="../logbook/countrydat.cpp" line="185"/>
         <source>Hungary</source>
         <translation>匈牙利</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="184"/>
+        <location filename="../logbook/countrydat.cpp" line="186"/>
         <source>Switzerland</source>
         <translation>瑞士</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="185"/>
+        <location filename="../logbook/countrydat.cpp" line="187"/>
         <source>Liechtenstein</source>
         <translation>列支敦士登</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="186"/>
+        <location filename="../logbook/countrydat.cpp" line="188"/>
         <source>Ecuador</source>
         <translation>厄瓜多爾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="187"/>
+        <location filename="../logbook/countrydat.cpp" line="189"/>
         <source>Galapagos Is.</source>
         <translation>加拉帕戈斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="188"/>
+        <location filename="../logbook/countrydat.cpp" line="190"/>
         <source>Haiti</source>
         <translation>海地</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="189"/>
+        <location filename="../logbook/countrydat.cpp" line="191"/>
         <source>Dominican Rep.</source>
         <translation>多明尼加共和國.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="190"/>
+        <location filename="../logbook/countrydat.cpp" line="192"/>
         <source>Colombia</source>
         <translation>哥倫比亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="191"/>
+        <location filename="../logbook/countrydat.cpp" line="193"/>
         <source>San Andres &amp; Providencia</source>
         <translation>聖安德列斯和普羅維登西亞島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="192"/>
+        <location filename="../logbook/countrydat.cpp" line="194"/>
         <source>Malpelo Is.</source>
         <translation>馬爾佩洛島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="193"/>
+        <location filename="../logbook/countrydat.cpp" line="195"/>
         <source>Rep. of Korea</source>
         <translation>韓國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="194"/>
+        <location filename="../logbook/countrydat.cpp" line="196"/>
         <source>Panama</source>
         <translation>巴拿馬</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="195"/>
+        <location filename="../logbook/countrydat.cpp" line="197"/>
         <source>Honduras</source>
         <translation>洪都拉斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="196"/>
+        <location filename="../logbook/countrydat.cpp" line="198"/>
         <source>Thailand</source>
         <translation>泰國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="197"/>
+        <location filename="../logbook/countrydat.cpp" line="199"/>
         <source>Vatican City</source>
         <translation>梵蒂岡</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="198"/>
+        <location filename="../logbook/countrydat.cpp" line="200"/>
         <source>Saudi Arabia</source>
         <translation>沙特阿拉伯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="199"/>
+        <location filename="../logbook/countrydat.cpp" line="201"/>
         <source>Italy</source>
         <translation>意大利</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="200"/>
+        <location filename="../logbook/countrydat.cpp" line="202"/>
         <source>AF Italy</source>
         <translation>意大利非洲屬地</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="201"/>
+        <location filename="../logbook/countrydat.cpp" line="203"/>
         <source>Sardinia</source>
         <translation>撒丁島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="202"/>
+        <location filename="../logbook/countrydat.cpp" line="204"/>
         <source>Sicily</source>
         <translation>西西里島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="203"/>
+        <location filename="../logbook/countrydat.cpp" line="205"/>
         <source>Djibouti</source>
         <translation>吉布提</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="204"/>
+        <location filename="../logbook/countrydat.cpp" line="206"/>
         <source>Grenada</source>
         <translation>格林納達</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="205"/>
+        <location filename="../logbook/countrydat.cpp" line="207"/>
         <source>Guinea-Bissau</source>
         <translation>幾內亞比紹</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="206"/>
+        <location filename="../logbook/countrydat.cpp" line="208"/>
         <source>St. Lucia</source>
         <translation>聖盧西亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="207"/>
+        <location filename="../logbook/countrydat.cpp" line="209"/>
         <source>Dominica</source>
         <translation>多米尼克</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="208"/>
+        <location filename="../logbook/countrydat.cpp" line="210"/>
         <source>St. Vincent</source>
         <translation>聖文森特島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="209"/>
+        <location filename="../logbook/countrydat.cpp" line="211"/>
         <source>Japan</source>
         <translation>日本</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="210"/>
+        <location filename="../logbook/countrydat.cpp" line="212"/>
         <source>Minami Torishima</source>
         <translation>南鳥島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="211"/>
+        <location filename="../logbook/countrydat.cpp" line="213"/>
         <source>Ogasawara</source>
         <translation>小笠原島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="212"/>
+        <location filename="../logbook/countrydat.cpp" line="214"/>
         <source>Mongolia</source>
         <translation>蒙古</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="213"/>
+        <location filename="../logbook/countrydat.cpp" line="215"/>
         <source>Svalbard</source>
         <translation>斯瓦爾巴群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="214"/>
+        <location filename="../logbook/countrydat.cpp" line="216"/>
         <source>Bear Is.</source>
         <translation>熊島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="215"/>
+        <location filename="../logbook/countrydat.cpp" line="217"/>
         <source>Jan Mayen</source>
         <translation>揚馬延島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="216"/>
+        <location filename="../logbook/countrydat.cpp" line="218"/>
         <source>Jordan</source>
         <translation>約旦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="217"/>
+        <location filename="../logbook/countrydat.cpp" line="219"/>
         <source>U.S.A.</source>
         <translation>美國.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="218"/>
+        <location filename="../logbook/countrydat.cpp" line="220"/>
         <source>Guantanamo Bay</source>
         <translation>關塔那摩灣</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="219"/>
+        <location filename="../logbook/countrydat.cpp" line="221"/>
         <source>Mariana Is.</source>
         <translation>馬利亞納群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="220"/>
+        <location filename="../logbook/countrydat.cpp" line="222"/>
         <source>Baker &amp; Howland Is.</source>
         <translation>貝克島和豪蘭島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="221"/>
+        <location filename="../logbook/countrydat.cpp" line="223"/>
         <source>Guam</source>
         <translation>關島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="222"/>
+        <location filename="../logbook/countrydat.cpp" line="224"/>
         <source>Johnston Is.</source>
         <translation>約翰斯頓島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="223"/>
+        <location filename="../logbook/countrydat.cpp" line="225"/>
         <source>Midway Is.</source>
         <translation>中途島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="224"/>
+        <location filename="../logbook/countrydat.cpp" line="226"/>
         <source>Palmyra &amp; Jarvis Is.</source>
         <translation>巴爾米拉環礁和賈維斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="225"/>
+        <location filename="../logbook/countrydat.cpp" line="227"/>
         <source>Hawaii</source>
         <translation>夏威夷</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="226"/>
+        <location filename="../logbook/countrydat.cpp" line="228"/>
         <source>Kure Is.</source>
         <translation>庫雷環礁.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="227"/>
+        <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>American Samoa</source>
         <translation>美屬薩摩亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="228"/>
+        <location filename="../logbook/countrydat.cpp" line="230"/>
         <source>Swains Is.</source>
         <translation>斯溫斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="229"/>
+        <location filename="../logbook/countrydat.cpp" line="231"/>
         <source>Wake Is.</source>
         <translation>威克島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="230"/>
+        <location filename="../logbook/countrydat.cpp" line="232"/>
         <source>Alaska</source>
         <translation>阿拉斯加</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="231"/>
+        <location filename="../logbook/countrydat.cpp" line="233"/>
         <source>Navassa Is.</source>
         <translation>那瓦薩島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="232"/>
+        <location filename="../logbook/countrydat.cpp" line="234"/>
         <source>US Virgin Is.</source>
         <translation>美屬維京島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="233"/>
+        <location filename="../logbook/countrydat.cpp" line="235"/>
         <source>Puerto Rico</source>
         <translation>波多黎各</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="234"/>
+        <location filename="../logbook/countrydat.cpp" line="236"/>
         <source>Desecheo Is.</source>
         <translation>德塞切奧島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="235"/>
+        <location filename="../logbook/countrydat.cpp" line="237"/>
         <source>Norway</source>
         <translation>挪威</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="236"/>
+        <location filename="../logbook/countrydat.cpp" line="238"/>
         <source>Argentina</source>
         <translation>阿根廷</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="237"/>
+        <location filename="../logbook/countrydat.cpp" line="239"/>
         <source>Luxembourg</source>
         <translation>盧森堡</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="238"/>
+        <location filename="../logbook/countrydat.cpp" line="240"/>
         <source>Lithuania</source>
         <translation>立陶宛</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="239"/>
+        <location filename="../logbook/countrydat.cpp" line="241"/>
         <source>Bulgaria</source>
         <translation>保加利亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="240"/>
+        <location filename="../logbook/countrydat.cpp" line="242"/>
         <source>Peru</source>
         <translation>秘魯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="241"/>
+        <location filename="../logbook/countrydat.cpp" line="243"/>
         <source>Lebanon</source>
         <translation>黎巴嫩</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="242"/>
+        <location filename="../logbook/countrydat.cpp" line="244"/>
         <source>Austria</source>
         <translation>奧地利</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="243"/>
+        <location filename="../logbook/countrydat.cpp" line="245"/>
         <source>Finland</source>
         <translation>芬蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="244"/>
+        <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Aland Is.</source>
         <translation>奧蘭群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="245"/>
+        <location filename="../logbook/countrydat.cpp" line="247"/>
         <source>Market Reef</source>
         <translation>馬凱特礁</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="246"/>
+        <location filename="../logbook/countrydat.cpp" line="248"/>
         <source>Czech Rep.</source>
         <translation>捷克.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="247"/>
+        <location filename="../logbook/countrydat.cpp" line="249"/>
         <source>Slovak Rep.</source>
         <translation>斯洛伐克.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="248"/>
+        <location filename="../logbook/countrydat.cpp" line="250"/>
         <source>Belgium</source>
         <translation>比利時</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="249"/>
+        <location filename="../logbook/countrydat.cpp" line="251"/>
         <source>Greenland</source>
         <translation>格陵蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="250"/>
+        <location filename="../logbook/countrydat.cpp" line="252"/>
         <source>Faroe Is.</source>
         <translation>法羅群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="251"/>
+        <location filename="../logbook/countrydat.cpp" line="253"/>
         <source>Denmark</source>
         <translation>丹麥</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="252"/>
+        <location filename="../logbook/countrydat.cpp" line="254"/>
         <source>Papua New Guinea</source>
         <translation>巴布亞新幾內亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="253"/>
+        <location filename="../logbook/countrydat.cpp" line="255"/>
         <source>Aruba</source>
         <translation>阿魯巴</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="254"/>
+        <location filename="../logbook/countrydat.cpp" line="256"/>
         <source>DPR of Korea</source>
         <translation>朝鮮</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="255"/>
+        <location filename="../logbook/countrydat.cpp" line="257"/>
         <source>Netherlands</source>
         <translation>荷蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="256"/>
+        <location filename="../logbook/countrydat.cpp" line="258"/>
         <source>Curacao</source>
         <translation>庫拉索島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="257"/>
+        <location filename="../logbook/countrydat.cpp" line="259"/>
         <source>Bonaire</source>
         <translation>博奈爾島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="258"/>
+        <location filename="../logbook/countrydat.cpp" line="260"/>
         <source>Saba &amp; St. Eustatius</source>
         <translation>薩巴島和聖尤斯特歇斯島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="259"/>
+        <location filename="../logbook/countrydat.cpp" line="261"/>
         <source>Sint Maarten</source>
         <translation>聖馬丁島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="260"/>
+        <location filename="../logbook/countrydat.cpp" line="262"/>
         <source>Brazil</source>
         <translation>巴西</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="261"/>
+        <location filename="../logbook/countrydat.cpp" line="263"/>
         <source>Fernando de Noronha</source>
         <translation>費爾南多迪諾羅尼亞群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="262"/>
+        <location filename="../logbook/countrydat.cpp" line="264"/>
         <source>St. Peter &amp; St. Paul</source>
         <translation>聖彼得與聖保羅岩</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="263"/>
+        <location filename="../logbook/countrydat.cpp" line="265"/>
         <source>Trindade &amp; Martim Vaz</source>
         <translation>特林達迪和馬丁瓦斯群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="264"/>
+        <location filename="../logbook/countrydat.cpp" line="266"/>
         <source>Suriname</source>
         <translation>蘇里南</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="265"/>
+        <location filename="../logbook/countrydat.cpp" line="267"/>
         <source>Franz Josef Land</source>
         <translation>法蘭士約瑟夫地群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="266"/>
+        <location filename="../logbook/countrydat.cpp" line="268"/>
         <source>Western Sahara</source>
         <translation>西薩哈拉</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="267"/>
+        <location filename="../logbook/countrydat.cpp" line="269"/>
         <source>Bangladesh</source>
         <translation>孟加拉</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="268"/>
+        <location filename="../logbook/countrydat.cpp" line="270"/>
         <source>Slovenia</source>
         <translation>斯洛文尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="269"/>
+        <location filename="../logbook/countrydat.cpp" line="271"/>
         <source>Seychelles</source>
         <translation>塞舌爾群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="270"/>
+        <location filename="../logbook/countrydat.cpp" line="272"/>
         <source>Sao Tome &amp; Principe</source>
         <translation>聖多美和普林西比</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="271"/>
+        <location filename="../logbook/countrydat.cpp" line="273"/>
         <source>Sweden</source>
         <translation>瑞典</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="272"/>
+        <location filename="../logbook/countrydat.cpp" line="274"/>
         <source>Poland</source>
         <translation>波蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="273"/>
+        <location filename="../logbook/countrydat.cpp" line="275"/>
         <source>Sudan</source>
         <translation>蘇丹</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="274"/>
+        <location filename="../logbook/countrydat.cpp" line="276"/>
         <source>Egypt</source>
         <translation>埃及</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="275"/>
+        <location filename="../logbook/countrydat.cpp" line="277"/>
         <source>Greece</source>
         <translation>希臘</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="276"/>
+        <location filename="../logbook/countrydat.cpp" line="278"/>
         <source>Mount Athos</source>
         <translation>阿索斯聖山</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="277"/>
+        <location filename="../logbook/countrydat.cpp" line="279"/>
         <source>Dodecanese</source>
         <translation>多德卡尼斯群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="278"/>
+        <location filename="../logbook/countrydat.cpp" line="280"/>
         <source>Crete</source>
         <translation>克里特島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="279"/>
+        <location filename="../logbook/countrydat.cpp" line="281"/>
         <source>Tuvalu</source>
         <translation>圖瓦盧</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="280"/>
+        <location filename="../logbook/countrydat.cpp" line="282"/>
         <source>W. Kiribati</source>
         <translation>西基里巴斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="281"/>
+        <location filename="../logbook/countrydat.cpp" line="283"/>
         <source>C. Kiribati</source>
         <translation>中基里巴斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="282"/>
+        <location filename="../logbook/countrydat.cpp" line="284"/>
         <source>E. Kiribati</source>
         <translation>東基里巴斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="283"/>
+        <location filename="../logbook/countrydat.cpp" line="285"/>
         <source>Banaba Is.</source>
         <translation>巴納巴島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="284"/>
+        <location filename="../logbook/countrydat.cpp" line="286"/>
         <source>Somalia</source>
         <translation>索馬里</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="285"/>
+        <location filename="../logbook/countrydat.cpp" line="287"/>
         <source>San Marino</source>
         <translation>聖馬利諾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="286"/>
+        <location filename="../logbook/countrydat.cpp" line="288"/>
         <source>Palau</source>
         <translation>帛琉</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="287"/>
+        <location filename="../logbook/countrydat.cpp" line="289"/>
         <source>AS Turkey</source>
         <translation>土耳其 亞洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="288"/>
+        <location filename="../logbook/countrydat.cpp" line="290"/>
         <source>EU Turkey</source>
         <translation>土耳其 歐洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="289"/>
+        <location filename="../logbook/countrydat.cpp" line="291"/>
         <source>Iceland</source>
         <translation>冰島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="290"/>
+        <location filename="../logbook/countrydat.cpp" line="292"/>
         <source>Guatemala</source>
         <translation>危地馬拉</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="291"/>
+        <location filename="../logbook/countrydat.cpp" line="293"/>
         <source>Costa Rica</source>
         <translation>哥斯達黎加</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="292"/>
+        <location filename="../logbook/countrydat.cpp" line="294"/>
         <source>Cocos Is.</source>
         <translation>科科斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="293"/>
+        <location filename="../logbook/countrydat.cpp" line="295"/>
         <source>Cameroon</source>
         <translation>喀麥隆</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="294"/>
+        <location filename="../logbook/countrydat.cpp" line="296"/>
         <source>Corsica</source>
         <translation>科西嘉島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="295"/>
+        <location filename="../logbook/countrydat.cpp" line="297"/>
         <source>C. African Rep.</source>
         <translation>中非共和國.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="296"/>
+        <location filename="../logbook/countrydat.cpp" line="298"/>
         <source>Rep. of the Congo</source>
         <translation>剛果共和國</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="297"/>
+        <location filename="../logbook/countrydat.cpp" line="299"/>
         <source>Gabon</source>
         <translation>加蓬</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="298"/>
+        <location filename="../logbook/countrydat.cpp" line="300"/>
         <source>Chad</source>
         <translation>乍得</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="299"/>
+        <location filename="../logbook/countrydat.cpp" line="301"/>
         <source>Cote d&apos;Ivoire</source>
         <translation>象牙海岸</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="300"/>
+        <location filename="../logbook/countrydat.cpp" line="302"/>
         <source>Benin</source>
         <translation>貝寧</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="301"/>
+        <location filename="../logbook/countrydat.cpp" line="303"/>
         <source>Mali</source>
         <translation>馬里</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="302"/>
+        <location filename="../logbook/countrydat.cpp" line="304"/>
         <source>EU Russia</source>
         <translation>俄羅斯 歐洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="303"/>
+        <location filename="../logbook/countrydat.cpp" line="305"/>
         <source>Kaliningrad</source>
         <translation>加里寧格勒</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="304"/>
+        <location filename="../logbook/countrydat.cpp" line="306"/>
         <source>AS Russia</source>
         <translation>俄羅斯 亞洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="305"/>
+        <location filename="../logbook/countrydat.cpp" line="307"/>
         <source>Uzbekistan</source>
         <translation>烏玆別克斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="306"/>
+        <location filename="../logbook/countrydat.cpp" line="308"/>
         <source>Kazakhstan</source>
         <translation>哈薩克斯坦</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="307"/>
+        <location filename="../logbook/countrydat.cpp" line="309"/>
         <source>Ukraine</source>
         <translation>烏克蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="308"/>
+        <location filename="../logbook/countrydat.cpp" line="310"/>
         <source>Antigua &amp; Barbuda</source>
         <translation>安提瓜及巴布達</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="309"/>
+        <location filename="../logbook/countrydat.cpp" line="311"/>
         <source>Belize</source>
         <translation>伯利玆</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="310"/>
+        <location filename="../logbook/countrydat.cpp" line="312"/>
         <source>St. Kitts &amp; Nevis</source>
         <translation>聖基茨和尼維斯</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="311"/>
+        <location filename="../logbook/countrydat.cpp" line="313"/>
         <source>Namibia</source>
         <translation>納米比亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="312"/>
+        <location filename="../logbook/countrydat.cpp" line="314"/>
         <source>Micronesia</source>
         <translation>密克羅尼西亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="313"/>
+        <location filename="../logbook/countrydat.cpp" line="315"/>
         <source>Marshall Is.</source>
         <translation>馬紹爾群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="314"/>
+        <location filename="../logbook/countrydat.cpp" line="316"/>
         <source>Brunei Darussalam</source>
         <translation>文萊</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="315"/>
+        <location filename="../logbook/countrydat.cpp" line="317"/>
         <source>Canada</source>
         <translation>加拿大</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="316"/>
+        <location filename="../logbook/countrydat.cpp" line="318"/>
         <source>Australia</source>
         <translation>澳洲</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="317"/>
+        <location filename="../logbook/countrydat.cpp" line="319"/>
         <source>Heard Is.</source>
         <translation>赫德島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="318"/>
+        <location filename="../logbook/countrydat.cpp" line="320"/>
         <source>Macquarie Is.</source>
         <translation>麥格理島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="319"/>
+        <location filename="../logbook/countrydat.cpp" line="321"/>
         <source>Cocos (Keeling) Is.</source>
         <translation>科科斯(基林)群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="320"/>
+        <location filename="../logbook/countrydat.cpp" line="322"/>
         <source>Lord Howe Is.</source>
         <translation>豪勛爵島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="321"/>
+        <location filename="../logbook/countrydat.cpp" line="323"/>
         <source>Mellish Reef</source>
         <translation>梅利什礁</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="322"/>
+        <location filename="../logbook/countrydat.cpp" line="324"/>
         <source>Norfolk Is.</source>
         <translation>諾福克島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="323"/>
+        <location filename="../logbook/countrydat.cpp" line="325"/>
         <source>Willis Is.</source>
         <translation>威利斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="324"/>
+        <location filename="../logbook/countrydat.cpp" line="326"/>
         <source>Christmas Is.</source>
         <translation>聖誕島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="325"/>
+        <location filename="../logbook/countrydat.cpp" line="327"/>
         <source>Anguilla</source>
         <translation>安圭拉島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="326"/>
+        <location filename="../logbook/countrydat.cpp" line="328"/>
         <source>Montserrat</source>
         <translation>蒙特塞拉特岛</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="327"/>
+        <location filename="../logbook/countrydat.cpp" line="329"/>
         <source>British Virgin Is.</source>
         <translation>英屬維京島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="328"/>
+        <location filename="../logbook/countrydat.cpp" line="330"/>
         <source>Turks &amp; Caicos Is.</source>
         <translation>特克斯和凱科斯群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="329"/>
+        <location filename="../logbook/countrydat.cpp" line="331"/>
         <source>Pitcairn Is.</source>
         <translation>皮特凱恩群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="330"/>
+        <location filename="../logbook/countrydat.cpp" line="332"/>
         <source>Ducie Is.</source>
         <translation>迪西島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="331"/>
+        <location filename="../logbook/countrydat.cpp" line="333"/>
         <source>Falkland Is.</source>
         <translation>福克蘭群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="332"/>
+        <location filename="../logbook/countrydat.cpp" line="334"/>
         <source>S. Georgia Is.</source>
         <translation>南喬治亞島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="333"/>
+        <location filename="../logbook/countrydat.cpp" line="335"/>
         <source>S. Shetland Is.</source>
         <translation>南設特蘭群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="334"/>
+        <location filename="../logbook/countrydat.cpp" line="336"/>
         <source>S. Orkney Is.</source>
         <translation>南奧克尼島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="335"/>
+        <location filename="../logbook/countrydat.cpp" line="337"/>
         <source>S. Sandwich Is.</source>
         <translation>南桑德韋奇島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="336"/>
+        <location filename="../logbook/countrydat.cpp" line="338"/>
         <source>Bermuda</source>
         <translation>百慕大</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="337"/>
+        <location filename="../logbook/countrydat.cpp" line="339"/>
         <source>Chagos Is.</source>
         <translation>查戈斯群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="338"/>
+        <location filename="../logbook/countrydat.cpp" line="340"/>
         <source>Hong Kong</source>
         <translation>香港</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="339"/>
+        <location filename="../logbook/countrydat.cpp" line="341"/>
         <source>India</source>
         <translation>印度</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="340"/>
+        <location filename="../logbook/countrydat.cpp" line="342"/>
         <source>Andaman &amp; Nicobar Is.</source>
         <translation>安達曼群島和尼科巴群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="341"/>
+        <location filename="../logbook/countrydat.cpp" line="343"/>
         <source>Lakshadweep Is.</source>
         <translation>拉克沙威島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="342"/>
+        <location filename="../logbook/countrydat.cpp" line="344"/>
         <source>Mexico</source>
         <translation>墨西哥</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="343"/>
+        <location filename="../logbook/countrydat.cpp" line="345"/>
         <source>Revillagigedo</source>
         <translation>雷維亞希赫多群島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="344"/>
+        <location filename="../logbook/countrydat.cpp" line="346"/>
         <source>Burkina Faso</source>
         <translation>布吉納法索</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="345"/>
+        <location filename="../logbook/countrydat.cpp" line="347"/>
         <source>Cambodia</source>
         <translation>柬埔寨</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="346"/>
+        <location filename="../logbook/countrydat.cpp" line="348"/>
         <source>Laos</source>
         <translation>老撾</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="347"/>
+        <location filename="../logbook/countrydat.cpp" line="349"/>
         <source>Macao</source>
         <translation>澳門</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="348"/>
+        <location filename="../logbook/countrydat.cpp" line="350"/>
         <source>Myanmar</source>
         <translation>緬甸</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="349"/>
+        <location filename="../logbook/countrydat.cpp" line="351"/>
         <source>Afghanistan</source>
         <translation>阿富汗</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="350"/>
+        <location filename="../logbook/countrydat.cpp" line="352"/>
         <source>Indonesia</source>
         <translation>印尼</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="351"/>
+        <location filename="../logbook/countrydat.cpp" line="353"/>
         <source>Iraq</source>
         <translation>伊拉克</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="352"/>
+        <location filename="../logbook/countrydat.cpp" line="354"/>
         <source>Vanuatu</source>
         <translation>瓦努阿圖</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="353"/>
+        <location filename="../logbook/countrydat.cpp" line="355"/>
         <source>Syria</source>
         <translation>敘利亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="354"/>
+        <location filename="../logbook/countrydat.cpp" line="356"/>
         <source>Latvia</source>
         <translation>拉脫維亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="355"/>
+        <location filename="../logbook/countrydat.cpp" line="357"/>
         <source>Nicaragua</source>
         <translation>尼加拉瓜</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="356"/>
+        <location filename="../logbook/countrydat.cpp" line="358"/>
         <source>Romania</source>
         <translation>羅馬尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="357"/>
+        <location filename="../logbook/countrydat.cpp" line="359"/>
         <source>El Salvador</source>
         <translation>薩爾瓦多</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="358"/>
+        <location filename="../logbook/countrydat.cpp" line="360"/>
         <source>Serbia</source>
         <translation>塞爾維亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="359"/>
+        <location filename="../logbook/countrydat.cpp" line="361"/>
         <source>Venezuela</source>
         <translation>委內瑞拉</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="360"/>
+        <location filename="../logbook/countrydat.cpp" line="362"/>
         <source>Aves Is.</source>
         <translation>阿維斯島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="361"/>
+        <location filename="../logbook/countrydat.cpp" line="363"/>
         <source>Zimbabwe</source>
         <translation>津巴布韋</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="362"/>
+        <location filename="../logbook/countrydat.cpp" line="364"/>
         <source>N. Macedonia</source>
         <translation>北馬其頓</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="363"/>
+        <location filename="../logbook/countrydat.cpp" line="365"/>
         <source>Rep. of Kosovo</source>
         <translation>科索沃</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="364"/>
+        <location filename="../logbook/countrydat.cpp" line="366"/>
         <source>Rep. of S. Sudan</source>
         <translation>南蘇丹</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="365"/>
+        <location filename="../logbook/countrydat.cpp" line="367"/>
         <source>Albania</source>
         <translation>阿爾巴尼亞</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="366"/>
+        <location filename="../logbook/countrydat.cpp" line="368"/>
         <source>Gibraltar</source>
         <translation>直布羅陀</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="367"/>
+        <location filename="../logbook/countrydat.cpp" line="369"/>
         <source>UK Base Areas on Cyprus</source>
         <translation>英國塞浦路斯基地</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="368"/>
+        <location filename="../logbook/countrydat.cpp" line="370"/>
         <source>St. Helena</source>
         <translation>聖赫勒拿島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="369"/>
+        <location filename="../logbook/countrydat.cpp" line="371"/>
         <source>Ascension Is.</source>
         <translation>阿森松島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="370"/>
+        <location filename="../logbook/countrydat.cpp" line="372"/>
         <source>Tristan da Cunha &amp; Gough</source>
         <translation>特里斯坦達庫尼亞島</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="371"/>
+        <location filename="../logbook/countrydat.cpp" line="373"/>
         <source>Cayman Is.</source>
         <translation>開曼群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="372"/>
+        <location filename="../logbook/countrydat.cpp" line="374"/>
         <source>Tokelau Is.</source>
         <translation>托克勞群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="373"/>
+        <location filename="../logbook/countrydat.cpp" line="375"/>
         <source>New Zealand</source>
         <translation>新西蘭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="374"/>
+        <location filename="../logbook/countrydat.cpp" line="376"/>
         <source>Chatham Is.</source>
         <translation>查塔姆島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="375"/>
+        <location filename="../logbook/countrydat.cpp" line="377"/>
         <source>Kermadec Is.</source>
         <translation>克馬德克群島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="376"/>
+        <location filename="../logbook/countrydat.cpp" line="378"/>
         <source>N.Z. Subantarctic Is.</source>
         <translation>紐西蘭亞南極島.</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="377"/>
+        <location filename="../logbook/countrydat.cpp" line="379"/>
         <source>Paraguay</source>
         <translation>巴拉圭</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="378"/>
+        <location filename="../logbook/countrydat.cpp" line="380"/>
         <source>S. Africa</source>
         <translation>南非</translation>
     </message>
     <message>
-        <location filename="../logbook/countrydat.cpp" line="379"/>
+        <location filename="../logbook/countrydat.cpp" line="381"/>
         <source>Pr. Edward &amp; Marion Is.</source>
         <translation>愛德華王子島.</translation>
     </message>
@@ -5348,7 +5348,7 @@ UDP 伺服器 %2:%3</translation>
 <context>
     <name>QDialogButtonBox</name>
     <message>
-        <location filename="../Configuration.cpp" line="5389"/>
+        <location filename="../Configuration.cpp" line="5387"/>
         <source>OK</source>
         <translation>確定</translation>
     </message>
@@ -5356,184 +5356,184 @@ UDP 伺服器 %2:%3</translation>
 <context>
     <name>QFileDialog</name>
     <message>
-        <location filename="../Configuration.cpp" line="5391"/>
+        <location filename="../Configuration.cpp" line="5389"/>
         <source>Directory:</source>
         <translation>目錄:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5392"/>
+        <location filename="../Configuration.cpp" line="5390"/>
         <source>File &amp;name:</source>
         <translation>檔案名稱(&amp;n):</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5393"/>
+        <location filename="../Configuration.cpp" line="5391"/>
         <source>&amp;Open</source>
         <translation>開啟(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5394"/>
+        <location filename="../Configuration.cpp" line="5392"/>
         <source>&amp;Choose</source>
         <translation>選擇(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5395"/>
+        <location filename="../Configuration.cpp" line="5393"/>
         <source>&amp;Save</source>
         <translation>儲存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5397"/>
+        <location filename="../Configuration.cpp" line="5395"/>
         <source>All files (*)</source>
         <translation>全部檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5398"/>
+        <location filename="../Configuration.cpp" line="5396"/>
         <source>New Folder</source>
         <translation>新資料夾</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5399"/>
+        <location filename="../Configuration.cpp" line="5397"/>
         <source>Delete</source>
         <translation>刪除</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5396"/>
+        <location filename="../Configuration.cpp" line="5394"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5400"/>
+        <location filename="../Configuration.cpp" line="5398"/>
         <source>&amp;Delete</source>
         <translation>刪除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5401"/>
+        <location filename="../Configuration.cpp" line="5399"/>
         <source>&amp;Rename</source>
         <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5402"/>
+        <location filename="../Configuration.cpp" line="5400"/>
         <source>Show &amp;hidden files</source>
         <translation>顯示隱藏檔案(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5403"/>
+        <location filename="../Configuration.cpp" line="5401"/>
         <source>&amp;New Folder</source>
         <translation>新資料夾(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5404"/>
+        <location filename="../Configuration.cpp" line="5402"/>
         <source>Look in:</source>
         <translation>檢視:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5405"/>
+        <location filename="../Configuration.cpp" line="5403"/>
         <source>Files of type:</source>
         <translation>檔案類型:</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5412"/>
+        <location filename="../Configuration.cpp" line="5410"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5413"/>
+        <location filename="../Configuration.cpp" line="5411"/>
         <source>Go back</source>
         <translation>回去</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5414"/>
+        <location filename="../Configuration.cpp" line="5412"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5415"/>
+        <location filename="../Configuration.cpp" line="5413"/>
         <source>Forward</source>
         <translation>向前</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5416"/>
+        <location filename="../Configuration.cpp" line="5414"/>
         <source>Go forward</source>
         <translation>前進</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5417"/>
+        <location filename="../Configuration.cpp" line="5415"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5418"/>
+        <location filename="../Configuration.cpp" line="5416"/>
         <source>Parent Directory</source>
         <translation>父目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5419"/>
+        <location filename="../Configuration.cpp" line="5417"/>
         <source>Go to the parent directory</source>
         <translation>移至父目錄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5420"/>
+        <location filename="../Configuration.cpp" line="5418"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5421"/>
+        <location filename="../Configuration.cpp" line="5419"/>
         <source>Create New Folder</source>
         <translation>建立新資料夾</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5422"/>
+        <location filename="../Configuration.cpp" line="5420"/>
         <source>Create a New Folder</source>
         <translation>建立新資料夾</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5423"/>
+        <location filename="../Configuration.cpp" line="5421"/>
         <source>List View</source>
         <translation>清單檢視</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5424"/>
+        <location filename="../Configuration.cpp" line="5422"/>
         <source>Change to list view mode</source>
         <translation>變更為清單檢視模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5425"/>
+        <location filename="../Configuration.cpp" line="5423"/>
         <source>Detail View</source>
         <translation>詳細資訊檢視</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5426"/>
+        <location filename="../Configuration.cpp" line="5424"/>
         <source>Change to detail view mode</source>
         <translation>變更為詳細資訊檢視模式</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5427"/>
+        <location filename="../Configuration.cpp" line="5425"/>
         <source>Sidebar</source>
         <translation>側欄</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5428"/>
+        <location filename="../Configuration.cpp" line="5426"/>
         <source>List of places and bookmarks</source>
         <translation>地點與書籤清單</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5406"/>
+        <location filename="../Configuration.cpp" line="5404"/>
         <source>&apos;%1&apos; is write protected.
 Do you want to delete it anyway?</source>
         <translation>&apos;%1&apos; 是寫入保護.
 是否仍要將其刪除?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5407"/>
+        <location filename="../Configuration.cpp" line="5405"/>
         <source>Are you sure you want to delete &apos;%1&apos;?</source>
         <translation>是否確定要刪除 &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5408"/>
+        <location filename="../Configuration.cpp" line="5406"/>
         <source>Could not delete directory.</source>
         <translation>無法刪除目錄.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5409"/>
+        <location filename="../Configuration.cpp" line="5407"/>
         <source>%1
 Directory not found.
 Please verify the correct directory name was given.</source>
@@ -5542,7 +5542,7 @@ Please verify the correct directory name was given.</source>
 請驗證已給出正確的目錄名稱.</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5411"/>
+        <location filename="../Configuration.cpp" line="5409"/>
         <source>Recent Places</source>
         <translation>近期的地方</translation>
     </message>
@@ -5550,22 +5550,22 @@ Please verify the correct directory name was given.</source>
 <context>
     <name>QFileSystemModel</name>
     <message>
-        <location filename="../Configuration.cpp" line="5430"/>
+        <location filename="../Configuration.cpp" line="5428"/>
         <source>Name</source>
         <translation>姓名</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5431"/>
+        <location filename="../Configuration.cpp" line="5429"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5432"/>
+        <location filename="../Configuration.cpp" line="5430"/>
         <source>Type</source>
         <translation>類型</translation>
     </message>
     <message>
-        <location filename="../Configuration.cpp" line="5433"/>
+        <location filename="../Configuration.cpp" line="5431"/>
         <source>Date Modified</source>
         <translation>變更日期</translation>
     </message>
@@ -6075,7 +6075,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="473"/>
-        <location filename="../TCITransceiver.cpp" line="1487"/>
+        <location filename="../TCITransceiver.cpp" line="1490"/>
         <source>TCI could not be opened</source>
         <translation>TCI 無法開啟</translation>
     </message>
@@ -6096,7 +6096,7 @@ Error(%2): %3</source>
     </message>
     <message>
         <location filename="../TCITransceiver.cpp" line="1365"/>
-        <location filename="../TCITransceiver.cpp" line="1469"/>
+        <location filename="../TCITransceiver.cpp" line="1472"/>
         <source>TCI failed set mode</source>
         <translation>TCI 設定模式失敗</translation>
     </message>
@@ -6106,17 +6106,17 @@ Error(%2): %3</source>
         <translation>TCI 設定異頻失敗</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1422"/>
+        <location filename="../TCITransceiver.cpp" line="1423"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI 設定發射頻率失敗</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1624"/>
+        <location filename="../TCITransceiver.cpp" line="1627"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI 發送了未識別的頻率</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1685"/>
+        <location filename="../TCITransceiver.cpp" line="1688"/>
         <source>TCI modulator not Idle</source>
         <translation>TCI 調製器不空閒</translation>
     </message>

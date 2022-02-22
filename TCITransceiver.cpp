@@ -637,13 +637,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
 #endif
             if(args.at(0)==rx_ && args.at(1) == "0") {
               rx_frequency_ = args.at(2);
-              if (!tci_Ready) {requested_rx_frequency_ = rx_frequency_; }
+//              if (!tci_Ready) {requested_rx_frequency_ = rx_frequency_; }
               if (busy_rx_frequency_) {/*printf ("cmdvfo0 done1\n");*/ tci_done1();}
               else if (!tci_timer2_->isActive() && split_) tci_timer2_->start(300);
             }
             else if (args.at(0)==rx_ && args.at(1) == "1") {
               other_frequency_ = args.at(2);
-              if (!tci_Ready) requested_other_frequency_ = other_frequency_;
+//              if (!tci_Ready) requested_other_frequency_ = other_frequency_;
               if (band_change) tci_done1();
               else if (busy_other_frequency_) tci_done2();
               else if (other_frequency_ != requested_other_frequency_ && tci_Ready && split_ && !tci_timer2_->isActive()) tci_timer2_->start(300);
@@ -1348,7 +1348,7 @@ void TCITransceiver::do_frequency (Frequency f, MODE m, bool no_ignore)
 //        throw error {tr ("TCI failed set rxfreq")};
       }
       busy_rx_frequency_ = false;
-    }
+    } else update_rx_frequency (string_to_frequency (rx_frequency_));
       
     if (!requested_mode_.isEmpty() && requested_mode_ != mode_) {
       busy_mode_ = true;
@@ -1403,7 +1403,8 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
     {
       requested_split_ = true;
       if (tci_Ready && _power_) {
-        if ((band_change || busy_rx_frequency_) && !tci_timer2_->isActive()) mysleep2(300);
+        if (tci_timer2_->isActive()) mysleep2(0);
+        else if (band_change || busy_rx_frequency_) mysleep2(300);
         if (requested_split_ != split_) rig_split();
         if (other_frequency_ != requested_other_frequency_) {
           busy_other_frequency_ = true;
@@ -1424,7 +1425,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
 //            throw error {tr ("TCI failed set txfreq")};
           }
           busy_other_frequency_ = false;
-        }
+        } else update_other_frequency (string_to_frequency (other_frequency_));
           
       } else {
         update_split (requested_split_);
@@ -1436,6 +1437,8 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
     if (tci_Ready && _power_) {
       requested_other_frequency_ = "";
       update_other_frequency (tx);
+      if (busy_split_) return;
+      else if (tci_timer2_->isActive()) mysleep2(0);
       if (requested_split_ != split_) rig_split();
     } else {
       update_other_frequency (tx);
