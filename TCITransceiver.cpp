@@ -645,13 +645,13 @@ void TCITransceiver::onMessageReceived(const QString &str)
 #endif
             if(args.at(0)==rx_ && args.at(1) == "0") {
               rx_frequency_ = args.at(2);
-//              if (!tci_Ready) {requested_rx_frequency_ = rx_frequency_; }
+              if (!tci_Ready && requested_rx_frequency_.isEmpty()) {requested_rx_frequency_ = rx_frequency_; }
               if (busy_rx_frequency_) {/*printf ("cmdvfo0 done1\n");*/ tci_done1();}
               else if (!tci_timer2_->isActive() && split_) tci_timer2_->start(300);
             }
             else if (args.at(0)==rx_ && args.at(1) == "1") {
               other_frequency_ = args.at(2);
-//              if (!tci_Ready) requested_other_frequency_ = other_frequency_;
+              if (!tci_Ready && requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
               if (band_change) tci_done1();
               else if (busy_other_frequency_) tci_done2();
               else if (other_frequency_ != requested_other_frequency_ && tci_Ready && split_ && !tci_timer2_->isActive()) tci_timer2_->start(300);
@@ -1413,7 +1413,7 @@ void TCITransceiver::do_tx_frequency (Frequency tx, MODE mode, bool no_ignore)
       requested_split_ = true;
       if (tci_Ready && _power_) {
         if (tci_timer2_->isActive()) mysleep2(0);
-        else if (band_change || busy_rx_frequency_) {if (HPSDR) mysleep2(500); else mysleep2(300);}
+        else if (band_change || busy_rx_frequency_) {if (HPSDR) mysleep2(1500); else mysleep2(300);}
         if (requested_split_ != split_) rig_split();
         if (other_frequency_ != requested_other_frequency_) {
           busy_other_frequency_ = true;
