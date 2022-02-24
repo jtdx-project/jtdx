@@ -72,7 +72,7 @@ subroutine jt9a()
   endif
 
   if(local_params%ndiskdat) then
-    if(local_params%learlystart .and. local_params%nmode.eq.8) then ! Early decoding in FT8, reading from disk
+    if(local_params%learlystart .and. local_params%nmode.eq.8 .and. .not.local_params%nswl) then ! Early decoding in FT8, reading from disk
        nearly=49 ! shall be in sync with m_hsymStop early decoding value in mainwindow
        local_params%nzhsym=nearly; nlast=nearly*3456
        dd(1:nlast)=shared_data%id2(1:nlast)
