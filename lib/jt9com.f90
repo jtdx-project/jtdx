@@ -78,6 +78,7 @@
      logical(c_bool) :: lmultinst
      logical(c_bool) :: lskiptx1
      logical(c_bool) :: lforcesync
+     logical(c_bool) :: learlystart
  end type params_block
 
   type, bind(C) :: dec_data

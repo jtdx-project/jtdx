@@ -3341,15 +3341,15 @@ void MainWindow::decode()                                       //decode()
   dec_data.params.lhound=m_houndMode ? 1 : 0;
   dec_data.params.lhidehash=m_config.hide2ndHash() && !m_bypassAllFilters;
   dec_data.params.lcommonft8b=m_commonFT8b;
-  dec_data.params.lmycallstd=m_bMyCallStd;
-  dec_data.params.lhiscallstd=m_bHisCallStd;
+  dec_data.params.lmycallstd=m_bMyCallStd; dec_data.params.lhiscallstd=m_bHisCallStd;
   dec_data.params.lapmyc=m_lapmyc;
   dec_data.params.lmodechanged=m_modeChanged ? 1 : 0; m_modeChanged=false;
   dec_data.params.lbandchanged=m_bandChanged ? 1 : 0; m_bandChanged=false;
   dec_data.params.lmultinst=m_multInst ? 1 : 0;
   dec_data.params.lskiptx1=m_skipTx1 ? 1 : 0;
-  dec_data.params.lforcesync=ui->syncButton->isChecked() && m_mode=="FT8";
   dec_data.params.nlasttx=m_nlasttx;
+  dec_data.params.lforcesync=ui->syncButton->isChecked() && m_mode=="FT8";
+  dec_data.params.learlystart=m_FT8EarlyStart ? 1 : 0;
 
   dec_data.params.nsecbandchanged=m_nsecBandChanged; m_nsecBandChanged=0;
   dec_data.params.nswl=m_swl ? 1 : 0;

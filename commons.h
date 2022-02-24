@@ -106,6 +106,7 @@ typedef struct dec_data {
     bool lmultinst;
     bool lskiptx1;
     bool lforcesync;
+    bool learlystart;
     } params;
 } dec_data_t;
 
