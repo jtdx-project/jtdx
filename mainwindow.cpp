@@ -1620,8 +1620,8 @@ void MainWindow::setStopHSym()
   m_hsymStop=179;
   if(m_mode=="FT8") {
     if(m_swl) m_hsymStop = 51;
-    else if(m_FT8EarlyStart) m_hsymStop = 49;
-    else m_hsymStop=50;  
+    else if(m_FT8EarlyStart) m_hsymStop = 48;
+    else m_hsymStop=49;
   }
   else if(m_mode=="FT4") m_hsymStop=21;
   else if(m_mode.startsWith("JT") or m_mode=="T10") { m_hsymStop=173; if(m_config.decode_at_52s()) m_hsymStop=179; }
@@ -1840,8 +1840,8 @@ void MainWindow::dataSink(qint64 frames)
       quint64 n1=now1.toMSecsSinceEpoch()%15000;
       if(n1>14735) {
         if(m_swl) ihsym=51; 
-        else if(m_FT8EarlyStart) ihsym=49; 
-        else ihsym=50;
+        else if(m_FT8EarlyStart) ihsym=48;
+        else ihsym=49;
       } 
     }
   }
@@ -3719,8 +3719,8 @@ void MainWindow::readFromStdout()                             //readFromStdout
         qint64 lagms=msDecFin-m_msDecStarted;
         if(m_mode=="FT8") {
           if(m_swl) lagms-=300; 
-          else if(m_FT8EarlyStart) lagms-=900; 
-          else lagms-=600;
+          else if(m_FT8EarlyStart) lagms-=1200;
+          else lagms-=900;
         } else {
           lagms-=1430;	
         }
