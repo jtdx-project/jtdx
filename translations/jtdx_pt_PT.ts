@@ -2965,7 +2965,7 @@ Error: %2 - %3</source>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avg: accumulated average DT of decoded signals on current band.&lt;/p&gt;&lt;p&gt;Lag: it is decoder lag calculated relatively to beginning of next interval, negative values mean there is spare time available to increase decoding depth, positive values is decoder&apos;s lag into TX or next interval meaning there may be no enough CPU resources for selected decoding depth to provide reliable signal transmission.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lag depends on CPU performance, noise conditions, band fullness and other programs using computer, it can be decreased by reducing waterfall bandwidth. If Lag is constantly negative then CPU handling well interval decoding and you can try to make decoding more aggressive to get more decodes.&lt;/p&gt;&lt;p&gt;FT8: if Lag is 0 .. 0.4 then you can still use Autoseq 3/7 (autoselect will trigger change of TX message early enough to transmit full message). If Lag &gt; 0.4 then you should try to decrease decoding aggressivity. If still Lag &gt; 0.4 then Autoseq 2/6 should be used as responding to incoming call will be partially damaged at transmission in AutoSeq 3/7. If constantly Lag  &gt; 2 then your CPU is unsuitable to operate in FT8 with current decoder settings. Sure You can monitor as SWL.&lt;/p&gt;&lt;p&gt;/xx: number of decoded messages in last interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Média: DT médio acumulado de sinais descodificados na banda atual. &lt;/p&gt; &lt;p&gt; Lag: é o atraso do descodificador calculado relativamente ao início do próximo intervalo, valores negativos significam há tempo livre disponível para aumentar a profundidade da descodificação, valores positivos são o atraso do descodificador em TX ou no próximo intervalo, o que significa que pode não haver recursos suficientes da CPU para a profundidade de descodificação selecionada para fornecer transmissão de sinal confiável. &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p &gt; O atraso depende do desempenho da CPU, das condições de ruído, da largura de banda e de outros programas usando no computador; pode ser diminuído pela redução da largura de banda da cascata. Se o Lag for constantemente negativo, a CPU manipulará a descodificação dos intervalo de tempo e você poderá tentar tornar a descodificação mais agressiva para obter mais descodificações. &lt;/p&gt; &lt;p&gt; FT8: se o Lag for 0 .. 0.4, você ainda poderá usar o Autoseq 3/7 (a seleção automática acionará a alteração da mensagem TX com antecedência suficiente para transmitir a mensagem completa). Se Lag&gt; 0,4, você deve tentar diminuir a agressividade da descodificação. Se ainda houver Lag&gt; 0,4, o Autoseq 2/6 deve ser usado, pois a resposta à chamada recebida será parcialmente danificada na transmissão no AutoSeq 3/7. Se o Lag for constantemente  &gt; 2, o seu CPU não é adequado para operar em FT8 com as configurações atuais do descodificador. Ainda assim você pode monitorar como SWL. &lt;/p&gt; &lt;p&gt; / xx: número de mensagens descodificadas no último intervalo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Média: DT médio acumulado de sinais descodificados na banda atual. &lt;/p&gt; &lt;p&gt; Lag: é o atraso do descodificador calculado relativamente ao início do próximo intervalo, valores negativos significam há tempo livre disponível para aumentar a profundidade da descodificação, valores positivos são o atraso do descodificador em TX ou no próximo intervalo, o que significa que pode não haver recursos suficientes da CPU para a profundidade de descodificação selecionada para fornecer transmissão de sinal confiável. &lt;/p&gt; &lt;p&gt; &lt;/p&gt; &lt;p &gt; O atraso depende do desempenho da CPU, das condições de ruído, da largura de banda e de outros programas usando no computador; pode ser diminuído pela redução da largura de banda da cascata. Se o Lag for constantemente negativo, a CPU manipulará a descodificação dos intervalo de tempo e você poderá tentar tornar a descodificação mais agressiva para obter mais descodificações. &lt;/p&gt; &lt;p&gt; FT8: se o Lag for 0 .. 0.4, você ainda poderá usar o Autoseq 3/7 (a seleção automática acionará a alteração da mensagem TX com antecedência suficiente para transmitir a mensagem completa). Se Lag&gt; 0,4, você deve tentar diminuir a agressividade da descodificação. Se ainda houver Lag&gt; 0,4, o Autoseq 2/6 deve ser usado, pois a resposta à chamada recebida será parcialmente danificada na transmissão no AutoSeq 3/7. Se o Lag for constantemente  &gt; 2, o seu CPU não é adequado para operar em FT8 com as configurações atuais do descodificador. Ainda assim você pode monitorar como SWL. &lt;/p&gt; &lt;p&gt; / xx: número de mensagens descodificadas no último intervalo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="181"/>
@@ -3669,10 +3669,10 @@ ZD8,ZD9,ZF,ZK3,ZL,ZL7,ZL8,ZL9,ZP,ZS,ZS8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</tra
 or select a predefined macro from the dropdown list.
 Press ENTER to add the current text to the predefined
 list. The list can be maintained in Settings (F2).</source>
-        <translation>Digite uma mensagem de texto livre (máximo de 13 caracteres)
-ou selecione uma macro predefinida na lista suspensa.
-Pressione ENTER para adicionar o texto actual ao texto predefinido.
-Lista. A lista pode ser mantida em Configurações (F2).</translation>
+        <translation>Digite uma mensagem de texto livre (máximo 13 caracteres)
+ou selecione uma macro predefinida da lista.
+Pressione ENTER para adicionar o texto actual à lista de texto predefinido.
+A lista pode ser alterada em Configurações (F2).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3726"/>
@@ -3900,12 +3900,21 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique com o botão esquerdo do rato muda o tempo interno do JTDX para fornecer melhor sincronização do decodificador aos sinais no fluxo de áudio RX de entrada.&lt;br&gt;
+Dois cenários são suportados:&lt;br&gt;
+- sincronização aproximada, se houver sinais deslocados na cascata e nenhum sinal descodificado, o valor mínimo de potência é usado no descodificador para avaliar a mudança de tempo até o início do intervalo&lt;br&gt;
+- sincronização mais precisa, se houver sinais descodificados no intervalo anterior e o DT médio estiver fora da faixa de -0,29 .. 0,29 seg. O valor médio de DT é usado para mudança de horário JTDX.&lt;br&gt;
+Recomenda-se manter pelo menos cinco intervalos de intervalo entre duas tentativas consequentes de sincronização aproximada e precisa.&lt;br&gt;
+A descodificação do intervalo atual e do próximo pode ser interrompida pela mudança de horário.&lt;br&gt;
+Nota:&lt;br&gt;
+- se a diferença do relógio do seu computador for superior a 7,5 segundos, há a possibilidade de você reportar pontos no intervalo errado, também o horário de início/fim do QSO pode ser afetado&lt;br&gt;
+- O DT do sinal TX será afetado de maneira errada se você estiver tentando compensar o atraso do fluxo de áudio RX causado pelo buffer no software SDR.&lt;br&gt;&lt;br&gt;
+Clicar com o botão direito do rato define a hora interna do JTDX de volta à hora do sistema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>
@@ -4487,22 +4496,22 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
     <message>
         <location filename="../mainwindow.ui" line="5704"/>
         <source>use low thresholds</source>
-        <translation>use limiares baixos</translation>
+        <translation>Usar limiares baixos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5739"/>
         <source>use subpass</source>
-        <translation>use subpass</translation>
+        <translation>Usar subpass</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5750"/>
         <source>minimum</source>
-        <translation>mínimo</translation>
+        <translation>Mínimo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5758"/>
         <source>early start of decoder</source>
-        <translation>início precoce de descodificação</translation>
+        <translation>Início precoce de descodificação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5766"/>
@@ -4522,7 +4531,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
     <message>
         <location filename="../mainwindow.ui" line="5801"/>
         <source>any messages</source>
-        <translation>quaisquer mensagens</translation>
+        <translation>Quaisquer mensagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5809"/>
@@ -4619,12 +4628,12 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
     <message>
         <location filename="../mainwindow.ui" line="5959"/>
         <source>low</source>
-        <translation>baixo</translation>
+        <translation>Baixo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5978"/>
         <source>high</source>
-        <translation>alto</translation>
+        <translation>Alto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5986"/>
