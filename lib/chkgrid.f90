@@ -2871,7 +2871,6 @@ endif
          (grid(1:2).eq.'KL' .and. grid(3:3).gt.'/' .and. grid(3:3).lt.'3') .or. &
          (grid(1:2).eq.'JM' .and. (grid(3:4).eq.'40' .or. grid(3:4).eq.'53')) .or. &
            grid(1:4).eq.'JL91' .or. grid(1:4).eq.'KK19') lgvalid=.true.
-          lgvalid=.true.
 
 ! Tanzania 5H, 5I
       else if(callsign(1:2).eq.'5H' .or. callsign(1:2).eq.'5I') then

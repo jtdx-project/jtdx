@@ -1951,28 +1951,21 @@ subroutine ft8b(newdat1,nQSOProgress,nfqso,nftx,napwid,lsubtract,npos,freqsub,tm
       msgsrcvd(ncount)=msg37(1:ispc2-1)
     endif
 
-! -23  0.0 1606 ~ <...> 3U1TBM/R CC65 4 0
-! -18  0.3 1609 ~ CQ 6U6MBL/R IJ90 1 -
-    if(xsnr.lt.-15.0) then
-      if((i3.eq.4 .and. n3.eq.0) .or. (i3.eq.1 .and. msg37(1:3).eq."CQ ")) then
-        if(index(msg37,'/R').gt.9) then
-          ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-          if(ispc2.gt.11) then
-            ispc3=index(msg37((ispc2+1):),' ')+ispc2
-            if(msg37((ispc2-2):(ispc2-1)).eq.'/R') then
-              if((ispc3-ispc2).eq.5) then
-                grid=msg37(ispc2+1:ispc3-1)
- ! grid can not be txed, invalid message:
-                if(i3.eq.4 .and. len_trim(grid).eq.4) then; nbadcrc=1; msg37=''; return; endif
-                call_b=''; call_b=msg37((ispc1+1):(ispc2-3))
-                call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
-                if(lwrongcall) then; nbadcrc=1; msg37=''; return; endif
-                if(lchkcall .or. .not.lgvalid) then
-                  falsedec=.false.
-                  call chkflscall('CQ          ',call_b,falsedec)
-                  if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-                endif
-              endif
+! -23  0.0 1606 ~ <...> 3U1TBM/R CC65 i3=4 n3=0
+! -18  0.3 1609 ~ CQ 6U6MBL/R IJ90 i3=1  in some noisy setups false decode with any SNR value is possible
+    if((i3.eq.4 .and. n3.eq.0) .or. (i3.eq.1 .and. msg37(1:3).eq."CQ ")) then
+      if(index(msg37,'/R ').gt.9) then
+        ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+        if(ispc2.gt.11) then
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2
+          if(msg37((ispc2-2):(ispc2-1)).eq.'/R') then
+            if((ispc3-ispc2).eq.5) then
+              grid=msg37(ispc2+1:ispc3-1)
+! grid can not be txed, invalid message:
+              if(i3.eq.4 .and. len_trim(grid).eq.4) then; nbadcrc=1; msg37=''; return; endif
+              call_b=''; call_b=msg37((ispc1+1):(ispc2-3))
+              call chkgrid(call_b,grid,lchkcall,lgvalid,lwrongcall)
+              if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
             endif
           endif
         endif
