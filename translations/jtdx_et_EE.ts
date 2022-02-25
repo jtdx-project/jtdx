@@ -3917,7 +3917,7 @@ vajutage sisestusklahvi (ENTER). Loendit saab hallata Seadetes (F2).</translatio
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3927,7 +3927,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nihutab JTDX kella siseneva helsignaali alusel..&lt;br&gt;
 Kaks võimalikku stsenaariumi:&lt;br&gt;
 - jäme sünkroniseerimine, Kui on näha signaalid ekraanil aga ei ole dekodeerimist.&lt;br&gt;
-- täpne sünkroniseerimine, Ui eelmises perioodis dekodderitud signaalide keskmine DT erinevus on suurem kui 0.29 sekundit.&lt;br&gt;
+- täpne sünkroniseerimine, Ui eelmises perioodis dekodderitud signaalide keskmine DT erinevus on suurem kui 0.19 sekundit.&lt;br&gt;
 Peale jämedat synkroniseerimist on soovitav oodata 5 perioodi enne täpset sünkroniseerimist.&lt;br&gt;
 Esimene periood peale jämedat sünkroniseerimis ei pruugi anda vee dekoode.&lt;br&gt;
 Märkused:&lt;br&gt;

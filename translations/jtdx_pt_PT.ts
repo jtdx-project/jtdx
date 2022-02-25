@@ -3893,7 +3893,7 @@ A lista pode ser alterada em Configurações (F2).</translation>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3903,7 +3903,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique com o botão esquerdo do rato muda o tempo interno do JTDX para fornecer melhor sincronização do decodificador aos sinais no fluxo de áudio RX de entrada.&lt;br&gt;
 Dois cenários são suportados:&lt;br&gt;
 - sincronização aproximada, se houver sinais deslocados na cascata e nenhum sinal descodificado, o valor mínimo de potência é usado no descodificador para avaliar a mudança de tempo até o início do intervalo&lt;br&gt;
-- sincronização mais precisa, se houver sinais descodificados no intervalo anterior e o DT médio estiver fora da faixa de -0,29 .. 0,29 seg. O valor médio de DT é usado para mudança de horário JTDX.&lt;br&gt;
+- sincronização mais precisa, se houver sinais descodificados no intervalo anterior e o DT médio estiver fora da faixa de -0,19 .. 0,19 seg. O valor médio de DT é usado para mudança de horário JTDX.&lt;br&gt;
 Recomenda-se manter pelo menos cinco intervalos de intervalo entre duas tentativas consequentes de sincronização aproximada e precisa.&lt;br&gt;
 A descodificação do intervalo atual e do próximo pode ser interrompida pela mudança de horário.&lt;br&gt;
 Nota:&lt;br&gt;

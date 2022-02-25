@@ -3905,7 +3905,7 @@ list. The list can be maintained in Settings (F2).</source>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3915,7 +3915,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;单击鼠标左键可移动 JTDX 内部时间，以提供更好的解码器同步信号给传入的 RX 音频流。&lt;br&gt;
 支持两种方案：&lt;br&gt;
 * 粗略同步，如果瀑布上有信号而没有信号解码，则解码器中使用最小功率值来评估时间偏移，直到间隔开始&lt;br&gt;
-* 精确同步，如果有信号在前一个间隔解码并且平均 DT 超出 -0.29 .. 0.29 秒范围。平均 DT 值用于 JTDX 时移。&lt;br&gt;
+* 精确同步，如果有信号在前一个间隔解码并且平均 DT 超出 -0.19 .. 0.19 秒范围。平均 DT 值用于 JTDX 时移。&lt;br&gt;
 建议在两次粗略和精确同步的后续尝试之间至少保留五个周期间隔。&lt;br&gt;
 时移可以打破当前和下一个间隔的解码。&lt;br&gt;
 注意：&lt;br&gt;

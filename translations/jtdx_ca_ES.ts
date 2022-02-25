@@ -3912,7 +3912,7 @@ predefinida. La llista es pot actualitzar en Ajustaments (F2).</translation>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3921,7 +3921,7 @@ Note:&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fes clic amb el botó esquerre del ratolí per canviar el temps intern del JTDX per tal de proporcionar una millor sincronització del descodificador als senyals del flux d&apos;àudio del RX entrant.&lt;br&gt;
 S&apos;admeten dos escenaris:&lt;br&gt;
-- sincronització més precisa, si hi ha senyals descodificats en l&apos;interval anterior i la mitjana DT està fora del rang -0,29 .. 0,29 s. El valor DT mitjà s&apos;utilitza per al canvi de temps JTDX.
+- sincronització més precisa, si hi ha senyals descodificats en l&apos;interval anterior i la mitjana DT està fora del rang -0,19 .. 0,19 s. El valor DT mitjà s&apos;utilitza per al canvi de temps JTDX.
 Es recomana mantenir almenys cinc intervals entre dos intents consecutius de sincronització aproximada i precisa.&lt;br&gt;
 La descodificació de l&apos;interval actual i següent es pot trencar pel canvi de temps.&lt;br&gt;
 Nota:&lt;br&gt;

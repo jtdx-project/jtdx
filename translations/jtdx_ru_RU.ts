@@ -3915,7 +3915,7 @@ list. The list can be maintained in Settings (F2).</source>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3925,7 +3925,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Левая кнопка мыши позволяет сместить внутреннее время JTDX для синхронизации декодера с сигналами во входящем RX звуковом потоке.&lt;br&gt;
 Два варианта работы:&lt;br&gt;
 - грубая синхронизация, если на водопаде сигналы смещены и не декодируются декодером, в декодере определяется смещение до начала интервала поиском минимального значения мощности в сигнале&lt;br&gt;
-- относительно точная синхронизация, выполняется если в предыдущем интервале декодированы сигналы и среднее значение DT декодированных сигналов находится вне диапазона -0.29 .. 0.29 секунды. Среднее значение DT используется для смещения времени JTDX.&lt;br&gt;
+- относительно точная синхронизация, выполняется если в предыдущем интервале декодированы сигналы и среднее значение DT декодированных сигналов находится вне диапазона -0.19 .. 0.19 секунды. Среднее значение DT используется для смещения времени JTDX.&lt;br&gt;
 При последовательном выполнении грубой и точной синхронизации рекомендуется промежуток времени не менее 5 интервалов.&lt;br&gt;
 При смещении внутреннего времени JTDX возможна потеря декодирования сигналов в текущем и следующем интервалах.&lt;br&gt;
 Примечание:&lt;br&gt;

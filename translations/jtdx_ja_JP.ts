@@ -3926,7 +3926,7 @@ list. The list can be maintained in Settings (F2).</source>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3940,7 +3940,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
 2つのシナリオがサポートされています。&lt;br&gt;
 - 粗い同期: ウォーターフォール上にシフトした信号があり、デコードされた信号がない場合、最小電力値がデコーダで使用されピリオドの開始までの時間シフトを評価します。&lt;br&gt;
 
-- より精密な同期:前の区間でデコードした信号があり、平均DTが-0.29～0.29秒の範囲外である場合。平均 DT 値が JTDX のタイムシフトに使用されます。&lt;br&gt;
+- より精密な同期:前の区間でデコードした信号があり、平均DTが-0.19～0.19秒の範囲外である場合。平均 DT 値が JTDX のタイムシフトに使用されます。&lt;br&gt;
 
 粗い同期と精密同期の2回の試行には、少なくとも5ピリオドの間隔を空けることを推奨します。&lt;br&gt;
 またこのタイムシフトにより、現在と次のピリオドのデコードが中断されることがあります。&lt;br&gt;

@@ -3739,7 +3739,7 @@ void MainWindow::readFromStdout()                             //readFromStdout
           }
           else m_lostaudio=false;
           if (ui->syncButton->isChecked()) {
-            if (navexdt > 29) m_jtdxtime->SetOffset(m_jtdxtime->GetOffset() - avexdt.toFloat());
+            if (navexdt > 19) m_jtdxtime->SetOffset(m_jtdxtime->GetOffset() - avexdt.toFloat());
             ui->syncButton->setChecked(false);
           } else if (!ui->syncButton->isEnabled()) ui->syncButton->setEnabled(true);
         }

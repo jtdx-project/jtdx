@@ -3912,7 +3912,7 @@ predefinida. La lista se puede actualizar en Ajustes (F2).</translation>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click by left mouse&apos;s button shifts JTDX internal time to provide better decoder synchronization to signals into incoming RX audio stream.&lt;br&gt;
 Two scenarios are supported:&lt;br&gt;
 - rough synchronization, if there are shifted signals on the waterfall and no a signal decoded, minimum power value is used in decoder to evaluate time shift till beginning of interval&lt;br&gt;
-- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.29 .. 0.29 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
+- more precise synchronization, if there are signals decoded in previous interval and average DT is out of the -0.19 .. 0.19 sec range. Average DT value is used for JTDX time shift.&lt;br&gt;
 It is recommended to keep at least five interval gap between two consequential attempts of rough and precise synchronization.&lt;br&gt;
 Decoding of current and next interval can be broken by the time shift.&lt;br&gt;
 Note:&lt;br&gt;
@@ -3922,7 +3922,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hacer clic con el botón izquierdo del ratón cambia el tiempo interno de JTDX para proporcionar una mejor sincronización del decodificador con las señales en el flujo de audio RX entrante.&lt;br&gt;
 Se admiten dos escenarios:&lt;br&gt;
 - Sincronización aproximada, si hay señales desplazadas en la cascada y no se decodifica una señal, se usa el valor mínimo de potencia en el decodificador para evaluar el cambio de tiempo hasta el comienzo del intervalo&lt;br&gt;
-- sincronización más precisa, si hay señales decodificadas en el intervalo anterior y el DT promedio está fuera del rango de -0.29 .. 0.29 seg. El valor promedio de DT se usa para el cambio de tiempo JTDX.&lt;br&gt;
+- sincronización más precisa, si hay señales decodificadas en el intervalo anterior y el DT promedio está fuera del rango de -0.19 .. 0.19 seg. El valor promedio de DT se usa para el cambio de tiempo JTDX.&lt;br&gt;
 Se recomienda mantener al menos cinco intervalos entre dos intentos consecutivos de sincronización aproximada y precisa.&lt;br&gt;
 La decodificación del intervalo actual y el siguiente se puede interrumpir con el cambio de hora.&lt;br&gt;
 Nota:&lt;br&gt;
