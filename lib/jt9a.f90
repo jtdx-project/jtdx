@@ -72,7 +72,7 @@ subroutine jt9a()
   endif
 
   if(local_params%ndiskdat) then
-    if(local_params%nmode.eq.8) then
+    if(local_params%nmode.eq.8) then ! nblocks values shall match to ihsym/m_hsymStop in mainwindow
       if(local_params%nswl) then; nblocks=51
       else if(local_params%learlystart) then; nblocks=48
       else; nblocks=49
