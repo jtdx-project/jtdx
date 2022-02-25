@@ -6067,69 +6067,69 @@ Error (%2): %3</translation>
         <translation>Error de connexió web TCI: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="409"/>
+        <location filename="../TCITransceiver.cpp" line="417"/>
         <source>TCI SDR could not be switched on</source>
         <translation>No s&apos;ha pogut activar el TCI SDR</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="412"/>
+        <location filename="../TCITransceiver.cpp" line="420"/>
         <source>TCI SDR is not switched on</source>
         <translation>no està activat el TCI SDR</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="419"/>
+        <location filename="../TCITransceiver.cpp" line="427"/>
         <source>TCI RX2 could not be enabled</source>
         <translation>no s&apos;ha pogut activar el TCI RX2</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="427"/>
+        <location filename="../TCITransceiver.cpp" line="435"/>
         <source>TCI Audio could not be switched on</source>
         <translation>No s&apos;ha pogut activar l&apos;àudio TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="473"/>
-        <location filename="../TCITransceiver.cpp" line="1490"/>
+        <location filename="../TCITransceiver.cpp" line="481"/>
+        <location filename="../TCITransceiver.cpp" line="1550"/>
         <source>TCI could not be opened</source>
         <translation>No s&apos;ha pogut obrir el TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1294"/>
+        <location filename="../TCITransceiver.cpp" line="1345"/>
         <source>TCI failed to set ptt</source>
         <translation>no ha pogut configurar el ptt TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1303"/>
+        <location filename="../TCITransceiver.cpp" line="1354"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI s&apos;ha d’utilitzar PTT mitjançant CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1346"/>
+        <location filename="../TCITransceiver.cpp" line="1397"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI ha fallat en establir la freqüència de RX</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1365"/>
-        <location filename="../TCITransceiver.cpp" line="1472"/>
+        <location filename="../TCITransceiver.cpp" line="1416"/>
+        <location filename="../TCITransceiver.cpp" line="1531"/>
         <source>TCI failed set mode</source>
         <translation>ha fallat en el mode de configuració TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1146"/>
+        <location filename="../TCITransceiver.cpp" line="1196"/>
         <source>TCI failed set split</source>
         <translation>ha fallat conjunt split del TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1423"/>
+        <location filename="../TCITransceiver.cpp" line="1480"/>
         <source>TCI failed set txfreq</source>
         <translation>ha fallat en establir la freqüència de TX TCI</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1627"/>
+        <location filename="../TCITransceiver.cpp" line="1679"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI ha enviat una freqüència no reconeguda</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1688"/>
+        <location filename="../TCITransceiver.cpp" line="1740"/>
         <source>TCI modulator not Idle</source>
         <translation>Modulador TCI no inactiu</translation>
     </message>

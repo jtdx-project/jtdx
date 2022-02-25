@@ -6024,69 +6024,69 @@ Error(%2): %3</source>
         <translation>TCI websocket エラー: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="409"/>
+        <location filename="../TCITransceiver.cpp" line="417"/>
         <source>TCI SDR could not be switched on</source>
         <translation>TCI SDR could の電源が入りません</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="412"/>
+        <location filename="../TCITransceiver.cpp" line="420"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR の電源が入っていません</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="419"/>
+        <location filename="../TCITransceiver.cpp" line="427"/>
         <source>TCI RX2 could not be enabled</source>
         <translation>TCIはRX2を有効にできませんでした</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="427"/>
+        <location filename="../TCITransceiver.cpp" line="435"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCIオーディオの電源が入りません</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="473"/>
-        <location filename="../TCITransceiver.cpp" line="1490"/>
+        <location filename="../TCITransceiver.cpp" line="481"/>
+        <location filename="../TCITransceiver.cpp" line="1550"/>
         <source>TCI could not be opened</source>
         <translation>TCIを開くことができません</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1294"/>
+        <location filename="../TCITransceiver.cpp" line="1345"/>
         <source>TCI failed to set ptt</source>
         <translation>TCIのPTTを設定するのに失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1303"/>
+        <location filename="../TCITransceiver.cpp" line="1354"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCIはPTTをCAT経由で行います</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1346"/>
+        <location filename="../TCITransceiver.cpp" line="1397"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCIは受信周波数の設定に失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1365"/>
-        <location filename="../TCITransceiver.cpp" line="1472"/>
+        <location filename="../TCITransceiver.cpp" line="1416"/>
+        <location filename="../TCITransceiver.cpp" line="1531"/>
         <source>TCI failed set mode</source>
         <translation>TCIはモードの設定に失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1146"/>
+        <location filename="../TCITransceiver.cpp" line="1196"/>
         <source>TCI failed set split</source>
         <translation>TCIはスプリットに設定ができませんでした</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1423"/>
+        <location filename="../TCITransceiver.cpp" line="1480"/>
         <source>TCI failed set txfreq</source>
         <translation>TCIは送信周波数の設定に失敗しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1627"/>
+        <location filename="../TCITransceiver.cpp" line="1679"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCIは認識されていない周波数を送信しました</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1688"/>
+        <location filename="../TCITransceiver.cpp" line="1740"/>
         <source>TCI modulator not Idle</source>
         <translation>TCIモジュラーはアイドルではありません</translation>
     </message>

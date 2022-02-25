@@ -6056,69 +6056,69 @@ Erreur(%2) : %3</translation>
         <translation>Erreur dans la base de données du TCI: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="409"/>
+        <location filename="../TCITransceiver.cpp" line="417"/>
         <source>TCI SDR could not be switched on</source>
         <translation>TCI SDR n&apos;a pas pu être mis en marche</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="412"/>
+        <location filename="../TCITransceiver.cpp" line="420"/>
         <source>TCI SDR is not switched on</source>
         <translation>TCI SDR n&apos;est pas allumé</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="419"/>
+        <location filename="../TCITransceiver.cpp" line="427"/>
         <source>TCI RX2 could not be enabled</source>
         <translation>TCI RX2 n&apos;a pas pu être activé</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="427"/>
+        <location filename="../TCITransceiver.cpp" line="435"/>
         <source>TCI Audio could not be switched on</source>
         <translation>TCI Audio n&apos;a pas pu être mis en marche</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="473"/>
-        <location filename="../TCITransceiver.cpp" line="1490"/>
+        <location filename="../TCITransceiver.cpp" line="481"/>
+        <location filename="../TCITransceiver.cpp" line="1550"/>
         <source>TCI could not be opened</source>
         <translation>Le TCI n&apos;a pas pu être ouvert</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1294"/>
+        <location filename="../TCITransceiver.cpp" line="1345"/>
         <source>TCI failed to set ptt</source>
         <translation>TCI n&apos;a pas réussi à mettre en place le ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1303"/>
+        <location filename="../TCITransceiver.cpp" line="1354"/>
         <source>TCI should use PTT via CAT</source>
         <translation>TCI devrait utiliser les PTT via le CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1346"/>
+        <location filename="../TCITransceiver.cpp" line="1397"/>
         <source>TCI failed set rxfreq</source>
         <translation>TCI a échoué set rxfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1365"/>
-        <location filename="../TCITransceiver.cpp" line="1472"/>
+        <location filename="../TCITransceiver.cpp" line="1416"/>
+        <location filename="../TCITransceiver.cpp" line="1531"/>
         <source>TCI failed set mode</source>
         <translation>Le TCI a échoué en mode set</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1146"/>
+        <location filename="../TCITransceiver.cpp" line="1196"/>
         <source>TCI failed set split</source>
         <translation>TCI n&apos;a pas réussi à mettre Split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1423"/>
+        <location filename="../TCITransceiver.cpp" line="1480"/>
         <source>TCI failed set txfreq</source>
         <translation>TCI a échoué set txfreq</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1627"/>
+        <location filename="../TCITransceiver.cpp" line="1679"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>TCI a envoyé une fréquence non reconnue</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1688"/>
+        <location filename="../TCITransceiver.cpp" line="1740"/>
         <source>TCI modulator not Idle</source>
         <translation>Le modulateur TCI n&apos;est pas inactif</translation>
     </message>

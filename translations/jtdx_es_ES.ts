@@ -6066,69 +6066,69 @@ Error (%2): %3</translation>
         <translation>Error en el websocket del TCI: %1</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="409"/>
+        <location filename="../TCITransceiver.cpp" line="417"/>
         <source>TCI SDR could not be switched on</source>
         <translation>El TCI de SDR no se ha podido activar</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="412"/>
+        <location filename="../TCITransceiver.cpp" line="420"/>
         <source>TCI SDR is not switched on</source>
         <translation>El TCI de SDR no está activado</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="419"/>
+        <location filename="../TCITransceiver.cpp" line="427"/>
         <source>TCI RX2 could not be enabled</source>
         <translation>TCI RX2 no pudo ser activado</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="427"/>
+        <location filename="../TCITransceiver.cpp" line="435"/>
         <source>TCI Audio could not be switched on</source>
         <translation>El TCI de Audio no se ha podido activar</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="473"/>
-        <location filename="../TCITransceiver.cpp" line="1490"/>
+        <location filename="../TCITransceiver.cpp" line="481"/>
+        <location filename="../TCITransceiver.cpp" line="1550"/>
         <source>TCI could not be opened</source>
         <translation>El TCI no se pudo abrir</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1294"/>
+        <location filename="../TCITransceiver.cpp" line="1345"/>
         <source>TCI failed to set ptt</source>
         <translation>El TCI no pudo activar el ptt</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1303"/>
+        <location filename="../TCITransceiver.cpp" line="1354"/>
         <source>TCI should use PTT via CAT</source>
         <translation>El TCI debe utilizar PTT a través de CAT</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1346"/>
+        <location filename="../TCITransceiver.cpp" line="1397"/>
         <source>TCI failed set rxfreq</source>
         <translation>El TCI falló al establecer frecuencia RX</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1365"/>
-        <location filename="../TCITransceiver.cpp" line="1472"/>
+        <location filename="../TCITransceiver.cpp" line="1416"/>
+        <location filename="../TCITransceiver.cpp" line="1531"/>
         <source>TCI failed set mode</source>
         <translation>El TCI no pudo ajustar el modo</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1146"/>
+        <location filename="../TCITransceiver.cpp" line="1196"/>
         <source>TCI failed set split</source>
         <translation>TCI falló en la división Split</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1423"/>
+        <location filename="../TCITransceiver.cpp" line="1480"/>
         <source>TCI failed set txfreq</source>
         <translation>El TCI falló al establecer frecuencia TX</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1627"/>
+        <location filename="../TCITransceiver.cpp" line="1679"/>
         <source>TCI sent an unrecognized frequency</source>
         <translation>El TCI envió una frecuencia no reconocida</translation>
     </message>
     <message>
-        <location filename="../TCITransceiver.cpp" line="1688"/>
+        <location filename="../TCITransceiver.cpp" line="1740"/>
         <source>TCI modulator not Idle</source>
         <translation>El modulador del TCI no está inactivo</translation>
     </message>
