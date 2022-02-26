@@ -856,12 +856,12 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="139"/>
         <source>Balearic Is.</source>
-        <translation>iles Baleare</translation>
+        <translation>iles Baleare.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="140"/>
         <source>Canary Is.</source>
-        <translation>iles Canaries</translation>
+        <translation>iles Canaries.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="141"/>
@@ -966,7 +966,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="161"/>
         <source>Austral Is.</source>
-        <translation>iles Ausrales</translation>
+        <translation>iles Ausrales.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="162"/>
@@ -1021,7 +1021,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="172"/>
         <source>Amsterdam &amp; St. Paul Is.</source>
-        <translation>iles Amsterdam et St. Paul</translation>
+        <translation>iles Amsterdam et St. Paul.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="173"/>
@@ -1241,7 +1241,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="216"/>
         <source>Bear Is.</source>
-        <translation>ile de Bear</translation>
+        <translation>ile de Bear.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="217"/>
@@ -1271,7 +1271,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="222"/>
         <source>Baker &amp; Howland Is.</source>
-        <translation>iles Baker et Howland</translation>
+        <translation>iles Baker et Howland.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="223"/>
@@ -1306,7 +1306,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="229"/>
         <source>American Samoa</source>
-        <translation>Samoa Americaine.</translation>
+        <translation>Samoa Americaine</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="230"/>
@@ -1391,7 +1391,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="246"/>
         <source>Aland Is.</source>
-        <translation>ile Aland</translation>
+        <translation>ile Aland.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="247"/>
@@ -1586,7 +1586,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="285"/>
         <source>Banaba Is.</source>
-        <translation>ile de Banaba</translation>
+        <translation>ile de Banaba.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="286"/>
@@ -1606,7 +1606,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="289"/>
         <source>AS Turkey</source>
-        <translation>Turquie Asia.</translation>
+        <translation>Turquie Asia</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="290"/>
@@ -1646,7 +1646,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="297"/>
         <source>C. African Rep.</source>
-        <translation>Rep. Centre Afrique</translation>
+        <translation>Rep. Centre Afrique.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="298"/>
@@ -1871,7 +1871,7 @@ Format:
     <message>
         <location filename="../logbook/countrydat.cpp" line="342"/>
         <source>Andaman &amp; Nicobar Is.</source>
-        <translation>Andaman &amp; Nicobar</translation>
+        <translation>Andaman &amp; Nicobar.</translation>
     </message>
     <message>
         <location filename="../logbook/countrydat.cpp" line="343"/>
@@ -2992,8 +2992,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="282"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lost audio blocks. FT8 15sec interval has 52 blocks of audio data, where decoder being triggered if audio data reached 51 blocks in &apos;SWL/late strat of decoder&apos; modes or 50 blocks otherwise. Under Windows OS there were multiple reports audio data being lost, for Windows OS there is workaround implemented to start FT8 decoder if there at least 46 out of 52 audio blocks received. Lost audio blocks notification lets user know there is something wrong in the setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Blocs audio perdus. L&apos;intervalle de 15 secondes du FT8 comporte 52 blocs de données audio, le décodeur étant déclenché si les données audio atteignent 51 blocs en mode &quot;SWL/dernière strate du décodeur&quot; ou 50 blocs dans le cas contraire. Sous le système d&apos;exploitation Windows, de nombreux rapports de données audio étaient perdus. Pour le système d&apos;exploitation Windows, une solution de contournement est mise en œuvre pour lancer le décodeur FT8 si au moins 46 des 52 blocs audio reçus. La notification de perte de blocs audio permet à l&apos;utilisateur de savoir qu&apos;il y a un problème dans la configuration.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Des blocs audio perdus. FT8 15sec intervalle a 52 blocs de données audio, où le décodeur étant déclenché si les données audio ont atteint 51 blocs dans les modes &apos;SWL/late strat of decoder&apos; ou 50 blocs autrement. Sous Windows OS, il y a eu de nombreux rapports de perte de données audio, pour Windows OS il y a une solution de contournement implémentée pour démarrer le décodeur FT8 s&apos;il y a au moins 46 blocs audio sur 52 reçus. La notification de blocs audio perdus permet à l&apos;utilisateur de savoir qu&apos;il y a un problème dans la configuration.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="288"/>
@@ -3266,8 +3265,7 @@ Erreur : %2 - %3</translation>
     <message>
         <location filename="../mainwindow.ui" line="1589"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Candidate list thinning, this feature is dedicated to wideband decoding with slow CPUs and &apos;minimum&apos; wideband decoder sensitivity setting. Candidate list being sorted by synchonization pattern level with applied DT weight factor, candidates with low value will not be processed by decoder to decrease time spent for interval decoding. This feature is not applied to QSO RX frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La liste des candidats est réduite, cette fonction est dédiée au décodage large bande avec des processeurs lents et un réglage &quot;minimum&quot; de la sensibilité du décodeur large bande. La liste des candidats étant triée par niveau de modèle de synchronisation avec le facteur de pondération DT appliqué, les candidats ayant une faible valeur ne seront pas traités par le décodeur pour réduire le temps passé pour le décodage par intervalles. Cette fonction n&apos;est pas appliquée à la fréquence de réception QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La liste des candidats est réduite, cette fonction est dédiée au décodage large bande avec des processeurs lents et un réglage &quot;minimum&quot; de la sensibilité du décodeur large bande. La liste des candidats étant triée par niveau de modèle de synchronisation avec le facteur de pondération DT appliqué, les candidats ayant une faible valeur ne seront pas traités par le décodeur pour réduire le temps passé pour le décodage par intervalles. Cette fonction n&apos;est pas appliquée à la fréquence de réception QSO.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1848"/>
@@ -3553,7 +3551,16 @@ Note:&lt;br&gt;
 - if your computer clock difference is more than 7.5 seconds, there is a chance you will be reporting spots in wrong interval, also QSO start/end time can be affected&lt;br&gt;
 - DT of TX signal will be affected in wrong way if you are trying to compensate RX audio stream delay caused by buffering in SDR software.&lt;br&gt;&lt;br&gt;
 Click by right mouse&apos;s button sets JTDX internal time back to system time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Le clic par le bouton gauche de la souris décale le temps interne du JTDX pour fournir une meilleure synchronisation du décodeur avec les signaux dans le flux audio RX entrant.&lt;br&gt;
+Deux scénarios sont pris en charge : &lt;br&gt;
+- synchronisation approximative, s&apos;il y a des signaux décalés sur la cascade et aucun signal décodé, la valeur de puissance minimale est utilisée dans le décodeur pour évaluer le décalage temporel jusqu&apos;au début de l&apos;intervalle&lt;br&gt;.
+ une synchronisation plus précise, s&apos;il y a des signaux décodés dans l&apos;intervalle précédent et la moyenne.DT  est hors de la -0.19 .. 0.19 sec. La valeur DT moyenne est utilisée pour le décalage horaire du JTDX.&lt;br&gt;
+Il est recommandé de garder un intervalle d&apos;au moins cinq entre deux tentatives consécutives de synchronisation approximative et précise.&lt;br&gt;
+Le décodage de l&apos;intervalle actuel et de l&apos;intervalle suivant peut être brisé par le décalage temporel.&lt;br&gt;
+Note:&lt;br&gt;
+- si la différence d&apos;horloge de votre ordinateur est supérieure à 7,5 secondes, il est possible que vous signaliez les spots dans un intervalle erroné, et que l&apos;heure de début/fin de QSO soit affectée&lt;br&gt;.
+- Le DT du signal TX sera affecté de manière erronée si vous essayez de compenser le retard du flux audio RX causé par la mise en mémoire tampon dans le logiciel SDR.&lt;br&gt;&lt;br&gt;.
+Un clic par le bouton droit de la souris remet l&apos;heure interne de JTDX à l&apos;heure du système.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3202"/>
@@ -3595,7 +3602,7 @@ Click by right mouse&apos;s button sets JTDX internal time back to system time.&
         <location filename="../mainwindow.ui" line="3340"/>
         <location filename="../mainwindow.ui" line="3978"/>
         <source>Check to generate &apos;RRR&apos; message, uncheck to generate &apos;RR73&apos;</source>
-        <translation>Cochez pour générer le message &quot;RRR&quot;, décochez pour générer le message &quot;RR73&quot;.</translation>
+        <translation>Cochez pour générer le message &quot;RRR&quot;, décochez pour générer le message &quot;RR73&quot;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3346"/>
@@ -3828,7 +3835,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="4259"/>
         <source>Gen msg</source>
-        <translation>Message. Gen.</translation>
+        <translation>Message. Gen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4324"/>
@@ -3898,23 +3905,22 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="1595"/>
         <source>CL  </source>
-        <translation>Cpu</translation>
+        <translation>Cpu  </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1821"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DT weighting functionality for candidate list thinning option, median value of DT distribution of decoded signals should be set there. This value depends on system clock synchronization accuracy and on overcrowded bands is close to average DT value of decoded signals. Correct value raises up decoding efficiency in the candidate list thinning option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fonction de pondération DT pour l&apos;option d&apos;éclaircissement de la liste des candidats, la valeur médiane de la distribution DT des signaux décodés doit y être définie. Cette valeur dépend de la précision de la synchronisation de l&apos;horloge du système et des bandes surchargées est proche de la valeur DT moyenne des signaux décodés. Une valeur correcte augmente l&apos;efficacité du décodage dans l&apos;option d&apos;éclaircissement de la liste candidate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fonctionnalité de pondération DT pour l&apos;option d&apos;amincissement de la liste des candidats, la valeur médiane de la distribution DT des signaux décodés doit y être définie. Cette valeur dépend de la précision de la synchronisation de l&apos;horloge du système et sur les bandes surchargées est proche de la valeur moyenne de DT des signaux décodés. Une valeur correcte élève l&apos;efficacité du décodage dans l&apos;option d&apos;éclaircissement de la liste des candidats.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1824"/>
         <source>DT </source>
-        <translation type="unfinished"></translation>
+        <translation>DT </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1827"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1898"/>
@@ -3924,7 +3930,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
     <message>
         <location filename="../mainwindow.ui" line="3048"/>
         <source>Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Sync</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4435"/>
@@ -4851,7 +4857,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="3080"/>
         <location filename="../mainwindow.cpp" line="6622"/>
         <source>Hound mode TX frequency control requires *Split* rig control (either *Rig* or *Fake It* set in the *Settings | Radio* tab.)</source>
-        <translation>Le contrôle de la fréquence TX en mode Hound nécessite le contrôle du Trx *Split* (soit *Rig*, soit *Fake It* dans l&apos;onglet *Réglages | Radio*).</translation>
+        <translation>Le contrôle de la fréquence TX en mode Hound nécessite le contrôle du Trx *Split* (soit *Rig*, soit *Fake It* dans l&apos;onglet *Réglages | Radio*.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2705"/>
@@ -4968,7 +4974,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
         <location filename="../mainwindow.cpp" line="3731"/>
         <location filename="../mainwindow.cpp" line="3754"/>
         <source>Freq  </source>
-        <translation>Frequ.</translation>
+        <translation>Freq  </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3731"/>
@@ -5104,9 +5110,7 @@ ou sélectionnez une macro prédéfinie dans la liste déroulante.
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+V &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Enregistrer le dernier fichier *.wav complété&lt;/td&gt;&lt;/tr&gt;.
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Alt+Z &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Filtre, ce raccourci est pris en charge dans l&apos;interface utilisateur principale et l&apos;interface utilisateur du widegraph&lt;/td&gt;&lt;/tr&gt;.
   &lt;tr&gt;&lt;td&gt;&lt;b&gt;Esc &lt;/b&gt;&lt;/td&gt;&lt;td&gt;Halt Tx&lt;/td&gt;&lt;/tr&gt;.
-&lt;/tableau&gt;
-
-</translation>
+&lt;/tableau&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3218"/>
@@ -6151,7 +6155,7 @@ Erreur(%2) : %3</translation>
     <message>
         <location filename="../widegraph.ui" line="152"/>
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Freq</translation>
     </message>
     <message>
         <location filename="../widegraph.ui" line="197"/>
@@ -6628,7 +6632,7 @@ une période de calme lorsque le décodage est effectué.</translation>
     <message>
         <location filename="../Configuration.ui" line="737"/>
         <source>0.5 s</source>
-        <translation type="unfinished"></translation>
+        <translation>0.5 s</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="808"/>
@@ -7795,7 +7799,7 @@ Cliquez avec le bouton droit de la souris pour les options d&apos;insertion et d
     <message>
         <location filename="../Configuration.ui" line="766"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>On</translation>
     </message>
     <message>
         <location filename="../Configuration.ui" line="779"/>
