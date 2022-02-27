@@ -176,10 +176,11 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
   endif
 
   if(iaptype.eq.2) then ! message starts with user's callsign, 2nd callsign is random
-! 'ES1JA JA1QZQ/R R GD47'
-! 'UA3ALE A70DDN/R OF23'
-! 'ES6DO NH4CXV MA87'
-! 'EA1AHY PW1BSL R GR47' i3=1
+! ES1JA JA1QZQ/R R GD47
+! UA3ALE A70DDN/R OF23
+! ES6DO NH4CXV MA87
+! EA1AHY PW1BSL R GR47 i3=1
+! ES6DO ST0VQA R174 invalid message, can not be transmitted
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     callsign=''; grid=''
     callsign=msg37(ispc1+1:ispc2-1)
@@ -192,13 +193,25 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
     indxr=index(msg37,' R ')
     if(indxr.gt.7) then
       ispc4=index(msg37((ispc3+1):),' ')+ispc3
-      if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
-         msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
-         msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
+      if(ispc4-ispc3.eq.5) then
+        if(msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+           msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+           msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
+          grid=msg37(ispc3+1:ispc4-1)
+        else ! invalid message
+          nbadcrc=1; msg37=''; return
+        endif
+      endif
     else if(indxr.lt.1) then
-      if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
-         msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
-         msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
+      if(ispc3-ispc2.eq.5) then
+        if(msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
+          grid=msg37(ispc2+1:ispc3-1)
+        else ! invalid message
+          nbadcrc=1; msg37=''; return
+        endif
+      endif
     endif
     if(len_trim(grid).eq.4) then
       call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
