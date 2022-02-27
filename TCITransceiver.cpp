@@ -663,7 +663,7 @@ void TCITransceiver::onMessageReceived(const QString &str)
             }
             else if (args.at(0)==rx_ && args.at(1) == "1") {
               if (args.at(2).left(1) != "-") other_frequency_ = args.at(2);
-              if (!tci_Ready && requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
+//              if (!tci_Ready && requested_other_frequency_.isEmpty()) requested_other_frequency_ = other_frequency_;
               if (band_change && tci_timer1_->isActive()) {
 //                printf (" cmdvfo1 done1");
 #if JTDX_DEBUG_TO_FILE
