@@ -59,9 +59,9 @@ else ()
   set (PROJECT_CONTACT "Igor Chernikov <c_igor@inbox.ru>, Arvo Järve <arvo.jarve@eesti.ee>")
   set (PROJECT_COPYRIGHT "Copyright (C) 2016-2020 by Igor Chernikov, UA3DJY and Arvo Järve, ES1JA.")
 endif (WIN32)
-set (PROJECT_HOMEPAGE http://jtdx.tech/)
+set (PROJECT_HOMEPAGE http://sourceforge.net/projects/jtdx/)
 set (PROJECT_MANUAL index.php/videos-guides)
-set (PROJECT_MANUAL_DIRECTORY_URL http://jtdx.tech/)
+set (PROJECT_MANUAL_DIRECTORY_URL http://sourceforge.net/projects/jtdx/)
 set (PROJECT_SAMPLES_URL http://jtdx.tech/public_html/downloads/)
 set (PROJECT_SAMPLES_UPLOAD_DEST frs.sourceforge.net:/home/frs/project/wsjt/)
 set (PROJECT_SUMMARY_DESCRIPTION "${PROJECT_NAME} - Digital Modes for Amateur Radio.")
@@ -175,6 +175,7 @@ set (wsjt_qt_CXXSRCS
   revision_utils.cpp
   WFPalette.cpp
   Radio.cpp
+  NonInheritingProcess.cpp
   IARURegions.cpp
   Bands.cpp
   Modes.cpp

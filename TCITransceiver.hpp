@@ -226,6 +226,7 @@ private:
   bool inConnected;
   bool tci_Ready;
   bool ESDR3;
+  bool HPSDR;
   bool tx_top_;
   bool band_change;
   QUrl url_;
@@ -240,6 +241,7 @@ private:
 // CAT internal variables
   QString requested_mode_;
   QString mode_;
+  QString started_mode_;
   QString requested_rx_frequency_;
   QString rx_frequency_;
   QString requested_other_frequency_;
@@ -255,6 +257,7 @@ private:
   bool PTT_;
   bool requested_split_;
   bool split_;
+  bool started_split_;
   bool requested_rx2_;
   bool rx2_;
   bool started_rx2_;
@@ -273,7 +276,7 @@ private:
   // from Detector
     void clear ();                // discard buffer contents
 
-  double m_period;
+  double m_period = 15.0;
   unsigned m_downSampleFactor;
   qint32 m_samplesPerFFT;       // after any down sampling
   qint32 m_ns;

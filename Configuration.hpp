@@ -132,6 +132,7 @@ public:
   bool do_pwr() const;
   bool rig_power() const;
   bool rig_power_off() const;
+  bool rig_ptt_share() const;
   bool tci_audio() const;
   bool id_after_73 () const;
   bool tx_QSY_allowed () const;

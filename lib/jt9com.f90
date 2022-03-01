@@ -61,6 +61,7 @@
      logical(c_bool) :: showharmonics
      logical(c_bool) :: lft8lowth
      logical(c_bool) :: lft8subpass
+     logical(c_bool) :: ltxing
      logical(c_bool) :: lhidetest
      logical(c_bool) :: lhidetelemetry
      logical(c_bool) :: lhideft8dupes
@@ -76,6 +77,8 @@
      logical(c_bool) :: lwidedxcsearch
      logical(c_bool) :: lmultinst
      logical(c_bool) :: lskiptx1
+     logical(c_bool) :: lforcesync
+     logical(c_bool) :: learlystart
  end type params_block
 
   type, bind(C) :: dec_data

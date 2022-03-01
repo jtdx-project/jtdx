@@ -18,7 +18,9 @@
 */
 
 
+
 #include "countrydat.h"
+#include "../Radio.hpp"
 #include <QFile>
 #include <QTextStream>
 
@@ -577,9 +579,12 @@ QString CountryDat::find(const QString prefix)
     while(!pf.isEmpty ())
   	{
         QString country = "";
-        if (pf.length() == prefix.length()) country = _data.value("="+pf,country);
-        if (!country.isEmpty ())
-            return country;
+        if (pf.length() == prefix.length()) {
+             country = _data.value("="+pf,country);
+            if (!country.isEmpty ())
+                return country;
+            else pf = Radio::effective_prefix(prefix);
+        }
         if (pf == "KG4" && prefix.length() != 5) pf = "AA";
         country = _data.value(pf,country);
         if (!country.isEmpty ())

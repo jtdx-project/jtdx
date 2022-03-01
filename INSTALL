@@ -58,13 +58,13 @@ from sources something like the following recipe should suffice:
 
 $ mkdir ~/hamlib-prefix
 $ cd ~/hamlib-prefix
-$ git clone git://github.com/jtdx-project/jtdxhamlib src
+$ git clone git://git.code.sf.net/p/jtdx/hamlib src
 $ cd src
 $ ./bootstrap
 $ mkdir ../build
 $ cd ../build
 $ ../src/configure --prefix=$HOME/hamlib-prefix \
-   --disable-shared --enable-static --without-readline \
+   --disable-static --enable-shared --without-readline \
    --without-indi --without-cxx-binding --disable-winradio \
    CFLAGS="-g -O2 -fdata-sections -ffunction-sections" \
    LDFLAGS="-Wl,--gc-sections"
@@ -83,7 +83,7 @@ project's git repository.
 
 $ mkdir -p ~/jtdx-prefix/build
 $ cd ~/jtdx-prefix
-$ git clone git://github.com/jtdx-project/jtdx src
+$ git clone git://git.code.sf.net/p/jtdx/code src
 
 
 To build JTDX you will need CMake and asciidoc installed.
@@ -141,14 +141,14 @@ In an MSYS shell:-
 
 $ mkdir ~/hamib-prefix
 $ cd ~/hamlib-prefix
-$ git clone git://git.code.sf.net/u/bsomervi/hamlib src
+$ git clone git://git.code.sf.net/p/jtdx/hamlib src
 $ cd src
 $ git checkout integration
 $ ./bootstrap
 $ mkdir ../build
 $ cd ../build
    ../src/configure --prefix=$HOME/hamlib-prefix \
-   --disable-shared --enable-static \
+   --disable-static --enable-shared \
    --without-indi --without-cxx-binding --disable-winradio \
    CC=<path-to-Qt-MinGW-tools>/gcc \
    CXX=<path-to-Qt-MinGW-tools>/g++ \
@@ -199,13 +199,14 @@ texinfo
 gcc9
 fftw-3-single +gcc9
 asciidoc
+asciidoctor
 libusb-devel
 
 These are installed by typing:
 
 $ sudo port install autoconf automake \
    libtool pkgconfig texinfo gcc9 asciidoc \
-   fftw-3-single +gcc9 libusb-devel
+   asciidoctor fftw-3-single +gcc9 libusb-devel
 
 Once complete you should have all the tools required to build JTDX.
 
@@ -223,7 +224,7 @@ First fetch hamlib from the repository, in this case my fork of Hamlib
 
 $ mkdir -p ~/hamlib-prefix/build
 $ cd ~/hamlib-prefix
-$ git clone git://github.com/jtdx-project/jtdxhamlib src
+$ git clone git://git.code.sf.net/p/jtdx/hamlib src
 $ cd src
 $ ./bootstrap
 
@@ -231,12 +232,13 @@ To build:
 
 $ cd ~/hamlib-prefix/build
 $ ../src/configure \
-   --enable-static \
-   --disable-shared \
+   --enable-shared \
+   --disable-static \
    --disable-winradio \
    --prefix=$HOME/hamlib-prefix \
    --without-readline \
    --without-indi \
+   --without-cxx-binding \
    CFLAGS="-g -O2 -mmacosx-version-min=10.13 -I/opt/local/include" \
    LIBUSB_LIBS="-L/opt/local/lib -lusb-1.0"
 $ make
@@ -327,7 +329,7 @@ First fetch the source from the repository:
 
 $ mkdir -p ~/jtdx-prefix/build
 $ cd ~/jtdx-prefix
-$ git clone git://github.com/jtdx-project/jtdx src
+$ git clone git://git.code.sf.net/p/jtdx/code src
 
 this links to the Git repository in a read-only fashion, if you
 intend to  contribute to the project  then you probably want  to get a

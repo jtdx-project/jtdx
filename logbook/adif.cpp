@@ -127,7 +127,7 @@ void ADIF::load(const QString mycall,const QString mygrid,const QString mydate)
                     _pxsmodeWorked.insert(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.mode, _pxsmodeWorked.value(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.mode,0)+1);
                     _pxsbandmodeWorked.insert(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.band+q.mode, _pxsbandmodeWorked.value(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.band+q.mode,0)+1);
                     _counts.insert(q.mode,_counts.value(q.mode,0)+1);
-                    QString country = _countries.find(Radio::effective_prefix(q.call));
+                    QString country = _countries.find(q.call);
                     if (!country.isEmpty ()) { //  country was found
                         QStringList items = country.split(',');
                         _countriesWorked.insert(items[0]+','+items[1]+','+items[2], _countriesWorked.value(items[0]+','+items[1]+','+items[2],0)+1);
@@ -200,7 +200,7 @@ void ADIF::add(const QString call, const QString band, const QString mode, const
     _pxsmodeWorked.insert(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.mode, _pxsmodeWorked.value(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.mode,0)+1);
     _pxsbandmodeWorked.insert(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.band+q.mode, _pxsbandmodeWorked.value(Radio::striped_prefix(Radio::effective_prefix(q.call))+q.band+q.mode,0)+1);
     _counts.insert(q.mode,_counts.value(q.mode,0)+1);
-    QString country = _countries.find(Radio::effective_prefix(q.call));
+    QString country = _countries.find(q.call);
     if (!country.isEmpty ()) {
         QStringList items = country.split(',');
         _countriesWorked.insert(items[0]+','+items[1]+','+items[2], _countriesWorked.value(items[0]+','+items[1]+','+items[2],0)+1);

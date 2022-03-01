@@ -1,6 +1,6 @@
 subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
 
-  use ft8_mod1, only : mycall,hiscall
+  use ft8_mod1, only : mycall,hiscall,hisgrid4
   character msg37*37,decoded*22,callsign*12,calltmp*12,call_a*12,call_b*12,grid*12,callmask6*6
   character*6 mask6(3)
   integer, intent(in) :: i3,n3
@@ -81,23 +81,24 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
           if(falsedec) then; nbadcrc=1; msg37=''; return; endif
         endif
       endif
-! 'CQ 3Q2VFI RH49          *' filter is based on the Grid
-! i=1 n=7 'CQ 2A1GKO/R GC63        *'
-! -24 -1.8 2389 ~ CQ N9OAT/R RP25         *
-! -24  0.3  550 ~ CQ DZ0BIL/R AD94          *
+
+! i=1 AP mask iaptype 1 false decodes
+! -23  0.9 2630 ~ CQ P5RXL MK92 *
+! -24  0.3  550 ~ CQ DZ0BIL/R AD94 *
+!  -7  0.2  400 ~ CQ LI9NAI/R CF97 * in some noisy setups such decodes possible with a high SNR
     else if(iaptype.eq.1) then
       ispc3=index(msg37((ispc2+1):),' ')+ispc2
       if(msg37(ispc2-2:ispc2-1).eq.'/R' .or. msg37(ispc2-2:ispc2-1).eq.'/P') then; callsign=msg37(ispc1+1:ispc2-3)
       else; callsign=msg37(ispc1+1:ispc2-1)
       endif
-      grid=msg37(ispc2+1:ispc3-1)
       include 'callsign_q.f90'
-      call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-      if(lwrongcall) then; nbadcrc=1; msg37=''; return; endif
-      if(lchkcall .or. .not.lgvalid) then
-        falsedec=.false.
-        call chkflscall('CQ          ',callsign,falsedec)
-        if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+      grid=''
+      if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+         msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+         msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
+      if(len_trim(grid).eq.4) then
+        call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+        if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
       endif
     endif
 
@@ -143,15 +144,27 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
       endif
     endif
 
-! CQ CJ3OPE/R FP61 i3=1 n3=1
-    if(i3.eq.1) then
+! CQ CJ3OPE/R FP61 i3=1
+! CQ KU3XIK NN41
+    if(i3.eq.1 .and. iaptype.eq.0) then
+      callsign=''; grid=''
       islash=index(msg37,'/R ')
-      if(islash.eq.9 .or. islash.eq.10) then
-        callsign=''; grid=''; callsign=msg37(4:islash-1); grid=msg37(islash+3:islash+6); nlengrid=len_trim(grid)
-        if(nlengrid.eq.4 .and. grid(1:1).gt.'@' .and. grid(4:4).lt.':') then
-          call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
-          if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+      if(islash.gt.6) then
+        callsign=msg37(4:islash-1); grid=msg37(islash+3:islash+6)
+      else if(islash.lt.1) then
+        ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1; ispc3=index(msg37((ispc2+1):),' ')+ispc2
+        if(len_trim(msg37).eq.ispc3-1) then
+          callsign=msg37(ispc1+1:ispc2-1); grid=msg37(ispc2+1:ispc3-1)
+        else
+          return ! 4-word message, will be processed in ft8b.f90
         endif
+      endif
+      nlengrid=len_trim(grid)
+      if(nlengrid.eq.4 .and. grid(1:1).gt.'@' .and. grid(4:4).lt.':') then
+        call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+        if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+      endif
+      if(islash.gt.6) then
         falsedec=.false.
         call chkflscall('MYCALL      ',callsign,falsedec)
         if(falsedec) then; nbadcrc=1; msg37=''; return; endif
@@ -163,10 +176,11 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
   endif
 
   if(iaptype.eq.2) then ! message starts with user's callsign, 2nd callsign is random
-! 'ES1JA JA1QZQ/R R GD47'
-! 'UA3ALE A70DDN/R OF23'
-! 'ES6DO NH4CXV MA87'
-! 'EA1AHY PW1BSL R GR47' i3=1
+! ES1JA JA1QZQ/R R GD47
+! UA3ALE A70DDN/R OF23
+! ES6DO NH4CXV MA87
+! EA1AHY PW1BSL R GR47 i3=1
+! ES6DO ST0VQA R174 invalid message, can not be transmitted
     ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
     callsign=''; grid=''
     callsign=msg37(ispc1+1:ispc2-1)
@@ -174,6 +188,46 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
     if(islash.gt.3) then
       calltmp='            '; calltmp=callsign(1:islash-1); callsign=calltmp
     endif
+    include 'callsign_q.f90'
+    ispc3=index(msg37((ispc2+1):),' ')+ispc2
+    indxr=index(msg37,' R ')
+    if(indxr.gt.7) then
+      ispc4=index(msg37((ispc3+1):),' ')+ispc3
+      if(ispc4-ispc3.eq.5) then
+        if(msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+           msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+           msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
+          grid=msg37(ispc3+1:ispc4-1)
+        else ! invalid message
+          nbadcrc=1; msg37=''; return
+        endif
+      endif
+    else if(indxr.lt.1) then
+      if(ispc3-ispc2.eq.5) then
+        if(msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+           msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+           msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') then
+          grid=msg37(ispc2+1:ispc3-1)
+        else ! invalid message
+          nbadcrc=1; msg37=''; return
+        endif
+      endif
+    endif
+    if(len_trim(grid).eq.4) then
+      call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
+      if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
+    endif
+!      call chkflscall('MYCALL      ',callsign,falsedec) ! too high risk to eliminate correct decode if callsign missed in ALLCALL7
+!      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
+    return ! no need in other checks
+  endif
+
+  if(iaptype.eq.40) then ! AP mask '<mycall> ??? ???'
+! JH4PUL/3 BG4NSA RQ43 * reported false decodes
+! JH4PUL/3 M06FLK R AE10 * at least it is possible to transmit the message
+    ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+    callsign=''; grid=''
+    callsign=msg37(ispc1+1:ispc2-1)
     include 'callsign_q.f90'
     ispc3=index(msg37((ispc2+1):),' ')+ispc2
     indxr=index(msg37,' R ')
@@ -191,23 +245,40 @@ subroutine chkfalse8(msg37,i3,n3,nbadcrc,iaptype,lcall1hash)
       call chkgrid(callsign,grid,lchkcall,lgvalid,lwrongcall)
       if(lwrongcall .or. .not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
     endif
-!      call chkflscall('MYCALL      ',callsign,falsedec) ! too high risk to eliminate correct decode if callsign missed in ALLCALL7
-!      if(falsedec) then; nbadcrc=1; msg37=''; return; endif
-    return ! no need in other checks
+    return ! no need in other checks for iaptype 40
   endif
 
 ! RV6ARZ CX7CO R NI25 ! mycall hiscall ??? AP mask false decode, both callsigns are correct, checking for valid grid
-  if(iaptype.eq.3) then
+! ES6DO TK60CNES R MJ79 ! non standard DXCall, iaptype 11
+! UA0ZZZ AA1AAA/1 R GC45 ! non standard DXCall, iaptype 11
+! JH4PUL/3 HB9CEX R PN76 * ! non standard mycall, iaptype 41
+! JH4PUL/3 JT1DN HB30 * ! non standard mycall, iaptype 41
+  if(iaptype.eq.3 .or. iaptype.eq.11 .or. iaptype.eq.21 .or. iaptype.eq.41) then
     indxr=index(msg37,' R ')
-    if(indxr.gt.7) then
-      islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
-      if(islash1.lt.1 .and. ispc1.gt.3 .and. ispc2.gt.7) then
+    if(iaptype.eq.21 .and. indxr.gt.0) then; nbadcrc=1; msg37=''; return; endif ! not valid message in Hound mode
+    islash1=index(msg37,'/'); ispc1=index(msg37,' '); ispc2=index(msg37((ispc1+1):),' ')+ispc1
+    if(ispc1.gt.3 .and. ispc2.gt.7) then
+      if(islash1.lt.ispc1 .or. (islash1.eq.ispc2-2 .and. msg37(ispc2-1:ispc2-1).lt.':' )) then ! AA1AAA/1 can be first or 2nd callsign
         if(msg37(1:ispc1-1).eq.mycall .and. msg37(ispc1+1:ispc2-1).eq.hiscall) then
-          ispc3=index(msg37((ispc2+1):),' ')+ispc2; ispc4=index(msg37((ispc3+1):),' ')+ispc3
-          if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
-             msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
-             msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') then
-            grid=msg37(ispc3+1:ispc4-1)
+          ispc3=index(msg37((ispc2+1):),' ')+ispc2; grid=''
+          if(indxr.gt.7) then
+            ispc4=index(msg37((ispc3+1):),' ')+ispc3
+            if(ispc4-ispc3.eq.5 .and. msg37(ispc3+1:ispc3+1).gt.'@' .and. msg37(ispc3+1:ispc3+1).lt.'S' .and. &
+               msg37(ispc3+2:ispc3+2).gt.'@' .and. msg37(ispc3+2:ispc3+2).lt.'S' .and. &
+               msg37(ispc3+3:ispc3+3).lt.':' .and. msg37(ispc3+4:ispc3+4).lt.':') grid=msg37(ispc3+1:ispc4-1)
+          else if(indxr.lt.1) then
+            if(ispc3-ispc2.eq.5 .and. msg37(ispc2+1:ispc2+1).gt.'@' .and. msg37(ispc2+1:ispc2+1).lt.'S' .and. &
+               msg37(ispc2+2:ispc2+2).gt.'@' .and. msg37(ispc2+2:ispc2+2).lt.'S' .and. &
+               msg37(ispc2+3:ispc2+3).lt.':' .and. msg37(ispc2+4:ispc2+4).lt.':') grid=msg37(ispc2+1:ispc3-1)
+          endif
+          if(len_trim(grid).eq.4 .and. grid.ne.hisgrid4) then ! correctly decoded contest message
+            if(iaptype.eq.21) then
+              if(grid.eq.'RR73') then
+                return ! AP mask 'mybcall hisbcall ???' can trigger RR73 message
+              else
+                nbadcrc=1; msg37=''; return ! not valid message in Hound mode
+              endif
+            endif
             call chkgrid(hiscall,grid,lchkcall,lgvalid,lwrongcall)
             if(.not.lgvalid) then; nbadcrc=1; msg37=''; return; endif
           endif

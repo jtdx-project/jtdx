@@ -11,18 +11,18 @@ module ft8_mod1
   real allfreq(200),windowc1(0:54),windowx(0:200),pivalue,facx,twopi,facc1,dt,sumxdtt(24),avexdt, &
        xdtincall(174)
   integer itone76(76,79),idtone76(76,58),itone56(56,79),idtone56(56,58),idtone25(25,58),allsnrs(200),apsym(58),     &
-          idtonemyc(58),mcq(29),m73(19),mrr73(19),naptypes(0:5,19),icos7(0:6),graymap(0:7),nappasses(0:5), &
-          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nFT8decdt(24),nfawide,nfbwide,nhaptypes(0:5,14),apsymsp(66),  &
-          apsymdxns1(58),apsymdxnsrrr(77),ndxnsaptypes(0:5,18),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),       &
+          idtonemyc(58),mcq(29),mrrr(19),m73(19),mrr73(19),naptypes(0:5,27),icos7(0:6),graymap(0:7),nappasses(0:5), &
+          nmsg,ndecodes,nlasttx,mycalllen1,msgrootlen,nfawide,nfbwide,nhaptypes(0:5,27),apsymsp(66),                &
+          apsymdxns1(58),apsymdxnsrrr(77),ndxnsaptypes(0:5,27),apcqsym(77),apsymdxnsrr73(77),apsymdxns73(77),       &
           nft8cycles,nft8swlcycles,ncandallthr(24),maskincallthr(25),nincallthr(24),idtonecqdxcns(58),              &
-          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,18),apsymdxstd(58),     &
-          apsymdxnsr73(77),apsymdxns732(77)
+          apsymmyns1(29),apsymmyns2(58),apsymmynsrr73(77),apsymmyns73(77),nmycnsaptypes(0:5,27),apsymdxstd(58),     &
+          apsymdxnsr73(77),apsymdxns732(77),apsymmynsrrr(77),idtonedxcns73(58),idtonefox73(58),idtonespec(58),nintcount
   integer*1 gen(91,174)
   logical one(0:511,0:8),lqsomsgdcd,first_osd
-  logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1
+  logical(1) lapmyc,lagcc,lagccbail,lhound,lenabledxcsearch,lwidedxcsearch,lmultinst,lskiptx1,ltxing
   data maskincallthr/0,30,45,55,65,75,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155,160,165,170,175/
   data     mcq/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0/
-!  data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/
+  data    mrrr/0,1,1,1,1,1,1,0,1,0,0,1,0,0,1,0,0,0,1/
   data     m73/0,1,1,1,1,1,1,0,1,0,0,1,0,1,0,0,0,0,1/
   data   mrr73/0,1,1,1,1,1,1,0,0,1,1,1,0,1,0,1,0,0,1/
   data   icos7/3,1,4,0,6,5,2/
@@ -31,33 +31,34 @@ module ft8_mod1
   data mycall12_00/'dummy'/
   data hiscall12_0/'dummy'/
 ! Hound OFF, MyCall is standard, DXCall is standard or empty
-  data naptypes(0,1:19)/0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35/ ! Tx6 CQ
-  data naptypes(1,1:19)/3,3,3,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35/ ! Tx1 Grid
-  data naptypes(2,1:19)/3,3,3,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35/ ! Tx2 Report
-  data naptypes(3,1:19)/3,3,3,6,6,5,0,0,0,0,0,0,31,31,31,36,36,36,35/ ! Tx3 RRreport
-  data naptypes(4,1:19)/3,3,3,6,6,5,2,2,2,0,0,0,31,31,31,36,36,36,35/ ! Tx4 RRR,RR73
-  data naptypes(5,1:19)/0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35/ ! Tx5 73
+  data naptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx6 CQ
+  data naptypes(1,1:27)/3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx1 Grid
+  data naptypes(2,1:27)/3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx2 Report
+  data naptypes(3,1:27)/3,3,3,6,6,6,5,5,5,4,4,4,0,0,0,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx3 RRreport
+  data naptypes(4,1:27)/3,3,3,6,6,6,5,5,5,4,4,4,2,2,2,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx4 RRR,RR73
+  data naptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/ ! Tx5 73
 ! Hound OFF, MyCall is non-standard, DXCall is standard or empty
-  data nmycnsaptypes(0,1:18)/40,40,40,0,0,0,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx6 CQ
-  data nmycnsaptypes(1,1:18)/0,0,0,41,41,41,31,31,31,36,36,36,35,35,35,1,1,1/ ! Tx1 DXcall MyCall
-  data nmycnsaptypes(2,1:18)/0,0,0,41,41,41,0,0,0,0,0,0,0,0,0,0,0,0/          ! Tx2 Report
-  data nmycnsaptypes(3,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx3 RRreport
-  data nmycnsaptypes(4,1:18)/0,0,0,41,41,41,44,44,44,43,43,43,0,0,0,0,0,0/    ! Tx4 RRR,RR73
-  data nmycnsaptypes(5,1:18)/0,0,0,0,0,0,44,44,44,43,43,43,0,0,0,1,1,1/       ! Tx5 73
+  data nmycnsaptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,40,40,40,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx6 CQ
+  data nmycnsaptypes(1,1:27)/41,41,41,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx1 DXcall MyCall
+  data nmycnsaptypes(2,1:27)/41,41,41,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx2 Report
+  data nmycnsaptypes(3,1:27)/41,41,41,44,44,44,43,43,43,42,42,42,0,0,0,0,0,0,31,31,31,36,36,36,35,35,35/    ! Tx3 RRreport
+  data nmycnsaptypes(4,1:27)/41,41,41,44,44,44,43,43,43,42,42,42,40,40,40,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx4 RRR,RR73
+  data nmycnsaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,40,40,40,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx5 73
 ! Hound mode
-  data nhaptypes(0,1:14)/1,1,1,111,111,111,31,31,31,36,36,36,0,0/ ! Tx6 CQ, possible in idle mode
-  data nhaptypes(1,1:14)/21,21,21,22,22,22,0,0,0,0,0,0,31,36/ ! Tx1 Grid !!! to add iaptype 5,6
-  data nhaptypes(2,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx2 none
-  data nhaptypes(3,1:14)/21,21,21,22,22,22,23,23,23,24,24,24,31,36/ ! Tx3 RRreport
-  data nhaptypes(4,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx4 none
-  data nhaptypes(5,1:14)/0,0,0,0,0,0,0,0,0,0,0,0,31,36/ ! Tx5 none
+  data nhaptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,111,111,111/       ! Tx6 CQ, possible in idle mode if DXCall is empty
+  data nhaptypes(1,1:27)/21,21,21,22,22,22,0,0,0,0,0,0,0,0,0,31,31,31,0,0,0,36,36,36,0,0,0/ ! Tx1 Grid idle mode or transmitting
+  data nhaptypes(2,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/             ! Tx2 none
+  data nhaptypes(3,1:27)/21,21,21,22,22,22,23,23,23,24,24,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/ ! Tx3 RRreport QSO in progress or QSO is finished
+  data nhaptypes(4,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/             ! Tx4 none
+  data nhaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/             ! Tx5 none
 !non-standard DXCall
-  data ndxnsaptypes(0,1:18)/1,1,1,31,31,0,36,36,0,0,31,36,35,0,0,0,0,0/       ! Tx6 CQ
-  data ndxnsaptypes(1,1:18)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0/      ! Tx1 Grid
-  data ndxnsaptypes(2,1:18)/11,11,11,1,1,1,31,36,0,0,31,36,35,0,0,0,0,0/      ! Tx2 Report
-  data ndxnsaptypes(3,1:18)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0/ ! Tx3 RRreport
-  data ndxnsaptypes(4,1:18)/11,11,11,13,13,13,14,14,14,12,31,36,35,1,0,0,0,0/ ! Tx4 RRR,RR73
-  data ndxnsaptypes(5,1:18)/14,14,14,13,13,13,1,1,1,12,31,36,35,0,0,0,0,0/    ! Tx5 73
+  data ndxnsaptypes(0,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx6 CQ
+  data ndxnsaptypes(1,1:27)/11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/          ! Tx1 Grid
+  data ndxnsaptypes(2,1:27)/11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,31,31,31,36,36,36,35,35,35/          ! Tx2 Report
+  data ndxnsaptypes(3,1:27)/11,11,11,14,14,14,13,13,13,12,12,12,0,0,0,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx3 RRreport
+  data ndxnsaptypes(4,1:27)/11,11,11,14,14,14,13,13,13,12,12,12,2,2,2,0,0,0,31,31,31,36,36,36,35,35,35/ ! Tx4 RRR,RR73
+  data ndxnsaptypes(5,1:27)/0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,1,1,1,31,31,31,36,36,36,35,35,35/             ! Tx5 73
+  data nintcount/0/
   data avexdt/0.0/
   data first_osd/.true./
   
