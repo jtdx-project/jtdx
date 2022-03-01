@@ -89,6 +89,7 @@ typedef struct dec_data {
     bool showharmonics;
     bool lft8lowth;
     bool lft8subpass;
+    bool ltxing;
     bool lhidetest;
     bool lhidetelemetry;
     bool lhideft8dupes;
@@ -104,6 +105,8 @@ typedef struct dec_data {
     bool lwidedxcsearch;
     bool lmultinst;
     bool lskiptx1;
+    bool lforcesync;
+    bool learlystart;
     } params;
 } dec_data_t;
 

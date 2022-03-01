@@ -72,7 +72,17 @@ subroutine jt9a()
   endif
 
   if(local_params%ndiskdat) then
+    if(local_params%nmode.eq.8) then ! nblocks values shall match to ihsym/m_hsymStop in mainwindow
+      if(local_params%nswl) then; nblocks=51
+      else if(local_params%learlystart) then; nblocks=48
+      else; nblocks=49
+      endif
+      local_params%nzhsym=nblocks; nlastsam=nblocks*3456
+      dd(1:nlastsam)=shared_data%id2(1:nlastsam)
+      dd(nlastsam+1:npts1)=0.
+    else
      dd(1:npts1)=shared_data%id2(1:npts1)
+    endif
   else
      if(local_params%nmode.eq.8) then
         rms=sum(abs(shared_data%dd2(1:10)))+sum(abs(shared_data%dd2(76001:76010)))+ &

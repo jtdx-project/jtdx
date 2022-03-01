@@ -1,5 +1,3 @@
-// last time modified by Igor UA3DJY on 20200205
-
 #include "MessageServer.hpp"
 
 #include <stdexcept>
@@ -213,6 +211,7 @@ void MessageServer::impl::parse_message (QHostAddress const& sender, port_type s
                 QByteArray sub_mode;
                 bool fast_mode {false};
                 bool tx_first {false};
+                bool force {false};
                 in >> f >> mode >> dx_call >> report >> tx_mode >> tx_enabled >> transmitting >> decoding
                    >> rx_df >> tx_df >> de_call >> de_grid >> dx_grid >> watchdog_timeout >> sub_mode
                    >> fast_mode >> tx_first;
@@ -224,7 +223,7 @@ void MessageServer::impl::parse_message (QHostAddress const& sender, port_type s
                                                  , tx_enabled, transmitting, decoding, rx_df, tx_df
                                                  , QString::fromUtf8 (de_call), QString::fromUtf8 (de_grid)
                                                  , QString::fromUtf8 (dx_grid), watchdog_timeout
-                                                 , QString::fromUtf8 (sub_mode), fast_mode, tx_first);
+                                                 , QString::fromUtf8 (sub_mode), fast_mode, tx_first, force);
                   }
               }
               break;

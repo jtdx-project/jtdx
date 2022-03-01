@@ -24,6 +24,7 @@
 #include <QFileSystemWatcher>
 #include <QClipboard>
 
+#include "NonInheritingProcess.hpp"
 #include "AudioDevice.hpp"
 #include "commons.h"
 #include "Radio.hpp"
@@ -424,6 +425,7 @@ private:
   SoundOutput * m_soundOutput;
   int m_rx_audio_buffer_frames;
   int m_tx_audio_buffer_frames;
+  int m_outAttenuation = 225;
   QThread m_audioThread;
   QClipboard *clipboard = QGuiApplication::clipboard();
 
@@ -638,9 +640,9 @@ private:
 
   QFileSystemWatcher *fsWatcher;
 
-  QProcess proc_jtdxjt9;
-  QProcess p1;
-  QProcess p3;
+  NonInheritingProcess proc_jtdxjt9;
+  NonInheritingProcess p1;
+  NonInheritingProcess p3;
 
   WSPRNet *wsprNet;
   EQSL *Eqsl;
