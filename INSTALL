@@ -58,7 +58,7 @@ from sources something like the following recipe should suffice:
 
 $ mkdir ~/hamlib-prefix
 $ cd ~/hamlib-prefix
-$ git clone https://github.com/jtdx-project/jtdxhamlib src
+$ git clone git://git.code.sf.net/p/jtdx/hamlib src
 $ cd src
 $ ./bootstrap
 $ mkdir ../build
@@ -83,7 +83,7 @@ project's git repository.
 
 $ mkdir -p ~/jtdx-prefix/build
 $ cd ~/jtdx-prefix
-$ git clone https://github.com/jtdx-project/jtdx src
+$ git clone git://git.code.sf.net/p/jtdx/code src
 
 
 To build JTDX you will need CMake and asciidoc installed.
@@ -141,7 +141,7 @@ In an MSYS shell:-
 
 $ mkdir ~/hamib-prefix
 $ cd ~/hamlib-prefix
-$ git clone https://github.com/jtdx-project/jtdxhamlib src
+$ git clone git://git.code.sf.net/p/jtdx/hamlib src
 $ cd src
 $ git checkout integration
 $ ./bootstrap
@@ -224,7 +224,7 @@ First fetch hamlib from the repository, in this case my fork of Hamlib
 
 $ mkdir -p ~/hamlib-prefix/build
 $ cd ~/hamlib-prefix
-$ git clone https://github.com/jtdx-project/jtdxhamlib src
+$ git clone git://git.code.sf.net/p/jtdx/hamlib src
 $ cd src
 $ ./bootstrap
 
@@ -329,7 +329,7 @@ First fetch the source from the repository:
 
 $ mkdir -p ~/jtdx-prefix/build
 $ cd ~/jtdx-prefix
-$ git clone https://github.com/jtdx-project/jtdx src
+$ git clone git://git.code.sf.net/p/jtdx/code src
 
 this links to the Git repository in a read-only fashion, if you
 intend to  contribute to the project  then you probably want  to get a
