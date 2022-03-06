@@ -153,7 +153,8 @@ subroutine multimode_decoder(params)
        call tone8myc(); mycall12_00=mycall
      endif
      ndecodes=0; allmessages=""; allsnrs=0; allfreq=0. !init arrays for multithreading decoding
-     numcores=omp_get_num_procs()
+     numcores=1
+     !$ numcores=omp_get_num_procs()
      nuserthr=params%nmt
 
      numthreads=1 ! fallback
@@ -172,8 +173,8 @@ subroutine multimode_decoder(params)
      endif
 
 !print *,nuserthr,numcores,numthreads
-     call omp_set_dynamic(.false.)
-     call omp_set_nested(.true.)
+     !$ call omp_set_dynamic(.false.)
+     !$ call omp_set_nested(.true.)
 
      nfa=params%nfa; nfb=params%nfb; nfqso=params%nfqso; nfawide=params%nfa; nfbwide=params%nfb
      if(params%nfilter) then  ! 160Hz Filter bandwidth, 580Hz Filter bandwidth in Hound mode
@@ -2409,7 +2410,7 @@ endif
      go to 800
   endif
 
-  call omp_set_dynamic(.true.)
+  !$ call omp_set_dynamic(.true.)
 !!!  !$omp parallel sections num_threads(2) copyin(/timer_private/) shared(ndecoded) if(.true.) !iif() needed on Mac
   !$omp parallel sections num_threads(2) shared(ndecoded) if(.true.) !iif() needed on Mac
   !$omp section
