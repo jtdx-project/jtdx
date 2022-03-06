@@ -386,10 +386,11 @@ auto WSPRBandHopping::next_hop (bool tx_enabled) -> Hop
 #endif
             {
               // build new random permutations
-              m_->rx_permutation_ = target_rx_bands.values ();
-              std::random_shuffle (std::begin (m_->rx_permutation_), std::end (m_->rx_permutation_));
+              std::mt19937 rng(std::time(nullptr));
+	            m_->rx_permutation_ = target_rx_bands.values ();
+              std::shuffle (std::begin (m_->rx_permutation_), std::end (m_->rx_permutation_), rng);
               m_->tx_permutation_ = target_tx_bands.values ();
-              std::random_shuffle (std::begin (m_->tx_permutation_), std::end (m_->tx_permutation_));
+              std::shuffle (std::begin (m_->tx_permutation_), std::end (m_->tx_permutation_), rng);
               // qDebug () << "New random Rx permutation:" << m_->rx_permutation_
               //           << "random Tx permutation:" << m_->tx_permutation_;
             }
