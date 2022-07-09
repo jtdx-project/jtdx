@@ -5,7 +5,7 @@ JTDX  Version  2.2 offers six different  protocols or modes: FT4, FT8,
 JT9, JT65, T10 and WSPR.
 .
 FT8 is the most popular mode of communication, JTDX  provides  matched 
-filter and own statistics based FT8 decoders with possibilty to decode 
+filter and own statistics based FT8 decoders with possibility to decode 
 some signals as low as -30 dB SNR in  a  2500 Hz  bandwidth.  JTDX FT8
 decoders do use  information  collected  from  previous  intervals  to
 decode signals in last interval.

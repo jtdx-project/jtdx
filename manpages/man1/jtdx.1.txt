@@ -77,7 +77,7 @@ applications settings dialog.
 
 ~/.local/share/JTDX[ - RIGNAME]/save/samples/::
 
-Sample .WAV files suppied with the application are found in this
+Sample .WAV files supplied with the application are found in this
 directory, they may be played back in the application and are referred
 to in the user guide tutorial sections.
 
