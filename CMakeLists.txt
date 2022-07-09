@@ -2,10 +2,10 @@ cmake_minimum_required (VERSION 3.7.2 FATAL_ERROR)
 
 if (APPLE)
   #
-  # The following variables define the portability and compatability attributes of the Mac macOS build
-  # they are choosen with care and should not be changed without good cause.
+  # The following variables define the portability and compatibility attributes of the Mac macOS build
+  # they are chosen with care and should not be changed without good cause.
   #
-  # Among other things these options are chosen to match the portability and compatability options of the
+  # Among other things these options are chosen to match the portability and compatibility options of the
   # Qt framework dylibs which can be checked as follows:
   #
   # otool -l <binary> | grep -A3 LC_VERSION_MIN_MACOSX
@@ -102,7 +102,7 @@ endif (BUILD_SHARED_LIBS)
 option (UPDATE_TRANSLATIONS "Update source translation translations/*.ts
 files (WARNING: make clean will delete the source .ts files! Danger!)")
 option (WSJT_SHARED_RUNTIME "Debugging option that allows running from a shared Cloud directory.")
-option (WSJT_QDEBUG_TO_FILE "Redirect Qt debuging messages to a trace file.")
+option (WSJT_QDEBUG_TO_FILE "Redirect Qt debugging messages to a trace file.")
 option (WSJT_TRACE_CAT "Debugging option that turns on CAT diagnostics.")
 option (WSJT_TRACE_CAT_POLLS "Debugging option that turns on CAT diagnostics during polling.")
 option (WSJT_HAMLIB_TRACE "Debugging option that turns on minimal Hamlib internal diagnostics.")
@@ -695,7 +695,7 @@ endif (WIN32)
 
 
 #
-# decide on platform specifc packing and fixing up
+# decide on platform specific packing and fixing up
 #
 if (APPLE)
   set (WSJTX_BUNDLE_VERSION ${wsjtx_VERSION})
@@ -884,7 +884,7 @@ set (CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
 
 # set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
 
-# add the automaticaly determined parts of the RPATH which point to
+# add the automatically determined parts of the RPATH which point to
 # directories outside of the build tree to the install RPATH
 set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
@@ -922,7 +922,7 @@ set (QT_MKSPECS_DIR ${QT_DATA_DIR}/mkspecs)
 set (CMAKE_AUTOMOC ON)
 
 # don't use Qt "keywords" signal, slot, emit in generated files to
-# avoid compatability issue with other libraries
+# avoid compatibility issue with other libraries
 # ADD_DEFINITIONS (-DQT_NO_KEYWORDS)
 # ADD_DEFINITIONS (-DUNICODE)	#as per qmake
 
