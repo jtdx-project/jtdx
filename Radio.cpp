@@ -85,7 +85,7 @@ namespace Radio
 
   bool is_callsign (QString const& callsign)
   {
-    if ((!callsign.at(1).isDigit() && callsign.size () == 2) || callsign == "F" || callsign == "G" || callsign == "I" || callsign == "K" || callsign == "W") {
+    if ((callsign.size() > 1 && !callsign.at(1).isDigit() && callsign.size() == 2) || callsign == "F" || callsign == "G" || callsign == "I" || callsign == "K" || callsign == "W") {
         auto call = callsign + "0";
         return call.contains (valid_callsign_regexp);
     }
