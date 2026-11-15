@@ -533,7 +533,7 @@ C
 
 C+++++++++++++++++++++++++
 C
-      SUBROUTINE SPLIT(TT,FR)
+      SUBROUTINE JSPLIT(TT,FR)
 C
 C+++++++++++++++++++++++++
 C
@@ -754,11 +754,11 @@ C       ********** MAIN ENTRY POINT **********
       IF(ET2(1) .EQ. 0.D0) RETURN
 
       S=ET2(1)-.5D0
-      CALL SPLIT(S,PJD(1))
-      CALL SPLIT(ET2(2),PJD(3))
+      CALL JSPLIT(S,PJD(1))
+      CALL JSPLIT(ET2(2),PJD(3))
       PJD(1)=PJD(1)+PJD(3)+.5D0
       PJD(2)=PJD(2)+PJD(4)
-      CALL SPLIT(PJD(2),PJD(3))
+      CALL JSPLIT(PJD(2),PJD(3))
       PJD(1)=PJD(1)+PJD(3)
 
 C       ERROR RETURN FOR EPOCH OUT OF RANGE
